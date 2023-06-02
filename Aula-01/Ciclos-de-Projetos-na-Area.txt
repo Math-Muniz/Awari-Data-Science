@@ -1,0 +1,162 @@
+# Leitura: Ciclos de Projetos na Área
+
+Ciclo de projeto em Data Science, conforme padrão CRISP-DM. Imagem: Data Science Process Alliance
+
+Em Data Science, um ciclo de vida de um projeto pode ser entendido como um conjunto repetitivo de etapas que precisam ser seguidas para a conclusão ou entrega de um projeto.
+
+A depender do perfil do negócio, cada ciclo poderá ser ligeiramente diferente. A maioria dos projetos de ciência de dados, no entanto, costuma seguir um processo semelhante.
+
+Nesse contexto, estruturas universalmente aceitas como a CRISP-DM servem para facilitar esse trabalho.
+
+# O que é CRISP-DM?
+Cross Industry Standard Process for Data Mining (CRISP-DM) é um modelo de processo com seis fases que descreve o ciclo de vida da Ciência de Dados.
+
+Criado em 1999 para padronizar os processos de mineração de dados, CRISP-DM tornou-se a metodologia mais comum para projetos de análise e ciência de dados. Suas seis etapas básicas incluem:
+
+1. Entendimento do negócio (que o negócio precisa?)
+2. Compreensão dos dados (quais dados temos/precisamos?)
+3. Preparação (como organizar esses dados para modelagem?)
+4. Modelagem (quais técnicas de modelagem devem ser aplicadas?)
+5. Avaliação (qual modelo melhor atende aos objetivos do negócio?)
+6. Implantação (como as partes interessadas acessarão os resultados?)
+
+# Principais etapas de um projeto
+Equipes de Data Science geralmente implementam CRISP-DM de forma flexível, quase sempre em acordo com abordagens mais abrangentes de gerenciamento de projetos. 
+
+Nesse sentido, embora seu ciclo de vida seja baseado em seis fases básicas, é esperado que haja variações de um projeto para outro. Aqui estão as etapas mais comuns em relação aos ciclos de um projeto:
+
+## Etapa 1: entendendo o negócio
+Entender a necessidade do negócio é o ponto de partida em qualquer projeto de Data Science. Sendo assim, será fundamental entender primeiro qual o problema a ser solucionado e fazer as perguntas certas aos clientes ou stakeholders. 
+
+O principal foco nesta fase é conseguir transformar as necessidades de negócios em questões de ciência de dados e etapas acionáveis. Além disso, será necessário identificar o objetivo central do seu projeto, assim como possíveis variáveis a serem previstas.
+
+É válido ressaltar que qualquer equívoco na definição do problema pode comprometer toda a compreensão do requisito. Portanto, esse processo inicial de diagnóstico deve ser feito com a máxima precisão.
+
+Como direcionamento, vale ter em mente que, de modo geral, a ciência de dados é usada para responder a cinco tipos de perguntas:
+
+* Quanto ou quantos? (regressão)
+* Qual categoria? (classificação)
+* Qual grupo? (agrupamento)
+* Isso é estranho? (detecção de anomalia)
+* Qual opção deve ser tomada? (recomendação)
+
+## Etapa 2: coleta de dados
+Após a compreensão do problema, o próximo passo é coletar o conjunto correto de dados. 
+
+Como é praticamente impossível construir um bom modelo sem dados de qualidade, o processo de coleta de dados, da mesma forma que os mecanismos utilizados para coletá-los, é parte primordial do ciclo de vida de qualquer projeto.
+
+Esses dados comumente precisam ser coletados de vários tipos diferentes de fontes de dados. Alguns exemplos são:
+
+Dados de formato de arquivo (planilha, CSV, arquivos de texto, XML, jSON).
+Banco de dados relacional.
+Banco de dados não relacional (NoSQL).
+Raspagem de dados do site com ferramentas.
+Os dados a serem coletados podem variar conforme o problema a ser solucionado. Dados necessários para análise de risco de crédito, por exemplo, normalmente devem incluir dados demográficos, de pagamento, extratos de transações e assim por diante. Nessa situação hipotética, coletar dados sobre altura ou peso do cliente não faria o menor sentido.
+
+Com o advento de tecnologias como web scraping, ferramentas de coleta de dados em nuvem e APIs da web passou a ser possível extrair dados valiosos de qualquer lugar a qualquer momento.
+
+Em suma, a coleta de dados envolve a obtenção de informações de fontes internas e externas que possam ajudar a resolver o problema de negócios. 
+
+Portanto, os analistas de dados precisam descobrir maneiras adequadas de obter e coletar dados e, com isso, obter os resultados desejados.
+
+Aqui estão duas maneiras comuns de obter dados:
+
+Por meio de web scraping com Python.
+Extraindo dados com o uso de APIs de terceiros.
+
+## Etapa 3: limpeza e processamento de dados
+Depois de coletar os dados de fontes relevantes, precisamos avançar para a sua preparação. Essa etapa nos ajuda a entender melhor os dados e os prepara para uma avaliação posterior. 
+
+Esse estágio, conhecido como Data Cleaning ou Data Wrangling, envolve, dentre outras coisas, selecionar dados relevantes, combiná-los e limpá-los. 
+
+A preparação de dados costuma ser a etapa mais demorada — correspondendo a cerca de 90% da duração total do projeto — mas, sem dúvida, é também uma das mais importantes em todo o ciclo de vida. 
+
+Limpar dados significa, essencialmente, remover discrepâncias, como campos ausentes, valores impróprios, definir o formato correto e estruturá -los a partir de arquivos brutos.
+
+A Análise Exploratória de Dados ou Exploratory Data Analysis (EDA) é fundamental nesse momento, pois resume dados limpos e permite a identificação da estrutura dos dados, padrões observados neles, valores discrepantes, anomalias e tendências. Lembre-se: um modelo será tão bom quanto seus dados. 
+
+## Etapa 4: análise de dados
+A análise exploratória é frequentemente descrita como uma filosofia, e não há regras fixas sobre como você a aborda, muito menos atalhos para a análise de dados.
+
+Uma vez que você possui uma hipótese de negócios pronta, faz sentido gastar muito tempo e esforço aqui.
+
+A depender do problema em questão, há diferentes tipos de análise de dados que podem ser executados. Entre os principais estão:
+
+* Análise descritiva: utiliza ferramentas de métodos de agregação de dados para fornecer insights sobre o que aconteceu no passado;
+* Análise preditiva: métodos estatísticos e outras técnicas de previsão, incluindo mineração de dados e aprendizado de máquina, para entender e estimar o que pode acontecer no futuro.
+* Análise prescritiva: métodos de otimização e simulação para tomar a decisão e descrever possíveis resultados para análises hipotéticas.
+Depois de ter determinado o tipo de análise que pretende realizar, é possível realizar operações de mineração de dados e, a partir daí, identificar e descobrir padrões e informações ocultas em um grande conjunto de dados.
+
+É importante ter em mente que a análise de dados consiste em uma abordagem holística, enquanto a mineração de dados tende a encontrar os padrões ocultos apenas nos dados. 
+
+Esses padrões descobertos são alimentados com abordagens de análise de dados adotadas para gerar hipóteses e encontrar insights.
+
+## Etapa 5: modelagem de dados
+A modelagem é usada para encontrar padrões ou comportamentos nos dados, por isso muitas pessoas a chamam de “a etapa onde a mágica acontece”.  Esses padrões nos ajudam de duas maneiras:
+
+* Modelagem descritiva (aprendizagem não supervisionada): consiste em sistemas de recomendação. Exemplo: se uma pessoa gostou do filme X, ela também gostaria do filme Y;
+* Modelagem preditiva (aprendizagem supervisionada): envolve obter uma previsão sobre tendências futuras. Exemplo: regressão linear para prever os valores da bolsa de valores.
+A primeira coisa que você precisa fazer neste estágio é dividir o conjunto de dados limpo da etapa anterior em conjuntos de treinamento e teste.
+
+É possível usar métricas de avaliação para examinar o desempenho do seu modelo. Como sempre, a escolha das métricas a serem usadas depende do tipo de problema que você está tentando resolver. 
+
+Na maioria dos casos, a modelagem de dados é considerada um processo central. Afinal, é nele que tomamos os dados preparados como entrada e com isso, tentamos preparar a saída desejada.
+
+## Etapa 6: avaliação e implantação do modelo
+Antes de o modelo ser implantado, precisamos garantir que escolhemos a solução certa após uma avaliação rigorosa. 
+
+Com base nos modelos de problemas de negócios, é essencial identificar qual é a tarefa, se é um problema de classificação, problema de regressão ou previsão, um problema de agrupamento. 
+
+Uma vez que o problema é resolvido, o modelo pode ser implementado.
+
+Exemplos de métricas de classificação:
+
+* Precisão da Classificação (Classification Accuracy).
+* Matriz de confusão (Confusion Matrix).
+* Perda logarítmica (Logarithmic Loss).
+* Área sob a curva (AUC)
+* F-Measure (F1 Score)
+* Precisão.
+* Recall.
+Exemplos de métricas de regressão:
+
+* Erro absoluto médio (MAE).
+* Erro Quadrado Médio (MSE).
+* Erro quadrático médio (RMSE).
+Depois de construir o modelos, ele é implantado primeiro em um ambiente de pré-produção ou teste antes de realmente implantá-los na produção.
+
+Qualquer que seja a forma ou formato em que seu modelo de dados é implantado, ele deve ser exposto ao mundo real. 
+
+Uma vez que humanos reais o usem, você receberá feedback. Capturar esse feedback se traduz diretamente em vida ou morte para qualquer projeto.
+
+Algumas estruturas usadas para implantação do modelo:
+
+1. Flask
+2. Django
+3. FastAPI
+Os provedores de nuvem populares e amplamente utilizados são:
+
+1. AWS
+2. Azure
+3. Google Cloud
+# Apresentação de resultados
+Após todas as etapas anteriores, você precisará gerar insights e relatórios/gráficos de BI e, por fim, apresentá-los para o cliente ou stakeholders (partes interessadas). 
+
+Trata-se de uma etapa que exige algo além das habilidades técnicas: é preciso saber contar uma boa história.
+
+Lembre-se de que você estará apresentando para um público sem formação técnica, portanto, a maneira como você comunica a mensagem é fundamental.
+
+Aqui estão algumas ferramentas usadas para fins de visualização que poderão ajudá-lo:
+
+1. Tableau
+2. Power BI
+3. Kibana
+4. Grafana
+5. Matplotlib
+Ao longo do curso, iremos aprofundar cada uma dessas etapas e as ferramentas e métodos associados a elas. De qualquer modo, mantenha esse quadro geral do ciclo de projetos em Data Science em mente. Muito do que é feito na área repete esse padrão.
+
+# Referências
+https://www.analyticsvidhya.com/blog/2021/05/introduction-to-data-science-project-lifecycle/
+https://12ft.io/proxy?q=https://medium.com/co-learning-lounge/complete-data-science-project-life-cycle-9eae6e4ed4c9
+https://towardsdatascience.com/data-science-101-life-cycle-of-a-data-science-project-86cbc4a2f7f0
+https://www.datascience-pm.com/crisp-dm-2/
