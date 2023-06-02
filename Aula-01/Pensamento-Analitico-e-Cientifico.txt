@@ -1,0 +1,101 @@
+# Leitura: Pensamento Analítico e Científico
+ 
+
+
+Ciclo do Método Científico, em que a Ciência de Dados se inspira. Imagem: australianenvironmentaleducation.com.au 
+
+Em um primeiro momento, pode parecer difícil diferenciar conceitos relacionados à Data Analytics daqueles que dizem respeito à Data Science. 
+
+Entretanto, é importante ter em mente que, apesar de esses dois campos estarem interligados, ambos utilizam de abordagens diferentes e fornecem resultados distintos.
+
+A linha de pensamento adotada por cada uma dessas áreas talvez seja um um dos aspectos que mais as diferenciam. 
+
+Enquanto a análise de dados segue um viés mais analítico e intuitivo, a ciência de dados, por sua vez, adota processos científicos de raciocínio, baseados em hipóteses e inferências.
+
+Como cientista de dados, você deve saber combinar esses dois tipos de pensamento para conseguir extrair significado de uma variedade de conjuntos de dados. Assim, será viável solucionar problemas ao passo em que estes forem apresentados.
+
+# O que é pensamento analítico?
+Em poucas palavras, podemos definir o pensamento analítico como sendo a capacidade de lidar com questões complexas, assim como de avaliar e organizar informações, geralmente com foco na resolução de problemas.
+
+Os pensadores analíticos podem detectar com facilidade padrões entre conjuntos de dados que geralmente levam a soluções criativas. Ou seja, eles são capazes de transformar dados e informações em ação. 
+
+Como pensadores críticos, profissionais que possuem esse padrão de discernimento podem, por exemplo, ajudar as equipes a tomar decisões informadas com base em dados coletados e metas identificadas. 
+
+Dessa maneira, ajudam sua equipe a abraçar novas ideias e desenvolver uma mentalidade de crescimento.
+
+A habilidade analítica também abrange conceitos de raciocínio lógico, pensamento crítico, comunicação, pesquisa, análise de dados e criatividade. 
+
+Exemplo de pensamento analítico:
+
+* Definição do problema;
+* Formulação da hipótese;
+* Coleta dos fatos;
+* Condução da análise;
+* Desenvolvimento da solução.
+## Habilidades analíticas
+Aqui estão as principais habilidades que levam ao domínio do pensamento analítico:
+
+* Análise de informações: a capacidade de examinar detalhadamente informações para identificar elementos-chave, seus pontos fortes e fracos, e a partir disso solucionar problemas.
+* Decompor problemas: a habilidade de resolver grandes problemas dividindo-os em problemas menores.
+* Junção de informações: saber fazer as perguntas apropriadas a si mesmo e aos outros para obter os insights necessários para a tomada de decisões mais assertivas.
+* Percepção de problemas: ser capaz de reconhecer questões ou problemas subjacentes com base em tendências, associações e relações de causa e efeito entre conjuntos de dados.
+* Identificar a causa raiz: a análise de causa raiz ajuda a identificar um real problema real em vez de apenas corrigir suas consequências. 
+* Organizar informações: uma vez que todas as informações relevantes tenham sido coletadas com sucesso, é importante saber organizá-las e integrá-las, de maneira que elas forneçam insights e ideias que possam ser usadas para tirar conclusões adequadas.
+# O que é pensamento científico?
+Ao contrário do analítico, o pensamento científico refere-se, em especial, ao conjunto de processos de raciocínio que permeiam o campo da ciência — indução, dedução, inferência, teste de hipóteses e assim por diante. 
+
+De acordo com essa linha de pensamento, tudo que acontece ao nosso redor ocorre por uma razão. As causas que explicam os fenômenos, portanto, podem ser descobertas a partir de um método científico.
+
+O esquema geral do pensamento científico seria o seguinte:
+
+Um fenômeno observado gera hipóteses.
+Baseado na experimentação, ocorre o acúmulo de dados.
+Os dados obtidos são confrontados com a hipótese inicial.
+Depois de conferidos, os dados analisados fornecem uma explicação para o fenômeno investigado.
+
+## Habilidades científicas
+Algumas habilidades e práticas que norteiam o pensamento científico:
+
+* Observação: esta é a habilidade mais básica da ciência. As observações são feitas usando os 5 sentidos. Boas observações são essenciais para aprender outras habilidades do processo científico.
+* Classificação: depois de fazer observações, é importante notar semelhanças, diferenças e agrupar objetos de acordo com um propósito. 
+* Medição: a medição é importante na coleta, comparação e interpretação de dados, além de ajudar a classificá-los. 
+* Comunicação: fundamentalmente para partilhar experiências. Isso pode ser feito com gráficos, diagramas, mapas ou verbalmente.
+* Inferência: uma inferência é uma explicação baseada em uma observação. É um elo entre o que se observa e o que já se sabe.
+* Previsão: o que você acha que irá acontecer? É um palpite baseado em boas observações e inferências sobre um evento observado ou um conhecimento prévio.
+
+# Como pensar como um cientista de dados
+Ser um cientista de dados não significa apenas conhecer muito sobre aprendizado de máquina, Python e bancos de dados. 
+
+Tem a ver com ser capaz de resolver problemas de forma rápida e satisfatória usando dados para orientar sua estrutura de tomada de decisão. 
+
+Mas o que é preciso para pensar como um?
+
+1. Seja curioso
+Cientistas de dados devem pensar como investigadores.
+
+Esses profissionais extraem significado de uma variedade de conjuntos de dados para informar clientes e orientar suas principais decisões.
+
+Às vezes, você precisará voltar, tentar uma nova abordagem e reformular perguntas que está tentando responder.  
+
+2. Seja científico
+Os cientistas de dados usam uma variedade de ferramentas para gerenciar seus fluxos de trabalho, dados, anotações e código.
+
+Assim, é importante ser científico, fazer observações, experimentar e documentar bem à medida que avança, principalmente para poder reproduzir suas descobertas. 
+
+Lembre-se de manter registros que remontam não apenas às suas investigações atuais, mas a todas as suas descobertas anteriores.
+
+3. Seja criativo
+Embora o pensamento analítico/lógico e científico sejam essenciais para chegar a conclusões precisas, uma dose de criatividade é igualmente importante. 
+
+Muitas vezes, o pensamento alternativo é a chave para a maneira como você enfrenta um desafio.
+
+É saudável alternar entre o pensamento científico para resolver problemas e o pensamento criativo para se deixar guiar por novos caminhos.
+
+# Referências
+https://www.sisense.com/blog/data-science-vs-data-analytics
+https://pt.wikipedia.org/wiki/Pensamento_anal%C3%ADtico
+https://matterapp.com/skills/analytical-thinking
+https://sites.google.com/site/handsonscienceinvestigations/Home/science-process-skills-1
+https://www.geekie.com.br/blog/pensamento-cientifico-competencia-bncc
+https://12ft.io/proxy?q=https://towardsdatascience.com/how-to-think-like-a-data-scientist-98ba53c260e2
+https://www.kdnuggets.com/2020/05/think-like-data-scientist-data-analyst.html
