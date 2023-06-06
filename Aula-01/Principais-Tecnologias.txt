@@ -1,0 +1,67 @@
+# Leitura: Principais Tecnologias
+
+Este é um texto complementar a esta unidade. Você não é obrigado a lê-lo para a aula, mas recomendamos que o faça para ter uma visão mais ampla do assunto.
+
+Logotipos de bibliotecas e frameworks de Machine Learning e Deep Learning. Imagem: towardsdatascience.com
+
+A seguir estão algumas das principais tecnologias adotadas em Data Science e algumas de suas respectivas ferramentas:
+
+# Linguagens de programação
+Embora existam algumas linguagens de programação estatística, R e Python são, de longe, as linguagens mais populares em ciência de dados. 
+
+Ambas podem executar funções estatísticas complexas, incluindo análise de regressão, modelagem linear e não linear, testes estatísticos e análise de séries temporais, entre outras.
+
+## Python 
+A linguagem Python é útil para aplicativos de processamento de linguagem natural. Grande parte dos cientistas de dados a considera sua principal ferramenta de programação estatística. 
+
+Principais bibliotecas Python usadas em Data Science:
+
+* NumPy: usada para trabalhar com arrays (matrizes de várias dimensões); possui funções para trabalhar no domínio da álgebra linear.
+
+* Pandas: oferece ferramentas de análise e manipulação rápida de dados de código aberto.
+
+* SciPy: uma coleção de algoritmos matemáticos e funções de conveniência; fornece ao usuário comandos e classes de alto nível para manipular e visualizar dados.
+
+* Scikit-learn: provavelmente a biblioteca mais útil para aprendizado de máquina em Python; contém também muitas ferramentas para  modelagem estatística, incluindo classificação, regressão, agrupamento e redução de dimensionalidade.
+
+* PyTorch: usada para projetos de Machine Learning e de Deep Learning que requerem processamento intensivo.
+
+* TensorFlow: biblioteca open source end-to-end para Machine Learning e Deep Learning; permite grande eficiência; porém, ao custo de maior complexidade.
+
+## R
+Desenvolvida especificamente para análise e mineração de dados estatísticos, a linguagem R é mais adequada para conjuntos menores de dados. Suas principais ferramentas incluem:
+
+* RStudio Server: uma das ferramentas mais importantes de um Cientista de Dados, suporta um ambiente de desenvolvimento para trabalhar com R em um servidor.
+* Tidyverse: uma coleção opinativa de pacotes R projetados para ciência de dados. Todos os pacotes compartilham uma filosofia de design, gramática e dados subjacentes.
+
+## SQL 
+SQL (Structured Query Language) é usado para realizar diversas operações nos dados armazenados em bancos de dados (como atualização e exclusão de registros, criação e modificação de tabelas, visualizações, etc.). 
+
+O domínio dessa linguagem de servidor é uma das habilidades mais requisitadas em Data Science.
+
+Seu uso abrange especialmente sistemas de banco de dados relacionais, como MySQL, SQL Server e Oracle. 
+
+## Serviços em Nuvem
+Com volumes gigantescos de dados  gerados diariamente, torna-se um desafio encontrar soluções para armazenamento de baixo custo. Nesse sentido, os serviços de computação em nuvem são de grande ajuda.
+
+Eles visam armazenar grandes quantidades de dados por um baixo custo para solucionar com eficiência os problemas encontrados em relação ao armazenamento em ciência de dados. 
+
+Entre os muitos serviços disponíveis, o Microsoft Azure e Amazon AWS são as principais plataformas da categoria utilizadas para criar suas soluções robustas de Big Data.
+
+## Visualização de dados
+Os cientistas de dados precisam converter milhões de pontos de dados complexos em diagramas, mapas de calor, gráficos de dispersão e muito mais, visualmente agradáveis e fáceis de ler.
+
+Nesse sentido, as ferramentas de data visualization são cruciais. Algumas das mais usadas são:
+
+* Matplotlib e Seaborn: bibliotecas Python para construção de gráficos e painéis de visualização de dados personalizados.
+* Plotly: biblioteca e solução para criar gráficos e dashboards interativos, além de tabelas e mapas.
+* Tableau: software de visualização de dados que pode ser usada para criar gráficos, tabelas e mapas interativos; permite conectar diferentes fontes de dados e criar visualizações em minutos.
+* PowerBI: software de business intelligence; pode ser usado para relatórios, análises de autoatendimento e análises preditivas.
+
+# Referências
+https://www.oracle.com/in/data-science/what-is-data-science/
+https://www.analyticsvidhya.com/blog/2021/06/sql-for-data-science-a-beginners-guide/
+https://businesstoys.in/blog/different-emerging-technologies-in-data-science/
+https://www.techrepublic.com/article/data-science-which-technologies-are-hot-and-which-are-not/
+https://www.simplilearn.com/top-python-libraries-for-data-science-article#1tensorflow
+https://data-flair.training/blogs/data-science-vs-artificial-intelligence/
