@@ -1,10 +1,10 @@
-Leitura: Por que Interessa a Negócios?
+# Leitura: Por que Interessa a Negócios?
 
 Em um momento em que milhões de bytes de dados são gerados a cada segundo, se tornou ainda mais crucial para as empresas saber como percorrer essas informações, estruturá-las, interpretá-las e apresentá-las de maneira significativa.
 
 Assim, para compreender melhor esses dados, os campos da ciência e da análise de dados deixaram de se limitar ao meio acadêmico para se tornarem elementos integrantes de Business Intelligence e ferramentas de análise de big data.
 
-Benefícios de Data Science 
+# Benefícios de Data Science 
 Em termos gerais, as técnicas de Data Science fornecem às empresas acesso a insights que podem ajudá-las a melhorar seu desempenho - desde o conhecimento sobre seus clientes, previsão de resultados, orçamento e muito mais.
 
 O fato é que os dados têm o potencial de fornecer muito valor às empresas, mas para tirar proveito disso, elas precisam do componente de análise. 
@@ -15,11 +15,12 @@ Além de aumentar a segurança e a privacidade de dados confidenciais, esse camp
 
 Aqui algumas das razões pelas quais o Data Science é importante para ajudar empresas em seus processos de negócio:
 
-Business Intelligence: embora o Business Intelligence (Inteligência de Negócios) tradicional seja mais descritivo e estático por natureza, com a adição da Ciência de Dados, ele se tornou um campo mais dinâmico, capaz de incorporar uma ampla gama de operações de negócios.
-Tomada assertiva de decisões: as empresas podem usar os insights obtidos com a análise de dados para informar suas decisões, levando a melhores resultados. Isso elimina grande parte das suposições do planejamento de campanhas, desenvolvimento de produtos, entre outros, já que permite coletar e analisar continuamente novos dados para atualizar sua compreensão à medida que as condições mudam.
-Estratégias de Marketing mais eficazes: a análise de dados também fornece informações úteis sobre o desempenho de suas campanhas para que você possa ajustá-las para obter os melhores resultados. É possível usar essas informações para ajustar critérios de segmentação manualmente ou por meio de automação.
-Melhor relacionamento com o cliente: ao fornecer mais informações sobre clientes, a análise de dados possibilita adaptar o atendimento às reais necessidades de cada cliente, e, consequentemente, a criação de um relacionamento mais forte com eles.
-Data Science vs. Business Intelligence
+* Business Intelligence: embora o Business Intelligence (Inteligência de Negócios) tradicional seja mais descritivo e estático por natureza, com a adição da Ciência de Dados, ele se tornou um campo mais dinâmico, capaz de incorporar uma ampla gama de operações de negócios.
+* Tomada assertiva de decisões: as empresas podem usar os insights obtidos com a análise de dados para informar suas decisões, levando a melhores resultados. Isso elimina grande parte das suposições do planejamento de campanhas, desenvolvimento de produtos, entre outros, já que permite coletar e analisar continuamente novos dados para atualizar sua compreensão à medida que as condições mudam.
+* Estratégias de Marketing mais eficazes: a análise de dados também fornece informações úteis sobre o desempenho de suas campanhas para que você possa ajustá-las para obter os melhores resultados. É possível usar essas informações para ajustar critérios de segmentação manualmente ou por meio de automação.
+* Melhor relacionamento com o cliente: ao fornecer mais informações sobre clientes, a análise de dados possibilita adaptar o atendimento às reais necessidades de cada cliente, e, consequentemente, a criação de um relacionamento mais forte com eles.
+
+# Data Science vs. Business Intelligence
 Data Science pode ser entendido como um campo no qual informações e conhecimento são extraídos dos dados por meio de métodos, algoritmos e processos científicos. 
 
 Em outras palavras, ele consiste na combinação de várias ferramentas matemáticas, algoritmos, estatísticas e técnicas de machine learning, usadas para encontrar os padrões ocultos e insights dos dados que ajudam no processo de tomada de decisão. 
@@ -32,7 +33,7 @@ Ele é usado basicamente para a conversão de dados brutos em informações sign
 
 As ferramentas de inteligência de negócios aumentam as chances de uma empresa entrar em um novo mercado, além de ajudar no estudo do impacto dos esforços de marketing.
 
-Data Science vs. Data Analytics
+# Data Science vs. Data Analytics
 No entanto, pode ser confuso diferenciar entre análise de dados e ciência de dados. Apesar de os dois estarem interligados, eles fornecem resultados diferentes e buscam abordagens diferentes. 
 
 Embora muitas pessoas usem os termos de forma intercambiável, a ciência de dados e análise de dados têm diferenças.
@@ -43,7 +44,7 @@ Além disso, Data Sience constrói e otimiza modelos de Machine Learning, enquan
 
 Data Science está muito mais para a pesquisa, a inovação e a inserção do Aprendizado de Máquina nos negócios, ao passo que Data Analytics está para o monitoramento, a emissão de comunicados e alertas ao negócio e a facilitação para que equipes não especializadas usem dados no seu dia a dia.
 
-Referências
+# Referências
 https://online.hbs.edu/blog/post/what-is-data-science
 https://data-flair.training/blogs/data-science-for-business/
 https://www.geeksforgeeks.org/difference-between-data-science-and-business-intelligence/
