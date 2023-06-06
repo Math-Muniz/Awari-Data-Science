@@ -1,0 +1,95 @@
+# Leitura: Visão Geral de Data Science
+
+Diagrama de Venn com as habilidades que Data Science requer, segundo representação de Drew Conaway, de 2013, que se tornaria célebre. Fonte: drewconawy.com
+
+Data Science ou Ciência de Dados é uma área multidisciplinar, que normalmente utiliza computação, estatística e matemática e conhecimentos de domínios (saúde, engenharia, marketing etc.) para apoiar a tomada de decisões ou para automatizar processos de negócios.
+
+Conforme a imagem acima, um dos diagramas clássicos que descreve a Ciência de Dados, a área é uma interseção entre:
+
+**Hacking Skills:** habilidades de tecnologia, como conhecimento em computação e domínio de programação;
+
+**Math & Statistics Knowledge:** conhecimento sobre métodos quantitativos, basicamente Estatística e partes da Matemática, em resumo; e
+
+**Substantive Expertise:** atualmente é denominada “conhecimento de domínio” ou “conhecimento de negócio”, isto é, entender como aplicar computação e métodos quantitativos para resolver problemas do mundo real, sejam de empresas, governos ou outras organizações.
+
+No apoio à tomada de decisão, por exemplo, a Ciência de Dados pode atuar fazendo análises estatísticas para ajudar um hospital a entender porque teve aumento de gastos com pacientes ou porque um e-commerce teve um aumento inexplicado de vendas de itens sazonais.
+
+Na automatização de processos, em outro exemplo, a Ciência de Dados pode implementar algoritmos de Machine Learning (ML) para que o mesmo hospital, com base nas características do paciente, otimize os custos de tratamento ou para que o e-commerce recomende mais produtos que combinam com os hábitos de compras dos clientes.
+
+## Origem na Estatística
+A origem do termo “Data Science” está na Estatística. Desde os anos 1960, há iniciativas que já visavam tornar a Estatística menos teórica e mais aplicada, o que está no cerne do nascimento da Ciência de Dados. 
+
+Em 1989, uma base de conhecimentos para data mining (mineração de dados), chamada Knowledge Discovery in Databases (KDD), já sistematizava as etapas de um processo que é utilizado até hoje em Data Science.
+
+Em 1997, em uma apresentação intitulada “Statistics = Data Science”, o estatístico Jeff Wu perguntou se a Estatística não deveria ser renomeada para Ciência de Dados.
+
+Em 2001, Willian S. Cleveland e Leo Breiman, outros dois estatísticos proeminentes, levaram a Estatística para abordagens ainda mais pragmáticas, que hoje estão no centro da Ciência de Dados.
+
+## Boom da área
+A Ciência de Dados ganhou tração a partir da década 2000, quando o conceito de Big Data se popularizou e big techs como Google e Facebook adotaram métodos quantitativos para iniciativas que iam desde recomendar conteúdos a seus usuários como capturar e entender hábitos comportamentais destes.
+
+Na década de 2010, com expansão de Big Data e avanços do Machine Learning (ML) e Deep Learning (DL) — “aprendizado de máquina clássico” e “aprendizado profundo”, respectivamente — houve um boom de Data Science em diferentes contextos.
+
+Os dados ganharam, então, o apelido de “novo petróleo” pela revista The Economist, em razão do poder econômico das empresas que os detém. Data Science também entrou no hype ao ser chamada de “a profissão mais sexy do século” na Harvard Business Review.    
+
+## Big Data e Machine Learning
+Big Data (quantidades massivas de dados geradas, principalmente, com a Internet e dispositivos móveis) e Machine Learning/Deep Learning (algoritmos computacionais capazes de aprender) são tecnologias fundamentais para se entender a ascensão da Ciência de Dados no mundo.
+
+Com a explosão de dados, principalmente dados comportamentais de usuários que big techs passaram a dominar, tornou-se inviável utilizar ferramentas tradicionais, como softwares de planilha, para processamento e análise das informações. É onde Data Science ganhou força.
+
+Em seguida, o sucesso crescente dos algoritmos de aprendizado de máquina, com vitórias sucessivas de computadores contra humanos em jogos como Xadrez e Go, o avanço no reconhecimento de imagens ou computer vision (vide deep fakes) e o processamento de linguagem natural (vide GPT-3), além dos feitos da robótica, impulsionaram o interesse do mercado pela área.
+
+A Ciência de Dados é o componente que roda “sob o capô” de todas essas novidades tecnológicas. Aprendê-la é como abrir portas para entender esse mundo, que estará cada vez mais presente em nossa vida.
+
+## Responsabilidades de um Data Scientist
+Data scientists ou cientistas de dados é como são chamados os profissionais da Ciência de Dados.
+
+Atualmente, eles costumam vir de uma gama de formações diferentes. Há tanto pessoas com background em computação ou em estatística como pessoas que vêm de ciências sociais, do marketing etc. 
+
+Mesmo pessoas sem background “quantitativo” também têm ingressado e se desenvolvido na área.
+
+Voltando ao diagrama que ilustra este tópico, as funções e responsabilidades de um Data Scientist demandam tanto habilidades técnicas (em computação e estatística/matemática) como conhecimentos de domínio/negócios. Vamos ver em mais detalhes o que é requerido, em geral, em cada uma.
+
+### **Habilidades técnicas**
+Habilidades de **programação**, principalmente na linguagem Python, a mais utilizada na área, atualmente. Também é recomendável aprender ao menos SQL, a linguagem para consulta e operações com dados em bancos de dados relacionais. Dependendo da organização e do tipo de negócio em que o profissional estará inserido, podem ser necessários conhecimentos em outras linguagens. Python, porém, fornece toda a base para se começar e entregar soluções profissionais em Ciência de Dados.
+Conhecimento de **Estatística**, que vai desde Estatística Descritiva (que visa descrever características de conjuntos de dados, como média e mediana, por exemplo), passando por Estatística Inferencial (método usado, por exemplo, para testar se uma vacina é segura e eficaz na prevenção de uma doença, se uma determinada população é mais propensa a votar em um candidato A ou B, entre outros testes e comparações), até Probabilidades (área que lida com as chances de um evento acontecer) e Séries Temporais (análise de dados ordenados ao longo do tempo).
+Conhecimento em **Matemática**, principalmente Cálculo Multivariável e Álgebra Linear. Estes conhecimentos podem não ser necessários no início da carreira e há como desenvolvê-los com o tempo. No entanto, dominá-los ajudará a entender, principalmente, como funcionam algoritmos de Machine Learning, por exemplo.
+Conhecimentos **coleta e em manipulação de dados**, necessários para buscar dados a partir de bancos de dados, APIs e outras fontes, a fim de serem analisados ou treinados por meio de modelos estatísticos ou de ML, e a fim de limpá-los, transformá-los e torná-los mais otimizados para o consumo pelos modelos.
+Habilidades na elaboração e construção de **gráficos e visualização de dados**, necessários para resumir dados analisados de uma forma que possam ser consumidos por outras pessoas, principalmente leigos.
+Conhecimentos gerais em **computação**, desde uso de linha de comando, sistemas operacionais, sistema Linux (principalmente) e Git/Github (sistema e repositório de versionamento de códigos, o que facilita e dá muito mais segurança na construção de soluções em código). Também dependendo da organização em que o profissional atuará, podem ser desejáveis ou necessários conhecimentos em ferramentas específicas, como Docker (meio de fazer com que uma solução rode independentemente da máquina, servidor ou nuvem em que estiver instalada), bancos de dados em nuvem (AWS, Azure, Google Cloud).
+Algoritmos de **Machine Learning**, principalmente, para início, os do tipo Supervised Learning (ou “supervisionados”, que dependem de dados pré-treinados fornecidos), os quais se dividem em algoritmos de Classificação e Regressão e os do tipo Unsupervised (“não supervisionados”, que aprendem a partir da detecção de padrões nos próprios dados), que podem ser de Clustering (agrupamento) ou Redução de dimensionalidade dos dados. Posteriormente, vale se aprofundar em algoritmos que aprendem por reforço (Reinforcement Learning), onde estão Redes Neurais. A partir disso, se desejável ou necessário, o profissional pode aprender mais sobre Deep Learning (Aprendizado Profundo), um ramo do Machine Learning usado em problemas de visão computacional e processamento de linguagem natural, por exemplo, cujos algoritmos são mais complexos. 
+
+Figura que ilustra os tipos e categorias de algoritmos de Machine Learning, com exemplos de áreas em que são empregados. Fonte: Towards Data Science/Medium
+
+Como ter todas essas habilidades de uma vez é praticamente impossível ou demandaria tempo demais, o mais comum é data scientists adquirirem fluência básica com Python, terem uma base em Estatística e aprenderem algoritmos básicos de ML.
+
+A partir disso, o profissional deve continuar estudando, certamente ao longo de toda sua carreira, para adquirir conhecimentos nos outros aspectos e manter-se atualizado em relação às ferramentas e tecnologias que usa.
+
+As habilidades técnicas são a base da área e costumam ser o foco inicial do aprendizado. Mas elas não encerram a Ciência de Dados. Há um outro lado muito relevante e, provavelmente, mais desafiante, que é o conhecimento de domínio/negócio.
+
+### **Habilidades de domínio/negócio**
+**Entender de um domínio ou negócio.** Para entregar valor para uma startup ou empresa, um Cientista de Dados deve conhecer o ramo de negócio em que ela atua. Somente a parte técnica de pouco servirá sem esse conhecimento. Conhecer seu ramo de atuação, seja e-commerce, fintech (bancos digitais, por exemplo), edtech (educação), agtech (agricultura), imobiliário, saúde, governamental, entre tantos outros, é o que permitirá entender problemas e questões colocadas pelo negócio e resolvê-los por meio da Ciência de Dados.
+**Aprofundar-se nos indicadores e objetivos do negócio.** Para gerar valor ao negócio, a Ciência de Dados deve entender quais são os indicadores-chave da empresa e seus objetivos. Entendê-los a fundo, acompanhá-los e analisá-los constantemente permitirá extrair conhecimento relevante dos dados e não apenas fazer análises que podem ser supérfluas ou não ter conexão com o que a empresa almeja.
+**Resolução de problemas complexos.** Cientistas de dados devem aliar esse entendimento do domínio/negócio em que atuam e saber resolver seus problemas e desafios por meio de estatística/matemática e computação. Para fazer o casamento entre essas três áreas, é necessário ter aptidão e gosto por resolução de problemas complexos. Nem sempre há respostas fáceis e pode ser necessária uma grande quantidade de testes e tentativa e erro até chegar a análises que entregam valor ao negócio.
+**Mentalidade analítica e científica.** Um data scientist deve ter um mindset analítico, ou seja, saber quebrar/decompor problemas maiores em partes menores a fim de verificá-las, entendê-las e, assim, ter uma compreensão mais ampla do todo. Além disso, é preciso de uma mentalidade científica, isto é, ser rigoroso, cético e intelectualmente honesto com resultados. Não adianta fazer uma análise superficial e formular opiniões ou achismos sobre os dados. É necessário entender o que os dados estão dizendo, mesmo que a mensagem vá contra as expectativas e crenças do profissional, do time ou da empresa.
+**Habilidades de comunicação e apresentação.** Outra parte relevante da Ciência de Dados está no relacionamento com pessoas de negócios ou de outras áreas, a maioria leigos em métodos estatísticos e pensamento científico. O Cientista de Dados deve saber explicar e traduzir a complexidade técnica de algoritmos e modelos para o público de negócios, a fim de demonstrar porque um insight percebido pode significar uma oportunidade ou ameaça ao negócio. Sem essa capacidade, a Ciência de Dados pode ficar restrita a círculos técnicos, sem conseguir impactar aspectos relevantes de uma organização.
+Novamente, pode parecer um bocado de habilidades, como se o data scientist tivesse tanto de ser tanto um gênio da matemática quanto um ótimo apresentador no palco. 
+
+Não é para tanto. Iniciantes da área não precisam ter todas essas habilidades e não precisarão demonstrá-las de imediato. Elas podem ser desenvolvidas à medida em que se amadurece na profissão. 
+
+Algumas, afinal, como o conhecimento de domínio, só será alcançado quando o profissional estiver inserido em um ramo de negócio.
+
+O mais importante é ter consciência dessas habilidades, procurar desenvolvê-las e fazer do aprendizado uma jornada para toda a carreira.
+
+Aos poucos, cada profissional experimenta domínios de sua preferência, estará mais à vontade com outros times e conseguirá enxergar com mais assertividade onde a Ciência de Dados pode ser aplicada para ajudar a resolver problemas do negócio.
+
+### Referências
+https://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-century
+https://en.wikipedia.org/wiki/Data_science
+https://awaridados.substack.com/p/tentando-definicao-abrangente-data-science
+https://dl.acm.org/doi/pdf/10.1145/3076253
+http://courses.csail.mit.edu/18.337/2015/docs/50YearsDataScience.pdf
+https://www.simplilearn.com/data-scientist-job-description-article
+https://www.kdnuggets.com/2022/01/deep-look-13-data-scientist-roles-responsibilities.html
+https://www.spec-india.com/blog/what-does-a-data-scientist-do
+© AWARI. Todos os direitos reservados.
