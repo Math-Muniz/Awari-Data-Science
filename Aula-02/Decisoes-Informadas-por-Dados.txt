@@ -1,0 +1,55 @@
+# Leitura: Decisões Informadas por Dados
+Esquema representando alguns dos benefícios das decisões baseadas em dados. Fonte: Plutora
+
+Entendidos como um recurso inestimável de informações, os dados possibilitam a tomada de decisões assertivas. 
+
+Nesse sentido, sua interpretação e análise têm servido, dentre outras coisas, para orientar as escolhas de negócios de grandes corporações e organizações.
+
+A forma como esses dados são usados, contudo, pode ter um impacto direto no desempenho do negócio, bem como em suas estratégias. 
+
+Por esse motivo, abordagens como Data-Informed (decisões informadas por dados) e Data-Driven (decisões dirigidas por dados) são amplamente utilizadas.
+
+Neste tópico, nos aprofundaremos no conceito por trás das Decisões Informadas por Dados ou Data-informed Decision Making (DIDM).
+
+## Visão geral
+A tomada de decisões informada por dados (DIDM) faz referência à coleta e análise de dados com o intuito de orientar as decisões de negócio. Isso possibilita que tais decisões sejam orientadas com base em dados objetivos em vez de suposições ou especulações.
+
+Defendida por estudiosos e profissionais de diversas áreas, a DIDM é um conceito de negócios anterior às tecnologias conectadas à Internet. Sua popularidade coincidiu com a advento do conceito de “big data” no início dos anos 2000.
+
+A partir dessa época, as interações do consumidor por e-mail, web e outros pontos de contato digitais começaram a gerar dados de usuários em uma escala sem precedentes. 
+
+As empresas, por sua vez, ficaram sobrecarregadas com novos fluxos de informações para orientar suas interações com esses clientes.
+
+À medida que a quantidade de dados disponíveis aumentava, também crescia seu valor nas mentes dos líderes empresariais, que viam as informações quantitativas como uma resposta para seus problemas. 
+
+### Etapas da tomada de decisões informadas por dados
+Cada negócio segue procedimentos próprios para adotar uma abordagem baseada em dados na tomada de decisões. Em geral, porém, esse tipo de processo envolve as seguintes etapas:
+
+* Articulação de um objetivo: consiste em definir o problema a ser resolvido a partir de uma abordagem específica e acionável. 
+* Definir as fontes de dados: nesta etapa, você precisará identificar as fontes das quais coletará os dados (sites, aplicativos, bancos de dados de clientes etc.). O ideal é coletar esses dados a partir de diferentes pontos de contato.
+* Descrever uma estratégia de coleta de dados: é o momento de determinar como os dados serão coletados das fontes que você identificou. Quais ferramentas serão utilizadas para extraí-los? Para onde irão os dados depois de recolhidos? Até que ponto você pode alocar recursos de engenharia para resolver esses problemas? 
+* Análise de dados: com um objetivo definido, o rastreamento implementado e os dados agora fluindo de várias fontes, é hora de detalhar as informações brutas para buscar os insights que ajudarão você a tomar as decisões certas. 
+* Agir e avaliar resultados: com os dados brutos agora ao seu alcance, é possível tomar decisões sobre seu produto, mensagens ou o que inicialmente o levou a coletar essas informações em primeiro lugar. Uma vez que você tenha implementado sua decisão, no entanto, será crucial realizar uma análise de acompanhamento para verificar que os resultados desejados foram alcançados. 
+
+## Data-Informed vs Data-Driven
+Em uma abordagem Data-Driven (dirigida por dados), os dados têm a palavra final no processo de tomada de decisão. 
+
+Como a forma mais rígida de uso de dados, não há espaço para insights baseados na experiência ou na intuição. 
+
+Portanto, ser dirigido por dados é uma abordagem indicada para responder a perguntas de negócios muito precisas e garantir que não haja vieses e interferências subjetivas nas respostas.
+
+É uma abordagem útil quando os dados disponíveis são de alta qualidade e o negócio opera em cenários mais previsíveis, em que as correlações entre eventos e fatos são mais presentes e fáceis de serem identificadas.
+
+A tomada de decisões informadas por dados (Data-Informed), por outro lado, é feita com base em dados e na percepção humana sobre eles.
+
+Nesse sentido, estar informado por dados significa que estes são apenas um dos muitos componentes no processo de tomada de decisão. Fatores como perspicácia, experiência do tomador de decisão e intuição também contam.
+
+Como os dados representam apenas um instantâneo da realidade, levar em consideração outras fontes de informação — como experiências passadas, a intuição, julgamento e percepção — permitirá que as decisões tomadas possuam uma compreensão mais holística do negócio.
+
+É um tipo de abordagem usada quando não temos todos os dados e há mais imprevisibilidade e incerteza em jogo, exigindo correr alguns riscos e fazer apostas baseadas em intuição e informação limitada — algo comum, por exemplo, em startups que operam modelos de negócios muito inovadores, arriscados e incertos.
+
+# Referências
+https://en.wikipedia.org/
+https://www.qlik.com/
+https://www.mparticle.com/
+https://sapera.com/
