@@ -1,0 +1,90 @@
+# Leitura: Dado, Informação e Conhecimento
+Representação bem humorada, porém bastante útil, das particularidades entre dado (data), informação (information) e conhecimento (knowledge). A imagem ainda sugere o que seriam insights e sabedoria e brinca com a ideia de “teoria da conspiração”, algo que projetamos a partir de nossas crenças, opiniões e vieses sobre as informações disponíveis. Fonte: https://twitter.com/HDrochon
+
+Embora muita gente confunda, a verdade é que esses termos — dado, informação e conhecimento — correspondem a conceitos muito diferentes entre si.
+
+Mas, afinal, o que cada um deles significa e qual a relação entre cada um? É o que descobriremos neste tópico.
+
+# Visão geral
+Em 1597, o filósofo inglês Francis Bacon, considerado um dos precursores da chamada Revolução Científica, cunhou a máxima “Conhecimento é Poder” (Knowledge is Power).
+
+Bacon certamente não estava se referindo aos sistemas de informação como os conhecemos, mas essa frase até hoje ecoa como um mantra na indústria da tecnologia.
+
+Em seu sentido mais puro, ela reconhece o poder das informações e como estas são transformadas em conhecimento. Mas de onde elas vêm? 
+
+Para obter uma resposta para essa pergunta, precisamos começar definindo o que são dados, o que são informações e o que é conhecimento, assim como a interdependência entre cada um desses conceitos.
+
+# O que são dados?
+Em sua forma mais básica, os dados podem ser entendidos como valores alfanuméricos brutos, obtidos por meio de diferentes métodos de coleta ou aquisição, cujo significado só faz sentido quando inseridos em um contexto. 
+
+Ou seja, os dados por si só são incompreensíveis, mas quando contextualizados se transformam em informações.  
+
+Para coletar e processar dados, as organizações utilizam Sistemas de Informação (SI) que são uma combinação de tecnologias, procedimentos e ferramentas que reúnem e distribuem informações necessárias para a tomada de decisões.
+
+Portanto, podemos entender que, ao passo em que a informação dá contexto a um dado, o conhecimento torna mais profunda a compreensão de tais informações. 
+
+Uma vez transformados em informações, os dados passam a conter contexto, relevância e propósito específicos.
+
+# O que é informação?
+A informação é criada quando os dados são processados, organizados ou estruturados para fornecer contexto e significado úteis. Ela é geralmente entregue na forma de visualizações de dados, relatórios e painéis. 
+
+Um exemplo de dado transformado em informação:
+
+17091985 - é apenas uma sequência numérica bruta (sem contexto); 
+17/09/1985 - data de nascimento (dado com contexto).
+Quando conectada a um contexto, uma sequência numérica pode ser descriptografada e, com isso, passa a representar uma informação. 
+
+No contexto de Data Analytics, as informações são peças cruciais para a tomada de decisões.
+
+# O que é conhecimento?
+O conhecimento equivale ao acúmulo de experiências e insights passados que moldam as lentes pelas quais interpretamos e atribuímos significado às informações. 
+
+Em poucas palavras, o conhecimento consiste na compreensão teórica em conjunto com a capacidade de usá-la para um propósito específico.
+
+No entanto, para que ele resulte em ação, um indivíduo deve ter autoridade e capacidade para tomar e implementar uma decisão. 
+
+O conhecimento descreve as informações coletadas que estão disponíveis sobre um determinado fato ou uma pessoa. Assim, para adquiri-lo, é necessário processar tais informações.
+
+# Qual a diferença entre dados e informações?
+É possível afirmar que a principal diferença entre dados e informações diz respeito ao significado e ao valor atribuídos a cada um. 
+
+Os dados, que não fazem sentido algum sozinhos, uma vez processados ​​e interpretados, tornam-se informações repletas de significado.
+
+Dados e informações resolvem problemas da vida real simplesmente ao fornecer conhecimento para o processo de tomada de decisão. 
+
+Em suma, ambos os conceitos estão interligados e servem de base para insights valiosos que impulsionam decisões assertivas e possibilitam a obtenção de resultados bem-sucedidos para empresas e organizações.
+
+## Um bit e um byte
+Dados e informações são medidos em bits e bytes. 
+
+Um bit, que é a abreviação de dígito binário, é a unidade mais básica e menor de medida de dados em informações de computador e contém apenas dois valores: 0 e 1. 
+
+Os bits geralmente são projetados para armazenar dados e executar instruções em strings de 8 bits, que é chamado de byte.
+
+O termo byte foi citado pela primeira vez por Werner Buchholz em 1956 e representa esta unidade de medida de dados, que tem oito dígitos binários. 
+
+Considerando que todas as informações nos computadores são maiores que um bit, o byte é considerado o tamanho de medida universal e menor listado em sistemas operacionais, redes, etc.
+
+# Informação vs. conhecimento
+Podemos dizer que a informação é a base, enquanto o conhecimento é a construção. 
+
+O processamento de dados resulta em informação que, por sua vez, se torna conhecimento. 
+
+No entanto, aqui estão algumas das diferenças entre cada um que vale você conhecer: 
+
+Informação denota os dados organizados sobre alguém ou algo, obtidos de várias fontes (internet, televisão, discussões, etc.). Conhecimento refere-se à consciência ou compreensão sobre o assunto adquiridas a partir da educação ou experiência de uma pessoa.
+A informação nada mais é do que uma forma refinada de dados, útil para entender o significado. Por outro lado, o conhecimento é informação relevante e objetiva que ajuda a tirar conclusões.
+Os dados compilados no contexto significativo fornecem informações. Por outro lado, quando a informação é combinada com experiência e intuição, resulta em conhecimento.
+O processamento melhora a representação, garantindo uma fácil interpretação da informação. O processamento resulta em aumento da consciência, aumentando assim o conhecimento do assunto.
+A informação traz a compreensão dos fatos e números. O conhecimento que leva à compreensão do assunto.
+A transferência de informação é fácil através de diferentes meios, ou seja, sinais verbais ou não verbais. Por outro lado, a transferência de conhecimento é um pouco difícil, pois requer aprendizado por parte do receptor.
+A informação pode ser reproduzida com baixo custo. No entanto, a reprodução exatamente semelhante do conhecimento não é possível porque é baseada em valores e experiências individuais, percepções, etc.
+A informação por si só não é suficiente para fazer generalizações ou previsões sobre alguém ou alguma coisa. Já, por meio do conhecimento, é possível prever ou fazer inferências.
+Toda informação não é necessariamente um conhecimento, mas todo conhecimento é uma informação.
+
+# Referências
+https://internetofwater.org/
+https://iengage.ai/
+https://www.artegic.com/
+http://www.tlainc.com/
+https://datarob.com/
