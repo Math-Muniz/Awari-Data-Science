@@ -1,0 +1,412 @@
+# Leitura: Primeiros Passos na Linguagem
+Como qualquer linguagem de programação, Python tem uma sintaxe definida, com regras e boas práticas para construção de código.
+
+Este tópico é um tutorial das regras e estruturas mais básicas da sintaxe de Python. Você pode usar o Google Colab para praticar os exemplos em código.
+
+# O básico do básico
+
+## Variáveis
+Variáveis permitem armazenar valores que podemos reutilizar em nosso código. Está nos princípios de qualquer linguagem de programação.
+
+Atribuir valores a variáveis em Python é bastante simples:
+
+x = 1
+y = "Olá, mundo!"
+z = True
+Isto passa:
+
+* o número 1 à variável x;
+* a string (sequência de caracteres) Olá, mundo! à variável y; e
+* o valor booleano True (verdadeiro) à variável z.
+Podemos dar qualquer nome às nossas variáveis, desde que elas comecem com qualquer letra do alfabeto ou o caractere underline (_). 
+
+Se você começar uma variável com um número ou outro caractere especial, terá um erro. Também não é possível usar hífen e espaços em brancos no meio do nome de variáveis. 
+
+Os exemplos abaixo resultarão em erro:
+
+14ola = "Olá, mundo!"
+ola-mundo = "Olá, mundo!"
+ola mundo = "Olá, mundo!"
+
+Python é case sensitive, ou seja, termos em letras maiúsculas diferem de minúsculas. Fazer isto cria duas variáveis diferentes:
+
+a =  "Olá, mundo!"
+A = "Olá, mundo!"
+
+É importante nomear variáveis de forma que elas ajudem a entender seu próprio código. Se for necessário, você pode nomeá-las com entidades concretas do seu código, como por exemplo:
+
+# Estilo snake case (termos separados por underline)
+valor_do_aluguel = 100
+
+# Estilo camelCase (primeira letra em minúscula e demais iniciando em maiúsculas)
+valorDoAluguel = 100
+
+# Estilo Pascal (primeira letra de cada termo em maiúscula)
+ValorDoAluguel = 100
+A convenção na comunidade Python é o uso do estilo snake case, com underlines.
+
+Também é possível atribuir vários valores a várias variáveis de uma vez:
+
+x, y, z = "Maçã", "Banana", "Laranja"
+Desta forma, x armazenará Maça; y, Banana e z, “Laranja”.
+
+Você também pode atribuir um único valor a variáveis diferentes ou “desempacotar” uma lista em variáveis (veremos mais sobre listas adiante):
+
+# Um valor em várias variáveis
+x = y = z = "Banana"
+# Desempacotando uma lista 
+
+# (os valores da lista serão passados 
+
+# a cada uma das variáveis)
+frutas = ["Maçã", "Banana", "Laranja"]
+x, y, z = frutas 
+Caso você seja familiarizado com outras linguagens de programação, note que não é usado ponto-e-vírgula (“;”) para encerrar declarações ou instruções em Python.
+
+Você verá que outras convenções comuns em linguagens, como uso de chaves ({}) para delimitar escopo também não são usadas em Python. Escopo é definido por meio de recuos, como veremos em outros tópicos.
+
+## Comentários
+Você viu que no código acima há linhas iniciando com jogo da velha (#), assim:
+
+# Estilo snake case (termos separados por underline)
+Isto é um comentário em Python. É algo que você pode escrever no meio do seu código para lembrar depois ou para orientar pessoas que irão ler ou modificar seu programa.
+
+Comentários não são executados e podem ser definidos de algumas maneiras diferentes. 
+
+### Única linha
+Comentários de linha única usam jogo da velha (#):
+
+# Este é um comentário inline
+print("Olá, mundo!");
+
+print("Olá, mundo!") # Este também é um comentário inline
+Multilinhas
+
+Para multilinhas, podem ser usado jogo da velha (#) em cada linha:
+
+# Este é um comentário de
+# mais de uma linha
+print("Olá, mundo!");
+Literais de strings
+
+Para múltiplas linhas, também podem ser usados trechos de texto cercados por aspas triplas, desta maneira:
+
+"""
+Esse é um comentário de
+várias linhas em código Python,
+como um bloco de texto mesmo.
+"""
+print("Olá, mundo!");
+Tipos de dados
+
+Tipo de dado ou tipagem é uma necessidade em linguagens de programação por causa do jeito que o computador lida com valores na memória. 
+
+Embora para nós números inteiros (1, 2, 3..) ou fracionários (1.5, 3.45 ou 3.14159265359) pareçam ser apenas números, para o computador (especialmente, armazená-los na memória) são dados diferentes.
+
+Python tem os seguintes tipos de dados, por grupos:
+
+* Tipos textuais: str (de string).
+* Tipos numéricos: int, float, complex (de número inteiros, de ponto flutuante e números complexos).
+* Tipos de sequências: list, tuple, range (de lista, tuplas e intervalos).
+* Tipos de mapeamento: dict (de dicionário, com pares chave-valor).
+* Tipos de conjunto: set, frozenset (conjunto normal e conjunto imutável).
+* Tipos booleanos: bool (para verdadeiro ou falso).
+* Tipos binários: byte, bytearray, memoryview (para operações em nível de bits e bytes).
+Se atribuirmos um valor a uma variável e imprimir essa variável com type(), podemos ver qual tipo de dados Python usou para nosso valor:
+
+a = 5
+b = 1.45
+c = "Olá, mundo!"
+d = [1, 2, 3]
+e = {"nome": "Fulano", "idade": 27}
+
+print(type(a))
+print(type(b))
+print(type(c))
+print(type(d))
+print(type(e))
+A saída será:
+
+<class 'int'> #Indica que 5 é um int
+<class 'float'> #Indica que 1.45 é um float
+<class 'str'> #Indica que “Olá, mundo!” é uma string
+<class 'list'> #Indica que [1,2,3] é uma lista
+<class 'dict'> #Indica que se trata de dicionário
+Abaixo há uma lista completa com exemplos de todos os tipos. Experimente reproduzir isso no Colab e imprimir cada valor, com e sem type(), para ver os resultados.
+
+a = "Olá, mundo!" #str
+b = 20 #int
+c = 1.54 #float
+d = 1j #complex
+e = ["Maçã", "Banana", "Laranja"] #list
+f = ("Maçã", "Banana", "Laranja") #tupla
+g = range(6) #range, imprimirá os números de 0 até 6
+h = {"nome": "Fulano", "peso": 75} #set, chave-valor
+i = frozenset({"nome": "Fulano", "peso": 75}) #frozenset
+j = True #bool
+k = b"Hello" #bytes
+l = bytearray(5) #bytearray
+m = memoryview(bytes(5)) #memoryview
+No trabalho com dados, veremos que há bibliotecas específicas que implementam outros tipos de dados compostos, como matrizes (dados em linhas e colunas), que dão mais poder a Python.
+
+## Operadores
+Também como outras linguagens de programação, Python oferece diversos operadores que permitem fazer cálculos, concatenações e outras operações com dados de diferentes tipos.
+
+### Aritméticos
+Os operadores mais comuns são os aritméticos:
+
++ para adição (a + b)
+- para subtração (a - b)
+* para multiplicação (a * b)
+/ para divisão (a / b), retorna 1.5 se 3 / 2
+% para módulo ou o resto de uma divisão (a % b), retorna 0 se 3 / 2
+// para divisão inteira (a // b), retorna 1 se 3 / 2
+** para exponenciação (a ** b), como elevar ao quadrado
+
+### Comparação
+Também há operadores de comparação:
+
+== ou igual a (5 == 5)
+!= ou diferente de (5 != 4)
+< ou menor que (4 < 5)
+<= ou menor ou igual que (x <= 5)
+> ou maior que (5 > 4)
+>= ou maior ou igual que (x >= 5)
+
+### Lógicos
+Operadores lógicos (E, OU e NÃO), usados com booleanos:
+
+not ou não (not x, retornará falso se x for verdadeiro)
+or ou ou (x or y)
+and ou e (x and y)
+
+### Outros
+Há, ainda, operadores bitwise, para trabalhar no nível de bits, pouco usados no trabalho com dados.
+
+Uma visão geral de todos os operadores pode ser conferida em Real Python.
+
+# Condicionais e loops
+
+## Condicionais
+Condicionais permitem a você construir seus primeiros programas simples, porém com alguma lógica mais rica embutida.
+
+Você deve conhecer essa lógica como se… senão. Em python, fica if … elif … else. Veja em código:
+
+x = 5
+
+if x == 5:
+  print("x é igual a 5")
+else:
+  print("x é diferente de 5")
+Isto retornará x é igual a 5, porque, de fato, atribuímos à variável x o valor 5, o que atende nossa condição x == 5.
+
+Se x = 6, o programa retornaria: x é diferente de 5.
+
+Note que usamos operadores de comparação (==, no caso) para definir se nossa variável vale 5. Podemos usar outros desses operadores e usar mais “ses” no meio do código, com elif:
+
+x = 4
+
+if x == 5:
+  print("x é igual a 5")
+elif x < 5:
+  print("x é menor que 5")
+else:
+  print("x é maior que cinco 5")
+Como x = 4, este código retornará a condição que está no elif: x é menor que 5. Se fosse qualquer número menor de 5, retornaria o mesmo.
+
+Se x = 6 ou maior, retornaria o que está no else.
+
+Podemos construir ifs uns dentro de outros, formando árvores de condições:
+
+x = 4
+
+if x < 5:
+  print("x é menor que 5")
+  if x == 4:
+    print("x é exatamente 4")
+  elif x != 4:
+    print("x é qualquer número abaixo de 5 que não é 4")
+else:
+  print("x é maior que 5")
+Isto imprimirá:
+
+x é menor que 5
+x é exatamente 4
+Aqui, Python avaliou o primeiro if. Como 4 é menor que 5, ele imprimiu x é menor que 5. Então, foi para o if aninhado e, como x é igual a 4, imprimiu, também, x é exatamente 4.
+
+Se x = 3, imprimiria:
+
+x é menor que 5
+x é qualquer número abaixo de 5 que não é 4
+Se x = 6, Python já entenderia que não é menor que 5, pularia o primeiro if (e os ifs aninhados) e iria diretamente para o else, imprimindo:
+
+x é maior que 5  
+Loops
+
+Loops executam um código de maneira repetida, normalmente enquanto uma condição é atendida. 
+
+Se não houver uma condição de parada, eles entram no chamado loop infinito, o que é um problema em programas de computador.
+
+Loops são muito usados no dia a dia do trabalho com dados, principalmente porque teremos de iterar sobre muitos conjuntos de dados.
+
+## while
+O comando while executa um código enquanto uma condição é verdadeira. Exemplo:
+
+i = 1
+while i < 6:
+  print(i)
+  i += 1
+Esse código irá imprimir a sequência de números 1, 2, 3, 4, 5. O que acontece nele é o seguinte:
+
+atribuímos o valor 1 à variável i;
+dizemos que enquanto (while) i for menor que 6:
+o programa deve imprimir i, que é 1, cinco vezes (como queremos o números menores que 6, a contagem terminará em 5), o que geraria a sequência 1, 1, 1, 1, 1;
+e que i deve ser incrementado em +1 a cada contagem, resultando em i = 1, depois i = (i = 1) + 1, depois i = ((i = 1) + 1) + 1, e assim por diante, o que gera, então, a sequência 1, 2, 3, 4, 5.
+Se fizéssemos algo como o exemplo abaixo, teríamos um loop infinito, porque a condição será verdadeira para sempre:
+
+x = 1
+while x >= 1:
+  print(x)
+Isso imprimirá uma sequência de 1 para sempre, até travar seu navegador ou sua máquina.
+
+Poderíamos usar uma instrução break para parar a execução quando while atingir um determinado número. Embora seja um caso que não faria muito sentido no mundo real, vale como exemplo:
+
+x = 1
+while (x >= 1):
+  if(x == 10):
+    break
+  print(x)
+  x += 1
+Nossa condição continua sendo verdadeira e imprimindo x + 1 durante sua execução. Agora, porém, colocamos uma condicional que diz que quando x é igual a 10 (x == 10), a execução deve parar (break).
+
+Isso imprimirá a sequência 1, 2, 3, 4, 5, 6, 7, 8, 9. Do contrário, continuaria somando + 1 ao número anterior ad infinitum.
+
+Também poderíamos usar a instrução continue, no lugar de break, para continuar a execução a partir de uma determinada condição.
+
+## for
+O comando for serve para iterarmos sobre tipos de dados de sequência, como listas, tuplas, dicionários, sets ou mesmo strings (que Python também trata como são listas).
+
+Por exemplo, para imprimir cada um dos itens de uma lista, usamos o for desta maneira:
+
+frutas = ["Maçã", "Banana", "Laranja", "Abacate", "Morango"]
+for i in frutas:
+  print(i)
+Este código resultará em:
+
+Maçã
+Banana
+Laranja
+Abacate
+Morango
+Também podemos usar for para dobrar números de uma lista, por exemplo:
+
+numeros = [1, 2, 3, 4, 5]
+for i in numeros:
+  print(i * 2)
+O resultado será a sequência: 2, 4, 6, 8, 10.
+
+Podemos, ainda, aninhar um for dentro de outro, como neste exemplo:
+
+qualidades = ["verde", "madura"]
+frutas = ["Maçã", "Banana", "Laranja"]
+
+for x in frutas:
+  for y in qualidades:
+    print(x, y)
+O resultado será:
+
+Maçã verde
+Maçã madura
+Banana verde
+Banana madura
+Laranja verde
+Laranja madura
+Exercício prático
+
+Podemos usar um pouco do que aprendemos para construir um clássico jogo de adivinhação em Python, com meras 18 linhas de código.
+
+O jogo funciona assim:
+
+1. O computador “pensa” em um número aleatório entre 0 e 100.
+2. Em seguida, ele pede para você dar um palpite sobre qual número ele “pensou”.
+3. Você insere seu palpite em um campo (input) e, dependendo do caso, o computador retornará:
+3.1. “O valor é menor que [seu palpite]”, se ele pensou um número menor; ou
+3.2. “O valor é maior que [seu palpite]”, se ele pensou um número maior; ou
+3.3. “Você acertou! O número que pensei foi [número que o computador pensou]”, se você acertar o palpite.
+4. O jogo só termina quando você acertar. Ao fazer isso, também imprimirá quantas tentativas você levou para adivinhar o que o computador havia “pensado”.
+
+O código completo, caso você queira executá-lo no Google Colab, é o seguinte (iremos analisá-lo na sequência):
+
+import random
+
+numero = random.randint(0,100)
+tentativa = 0
+print('JOGO DE ADIVINHAÇÃO')
+print('Eu pensei em um número entre 0 e 100. Tente adivinhá-lo e veja quantas tentativas você levará.')
+
+palpite=0
+while palpite is not numero:
+  tentativa +=1
+  palpite = int(input('Qual seu palpite: '))
+  if numero < palpite:
+    print('O valor é menor que {}.'.format(palpite))
+  elif numero > palpite:
+    print('O valor é maior que {}.'.format(palpite))
+  else:
+    print('Você acertou! O número que pensei foi {}.'.format(numero))
+    print('Você acertou em {} tentativas(s).'.format(tentativa))
+O que fizemos aqui foi:
+
+Importamos o módulo random, que gera números aleatórios, necessário para o computador “pensar” um número.
+Definimos as variáveis:
+resposta, que armazena um número aleatório entre 0 e 100;
+tentativa, que começa com 0, naturalmente, pelo fato de não termos jogado ainda.
+Em seguida, definimos palpite também igual a 0, porque não informamos nenhum palpite ainda.
+Então, entramos em um loop while, que diz o seguinte: enquanto (while) nosso palpite não é (is not) o número que o computador pensou:
+somar +1 à tentativa, para podermos informar o número de tentativas ao final; 
+definir palpite como um valor que informaremos por meio de um campo — o código int(input('Qual seu palpite: ')) gera um campo para informarmos algo por meio do teclado, com os dizeres “Qual seu palpite: ” e definindo o tipo de dado desse campo como tendo de ser um inteiro (int); como nosso código é bastante simples, se informarmos qualquer dado que não seja um inteiro, o programa resultará em erro;
+então, se (if) nosso palpite for menor que o número que o computador pensou, seremos informados disso e o jogo continuará;
+se (elif) for maior, também seremos informados disso e o jogo continuará;
+se acertarmos (else), seremos informados que acertamos em tantas tentativas.
+Os códigos .format(palpite) são uma sintaxe de formatação que pode ser usada com print. O que está entre parênteses (neste caso, o número do nosso palpite) será passado para as chaves vazias ({}) que estão na frase entre aspas.
+
+Jogue um pouco para ver quantas tentativas você precisa para acertar o número “pensado” pelo computador. Depois, você pode continuar lendo o final do artigo. 
+
+Pense em formas de acertar com o menor número de tentativas possíveis. É um bom desafio para você exercitar raciocínio lógico e analítico. 
+
+Em uma de nossas jogadas, as saídas foram as seguintes:
+
+JOGO DE ADIVINHAÇÃO
+Eu pensei em um número entre 0 e 100. Tente adivinhá-lo e veja quantas tentativas você levará.
+Qual seu palpite: 50
+O valor é maior que 50.
+Qual seu palpite: 75
+O valor é maior que 75.
+Qual seu palpite: 87
+Você acertou! O número que pensei foi 87.
+Você acertou em 3 tentativas(s).
+Até que fomos muito bem! Em apenas 3 tentativas, acertamos o número “pensado” pelo computador.
+
+Como fomos tão rápidos? Por meio de formas de raciocinar que a própria computação nos fornece.
+
+Para você que gosta de computadores, computação e desafios lógicos, saiba que uma das melhores formas (mais “otimizada”) de resolver problemas como este é por meio do paradigma divisão e conquista — um clássico em buscas binárias quando você aprende sobre algoritmos computacionais.
+
+Em vez de ficar chutando números quaisquer de 0 a 100 e poder levar, literalmente, 99 tentativas para acertar, você usa a inteligência e divide o número de tentativas sempre pela metade. 
+
+Na pior das hipóteses, você levará 7 tentativas e, na melhor, é claro, apenas uma.
+
+Tente raciocinar como fazê-lo. Ou, como um plus à sua curiosidade, pesquise mais sobre divisão e conquista na web para entendê-lo.
+
+# Conclusão
+Este tutorial fornece um primeiro contato com o básico de Python, para você se acostumar com a prática do código e as saídas da linguagem.  
+
+Se você já tem um conhecimento em Python ou outras linguagens de programação, já deve estar familiarizado com todos esses conceitos.
+
+Uma boa base para se aprofundar mais em detalhes relacionados a cada um dos comandos e sintaxes que vimos é navegar na documentação do Python e consumir os tópicos conforme sua necessidade ou curiosidade.
+
+A seguir, veremos alguns recursos um pouco mais avançados, que nos permite sermos mais eficientes na construção de nossos programas em Python.
+
+Referências
+https://docs.python.org/
+https://www.w3schools.com/
+https://realpython.com/
