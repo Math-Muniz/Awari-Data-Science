@@ -1,0 +1,227 @@
+# Leitura: Visão Geral de Python
+Trecho de código em Python com Scikit-Learn, uma biblioteca de Machine Learning popular. Fonte: Towards AI / Medium
+
+Python é a linguagem de programação que tem se tornado dominante no trabalho com dados, como em Data Science (Ciência de Dados) e Data Analytics (Análise de Dados). 
+
+Isso porque combina facilidade de codificação, grande número de bibliotecas e frameworks para diversos tipos de tarefas — entre elas, desde análise estatística até aprendizado de máquina (Machine Learning) — e pouca complexidade com instalação, configurações e ambientes de uso.
+
+A linguagem foi criada por Guido Van Rossum, um programador holandês, entre os anos 1985 e 1990, como uma linguagem de scripting, isto é, uma linguagem para criar códigos rápidos e fáceis, sem a complexidade de linguagens mais robustas e complexas.
+
+Curiosamente, o nome “Python” não tem a ver com a cobra píton, com a qual a linguagem costuma ser associada, mas sim com um antigo seriado de comédia britânico chamado Monty Python.
+
+Para entender a versatilidade e facilidade de Python, é necessário entender o contexto das linguagens de programação no fim dos anos 1980 e início dos 1990, como a linguagem C, na qual Python é baseada.
+
+Linguagens desse tipo impõem uma série de restrições ao programar, como ter de declarar explicitamente tipos para os dados (dizer à máquina os dados se são números inteiros ou de ponto flutuante, sequências de caracteres etc.) e ter de compilar o programa para que ele funcione.
+
+Assim como outras linguagens de scripting, Python elimina essas exigências e permite que o programador foque mais no problema que está tentando resolver do que nos detalhes do próprio código.
+
+Tecnicamente, tudo isso é possível porque há alguns mecanismos que rodam nos bastidores, como ilustra a imagem abaixo:
+
+Esquema de como Python se comunica com o computador. Fonte: astateofdata.com
+
+Na verdade, quando escrevemos código Python e o colocamos para rodar, ele é compilado para um formato chamado bytecode. Em seguida, esse bytecode é interpretado para o código do computador (os 0s e 1s do código binário, que é o que a máquina entende de fato).
+
+É claro que não precisamos nos preocupar com nada disso enquanto programamos, porque Python resolve todos esses detalhes de baixo nível para nós. Mas se você quer se aprofundar e entender como as coisas funcionam “sob o capô”, eis um bom começo.
+
+É por causa dessas características que você verá em muitos sites que Python é uma linguagem:
+
+* de propósito geral: serve para codificar diversos tipos de soluções, desde sistemas ou sites completos até programar robôs;
+* tipagem dinâmica: não necessita que declaremos os tipos de variáveis; o interpretador Python se encarrega de entender se o valor de uma variável é um número, uma palavra ou um dado de outro tipo;
+* interativa: permite codificar e ver o resultado em tela, sem ter de compilar o código;
+* orientada a objetos: o código é encapsulado dentro do conceito de objeto, uma abstração para gerenciar os dados e o que fazer com eles;
+* de alto nível: muito fácil de ser lida e programada por humanos (se assemelha muito a declarações em inglês, em vários casos).
+
+Além disso, a linguagem tem diversos pontos fortes e benefícios:
+
+* É uma das mais recomendadas para iniciantes, por sua facilidade de escrita e leitura, tanto que há universidades que já optam por usar Python para o ensino de Ciência da Computação.
+* Possui uma rica biblioteca padrão, isto é, vem com muitas funções e recursos embutidos, sem precisar de módulos de terceiros.
+* Permite programar em diferentes paradigmas (formas de estruturar o código), como imperativo, orientado a objetos e funcional.
+* Facilmente integrável a códigos em outras linguagens, como C, C++, Java etc.
+* Lida bem com a grande maioria de bancos de dados do mercado.
+* Por ser programada em C, é extensível por meio dessa linguagem para aplicações mais robustas, que requeiram velocidade e segurança em processamento.
+
+Todos esses pontos positivos foram um diferencial para Python se tornar quase uma “unanimidade” no trabalho com dados. 
+
+Como esse tipo de trabalho demanda cálculos complexos, foi fácil à comunidade criar bibliotecas e frameworks em C, que se comunicam bem com o computador, mantendo Python como a camada em que podemos programar e nos divertir.
+
+Todo o restante necessário para as coisas funcionarem acontecem nos bastidores, sem que precisemos entender detalhes de baixo nível para criar programas úteis.
+
+Não é à toa que Python teve uma curva acentuada de adoção nos últimos anos, como mostra o índice TIOBE, que compara linguagens de programação mais usadas no mundo:
+
+
+Gráfico de adoção da linguagem Python desde seu início até março/2022, com crescimento acentuado de 2018 em diante, muito por conta do trabalho com dados. Fonte: TIOBE
+
+Para se ter ideia, já Python foi considerada a “linguagem do ano” pelo índice TIOBE cinco vezes ( 2007, 2010, 2018, 2020 e 2021), tendo sido bastante impulsionado pelo trabalho com dados desde 2018.
+
+Em março de 2022, a linguagem era a primeira do ranking TIOBE, entre centenas de outras, com 14.26% de adoção entre programadores (o ranking pode mudar de tempos em tempos; clique em Python, na lista do site, para ver sua evolução e mais informações).
+
+# Filosofia e boas práticas
+Python possui padrões, boas práticas para escrita de código, entre outros acordos sobre a linguagem registrados em uma documentação chamada PEP (Python Enhancement Proposal). Vale conhecê-la com o tempo.
+
+Também há toda uma cultura interessante, como o Zen of Python (“Zen do Python”), um conjunto de aforismos que resume bem o “espírito” da linguagem, como, por exemplo:
+
+Bonito é melhor que feio (código legível é melhor que código “macarrônico”);
+Explícito é melhor que implícito (é melhor deixar claro o que você está tentando fazer, principalmente se o código tiver de ser lido por outros programadores);
+Simples é melhor que complexo (evite complicar para parecer inteligente ou qualquer coisa do tipo);
+etc. 
+# Versões e recursos
+A primeira versão de Python (numerada como 0.9.0) surgiu em 1991 e praticamente não temos mais contato com ela.
+
+Em 2000, surgiu Python 2.0, que introduziu muito novos recursos usados até hoje. Essa versão foi descontinuada com a versão 2.7.80, em 2020.
+
+Atualmente, a versão em uso é chamada de Python 3.0 ou simplesmente Python 3. Ela foi lançada em 2008 e alterou algumas coisas na sintaxe, além de acrescentar mais recursos.
+
+Embora ainda existam códigos legados em Python 2, a maneira atual de escrever em Python é a sintaxe de Python 3.
+
+# Instalação e uso
+Como você já deve estar cansado de conceitos teóricos da linguagem, vamos ao que interessa: um pouco de prática.
+
+Há diversas maneiras, atualmente, para experimentar ou utilizar Python para valer, desde interfaces interativas online até aplicativos de linha de comando do terminal. 
+
+Vamos especificar alguns dos jeitos mais comuns de fazermos isso.
+
+## Google Colab
+Quer se divertir (ou construir código de verdade em Ciência de Dados) sem precisar instalar nada, digite Google Colab na busca do seu navegador ou acesse colab.research.google.com.
+
+Você irá para uma aplicação online, que deve se parecer com isto, se você a está acessando pela primeira vez:
+
+
+Google Colab, como a apresentação diz, é um ambiente para escrever código Python no navegador sem nenhuma documentação necessária.
+
+Ele funciona de uma forma bastante “gráfica” e interativa. Você tem células onde digita o código e, ao executá-las, o resultado do seu código já é processado abaixo da célula.
+
+Isso permite que você salve todo o seu código e resultado em um arquivo .ipynb, da forma como você construiu e testou, para usá-lo no futuro, compartilhar com outras pessoas etc.
+
+Esse formato ficou consagrado no trabalho com dados por facilitar experimentos rápidos com código, como análises exploratórias de dados, geração de gráficos, documentação do que está sendo construído e testado, entre outras necessidades.
+
+## Criando um notebook
+Experimente ir no menu Arquivo e em Novo. Você criará um novo notebook (um “caderno de anotações”, em tradução livre) que se parecerá com isto:
+
+
+A linha em cinza, com um sinal de play na frente, é uma célula onde você pode digitar código Python.
+
+Experimente digitar o 2 + 2 e clicar no botão de play ou teclar Ctrl Enter.
+
+
+Na primeira vez, pode demorar um pouco para o resultado ser processado porque o Colab acionará servidores do Google para executar o código. Uma vez que isto for feito, você terá o resultado (4, no nosso caso) logo após a célula.
+
+“Tá, mas isso só serve para calcular 2 + 2”, você deve estar se perguntando?
+
+Certamente, você está ansioso para ver como fazer análises, gerar gráficos ou fazer a máquina aprender com dados. Calma! Você chegará lá. Mas se quiser ter um gostinho do que o Colab pode fazer, experimente reproduzir esse código abaixo em uma célula e teclar Ctrl Enter ou clicar no play da célula, para ver o que acontece:
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Data for plotting
+t = np.arange(0.0, 2.0, 0.01)
+s = 1 + np.sin(2 * np.pi * t)
+
+fig, ax = plt.subplots()
+ax.plot(t, s)
+
+ax.set(xlabel='time (s)', ylabel='voltage (mV)',
+       title='About as simple as it gets, folks')
+ax.grid()
+
+fig.savefig("test.png")
+plt.show()
+Você deve ter esse resultado no seu Colab:
+
+
+Parabéns! Você acabou de gerar seu primeiro gráfico de linha usando Matplotlib (biblioteca para gráficos em Python) e com Numpy (biblioteca para operações com matrizes). 
+
+Se você quiser, pode renomear o arquivo para melhor identificá-lo. Ele ficará automaticamente salvo em uma pasta no seu Google Drive. 
+
+Esta é, de longe, a maneira mais fácil de brincar — e, repetindo, também fazer trabalho profissional com Python e dados — sem complicações e ainda com benefícios extras, como contar com poder computacional de GPUS e TPUs do Google, para ajudar a processar seus modelos estatísticos ou de aprendizado de máquina.
+
+Você verá mais sobre o Colab durante o curso e, é claro, na sua jornada na área de dados.
+
+## Anaconda
+Anaconda é o nome de uma suíte de aplicações robustas para trabalho com dados. 
+
+Instalando Anaconda, você instala Python e toda uma gama de outras ferramentas para codificar na linguagem, visualizar dados, testar aplicações, entre outras necessidades.
+
+É como um ambiente profissional para Ciência de Dados. 
+
+Para instalar, você pode ir no menu Products > Individual Edition do site oficial. A opção de instalação para seu sistema operacional já deve ser exibida por padrão.
+
+Basta fazer download do arquivo (que é um pouco grande e pode demorar, dependendo de sua conexão) e fazer a instalação como outros programas.
+
+Ao fim da instalação, Anaconda estará acessível por meio do menu do seu sistema ou por meio do terminal. 
+
+No menu, basta procurar a pasta e o ícone da suíte. No terminal, digite anaconda-navigator.
+
+A tela do Anacona Navigator se parecerá com esta:
+
+
+Note que você terá ou poderá instalar ambientes para desenvolvimento de software profissional, como VSCode, Spyder ou PyCharm, terá acesso até a plataforma de Inteligência Artificial da IBM (IBM Watson), entre outras aplicações.
+
+O que nos interessa, porém, é o Jupyter Notebook:
+
+
+Clique em Launch. A interface do Jupyter Notebook será aberta em seu navegador:
+
+
+Acesse uma pasta, por exemplo Documentos, e depois vá no botão New (à direita, no alto) e na opção Python 3 (ipykernel). 
+
+Será criado um notebook onde você poderá codificar em Python:
+
+
+O princípio é o mesmo do Google Colab. Você tem células para digitar código e verá o resultado logo abaixo delas. 
+
+A diferença é que o Colab roda na nuvem do Google e o Jupyter Notebook, na sua máquina. 
+
+O código que você criar, porém, pode ser aberto em qualquer uma dessas ferramentas.
+
+Na verdade, o Jupyter Notebook é anterior ao Colab e foi a ferramenta que inaugurou o conceito dos notebooks (“cadernos de códigos” ou interfaces interativas para codificar em Python) na Ciência de Dados e áreas relacionadas.
+
+## Python na linha de comando
+Essa parte é apenas para conhecimento. É mais comum em desenvolvimento de software ou quando, no trabalho com dados, você precisa entregar código otimizado e funcionando para ser implementado em produção.
+
+Se você usa Linux ou macOS, certamente não precisará fazer nada para instalar Python, porque ele já vem com a versão nativa do sistema.
+
+Basta você acessar o terminal e digitar:
+
+python --version
+Você deverá ver algo como (ou um número diferente, que indica que sua versão é anterior ou posterior):
+
+Python 3.9.7
+Experimente digitar apenas python no terminal e você irá para o interpretador Python, indicado com >>>.
+
+Se você digitar 2 + 2 e der enter após este símbolo, Python retornará 4:
+
+>>> 2 + 2
+4
+Você já executando comandos no Python, mais precisamente em seu REPL.
+
+Para sair desse ambiente, digite quit() após o prompt >>>. Você voltará para o prompt do seu sistema.
+
+Se você usa Windows, precisará instalar o Python O python.org.br tem um tutorial em português sobre como fazer isso.
+
+Basicamente, você terá de fazer download da versão para seu sistema. Escolha o arquivo Windows installer (32-bit) ou Windows installer (64-bit). Muitos computadores, atualmente, são 64 bit.
+
+Você será guiado pela instalação e basta ir clicando em “Próximo” para completá-la.
+
+Então, você pode inicializar o Python por meio do Prompt de Comando (terminal do Windows) ou por meio do aplicativo IDLE, que estará no menu Iniciar.
+
+Essa é a forma “difícil” e mais “limitada” de instalar Python e, repetindo, é mais usada por desenvolvedores de software ou profissionais de dados que precisam de Python puro e querem instalar bibliotecas novas apenas conforme necessário, para aplicações otimizadas.
+
+# Conclusão
+Com isso, você conheceu conceitos e um pouco da história de Python, viu três das principais formas de usar a linguagem — por meio do Google Colab, do Jupyter Notebook, da suíte Anaconda, e por meio do interpretador Python na linha de comando, — e até brincou com algum código, mesmo que eles possam ser incompreensíveis neste momento.
+
+Nos próximos tópicos, usaremos o Google Colab para seguir a jornada de aprendizado em Python, agora na sintaxe da linguagem, ou seja, codificação de Python na prática.
+
+A documentação oficial do próprio Python é um local recomendado para encontrar tudo o que você precisa sobre a linguagem, desde tutoriais até referenciais sobre funções da biblioteca padrão. 
+
+Na web, também não faltam tutoriais e artigos falando mais sobre as características e benefícios de Python.
+
+Com o tempo e a prática, você verá que a sintaxe de Python é relativamente simples e fácil. Ou seja, em pouco tempo, será possível escrever códigos na linguagem, principalmente para o trabalho com dados.
+
+Referências
+https://docs.python.org/3/
+https://docs.python.org/3/tutorial/index.html
+https://www.tutorialspoint.com/python/index.htm
+https://en.wikipedia.org/wiki/Python_(programming_language)
+https://peps.python.org/pep-0020/#the-zen-of-python
+https://www.tiobe.com/tiobe-index/python/
+https://medium.com/fintechexplained/everything-about-python
