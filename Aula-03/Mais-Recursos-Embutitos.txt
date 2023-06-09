@@ -1,0 +1,245 @@
+# Leitura: Mais Recursos Embutidos
+Além de estruturas comuns a várias outras linguagens de programação, como condicionais if … else, loops while e for e funções e classes, é comum lermos e ouvirmos que Python vem com “baterias incluídas”.
+
+Isso quer dizer que há muitos outros recursos nativos da linguagem que facilitam nosso trabalho, principalmente em etapas da lida com dados, como limpezas, manipulações e análises.
+
+Neste tópico, vamos ver uma lista destes recursos úteis, porém sem sermos exaustivos, já que Python contém muito mais coisas que podem ser exploradas, dependendo do problema que estamos resolvendo.
+
+# Métodos de listas e outras coleções
+Listas são coleções de dados em Python. Elas permitem armazenar vários dados em uma única variável, como neste exemplo:
+
+frutas = ["banana", "maçã", "laranja", "abacate", "morango"]
+Como outras coleções de dados, como tuplas, dicionários etc., listas possuem métodos nativos associados, que permitem realizar algumas operações com elas. Vamos ver alguns.
+
+### Indexação
+Podemos localizar itens em uma lista por meio de seu índice (index). Fazemos isso usando o número de indexação do item entre colchetes ([]).
+
+Um detalhe é que Python, como outras linguagens de programação, conta a partir do número 0 e não a partir do número 1.
+
+Então, se quisermos localizar o primeiro item da lista frutas, faremos:
+
+frutas[0]
+O resultado será: ‘banana’.
+
+Também podemos obter uma fatia (slice) de vários itens de uma lista. Se quisermos obter o 3º e o 4º itens da lista de uma vez, faremos:
+
+frutas[2:4]
+O resultado será uma nova lista com o 3º e o 4º itens: ['laranja', 'abacate'].
+
+Note que Python também conta até o número anterior ao último número que declaramos. Ou seja, para pegar o 4º item da lista, temos de fatiar até o 5º item (que tem o item 4, porque Python conta a partir de 0, como já dito).
+
+Ou seja, para recortar o 3º e o 4º itens, fatiamos a partir do index 2 (3º item, contando 0, 1, 2 na forma de Python) até o index 4 (5º item da lista, ou, na contagem de Python, 0, 1, 2, 3, 4). Por isso colocamos 2:4 nos colchetes.
+
+Se quiséssemos abranger o 5º item, colocaríamos 2:5. Também poderíamos fazer apenas frutas[2:], o que pega todos os elementos a partir do 3º item até o fim da lista.
+
+Ainda, se quiséssemos obter apenas o último item da lista, não precisaríamos fazer frutas[4]. Poderíamos fazer apenas frutas[-1], o que pegará o último item, ou seja, percorreremos a lista do fim para o começo. 
+
+Se fizermos frutas[-2], pegaremos o penúltimo item e assim por diante. Isso é útil quando precisamos verificar o fim de uma lista sem nos preocuparmos com seu comprimento.
+
+### Comprimento
+Falando em comprimento, podemos saber o comprimento de uma lista com um método de Python para listas, chamado len(), de lenght (comprimento, em inglês):
+
+len(frutas)
+O resultado será 5, ou seja, frutas tem cinco itens.
+
+## Adicionar, remover e outros
+
+### append() e insert()
+Python também nos facilita adicionarmos elementos novos a uma lista existente. Isso pode ser feito com append (que insere o elemento ao fim da lista) ou com insert (que insere na posição que determinarmos).
+
+frutas.append("melancia")
+Resultado: ['banana', 'maçã', 'laranja', 'abacate', 'morango', 'melancia'].
+
+frutas.insert(4, "uva")
+Resultado: ['banana', 'maçã', 'laranja', 'abacate', 'uva', 'morango', 'melancia'].
+
+Com insert, informamos o index em que queremos inserir um novo item (no nosso caso, 4) e o valor do item (no caso, “uva”).
+
+### remove() e pop()
+Para removermos um ou mais itens da lista, podemos usar remove ou pop. Com remove, temos de declarar o valor do item. Com pop, excluímos pelo index do item (o que permite exclusão de fatias de itens).
+
+frutas.remove("melancia")
+Resultado: ['banana', 'maçã', 'laranja', 'abacate', 'uva', 'morango'].
+
+frutas.pop(4)
+Resultado: ['banana', 'maçã', 'laranja', 'abacate', 'morango'].
+
+### sort()
+Para ordenar uma lista de A-Z (no caso de strings) ou do menor para o maior (no caso de números), podemos usar:
+
+frutas.sort()
+Resultado: ['abacate', 'banana', 'laranja', 'maçã', 'morango']. 
+
+### copy()
+Note que a ordenação modifica a lista. Se quisermos preservar a ordem original e ordenar um cópia da lista, podemos usar o copy:
+
+frutas_copia = frutas.copy()
+Aí podemos executar frutas_ordenadas.sort() e obteremos a nova lista ordenada de A-Z, preservando a lista antiga (frutas).
+
+### reverse()
+Se quisermos reverter a lista (Z-A ou maior para o menor), fazemos:
+
+frutas_ordenadas.reverse()
+Resultado: ['morango', 'maçã', 'laranja', 'banana', 'abacate']. Reverse funciona como o sort, alterando a ordem da lista para sempre. Se você quer manter a ordem original, use copy.
+
+Outros
+Há outros métodos para listas na documentação oficial de Python. Nesta documentação, você também encontra métodos para os outros tipos de coleções de dados, como tuplas, dicionários, sets etc. Explore-os e divirta-se!
+
+# Métodos de strings
+Sequências de caracteres ou strings em Python são quaisquer coisas que escrevemos entre aspas simples ou duplas, como “Olá, mundo!”, “Bem-vindo, Fulano”, “blablabla” ou o texto de um livro inteiro.
+
+Em Python, strings se comportam de forma parecida com listas (tecnicamente, são arrays de bytes que representam caracteres unicode). 
+
+A string “banana”, por exemplo, é como uma lista de seis caracteres: ['b', 'a', 'n', 'a', 'n', 'a'].
+
+Rode o código abaixo no Google Colab para ver:
+
+banana = "banana"
+list(banana)
+Essa característica de strings permite que usemos métodos similares aos de listas nelas.
+
+Podemos pegar o primeiro item pelo index:
+
+banana[0]
+# Resultado: 'b'
+Também podemos fatiar a string ou calcular seu comprimento com len():
+
+banana[2:]
+# Resultado: 'nana'
+len(banana)
+# Resultado: 6
+Temos métodos para localizar palavras em textos:
+
+texto = "Este é um parágrafo de texto mais longo."
+print("parágrafo" in texto)
+# Retornará True (verdadeiro), porque “parágrafo” 
+# consta no (in) texto.
+Para saber se uma palavra não está no texto:
+
+print("longo" not in texto)
+# Retornará False (falso), porque há "longo" no texto
+Strings também possuem diversos métodos nativos, seja para verificar se há caracteres maiúsculos ou minúsculos nelas até para dividi-las etc. Explore mais na documentação de Python.
+
+# Lambdas
+Lambda é o nome que Python usa para funções anônimas, um recurso inspirado em linguagens de programação puramente funcionais.
+
+Criamos funções em Python com:
+
+def nome_da_funcao():
+  # código da função aqui
+Lambda permite mais flexibilidade, se quisermos criar pequenas funções dentro de outros códigos ou passar uma função como argumento a outra.
+
+Por exemplo, se quisermos criar uma função que soma dois números  apenas em um local do código, sabendo que não iremos reutilizá-la, podemos fazer:
+
+x = lambda a, b: a + b
+print(x(1,2))
+# Resultado: 3, soma dos argumentos 1 + 2
+Note que a, b são os argumentos dessa função anônima. É a mesma coisa que se fizéssemos:
+
+def soma(a, b):
+  return a + b
+Lambdas são úteis para escrever código mais conciso e elegante e são muito usadas em tarefas com dados, como análises exploratórias, quando não precisamos criar funções reutilizáveis, mas apenas programar algum código enxuto que nos permite entender um conjunto de dados.
+
+# Map, filter, zip, list comprehension
+Funções embutidas como map, filter e zip também são inspiradas em conceitos funcionais. Elas podem ser úteis ao iterar sobre coleções de dados, como listas, tuplas, dicionários etc.
+
+### Map
+Por exemplo, para multiplicar uma lista por ela mesma, não podemos fazer o mesmo que faríamos multiplicando dois números:
+
+lista = [1,2,3,4,5]
+
+def multiplica(a, b):
+  return a * b
+
+multiplica(lista, lista)
+# Resultará em erro
+Mas podemos fazer isso com map (copiaremos todo o código novamente para fazer mais sentido):
+
+lista = [1,2,3,4,5]
+
+def multiplica(a, b):
+  return a * b
+
+list(map(multiplica, lista, lista))
+Na última linha, fornecemos como argumento para a função map a nossa função multiplica, mais a variável que contém nossa lista duas vezes. Map  itera sobre cada item de uma lista, em relação a outra lista. Usamos list para que nosso retorno seja em forma de uma nova lista.
+
+O resultado será: [1, 4, 9, 16, 25]. O que ocorreu foi que map multiplicou o primeiro elemento da primeira lista pelo da segunda e assim sucessivamente. Ou seja, 1 * 1, 2 *2, 3 * 3 etc.
+
+### List Comprehension
+Se quiséssemos dobrar o valor de cada item da nossa lista, poderíamos usar outro recurso de Python, chamado de list comprehension (compreensão de lista):
+
+lista = [1,2,3,4,5]
+[i*2 for i in lista]
+Resultado: [2, 4, 6, 8, 10]. Fizemos 1 * 2, 2 *2, 3 *2 e assim por diante.
+
+Este recurso traz uma sintaxe concisa e elegante para a codificação em Python e é útil em muitos casos, inclusive para fazer condicionais e for loops de maneira “econômica” em termos de linhas de código.
+
+Note que list comprehensions são executadas dentro de colchetes, como uma lista. A diferença é que há um código sendo executado dentro dela.
+
+Note, também, que o que fizemos acima usar um for loop para iterar a multiplicação (*2) para (for) cada item (i) na (in) de nome lista. É quase o mesmo que escrever em inglês para o computador entender.
+
+# Filter
+Filter, como o nome diz, filtra itens em conjuntos. Para extrair os números pares de uma lista de números, poderíamos criar uma nova função para usar com filter, já que ele requer uma função e um iterável (conjunto) como argumentos:
+
+lista = [1,2,3,4,5,6,7,8,9]
+
+def impares(x):
+    return (x % 2) == 0
+
+list(filter(impares, lista))
+# Resultado: [2, 4, 6, 8]
+Zip
+
+Se quisermos combinar itens de duas listas de maneira que façam sentido em uma nova lista, como juntar uma lista de nomes e outra de cargos, podemos usar zip:
+
+nomes = ["Fulano", "Beltrana", "Ciclano"]
+cargos = ["programador", "gerente", "motorista"]
+
+dict(zip(nomes, cargos))
+Resultado: {'Beltrana': 'gerente', 'Ciclano': 'motorista', 'Fulano': 'programador'}.
+
+Pense no zip como um “zipper” mesmo. O primeiro item de uma lista foi combinado com o primeiro da outra, o segundo de uma com o segundo da outra e assim por diante.
+
+Como usamos dict para formatar nossa saída como um dicionário (e como dicionários retornam os valores já ordenados), tivemos o resultado acima: um dicionário em que os nomes são as chaves e os cargos, os valores.
+
+A mesma multiplicação de nossa lista de números por ela mesma, que fizemos com map, também poderia ser feita com zip dentro de uma list comprehension, por exemplo, para vermos a versatilidade e liberdade que Python nos oferece:
+
+[i*j for i, j in zip(lista, lista)]
+# Resultado: [1, 4, 9, 16, 25]
+Mais iteradores
+
+Você pode pesquisar mais sobre map, zip e outros dos chamados recursos para iteradores de Python a partir deste artigo, na documentação oficial de Python.
+
+Todos esses recursos são funções embutidas (built-in functions) de Python e é fácil encontrar explicações e exemplos de uso na internet sobre elas.
+
+Como no trabalho com dados é bastante comum termos de iterar sobre conjuntos de valores (listas ou tabelas de dados, por exemplo), funções que atuam sobre iteradores são muito bem vindas nesse trabalho.
+
+# Conclusão
+Os recursos apresentados acima exploram e apenas arranham algumas das facilidades que Python nos oferece de forma nativa, sem termos de construir nada do zero ou termos de encontrar módulos na internet, ler sua documentação e importá-los em nossos programas.
+
+Você pode conhecer mais sobre as built-in functions a partir desta referência, na documentação oficial. Tente encontrar exemplos e praticar com eles no Google Colab, para entender como funcionam.
+
+Como um plus para você expandir seus conhecimentos e habilidades em Python, dê uma olhada em alguns módulos nativos do Python. 
+
+Módulos nativos são coleções de funções ou métodos que precisamos apenas importar em nossos programas para usar, sem precisar instalá-los, já que também vêm com Python.
+
+Para o trabalho com dados, alguns módulos que podem ser explorados são:
+
+* Math: fornece funções para operações matemáticas.
+* Statistics: fornece funções para operações estatísticas básicas.
+* Random: permite gerar números pseudo-aleatórios, úteis para quando não quisermos ficar pensando em listas de números, como fizemos.
+
+Lembre-se sempre: aprender uma linguagem de programação requer contato constante, de preferência regular e espaçado, com conceitos e com a prática, como aprender um novo idioma. 
+
+Use as referências fornecidas aqui para ir além e explorar por conta própria os recursos, entender como resolver problemas reais com eles, quais seus benefícios e onde podem causar problemas (sim, uma linguagem de programação nunca é perfeita e, dependendo de como programamos, podemos criar código mais ou menos seguro, mais ou menos eficiente, entre outras características).
+
+Leve como mandamento para sua carreira o hábito de voltar à documentação oficial, praticar, refletir e “quebrar a cabeça”. Você nunca terá aprendido tudo e sempre terá de voltar, consultar as bases e raciocinar como as coisas funcionam para poder entendê-las, construí-las ou modificá-las.
+
+# Referências
+https://docs.python.org/3/contents.html
+https://docs.python.org/3/tutorial/datastructures.html
+https://docs.python.org/3/library/stdtypes.html#str
+https://docs.python.org/3/howto/functional.html
+https://docs.python.org/3/library/functions.html#built-in-funcs
+https://docs.python.org/3/library/math.html
+https://docs.python.org/3/library/statistics.html
