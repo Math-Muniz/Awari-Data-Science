@@ -1,0 +1,156 @@
+# Leitura: Pandas para Análise de Dados
+Logotipo do Pandas, a biblioteca “padrão” para manipulação de dados tabulares em Python. Fonte: Wikipedia
+
+Pandas é uma como um canivete suíço na caixa de ferramentas de um cientista de dados. É uma biblioteca padrão para limpeza, tratamento e análise exploratória de dados. Além disso, é divertida de aprender e de utilizar, por entregar resultados mais “intuitivos” na tela.
+
+# O que é Pandas?
+Em resumo, Pandas é uma biblioteca Python projetada para o trabalho com dados “relacionais” ou “rotulados”. 
+
+Pense nisso como dados de qualquer tabela, seja de uma planilha do Excel, uma tabela de um banco de dados relacional ou um mero arquivo .csv (texto puro tabulado).
+
+Em outras palavras, Pandas fornece métodos fáceis e intuitivos para lidarmos com dados organizados em linhas e colunas, ou seja, com matrizes ou arrays 2-D.
+
+Como dados tabulares são um padrão em diversos domínios do mundo real, da saúde ao comércio, da agronomia ao controle de nossas finanças pessoais, Pandas aplica-se com sucesso a uma gama de áreas.
+
+A biblioteca foi criada pelo desenvolvedor de software Wes McKinney, em 2008, quando trabalhava na empresa de investimentos AQR Capital Management, diante da falta de ferramentas flexíveis para análises. 
+
+O objetivo da ferramenta é bem ambicioso:
+
+“[...] se tornar a ferramenta de análise/manipulação de dados de código aberto mais poderosa e flexível disponível em qualquer idioma” — documentação do Pandas.
+
+Por sua facilidade e versatilidade, Pandas tem se tornado uma ferramenta por excelência não só a Cientista de Dados, mas Data Analytics, Business Analysts e outros profissionais que lidam com dados. 
+
+De alguma maneira, por se assemelhar a um “Excel com esteróides” Pandas é um substituto ao Excel e ferramentas de BI para profissionais que precisam de mais flexibilidade e liberdade para construir análises robustas do zero.
+
+# Conceitos gerais
+DataFrame é um dos principais conceitos de Pandas: quase tudo, em Pandas, é executado sobre um DataFrame, que nada mais é que uma tabela de dados. Fonte: Pandas
+
+Pandas possui dois tipos de estruturas de dados: 
+
+* Serie, que armazenam dados de uma dimensão (1-D); e
+* DataFrame, para dados tabulares ou de duas dimensões (2-D, por conterem linhas e colunas).
+
+DataFrame é, de longe, o mais utilizado. Um DataFrame permite que importemos a ele quaisquer dados tabulares, seja um arquivo de Excel, um arquivo .csv, JSON ou dados de bancos de dados diversos.
+
+Uma vez dentro de um DataFrame, podemos sumarizar os dados para entendê-los, limpá-los (remover ou substituir valores nulos ou problemáticos, por exemplo), transformá-los (agregar novas colunas ou excluir as que não precisamos) e analisá-los, seja por meio de medidas de estatística descritiva (média, mediana etc.) ou por meio de visualizações (gráficos). 
+
+Uma vez realizada a análise, os dados podem ser exportados novamente aos formatos em que foram importados, para alimentar relatórios, dashboards ou até modelos de aprendizado de máquina.
+
+# Praticando com Pandas
+Continuaremos usando o Google Colab para demonstrar comandos em Pandas. Se você quiser acompanhar, inicie um novo arquivo, insira e rode na primeira célula:
+
+import pandas as pd
+Isso importará a biblioteca Pandas em nosso código. O trecho as pd permite que usemos o Pandas citando-o apenas como np, o que torna nosso código mais conciso.
+
+# Criando DataFrames
+## Preenchendo manualmente
+Podemos criar um DataFrame preenchendo manualmente seus dados:
+
+df1 = pd.DataFrame(
+  {
+    "Nome": [ "Fulano",
+              "Ciclana",
+              "Beltrano" ],
+    "Idade": [36, 27, 42],
+    "Cargo": ["Analista",
+              "Gerente",
+              "Consultor" ]
+  }
+)
+O formato se parece com o de JSON, com os dados entre chaves e colchetes.
+
+Se você chamar df1 em uma nova célula do Colab, verá o DataFrame renderizado como uma tabela:
+
+### Series
+Series são parecidas com DataFrames, mas têm apenas uma dimensão (1-D). São como uma tabela de apenas uma coluna. Para criar uma série, podemos fazer:
+
+idades = pd.Series([36, 27, 58], name='Idade')
+Se chamarmos idades em outra célula, teremos:
+
+A não ser para testes e treinamento, porém, dificilmente criamos DataFrames ou Series na mão. O mais comum, como já dito e repetido, é alimentá-los com dados importados de arquivos tabulares.
+
+### Importando dados
+Para fins de demonstração, vamos importar um arquivo que é bastante usado em exercícios e até competições de nível iniciante em Ciência de Dados e Machine Learning no Kaggle (maior comunidade de competições na área): a lista de passageiros do Titanic.
+
+O arquivo .csv que usamos está disponível em formato bruto nesta conta do Github, além de outras diversas fontes na web.
+
+Podemos importá-lo para nosso notebook no Colab da seguinte maneira:
+
+titanic = pd.read_csv("https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv")
+Se o arquivo fosse em formato Excel, usaríamos pd.read_excel(), por exemplo. Se fosse JSON, usaríamos pd.read_json().
+
+Caso quisessemos salvar nosso DataFrame em um novo arquivo, poderíamos usar titanic.to_csv() ou titanic.to_excel().
+
+Se chamamos titanic em uma nova célula do Colab, teremos uma visão resumida (com as cinco linhas iniciais e as 5 finais) do nosso DataFrame:
+
+Note, ao fim da sumarização, que nos é informado o total de linhas e colunas do DataFrame: neste caso, 891 linhas (rows) e 12 colunas (columns). 
+
+Cada linha corresponde a um passageiro. Cada coluna corresponde a atributos desses passageiros, como nome, idade, entre outros.
+
+A partir daqui, podemos fazer uma série de resumos, manipulações e análises em nossos dados.
+
+### Sumarização básica
+Podemos sumarizar dados rapidamente com vários métodos.
+
+### head() 
+Um dos métodos que ajudam nisto é head(), que mostra as primeiras linhas da tabela. No exemplo abaixo, exibimos as primeira 10 linhas:
+
+titanic.head(10)
+Rode isso em uma nova célula do Colab e veja o resultado.
+
+### tail()
+Ao contrário, se você quer investigar o fim do DataFrame, use tail():
+
+titanic.tail()
+Neste caso, como não informamos um número de linhas entre parênteses, Pandas retornará as 5 últimas linhas por padrão.
+
+### info()
+Se você quer ter uma visão geral dos rótulos das colunas, tipos dos dados, entre outras características do DataFrame, use info():
+
+### describe()
+Algumas medidas de Estatística Descritiva sobre nosso conjunto de dados são facilmente acessíveis. Usamos describe() para isso:
+
+Note que esta sumarização já nos entrega:
+
+* count: contagens de itens em cada coluna;
+* mean: média dos valores em cada coluna;
+* std: desvio padrão;
+* min: valor mínimo;
+* max: valor máximo.
+Os percentuais referem-se aos quartis dos dados, um conceito que veremos em Estatística Descritiva.
+
+# Primeiras análises
+Observe bem os dados, de preferência no seu Google Colab. Percebe alguma anomalia, algo estranho? Uma primeira esquisitice é o fato de termos 714 idades (Age) para 891 passageiros (PassengerId).
+
+Não se trata de teoria da conspiração ou fenômeno sobrenatural: provavelmente os valores estão faltando, o que é um problema se quisermos analisar os dados com qualidade. A média de idades, por exemplo, é diretamente afetada por isso.
+
+Como temos métodos para praticamente tudo o que precisarmos fazer sobre o DataFrame, podemos fazer o seguinte para investigar os valores nulos na coluna Age:
+
+nulos = titanic.isnull().sum()
+Com isnull(), perguntamos quais os dados nulos do DataFrame (no nosso caso, titanic). Com sum(), somamos os valores nulos contados. Pandas nos entrega tudo bonitinho se chamarmos nulos:
+
+Realmente, há 177 valores nulos nas idades (Age). De quebra, Pandas nos ajudou a ver que há também valores nulos em Cabin (cabine) e Embarked (onde o passageiro embarcou).
+
+Perceba que, agora, precisamos ter um conhecimento mais apurado sobre o que significa cada rótulo de dados para começarmos a entender essa anomalia de Cabin, o que significa as letras C, Q e S em Embarked, entre outras características de nossos dados.
+
+Adentramos em uma etapa importantíssima — e normalmente demorada, a ponto de consumir 80% do tempo do ciclo de um projeto de dados, segundo estimativas populares —, que é essa fase de entendimento e preparação dos dados para uso em modelos estatísticos ou de ML. Vamos seguir nisto nos pŕoximos tópicos.
+
+# Conclusão
+Pandas é uma biblioteca versátil, flexível, indispensável para entender, analisar e preparar dados para uso em modelos. Além disso, é divertida de aprender e utilizar. 
+
+Os resultados do nosso código, como vimos, são impressos de forma intuitiva na tela, em ambientes como Google Colab e Jupyter Notebook.
+
+E tal qual um “canivete suíço”, como mencionamos no início, Pandas tem recursos de sobra para fazermos o que for necessário em conjuntos de dados.
+
+Assim como Numpy, a biblioteca possui uma documentação rica e explicativa. Na introdução, há perguntas e respostas que fornecem uma boa visão geral a iniciantes. Uma série de tutoriais ajudam a guiá-lo por várias funcionalidades. 
+
+O Guia do Usuário entra em detalhes do “como fazer”, de forma direta, com muitos exemplos em código. A Referência complementa trazendo detalhes técnicos em detalhes.
+
+Aprender bem Pandas, a ponto de ser fluente nele, é um dos melhores investimentos para começar em ciência e análise de dados. É um requisito para posições juniores na área. Pandas continuará sendo companhia frequente ao longo deste curso.
+
+# Referências
+https://pandas.pydata.org/
+https://pandas.pydata.org/docs/getting_started/index.html]
+https://pandas.pydata.org/docs/user_guide/index.html
+https://pandas.pydata.org/docs/reference/index.html
+https://pandas.pydata.org/docs/getting_started/overview.html
