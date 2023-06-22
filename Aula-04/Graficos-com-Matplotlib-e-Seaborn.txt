@@ -1,0 +1,150 @@
+# Leitura: Gráficos com Matplotlib e Seaborn
+Exemplos de muitos tipos de visualizações de gráficos possíveis com Matplotlib. Fonte: towardsdatascience.com
+
+Uma das partes mais importantes do trabalho com dados é torná-los fáceis de entender, seja para a própria equipe de Data Science, seja para a empresa ou para o público geral. 
+
+Uma das maneiras mais fáceis de fazer isso é com o uso de gráficos, por serem amigáveis e intuitivos.
+
+Criar esses gráficos, portanto, é uma parte essencial do processo, que merece uma atenção a mais pelo profissional para que tanto a análise desses dados e sua posterior utilização sejam feitas da maneira correta. 
+
+Algumas ferramentas foram criadas com esse objetivo, sendo que nesse texto falaremos sobre duas das mais populares e conhecidas: Matplotlib e Seaborn.
+
+Ambas são bibliotecas Python e criam diferentes tipos de gráficos, de acordo com a necessidade do profissional e com o formato que pode ser entendido de uma maneira melhor. 
+
+# Matplotlib
+Matplotlib é uma biblioteca do Python criada para a construção de gráficos. É Open Source, ou seja, gratuita. O principal objetivo dessa biblioteca é transformar os dados em gráficos de fácil entendimento. 
+
+Apesar de cumprir sua função de maneira satisfatória, é considerada uma biblioteca mais simples, com menos recursos visuais do que outras, mas é também a preferência de profissionais que gostam de controlar melhor a construção do gráfico.
+
+Isso porque praticamente toda a parte visual precisa ser indicada por ele em código. Assim sendo, exige mais linhas de código para exibir um gráfico. 
+
+## Estrutura do MatplotLib
+A biblioteca conta com uma “estrutura” de criação de gráficos que precisa ser entendida pelos profissionais para a inserção e relacionamento correto dos dados. 
+
+Os três elementos mais importantes de serem entendidos, pois influenciam na inserção dos dados, são:
+
+Figure: é a composição total do gráfico, ou seja, todos os seus componentes. Esse conceito existe pois em alguns casos apenas um gráfico não é o suficiente, então é possível criar mais de um para a exibição dos dados. O conjunto de todos os gráficos formam a figure.
+Axes: definem as coordenadas do gráfico, é um região de plotagem de dados. Contém a maioria dos elementos da figure, como axis, tick (marcações do eixo), texto, entre outros. 
+Axis: definem a escala e os limites do gráfico, gerando os ticks (marcas do eixo, divididas major tick e minor tick) 
+
+## Exemplo prático em Matplotlib
+Vamos usar um dos exemplos da própria documentação do Matplotlib para criar um gráfico de barras simples.
+
+Você pode usar o Google Colab, ambiente interativo para Python e Data Science, para reproduzir o exemplo.
+
+Na primeira célula de um novo arquivo, no Colab, digite e rode (clicando no botão de play ou teclando CTRL Enter):
+
+import matplotlib.pyplot as plt
+import numpy as np
+Com estas duas linhas importamos o Matplotlib como plt e o Numpy como np (os nomes mais curtos ajudam na codificação.
+
+Em outra célula, então, insira e rode:
+
+# Criando os dados
+np.random.seed(3)
+x = 0.5 + np.arange(8)
+y = np.random.uniform(2, 7, len(x))
+
+# Plotando o gráfico
+fig, ax = plt.subplots()
+ax.bar(x, y, width=1, edgecolor="white", linewidth=0.7)
+ax.set(xlim=(0, 8), xticks=np.arange(1, 8),
+      ylim=(0, 8), yticks=np.arange(1, 8))
+
+plt.show()
+No bloco “Criando os dados”, usamos apenas o Numpy para gerar dados numéricos aleatórios.
+
+O que nos interessa sobre Matplotlib está no bloco “Plotando o gráfico”:
+
+definimos as variáveis fig e ax, criando a figura do gráfico;
+em ax.bar,  setamos o nosso gráfico como sendo um gráfico de barras, chamando como parâmetros:
+nossos dados (x e y), isto é, os rótulos e a altura de cada barra;
+a cor da linha divisória entre cada barra (edgecolor="white"); e
+a espessura da linha (linewidth=0.7);
+em ax.set, definimos as “legendas” dos eixos x e y (ambos sendo escalas de 1 a 8; como Python conta até o último número anterior ao informado, as escalas aparecem de 1 a 7).
+Com isso, teremos na tela o seguinte gráfico:
+
+
+Este exemplo, como dito, consta na documentação do Matplotlib. 
+
+A documentação oferece muitos outros recursos, como demonstrações com código de todos os tipos de gráficos, exemplos mais ricos de construção de gráficos especializados e tutoriais que explicam aspectos que vão desde colorização dos gráficos até uso de imagens e textos associados a eles.
+
+# Seaborn
+Seaborn é outra biblioteca utilizada para gerar gráficos a partir de dados e também se relaciona com a linguagem Python. Na verdade, utiliza Matplotlib como base, mas apresenta os gráficos de maneira mais refinada. 
+
+Já é uma biblioteca muito popular, mas vem ganhando ainda mais espaço por sua facilidade em criar gráficos visualmente interessantes. 
+
+Por isso, é a ferramenta escolhida principalmente quando esse gráfico não terá apenas uso interno da equipe, mas também precisará ser mostrado a pessoas de fora (leigas), que precisam entender ainda mais facilmente o que os dados representam. 
+
+Além disso, exige uma quantidade de código menor, pois já constrói o gráfico com maiores possibilidades de cores e informações, por exemplo. 
+
+Também é uma ferramenta open source (gratuita) e conta com ainda mais opções de gráficos e estilizações. 
+
+## Detalhes sobre Seaborn
+A estrutura do Seaborn é bastante semelhante à do Matplotlib, considerando as figures, os axes e os axis. 
+
+No caso dessa biblioteca, o mais importante é definir os valores dos eixos, que já são informações suficientes para criar um gráfico completo. 
+
+Também é possível definir as variáveis de estilo, com opções ainda mais variadas que do Matplotlib, que já conta com muitas possibilidades. 
+
+Assim, é só colocar o estilo seguido das instruções do gráfico para que a biblioteca entenda as definições. 
+
+Outro ponto interessante é que o Seaborn permite a criação de diferentes gráficos a partir de um mesmo conjunto de dados e praticamente de maneira automática, sendo necessário mudanças conceituais apenas em alguns casos, geralmente em legendas ou nas distâncias de ticks, por exemplo. 
+
+Para isso, usa-se a função relplot(), criada para permitir a visualização de diferentes gráficos.
+
+Seaborn aceita diferentes tipos de dados, além de se relacionar com outras ferramentas de manipulação de dados, como Pandas. Também por isso é uma das principais opções para quem trabalha com Data Science e Data Analytics. 
+
+## Exemplo prático com Seaborn
+Vamos criar um exemplo de gráfico em Seaborn usando o Google Colab novamente.
+
+Primeiro, no entanto, precisamos importar a biblioteca. Para isso, rode em uma célula do Colab:
+
+!pip install seaborn
+Um log de instalação será exibido. Quando terminar, você irá automaticamente para uma nova célula.
+
+Nesta nova célula, digite e rode, então:
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+flights = sns.load_dataset("flights")
+
+
+may_flights = flights.query("month == 'May'")
+sns.lineplot(data=may_flights, x="year", y="passengers")
+
+plt.show()
+A nossa visualização será um gráfico de linhas, assim:
+
+
+O que aconteceu em nosso código foi o seguinte:
+
+1. importamos o Matplotlib (lembre-se que Seaborn funciona sobre o mesmo);
+2. importamos o Seaborn com o nome encurtado para sns;
+3. com flights = sns.load_dataset("flights"), usamos um conjunto de dados de exemplo, com o número de passageiros em vôos por mês, entre os anos de 1950 a 1960, fornecido pelo próprio Seaborn, e o atribuímos a variável flights;
+4. com may_flights = flights.query("month == 'May'"), filtramos o conjunto de dados apenas pelos dados referentes aos meses de maio de cada ano;
+5. enfim, com sns.lineplot(data=may_flights, x="year", y="passengers"), criamos o gráfico de linhas, passando como parâmetros as variáveis que criamos e que estão disponíveis em nosso conjunto de dados.
+6. imprimimos o gráfico com plt.show().
+Se você digitar em outra célula flights.head(), verá as características do conjunto de dados, com suas variáveis.
+
+Este exemplo consta na documentação do Seaborn. A documentação fornece várias formas de personalizar ainda mais este gráfico.
+
+Se quisermos mostrar a evolução de passageiros por mês ao longo da década analisada, Seaborn já faz uma paleta de cores agradável para nós:
+
+
+A documentação da biblioteca é bastante rica: 
+
+* possui um tutorialque permite entender como ela gera diferentes tipos de gráficos e como eles podem ser combinados;
+* uma galeria de exemplos, que mostra os diferentes tipos de gráficos (e sua qualidade visual) que Seaborn é capaz de gerar; e
+* a referência, que ajuda a entender cada método e seus parâmetros.
+
+Referências
+https://matplotlib.org/
+https://seaborn.pydata.org/ 
+https://www.w3schools.com/
+https://medium.com/ 
+https://realpython.com/
+https://www.tutorialspoint.com/ 
+https://www.youtube.com/
+https://www.youtube.com/
