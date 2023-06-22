@@ -1,0 +1,343 @@
+# Leitura: Funções e Classes em Python
+Quando vemos aspectos mais básicos de Python, muito do que programamos segue o paradigma imperativo ou procedural, em que encadeamos comandos em após os outros, em uma ordem linear e lógica.
+
+É um jeito fácil de aprender a criar pequenos programas, seguindo um passo a passo com começo, meio e fim, o que é bastante natural à nossa forma de pensar em processos.
+
+No entanto, se dependêssemos apenas desse jeito de programar, não teríamos evoluído a tecnologia. 
+
+Para poder criar programas mais robustos e versáteis, com muitas linhas de código, precisamos contar com abstrações mais poderosas. 
+
+Duas dessas abstrações, que veremos neste tópico, são Funções e Classes. 
+
+Ambas permitem encapsular e reaproveitar trechos de códigos em nossos programas (e até de outros programas, os quais que podemos importar nos nossos, a fim de herdar suas funcionalidades) e construir soluções complexas.
+
+Funções e classes não são exclusivas de Python e existem em diversas linguagens de programação. Tanto que há aquelas puramente funcionais (baseadas apenas em funções, sem classes) e outras fortemente orientadas a objetos (onde classes constituem o recurso mais importante).
+
+Python permite uma mescla das duas coisas, o que torna tudo mais fácil e divertido.
+
+## Funções
+Uma função é um bloco de código que só é executado quando “chamado”, e que pode ser chamado quantas vezes quisermos ou for necessário em nossos programas — o que permite forte reaproveitamento de código.
+
+Uma vez criada, uma função pode ser incluída em um arquivo e ser importada em qualquer outro programa, compartilhando seus recursos. 
+
+Quase toda a programação evoluiu a partir dessa ideia. Quando usamos bibliotecas e frameworks para análises estatísticas ou aprendizado de máquina em Python, muitas vezes estamos apenas importando pacotes com muitas funções criadas por outras pessoas, bastando a nós usarmos aquelas que precisamos.
+
+### Criando uma função
+A criação de uma função em Python é feita com a palavra-chave def, assim:
+
+def funcao_de_exemplo():
+  print("Imprimindo este texto a partir de uma função em Python")
+Isto cria nossa função, mas não executa nada. Você pode testar no Google Colab. Experimente copiar o código em uma célula e rodá-lo. Apenas pulará para a célula seguinte.
+
+Lembre-se: para executarmos uma função, temos sempre de chamá-la. Em Python, isso é feito da seguinte forma:
+
+funcao_de_exemplo()
+Experimente no Colab. Agora, sim! Nosso programa terá impresso na tela: Imprimindo este texto a partir de uma função em Python.
+
+O que aconteceu foi que chamamos o nome de nossa função com os parênteses ao fim. A função poderia ter qualquer outro nome, como teste(), funcao_teste() ou blablabla(). Quanto aos parênteses, eles servem para o que veremos a seguir.
+
+### Argumentos
+Os parênteses ao fim da função permitem que passemos dados, também chamados de parâmetros, à função, dessa forma:
+
+def imprime_nome(nome):
+  print("Bem-vindo, " + nome + "!")
+Experimente criar a função em uma nova célula do Colab. Novamente, apenas criaremos a função. Em outra célula, então, chame:
+
+imprime_nome("Fulano") 
+A saída será Bem-vindo, Fulano!
+
+Podemos passar quantos argumentos quisermos dentro dos parênteses. Para um exemplo:
+
+def soma_tres_numeros(x, y, z):
+  print(x + y + z)
+
+soma(1, 2, 3)
+A saída será: 6, já que somar 1, 2 e 3 resulta neste número. Se chamarmos soma(5, 8, 1), teremos 14.
+
+Até aqui, fizemos as funções imprimirem valores na tela com print. Mas se quisermos que uma função retorne um valor, para que possamos utilizá-lo em outras partes do nosso código, usamos return:
+
+def soma_dois_numeros(x, y):
+  return(x + y)
+Com isso, podemos chamar a função e receber seu valor em outros locais. Como print também é uma função em Python, podemos chamar uma função dentro da outra:
+
+print(soma_dois_numeros(1,2))
+O que imprime 3, o valor que nossa função soma_dois_numeros retornou para que print pudesse usá-lo.
+
+### Reutilização de código
+“Tudo bem, mas como funções podem ser reaproveitadas ao longo de um programa”, você deve se perguntar. Vamos juntar esses conceitos acima para exemplificar.
+
+Suponha que, rotineiramente, em nosso trabalho — talvez trabalhemos com engenharia ou, sabe-se lá, uma fábrica de pratos —, precisamos calcular a área de circunferências, muitas delas, de vários tamanhos.
+
+Poderíamos fazer isso resolvendo a fórmula da área manualmente, a cada vez.
+
+Sabendo que a fórmula é A = π r2, onde A é a área a ser calculada, π é o número irracional pi (3.14…), e r2 é o raio ao quadrado, para uma circunferência de raio 2, poderíamos fazer:
+
+area_circunferencia = 3.14 * (2*2)
+print(area_circunferencia)
+Teste no Colab e o resultado será 12.56.
+
+Porém, temos de calcular a área de outras circunferências: uma de raio 3, mais uma de raio 5.25 e outra de raio 7.5. 
+
+Poderíamos criar as variáveis area_circunferencia2 e assim por diante. Porém, seria estupidez (além de podermos incorrer em erros fáceis) calcular cada área do zero, a cada vez. 
+
+Podemos criar uma função que automatizar isso. De quebra, precisaremos quebrar a cabeça com a fórmula uma única vez. Depois, a função fará todo o trabalho “sujo” para nós. 
+
+Nossa função poderia ficar assim:
+
+def area_circunferencia(raio):
+  pi = 3.14
+  area = pi * (raio * raio)
+  print(area)
+Agora, se quisermos calcular a área da mesma circunferência de raio 2, basta chamamos a função, passando o raio como parâmetro:
+
+area_circunferencia(2) 
+E teremos o mesmo resultado que no cálculo manual: 12.56.
+
+Agora ficou fácil calcular a área das demais circunferências!
+
+area_circunferencia(3)
+area_circunferencia(5.25)
+area_circunferencia(7.5)
+E teremos:
+
+28.26
+86.54625
+176.625
+Com uma única função, tornamos muito mais fácil e rápido resolver um problema sempre da mesma forma, sem risco de esquecermos o valor do pi ou qualquer outro detalhe da fórmula.
+
+### Funções embutidas
+Funções ainda nos ajudariam com outras melhorias aqui, como dar mais precisão ao cálculo, por meio de um valor de pi com mais casas decimais. E não precisamos saber mais nada sobre o pi!
+
+Basta importar o módulo Math (“Matemática”) do próprio Python, que já nos dá o pi pronto para uso. Criando uma nova função, nosso código ficaria:
+
+import math
+
+def area_circunferencia_melhorada(raio):
+  pi = math.pi
+  area = pi * (raio * raio)
+  print(area)
+Note que atribuímos math.pi na variável pi, dentro da função, e não precisamos mais nos preocupar com as casas decimais do valor.
+
+Dessa forma (math.pi), pi é uma função que já vem embutida no módulo math. Após importarmos (import) o módulo, basta chamarmos a função em nosso código.
+
+Chamando a nova função para a circunferência de raio 2, teremos:
+
+area_circunferencia_melhorada(2)
+Resultado: 12.566370614359172, uma precisão de várias casas decimais a mais (pense que se fossem valores financeiros em vez de áreas de circunferências, isto seria de suma importância).
+
+## Classes
+Uma classe pode ser entendida como um “molde” para construir objetos em uma linguagem de programação orientada a objetos.
+
+Como Python é uma linguagem orientada a objetos, quase tudo nela se resume a… objetos.
+
+Pense nesse conceito realmente como um “molde” ou “forma” abstratos. Temos a classe Cachorro, por exemplo. Ela é o molde do que deve ser um cão de estimação. É uma ideia de cachorro, não um cachorro real.
+
+Um cachorro real, para existir, precisa ter algumas propriedades ou informações (nome, raça, idade, peso) e alguns métodos ou ações que executa (late, senta etc.) que espelham a classe Cachorro.
+
+Quando, então, adotamos um cachorro para ser nosso animal de estimação, por exemplo, Nancy, uma Buldog Francês, com 3 anos e 9.5 quilos, que sabe sentar e dar a pata, dizemos que estamos instanciando um objeto da classe Cachorro.
+
+### Criando uma classe
+Criamos classes com a palavra-chave class, dessa forma:
+
+class NomeDaClasse:
+  ola = "Olá, mundo!"
+Tente isso no Colab e não acontecerá nada. Porém, nos bastidores, estamos com nosso “molde” pronto para instanciar objetos dessa classe.
+
+Fazemos a instanciação de um objeto — no nosso caso, chamado saudacao, a partir da nossa classe — com a seguinte sintaxe:
+
+saudacao = NomeDaClasse()
+Se quisermos imprimir o valor da propriedade ola, então, chamamos o objeto com outra sintaxe:
+
+print(saudacao.ola)
+Isto imprimirá Olá, mundo! na tela.
+
+### Propriedades
+O exemplo acima, porém, é muito simples e não transmite o que as classes permitem. Vamos ver como ficaria nosso exemplo Cachorro.
+
+Para isso,  vamos usar a função __init__, comum a qualquer classe, que permite atribuir valores às propriedades do objeto.
+
+Podemos fazer desta forma:
+
+class Cachorro:
+  def __init__(self, nome, raca, idade, peso):
+    self.nome = nome
+    self.raca = raca
+    self.idade = idade
+    self.peso = peso
+    self.habilidade = habilidade
+Em seguida, podemos instanciar nosso primeiro cãozinho de estimação, com suas respectivas propriedades:
+
+cachorro1 = Cachorro("Nancy", "Buldog Francês", 3, 9.5, "fazer companhia")
+Note que entre parênteses passamos os valores nome, raca, idade, peso e habilidade, que são as propriedades da nossa classe ou, mais precisamente, da nossa função __init__ da classe. 
+
+A sintaxe de __init__ é a mesma em qualquer função, com argumentos entre parênteses. A diferença para uma função comum é que ela usa o parâmetro self para se referir a uma variável que está contida nela.
+
+Podemos, então, chamar as propriedades das nossas instâncias de Cachorro de várias formas. Por exemplo:
+
+print("Nosso primeiro cão de estimação se chama {}, é um(a) {}, tem {} ano(s) e pesa {} quilo(s)".format(cachorro1.nome, cachorro1.raca, cachorro1.idade, cachorro1.peso))
+Isso imprimirá:
+
+Nosso primeiro cão de estimação se chama Nancy, é um(a) Buldog Francês, tem 3 ano(s) e pesa 9.5 quilo(s).
+Se adotarmos mais dois cães, Ronney e Pepita, podemos instanciar novos objetos da classe:
+
+cachorro2 = Cachorro("Ronney", "Golden Retriewer", 2, 20, "fazer bagunça")
+cachorro3 = Cachorro("Pepita", "Fox Paulistinha", 5, 8, "latir muito")
+E chamar nossa cachorrada de outras maneiras, como:
+
+print("Agora temos três amigos:\n- {}, um(a) {}\n- {}, um(a) {}\n- {}, um(a) {}".format(cachorro1.nome, cachorro1.raca, cachorro2.nome, cachorro2.raca, cachorro3.nome, cachorro3.raca))
+O que resultará em:
+
+Agora temos três amigos:
+- Nancy, um(a) Buldog Francês
+- Ronney, um(a) Golden Retriewer
+- Pepita, um(a) Fox Paulistinha
+Métodos
+
+Podemos adicionar métodos à nossa Classe com uma nova função. Digamos que queremos demonstrar as habilidades de nossos cães, algo que eles sabem fazerem.
+
+Para isso, podemos adicionar uma nova função à nossa classe, que já imprime a habilidade de cada um de nossos cães de uma forma mais apresentável.
+
+Ficaria assim no código:
+
+class Cachorro:
+  def __init__(self, nome, raca, idade, peso, habilidade):
+    self.nome = nome
+    self.raca = raca
+    self.idade = idade
+    self.peso = peso
+    self.habilidade = habilidade
+
+  def mostra_habilidade(self):
+    print("A habilidade de {} é {}!".format(self.nome, self.habilidade))
+Agora, podemos demonstrar a habilidade de cada um de nossos amigos com:
+
+cachorro1.mostra_habilidade()
+A saída será:
+
+A habilidade de Nancy é fazer companhia!
+Podemos fazer o mesmo para Ronney e Pepita. Tente no Colab. As saídas deverão ser:
+
+A habilidade de Ronney é fazer bagunça!
+A habilidade de Pepita é latir muito!
+Caso você queira modificar propriedades de um objeto, pode fazê-lo de forma fácil com classes. Digamos que você adestrou Pepita para que ela usasse sua habilidade de latir muito para algo benéfico: cuidar da casa.
+
+Podemos atualizar a propriedade assim:
+
+cachorro3.habilidade = "cuidar da casa"
+Chame cachorro3.mostra_habilidade() e você verá a mudança.
+
+Com essa nova habilidade de Pepita, digamos que você a doou à sua mãe, porque ela precisava de um cão de alerta na residência. 
+
+Você pode excluir um objeto instanciado da seguinte maneira:
+
+del cachorro3
+Agora, se você chamar cachorro3.mostra_habilidade(), receberá um erro de que o objeto não está definido.
+
+## Escopo e indentação
+Python tem exigências com a indentação do código, isto é, com os espaços em branco ou recuos antes dos blocos de código. Você viu isso ao longo de vários exemplos que demos, principalmente em funções e classes.
+
+Os espaços em branco são usados para separar escopos dentro de um programa. Pense no escopo como uma “caixa” com algo dentro. 
+
+Um programa como um todo é a “caixa” maior, chamada de escopo global. Dentro dele, porém, pode haver várias “caixas” menores (escopos locais), com código que só roda dentro de cada caixa.
+
+Para que Python entenda o que é o escopo global e o que são escopos locais, é usada indentação padronizada. 
+
+O recomendado é usar 4 espaços em branco para recuar o código. Mas também podem ser usados outros espaçamentos (2 espaços, por exemplo), desde que eles sejam padrões para todo o código. 
+
+O Google Colab, por exemplo, formata o código automaticamente com 2 espaços de recuo onde for necessário.
+
+Se digitarmos o código abaixo em uma célula do Colab e o executarmos, estamos no escopo global do programa e não precisamos usar recuos:
+
+x = "escopo global"
+print("Estamos no " + x)
+Isto imprimirá na tela: Estamos no escopo global.
+
+Agora se quisermos diferenciar os escopos, teremos de usar os recuos, como neste exemplo:
+
+x = "escopo global"
+
+def escopo():
+  x = "escopo local"
+  print("Estamos no " + x)  
+
+escopo()
+print("Estamos no " + x)
+Isso imprimirá na tela:
+
+Estamos no escopo local
+Estamos no escopo global
+O que aconteceu aqui, foi:
+
+atribuímos à primeira variável x o valor (string) “escopo global”;
+criamos uma função escopo(), que tem outra variável x, com valor (string) “escopo local” e que imprime o escopo local;
+chamamos, então, a função com escopo(), o que vai imprimir o que está no escopo local; e
+rodamos um novo comando, imprimindo o valor de x do escopo global.
+Veja que o escopo local da função escopo() é definido por meio dos recuos de 2 espaços nos códigos que estão dentro da função.
+
+Se fizéssemos isto, o código resultaria em erro:
+
+x = "escopo global"
+
+def escopo():
+x = "escopo local"
+print("Estamos no " + x)  
+
+escopo()
+print("Estamos no " + x)
+O próprio erro já nos é educativo neste caso:
+
+  File "<ipython-input-5-44d76135e928>", line 4
+    x = "escopo local"
+    ^
+IndentationError: expected an indented block
+O interpretador Python diz que é esperado um bloco de indentação a partir do trecho indicado, ou seja, dentro da função.
+
+Uma variável criada no escopo global pode ser usada em qualquer parte do programa. Já uma variável criada em um escopo local, só pode ser usada dentro de sua função.
+
+Note que no nosso exemplo acima, se chamarmos x diretamente (como no print), o programa nos entregará o valor da variável no escopo global (“escopo global”). Já ao chamar a função escopo(), receberemos o valor de x que está dentro da função (“escopo local”).
+
+Se quisermos disponibilizar uma variável local para o escopo global, devemos usar a palavra-chave global antes do nome da variável, dentro da função:
+
+def novo_escopo():
+  global y 
+  y = "Variável local tornada global"
+  print(y)
+Assim, se chamarmos tanto novo_escopo() quanto print(y) no escopo global, teremos o valor "Variável local tornada global" impresso na tela. Do contrário, print(y) resultaria em erro.
+
+Uma diferença é em relação a funções dentro de outras funções. Uma variável criada dentro de uma função-mãe poderá ser acessada pela função-filha, sem problemas, como nesse caso:
+
+def funcao_mae():
+  x = "Olá, mundo!"
+  def funcao_filha():
+     print(x)
+  funcao_filha()
+
+funcao_mae()
+Note que a variável x foi definida no escopo da funcao_mae(), mas ela é impressa pela funcao_filha(), que é chamada, então, dentro da funcao_mae(). 
+
+Quando chamamos a funcao_mae(), a saída será: Olá, mundo!, sem conflitos de escopos.
+
+# Conclusão
+Você pode aprender mais sobre funções e classes na documentação do próprio Python ou em tutoriais na web:
+
+https://docs.python.org/pt-br/3/tutorial/controlflow.html#defining-functions
+https://docs.python.org/pt-br/3/tutorial/classes.html
+Obviamente, há muitos outros recursos e particularidades que não conseguiríamos cobrir em um tópico que se pretende introdutório.
+
+Funções podem ter argumentos arbitrários e não nomeados ou até serem anônimas (chamadas de expressões lambda em Python), por exemplo. 
+
+Python não é uma linguagem de paradigma funcional por padrão, mas aceita algumas construções sintáticas similares às de linguagens puramente funcionais, como também é explicado na própria documentação.
+
+Classes também têm mais detalhes. Um deles, em especial, é o conceito de herança, isto é, como uma classe pode herdar características de outra. Trata-se de algo bastante comum em linguagens do paradigma orientado a objetos. Elas também aceitam variáveis privadas e sua documentação traz mais explicações sobre escopo.
+
+O importante é exercitar a criação de funções e classes para entender como é a sintaxe delas e como funcionam. O Google Colab é um ambiente ótimo para testar e aprender com os próprios erros, que o interpretador Python se encarrega de nos informar.
+
+Um possível exercício para brincar com funções e classes é tentar construir nosso jogo de adivinhação, do tópico anterior, usando estes recursos. Funções podem ser particularmente úteis naquele exemplo.
+
+# Referências
+https://docs.python.org/pt-br/3/tutorial/controlflow.html#defining-functions
+https://docs.python.org/pt-br/3/tutorial/classes.html
+https://docs.python.org/3/howto/functional.html
+https://www.w3schools.com/python/python_functions.asp
+https://www.w3schools.com/python/python_classes.asp
+https://www.w3schools.com/python/python_scope.asp
