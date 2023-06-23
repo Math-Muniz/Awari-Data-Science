@@ -1,0 +1,230 @@
+# Leitura: Importando Dados com Web Scraping
+
+Fluxo de dados no Scrapy, um framework popular para web scraping (raspagem de dados em páginas web) em Python. Fonte: docs.scrapy.org
+
+Os dados são fontes primordiais, atualmente, para a tomada de decisões em uma empresa, para verificação de tendências, para nortear mudanças, entre outros objetivos. 
+
+No entanto, um ponto importante ao cientista de dados é saber onde encontrar esses dados, como saber se eles são de fato relevantes para análise. Até porque, sem realizar a importação da maneira correta, o trabalho da manipulação de dados e, posteriormente, de análise, pode ser mais difícil. 
+
+Mas como encontrar esses dados e importá-los? Que tipo de dados podemos utilizar? 
+
+# Web Scraping
+Web Scraping é uma solução para obtenção de determinados dados. Trata-se de uma técnica de “raspagem” de dados na Internet. Ou seja, permite capturar dados de um site a partir de ferramentas e algoritmos aplicados em um endereço, podendo especificar as páginas e outros direcionamentos, o que acelera e organiza o processo.  
+
+Muitos projetos acabam utilizando dados de raspagem, principalmente aqueles que consideram dados abertos e públicos, como análise de informações do governo.
+
+O principal objetivo dessa raspagem de dados é conseguir informações de um site especificando exatamente de quais páginas se deseja obter os dados.
+
+## É ético fazer Web Scraping?
+O consenso é que, sim, não há implicações para o analistas ou cientista de dados em fazer web scraping, já que os dados a serem “raspados” estão disponíveis publicamente em páginas web, isto é, já estão visíveis a qualquer pessoa ou empresa que queira consultá-los ou usá-los. 
+
+O que ocorre com web scraping, na prática, é que em vez de um humano obter aquelas informações por meio de “copia e cola”, por exemplo, uma rotina de máquina faz esse serviço.
+
+Cabe ao titular ou detentor das informações — no caso, o site, portal ou serviço que está disponibilizando as informações — a observância a questões de privacidade, sigilo e outras exigências legais ou de boas práticas. 
+
+Se um e-commerce, por exemplo, disponibiliza diversos dados de forma aberta e, entre eles, há dados sensíveis de usuários, a responsabilidade por tais dados não é de quem eventualmente os obtenha, seja por web scraping ou mesmo manualmente, mas, sim, do e-commerce, que acabou publicando tais dados de forma indevida.
+
+# Ferramentas para web scraping
+Web Scraping é feito a partir de ferramentas de Python, a linguagem mais utilizada para captura e manipulação de dados. 
+
+Nesse caso, duas delas se destacam como mais conhecidas e completas para isso: Beautiful Soup e Scrapy. 
+
+# Beautiful Soup
+Uma das ferramentas mais utilizadas para extração de dados, seu foco é trabalhar com arquivos HTML e XML. com ela é possível organizar a extração e, assim, trabalhar com dados mesmo que esses estejam “desorganizados” no arquivo ou fora da catalogação necessária. 
+
+É uma das ferramentas mais importantes, pois é rápida e economiza muito tempo do trabalho da extração. 
+
+Um dos principais benefícios dessa ferramenta é conseguir especificar extração de dados e encontrá-los dentro do arquivo HTML, mesmo que estejam separados, o que pode torná-los  mais organizados. 
+
+Por permitir essa especificação na busca, também é muito mais rápido que outras ferramentas e, por isso, uma das favoritas dos profissionais de Data Science. 
+
+Em sua documentação é possível encontrar exemplos de como utilizar a Beautiful Soup para extração de dados.
+
+### Exemplo de uso de Beautiful Soup
+Vamos usar o exemplo da própria documentação da biblioteca, para um primeiro contato com Beautiful Soup na prática.
+
+Você pode testar o código no Google Colab, ambiente interativo para Data Science com Python, que não requer instalação de nenhum software.
+
+Primeiro, em uma célula do Colab, crie a variável html_doc, com o conteúdo abaixo (trata-se de um pequeno trecho de Alice no País das Maravilhas em formato HTML). 
+
+Esta é uma demonstração. Mas pense que você poderia estar raspando esse mesmo conteúdo de uma página web (e todas as páginas web são feitas em HTML). Então, você teria esse mesmo conteúdo.
+
+html_doc = """<html><head><title>The Dormouse's story</title></head>
+<body>
+<p class="title"><b>The Dormouse's story</b></p>
+
+<p class="story">Once upon a time there were three little sisters; and their names were
+<a href="http://example.com/elsie" class="sister" id="link1">Elsie</a>,
+<a href="http://example.com/lacie" class="sister" id="link2">Lacie</a> and
+<a href="http://example.com/tillie" class="sister" id="link3">Tillie</a>;
+and they lived at the bottom of a well.</p>
+
+<p class="story">...</p>
+"""
+Agora, podemos chamar a nossa variável como um objeto do Beautiful Soup, que nos fornecerá HTML devidamente estruturado.
+
+Em outra célula do Colab, rode:
+
+from bs4 import BeautifulSoup
+soup = BeautifulSoup(html_doc, 'html.parser')
+
+print(soup.prettify())
+Você verá o HTML estruturado:
+
+<html>
+ <head>
+  <title>
+   The Dormouse's story
+  </title>
+ </head>
+ <body>
+<p class="title">
+   <b>
+    The Dormouse's story
+   </b>
+  </p>
+  <p class="story">
+   Once upon a time there were three little sisters; and their names were
+   <a class="sister" href="http://example.com/elsie" id="link1">
+    Elsie
+   </a>
+   ,
+   <a class="sister" href="http://example.com/lacie" id="link2">
+    Lacie
+   </a>
+   and
+   <a class="sister" href="http://example.com/tillie" id="link3">
+    Tillie
+   </a>
+   ;
+and they lived at the bottom of a well.
+  </p>
+  <p class="story">
+   ...
+  </p>
+ </body>
+</html>
+A partir disso, podemos navegar na estrutura, por meio de métodos do Beautiful Soup, ou extrair determinadas informações do nosso scraping.
+
+Experimente digitar cada um desses comandos em células diferentes do Google Colab. Em seguida, dê Enter para rodar a célula e produzir o resultado.
+
+# Buscando o título da página
+soup.title
+# Resultado: <title>The Dormouse's story</title>
+
+# Buscando o atributo name do título da página
+soup.title.name
+# Resultado: u'title'
+
+# Buscando o conteúdo do título da página
+soup.title.string
+# Resultado: u'The Dormouse's story'
+
+# Buscando o nome do elemento pai do título da página (no caso, <head>)
+soup.title.parent.name
+# Resultado: u'head'
+
+# Buscando o primeiro parágrafo
+soup.p
+# Resultado: <p class="title"><b>The Dormouse's story</b></p>
+
+# Buscando o primeiro parágrafo (p) que possui um atributo class
+soup.p['class']
+# Resultado: u'title'
+
+# Buscando o primeiro link (a)
+soup.a
+# Resultado: <a class="sister" href="http://example.com/elsie" id="link1">Elsie</a>
+
+# Buscando todos os links (a)
+soup.find_all('a')
+# Resultado: [<a class="sister" href="http://example.com/elsie" id="link1">Elsie</a>,
+#            <a class="sister" href="http://example.com/lacie" id="link2">Lacie</a>,
+#            <a class="sister" href="http://example.com/tillie" id="link3">Tillie</a>]
+
+# Buscando elemento cujo id seja "link3"
+soup.find(id="link3")
+# Resultado: <a class="sister" href="http://example.com/tillie" id="link3">Tillie</a>
+Por exemplo, para extrair todos os links (URLs) da página, podemos fazer:
+
+for link in soup.find_all('a'):
+    print(link.get('href'))
+# Resultado: http://example.com/elsie
+#            http://example.com/lacie
+#            http://example.com/tillie
+Ou podemo extrair todo o conteúdo sem a estrutura HTML, como texto puro:
+
+print(soup.get_text())
+Brinque com esses exemplos no Google Colab e veja o que acontece. Recomendamos tentar ir além estudando a documentação do Beautiful Soup ou procurando tutoriais na web para praticar mais.
+
+# Scrapy
+Scrapy é uma ferramenta mais robusta para web scraping e é utilizada em aplicações profissionais em Ciência de Dados e Desenvolvimento de Software. 
+
+Segundo o próprio site da ferramenta:
+
+“ Scrapy é uma estrutura de aplicativo para rastrear sites e extrair dados estruturados que podem ser usados ​​para uma ampla gama de aplicativos úteis, como mineração de dados, processamento de informações ou arquivamento histórico” — Scrapy.
+
+Uma das principais vantagens do Scrapy é a rapidez na captura de dados, pois faz as requisições ao site de maneira assíncrona. 
+
+Assim, mesmo que um “pedido” não tenha sido processado ou tenha gerado resultados, o algoritmo continua seu processamento, sem pausas. 
+
+### Exemplo de uso de Scrapy
+Aqui, também vamos utilizar o tutorial do próprio Scrapy para demonstração. 
+
+Neste caso, porém, você precisará ter Python instalado em sua máquina e usar ou o bloco de notas ou um editor de código profissional (recomendamos o Visual Studio Code).
+
+A primeira coisa a fazermos é instalar a biblioteca scrapy em nosso ambiente. 
+
+Para isso, devemos ir no terminal de linha de comando do nosso sistema e executar a instalação com um gerenciador de pacotes Python, como o pip:
+
+pip install scrapy
+Você receberá uma série de informações de instalação na tela. Aguarde o procedimento terminar. Não é preciso fazer nada enquanto isso.
+
+Finalizado o processo, podemos criar o script que fará a raspagem de dados.
+
+Primeiro, crie um projeto no scrapy, chamado tutorial, executando no terminal:
+
+scrapy startproject tutorial
+Acesse a pasta /tutorial/tutorial/spiders dentro desse projeto. 
+
+Dentro daa pasta, crie um arquivo chamado quotes.py, com o seguinte código Python (use o bloco de notas ou seu editor de código para isso):
+
+import scrapy
+
+class QuotesSpider(scrapy.Spider):
+    name = "quotes"
+
+    def start_requests(self):
+        urls = [
+            'https://quotes.toscrape.com/page/1/',
+            'https://quotes.toscrape.com/page/2/',
+        ]
+        for url in urls:
+            yield scrapy.Request(url=url, callback=self.parse)
+
+    def parse(self, response):
+        page = response.url.split("/")[-2]
+        filename = f'quotes-{page}.html'
+        with open(filename, 'wb') as f:
+            f.write(response.body)
+        self.log(f'Saved file {filename}')
+Ótimo! Temos um programa criado em Python. (Este exemplo utiliza alguns conceitos mais avançados de Python, como classes, e métodos relacionados a manipulação do sistema de arquivos do computador).
+
+Agora, na pasta /tutorial/tutorial, por meio do terminal de linha de comando, execute:
+
+scrapy crawl quotes
+Você verá o procedimento de scraping sendo executado. 
+
+Ao fim, dois arquivos HTML (quotes-1.html e quotes2-html) aparecerão na mesma pasta do programa. 
+
+Se você abrir esses arquivos no navegador, verá neles a lista de citações raspadas da primeira e da segunda páginas, respectivamente, da pagina quotes.toscrape.com.
+
+Você pode continuar testando outros métodos do scrapy, conforme o tutorial da biblioteca. Se você quer praticar mais, este tutorial, disponível no Analytics Vidhya (comunidade de Data Science), também pode ser interessante. Tente mudar a URL da página a ser raspada, no script que criamos, vá fazendo pequenas mudanças no código e veja o que acontece. É uma boa maneira de testar e aprender com a ferramenta.
+
+# Referências
+https://realpython.com/beautiful-soup-web-scraper-python/ 
+https://www.digitalocean.com/
+https://medium.com/data-hackers/
+https://medium.com/@marlessonsantana/utilizando-o-scrapy 
+https://betterprogramming.pub/how-to-use-pandas 
+https://www.crawlnow.com/blog/is-web-scraping-legal
