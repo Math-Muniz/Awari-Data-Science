@@ -1,0 +1,269 @@
+# Leitura: JSON e APIs
+Neste tópico, vamos tratar de JSON, formato popular para estruturar dados em texto simples, e de APIs, um meio de sistemas disponibilizarem dados (normalmente, no formato JSON) a terceiros, principalmente a outros sistemas.
+
+# JSON
+JSON é a sigla para Javascript Object Notation, porque deriva do conceito de objeto na linguagem de programação Javascript. Trata-se de um tipo de documento que contém pares de nomes e valores. 
+
+É um formato leve para intercâmbio de dados, em forma de texto. Agrega os benefícios de ser fácil de ser lido e escrito por humanos, ao mesmo tempo em que é fácil de ser “parseado” e “gerado” por máquinas.
+
+O maior benefício de JSON é que ele permite estruturar dados de muitas formas diferentes, de uma maneira que tanto humanos quanto máquinas possam facilmente entender.
+
+Tanto é que JSON é um dos principais formatos de dados que APIs (Application Programming Interfaces) emitem, atualmente, para que sejam consumidos por outras aplicações.
+
+Pense que você trabalha em uma startup. Não será surpresa se seu trabalho será consumir dados em formato JSON, por meio de uma API disponibilizada pelo time de engenharia, para alimentar um dashboard (painel com gráficos) ou um modelo de Machine Learning, por exemplo.
+
+JSON foi criado em 2000 por Douglas Crockford, um programador especializado em Javascript. O padrão acabou por substituir o XML, formato até então usado (ainda existente em aplicações), para intercâmbio de dados na web.
+
+A especificação técnica de JSON chama-se ECMA-404. O site json.org ajuda a entender mais sobre o formato.
+
+# Estrutura
+Um arquivo JSON tem a extensão .json e se parece, grosso modo, com qualquer arquivo de texto, porém estruturado (com campos de dados).
+
+Um exemplo é:
+
+{
+    "person1" : {
+        "first_name" : "Fulano",
+        "last_name" : "de Tal",
+        "location" : "São Paulo",
+        "online" : true,
+        "followers" : 12525,
+        "activities" : [
+            {
+                "arts" : "música",
+                "sports" : "natação"
+            }
+        ]
+    },
+    "person2" : {
+        "first_name" : "Ciclano",
+        "last_name" : "de Tal",
+        "location" : "Rio de Janeiro",
+        "online" : true,
+        "followers" : 13827,
+        "activities" : [
+            {
+                "arts" : "dança",
+                "sports" : "ciclismo"
+            }
+        ]
+    }
+}
+Note que o exemplo possui dados referentes a duas pessoas, como seus nomes, cidades, se estão online ou não, seguidores e atividades que praticam, especificadas nos subcampos artes e esportes.
+
+O arquivo é um encadeamento de chaves (e alguns colchetes), preenchidos com os pares nomes/valores.
+
+Os nomes dos pares poderiam ser em português, sem problemas. O que importa é a estrutura, não o que está dentro das aspas.
+
+Como podemos ver, JSON aceita alguns tipos de dados, que são:
+
+* strings (quaisquer sequências de caracteres entre aspas);
+* numbers (números de qualquer tipo);
+* objects (um JSON dentro de outro, como no caso de artes e esportes dentro de atividades);
+* arrays (listas, matrizes e similares);
+* booleanos (true ou false);
+* null (valor nulo).
+
+## JSON na linguagem Python
+Por ser um formato de dados universal, diversas linguagens de programação possuem métodos para ler e transformar dados em JSON. Com Python, não seria diferente.
+
+Pandas, a biblioteca mais popular para tratamento e manipulação de dados em Python, vem com métodos muito fáceis de usar, tanto para ler como para salvar dados em JSON.
+
+A biblioteca json, nativa de Python, também fornece métodos fáceis de usar.
+
+### Importação 
+Importar um arquivo em formato JSON para ser manipulado por meio de Pandas requer, quando muito, duas linhas de código:
+
+import pandas as pd
+data = pd.read_json("https://jsonplaceholder.typicode.com/users")
+Importamos Pandas abreviado para pd na primeira linha. Na segunda, chamamos o método read_json de pandas (pd) e passamos um arquivo JSON a ele (no caso, disponível na URL entre aspas). Atribuímos esse JSON à variável data.
+
+A consulta resultará em uma “tabela” com os dados importados. 
+
+Por curiosidade, os dados usados no exemplo são estes, de JSONPlaceholder, que fornece placeholders para testes com o formato.
+
+O método pandas.read_json permite uso de alguns parâmetros para ajudar a formatar o JSON importado. O método pandas.json_normalize também ajuda na normalização de dados, caso sejam semi-estruturados.
+
+Com alguma manipulação, é fácil transformar dados que possam ser “sujos” ou “problemáticos” — muito comuns em arquivos JSONs do mundo real — em dados limpos para análises ou treinamento de modelos.
+
+### Conversão
+A conversão ou transformação de dados de Python em JSON também é simples com Pandas. Usando a biblioteca nativa json, podemos facilmente parsear os dados para um formato JSON agradável:
+
+# Importa as bibliotecas pandas e json
+
+import pandas as pd
+import json
+
+# Cria um DataFrame (conjunto de dados) em Pandas
+df = pd.DataFrame([['Beltrana', 'Data Scientist'], ['Fulano', 'Data Analyst']],
+                  index=['linha1', 'linha2'],
+                  columns=['coluna1', 'coluna2'])
+
+# Gera o Dataframe em JSON orientado por linhas
+linhas =df.to_json(orient='index')
+# Gera o Dataframe em JSON orientado por colunas
+colunas = df.to_json(orient='columns')
+
+# Parseia os resultados com a biblioteca json para visualização
+parsed_linhas = json.loads(linhas)
+parsed_colunas = json.loads(colunas)
+dumps_linhas = json.dumps(parsed_linhas, indent=4)
+dumps_colunas = json.dumps(parsed_colunas, indent=4)
+
+# Imprime os resultados na tela
+print("JSON ORGANIZADO POR LINHAS:\n" + dumps_linhas + "\n")
+print("JSON ORGANIZADO POR COLUNAS:\n" + dumps_colunas)
+O resultado será gerado em JSON:
+
+JSON ORGANIZADO POR LINHAS:
+
+{
+
+    "linha1": {
+
+        "coluna1": "Beltrana",
+
+        "coluna2": "Data Scientist"
+
+    },
+
+    "linha2": {
+
+        "coluna1": "Fulano",
+
+        "coluna2": "Data Analyst"
+
+    }
+
+}
+
+
+
+
+JSON ORGANIZADO POR COLUNAS:
+
+{
+
+    "coluna1": {
+
+        "linha1": "Beltrana",
+
+        "linha2": "Fulano"
+
+    },
+
+    "coluna2": {
+
+        "linha1": "Data Scientist",
+
+        "linha2": "Data Analyst"
+
+    }
+
+}
+
+## Recomendações
+Em geral, sites que disponibilizam dados em formato JSON, por meio de APIs, fornecem documentação de como tais dados estão estruturados (organizados por meio de “tabelas”, com colunas e linhas, por exemplo) e como devem ser utilizados.
+
+Procure sempre ler e entender a documentação para um uso mais eficiente dos dados disponibilizados em JSON e ter menos trabalho com limpeza e manipulação posterior desses dados.
+
+Também é importante ficar atento a possíveis mudanças em um API JSON. Se você consome dados de uma fonte e a estrutura desses dados muda, provavelmente sua aplicação (análise ou modelo) deixarão de funcionar. 
+
+Assegure-se de usar fontes consistentes para projetos de dados em produção (“rodando para valer”).
+
+# API
+API significa Application Programming Interface ou Interface de Programação de Aplicações.
+
+Ao contrário de uma interface de usuário, que conecta um computador a uma pessoa, uma API permite, principalmente, conectar computadores ou softwares entre si.
+
+O conceito da API, apresentado pela primeira vez em 1940, é mais antigo que o próprio nome — que só veio a se popularizar entre as décadas de 1960 e 1970.  
+
+O termo é frequentemente usado para se referir a APIs da web, que permitem a comunicação entre computadores conectados via internet. 
+
+Esquema de funcionamento de uma API, como uma interface entre o servidor que disponibiliza os dados e sistemas clientes que consomem esses dados.
+Fonte: junaidsshaikh.com
+
+Uma API geralmente é composta por diferentes partes que atuam como ferramentas ou serviços a desenvolvedores de softwares e outros profissionais que lidam com códigos. 
+
+As chamadas que compõem a API também são conhecidas como sub-rotinas, métodos, solicitações ou endpoints. 
+
+## Exemplos de APIs
+Há muitos exemplos de APIs que utilizamos todos os dias, em diferentes serviços. Um exemplo é o Google Maps, quando fornece mapas a um aplicativo ou site.
+
+O que o site ou app faz é se conectar ao Google Maps por meio da API deste e consumir dados que permitem renderizar mapas, setar localizações, rotas etc., ao mesmo tempo que disponibiliza dados da própria aplicação (localizações, por exemplo) como pontos sobre o mapa.
+
+A Google Cloud disponibiliza diversas APIs para o Google Maps, como esta, que exibe locais de todo o mundo.
+
+Exemplo de um mapa embedado em uma página web por meio de API do Google Maps.
+Fonte: developers.google.com
+
+Para análises ou alimentação de modelos estatísticos ou de ML, há uma infinidade de APIs disponíveis. Um exemplo são as APIs do Governo Federal brasileiro, que permitem ler várias informações públicas.
+
+Elas permitem acesso a uma gama de informações, como bases do CEP, registros de unidades federativas (Estados) e municípios etc. 
+
+Outra fonte rica de dados públicos são as APIs do IBGE (Instituto Brasileiro de Geografia e Estatística), que disponibiliza dados sobre a população, situação sócio-econômica do país etc.
+
+Se você pretende trabalhar com ativos financeiros, a Bolsa de Valores brasileira, a B3, também disponibiliza APIs — são estas que alimentam tabelas e gráficos de variações de preços de ações em muitos sites financeiros, por exemplo.
+
+Há muitos desenvolvedores que também oferecem APIs próprias, que automatizam web scraping (raspagem de dados) em sites, de forma a compartilhá-los com mais facilidade.
+
+## Uso de API com Python
+O uso de APIs não é como o de JSON, em que basta alguns comandos para consumir dados. É necessário entender a documentação de cada API para saber como ela estrutura os dados e como permite consumi-los (ou, em alguns casos, até modificá-los).
+
+Há APIs bastante fáceis. Basta instalar um pacote Python (isso normalmente é feito com o gerenciador de pacotes do Python, chamado pip) e usá-las. 
+
+Há outras que podem ter níveis de segurança maiores e requerem tokens de certificação, login, entre outras etapas.
+
+A documentação de cada API é que dirá como usá-las. Você também encontrará APIs muito consistentes e estruturadas, bem como APIs com dados de baixa qualidade, com problemas de estrutura, na tipagem dos dados, entre outros, que normalmente requerem um trabalho maior de limpeza.
+
+## Exemplo prático
+Vamos ver um exemplo simples que permite acesso a dados de ações da Bolsa de Valores brasileira. Usaremos um pacote de terceiros em Python, que consome dados do Yahoo Finanças.
+
+Consideramos o uso do Google Colab (ambiente para Ciência de Dados disponibilizado pelo Google) para o exemplo, caso você queira repeti-lo. O código fica assim:
+
+# Instalando o pacote yahooquery
+!pip install yahooquery
+
+# Importando o método Ticker do pacote
+from yahooquery import Ticker
+
+# Exibindo dados das ações preferenciais (PETR4) da Petrobrás
+petr = Ticker('PETR4.SA')
+petr.history(start='2022-04-01', end='2022-04-13')
+No início do código, importamos o pacote yahooquery. O pacote possui uma API embutida que já lê os dados do Yahoo Finanças para nós.
+
+Em seguida, importamos o método Ticker do pacote para que possamos ler os dados de um ativo.
+
+Ao final, criamos uma variável petr que chama o ticket PETR4.SA, referente às ações preferenciais da Petrobrás.
+
+Com petr.history, um método disponibilizado pelo pacote, exibimos o histórico de dados dos papéis PETR4 para o período que começa (start) em 01/04/2022 e vai até (end) o dia 12/04/2022.
+
+O resultado, após a instalação do pacote yahooquery, que exibirá algumas linhas de log na tela, ficará assim:
+
+Temos, então, uma tabela. Para cada dia, temos o maior (high) e menor (low) preço do ativo, o preço de abertura (open) e de fechamento (close) da ação no pregão, o volume negociado, por exemplo.
+
+A partir disso, podemos aplicar as transformações necessárias, arredondar números, reduzir casas decimais, renomear os nomes das colunas, excluir aquelas que não precisamos e até gerar gráficos candlestick (em forma e “vela”, famosos no mercado financeiro) que mostram as variações desses dados ao longo do tempo.
+
+Se você quer exibir todo o histórico de dados do papel PETR4, pode usar petr.history(max). Ele informará dados até o último dia útil anterior à data atual.
+
+Eis um exemplo simples de uso de API em Python, com dados bastante interessantes e úteis.
+
+# Conclusão
+JSON e APIs caminham juntos e são uma “mão-na-roda” para cientistas de dados. 
+
+No dia a dia de grandes empresas, muitos dos dados consumidos internamente para análises e modelagem são fornecidos por meio de APIs por times de engenharia de dados ou por times de desenvolvimento de software. 
+
+Dados externos, como dados governamentais, socioeconômicos, econômicos (de inflação ou taxas de juros, por exemplo), necessários em aplicações bancárias e financeiras, por exemplo, também costumam vir nesses formatos.
+
+Por isso, é importante se familiarizar com eles, adotar o hábito de ler (estudar, na verdade) a documentação de APIs e entender os métodos que Python e suas bibliotecas disponibilizam para trabalhar com JSON. 
+
+Isso garantirá escala e facilidade na lida com muitas fontes de dados comuns em startups e empresas.
+
+# Referências
+https://www.json.org/
+https://pandas.pydata.org/
+https://pandas.pydata.org/
+https://pandas.pydata.org/
+https://docs.python.org/
+https://www.ibm.com/
+https://medium.com/
