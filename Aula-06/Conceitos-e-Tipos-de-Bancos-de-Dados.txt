@@ -1,0 +1,178 @@
+# Leitura: Conceitos e Tipos de Bancos de Dados
+Representação de bancos de dados pela forma (esquema) com que armazenam/estruturam seus dados. Fonte: Packt
+
+Conhecer e saber trabalhar com Bancos de Dados é requisito básico em Ciência de Dados. 
+
+Muitos dos dados que as empresas utilizam no dia a dia ainda vem de bancos de dados tradicionais, principalmente bancos de dados relacionais.
+
+Neste tópico, vamos fornecer uma visão geral e dicas de como se aprofundar em cada tipo de banco de dados disponível no mercado.
+
+## Primeiro, os conceitos
+Antes de listarmos uma porção de bancos de dados, cabe entender o que são e o que fazem de tão fundamental.
+
+Bancos de dados são repositórios que armazenam dados de diferentes formatos e diferentes esquemas. 
+
+### Esquemas
+Há bancos de dados que — os do tipo relacional, conforme citado acima — que armazenam dados em linhas e colunas, como grandes tabelas. 
+
+Quase a mesma coisa que fazemos no Excel ou no Google Planilhas, só que com uma capacidade de armazenamento muito maior e não de uma forma “gráfica”, como estamos acostumados.
+
+Há outros bancos de dados, porém, que podem armazenar dados dentro de documentos estruturados ou semiestruturados. Pense nesses documentos como fichas ou formulários com várias informações preenchidas.
+
+Há, ainda, bancos de dados que armazenam dados em várias dimensões, como se houvesse colunas e linhas e, dentro de cada célula, níveis de camadas mais profundos, armazenando mais informações.
+
+Tudo isso pode ser entendido como esquemas de armazenamento de dados. 
+
+### Formato
+Quanto ao formato, os dados podem ser de diversos tipos. Os mais conhecidos são números, caracteres ou trechos de textos (strings), valores de verdadeiro ou falso ou “sim” e “não” (chamados booleanos), datas, valores de ponto flutuante (como os monetários) etc.
+
+Mas também pode haver dados em formatos que só a máquina entende, como hashes (códigos criptografados), blobs (Binary Large Object), que podem armazenar fotos ou vídeos, por exemplo, entre outros.
+
+### CRUD
+Independentemente do esquema e formato dos dados, o funcionamento de todos os bancos de dados pode ser resumido a quatro operações básicas, resumidas no acrônimo CRUD, de:
+
+* Create (criar)
+* Read (ler)
+* Update (atualizar)
+* Delete (excluir)
+O conceito de CRUD foi cunhado pela primeira vez em 1983 está bem vivo até a atualidade. 
+
+Create é o ato de criar/gravar um ou mais valores no banco de dados. Read é o ato de ler as informações criadas. Update é o ato de atualizar dados existentes no banco de dados, como modificar um preço ou nome de cliente armazenado. Delete é o ato de excluir dados gravados.
+
+Em Ciência de Dados, a operação mais comum a ser executada é o Read, a busca de dados, seja para realizar análises sobre eles, seja para treinar modelos de aprendizado de máquina com esses dados. 
+
+As demais operações, normalmente, não são permitidas em etapas da Ciência de Dados para não afetar a integridade dos dados.
+
+# Tipos de Bancos de Dados
+## Bancos de Dados Relacionais (RDBMS)
+Bancos de dados relacionais (também conhecidos como bancos de dados SQL), armazenam e organizam pontos de dados relacionados entre si, normalmente no esquema linha vs. coluna (tabular), como em grandes tabelas. 
+
+O conceito surgiu na década de 1970 e se tornou dominante nas décadas seguintes, sendo muito presente até a atualidade. 
+
+Cada tabela de um RDBMS possui um identificador exclusivo, ou chave primária, que identifica as informações na tabela, e cada linha contém uma instância 
+
+A conexão lógica entre diferentes tabelas pode então ser estabelecida com o uso de chaves estrangeiras — um campo em uma tabela que se conecta aos dados de chave primária de outra tabela. 
+
+Os sistemas de gerenciamento de banco de dados relacional geralmente empregam SQL (Structured Query Language), ou linguagem de consulta estruturada — que também veremos neste curso —, para coletar dados para relatórios e para consultas interativas.
+
+Há quatro propriedades, consideradas cruciais, que definem as transações de banco de dados relacional, resumidas em outro acrônimo, ACID:
+
+* Atomicidade: define todos os elementos que compõem uma transação completa do banco de dados.
+* Consistência: define as regras para manter os pontos de dados em um estado correto após uma transação.
+* Isolamento: mantém o efeito de uma transação invisível para outras pessoas até que ela seja confirmada, para evitar confusão.
+* Durabilidade: garante que as alterações de dados se tornem permanentes assim que a transação for confirmada.
+
+### Exemplos de Bancos de Dados Relacionais
+
+## MySQL
+Desenvolvido pela Oracle, o MySQL é um sistema de gerenciamento de banco de dados relacional baseado em linguagem de consulta estruturada (SQL). Com mais de 10 milhões de instalações pelo mundo, é considerado um dos sistemas de gerenciamento de bancos de dados mais populares.
+
+Entre os usuários desse modelo de banco de dados estão: Google, NASA, Dataprev, HP, Sony, U.S. Army, U.S. Federal Reserve Bank, Associated Press, Alcatel, entre outros.
+
+Se você quer ao menos visualizar como este banco de dados funciona na Ciência de Dados, a conexão entre MySQL e Python — a principal linguagem de programação usada em Data Science — pode ser feita conforme a documentação do próprio MySQL. Este e este tutoriais também podem ser úteis. Você verá mais detalhes sobre isso ao longo do curso.
+
+## Oracle Database
+O Oracle Database, também chamado de Oracle DBMS ou simplesmente Oracle, é um sistema de gerenciamento de banco de dados multimodelo, comumente usado para executar cargas de trabalho de banco de dados de processamento de transações online (OLTP), armazenamento de dados (DW) e banco de dados misto (OLTP e DW). 
+
+Ele está disponível em vários provedores de serviços no local, na nuvem ou como instalação de nuvem híbrida. 
+
+A documentação da Oracle também instrui sobre como conectar usar o banco de dados com a linguagem de programação Python. Por ser um banco de dados usado em grandes corporações, talvez você não tenha contato com Oracle no início da sua jornada.
+
+## Microsoft SQL Server
+Desenvolvido pela Microsoft, o Microsoft SQL Server é um produto de software cuja função principal é armazenar e recuperar dados conforme solicitado por outros aplicativos de software — que podem ser executados no mesmo computador ou em outro computador em uma rede. 
+
+A Microsoft comercializa pelo menos uma dúzia de edições diferentes do Microsoft SQL Server, destinadas a diferentes públicos e cargas de trabalho que variam de pequenos aplicativos de máquina única a grandes aplicativos voltados para usuários simultâneos.
+
+A conexão entre Microsoft SQL Server e Python pode ser conferida na documentação do banco de dados.
+
+## PostgreSQL
+Conhecido como Postgres, o PostgreSQL é um RDBMS gratuito de código aberto. Trata-se de um banco de dados padrão para macOS Server, disponível também está disponível para Windows, Linux, FreeBSD e OpenBSD.
+
+Ele enfatiza a extensibilidade e a conformidade com o SQL, além de apresentar transações com propriedades de Atomicidade, Consistência, Isolamento, Durabilidade (ACID).
+
+Postgres é um banco de dados gratuito e ao mesmo tempo muito robusto, bastante utilizado por várias empresas. Conectá-lo com Python não é uma tarefa difícil, a partir do momento em que você tem algum conhecimento de Python e SQL. A documentação do Postgres é bastante rica e didática a respeito. 
+
+# Bancos de Dados NoSQL
+É comum usar o termo “banco de dados NoSQL” para se referir a qualquer banco de dados não relacional. 
+
+Há um consenso de que esse modelo de banco de dados armazena os dados em um formato diferente de tabelas relacionais, ou seja, de maneira não tabular. 
+
+Os banco de dados NoSQL surgiram no final dos anos 2000, época em que, à medida que os custos com armazenamento diminuíram, aumentou a quantidade de dados que aplicativos precisavam armazenar e consultar. 
+
+Nessa época, em razão dos dispositivos móveis, redes sociais e novos serviços que geravam enormes quantidades de dados pouco estruturados ou com estruturas diferentes para cada caso, também houve necessidade de armazenamentos mais rápidos e flexíveis em relação aos bancos de dados relacionais.
+
+Tanto é que, entre os principais recursos de bancos de dados NoSQL, estão:
+
+* esquemas flexíveis;
+* escala horizontal;
+* consultas rápidas devido ao modelo de dados;
+* facilidade de uso para diversos profissionais.
+
+### Esquemas de Bancos de Dados NoSQL
+* Bancos de dados de documentos: armazenam dados em documentos semelhantes a objetos JSON (JavaScript Object Notation). Cada documento contém pares de campos e valores, que podem ser de vários tipos - incluindo strings, números, booleanos, matrizes ou objetos.
+* Bancos de dados de chave-valor: são um tipo mais simples de banco de dados em que cada item contém chaves e valores.
+* Armazenamentos de dados em colunas: armazenam dados em tabelas, linhas e colunas dinâmicas;
+* Bancos de dados de grafos: armazenam dados em nós e arestas; os nós costumam armazenar informações sobre pessoas, lugares e coisas, enquanto as arestas armazenam informações sobre os relacionamentos entre esses nós.
+
+### Exemplos de Bancos de Dados NoSQL
+## Redis
+Muito utilizado por desenvolvedores, o Redis é o banco de dados do tipo chave-valor mais utilizado no mundo. Sua estrutura vincula um valor a uma chave, o que facilita tanto o armazenamento quanto a busca de dados.
+
+A documentação oficial do Redis instrui sobre como usá-lo com Python. Há, porém, uma série de bons tutoriais que permitem aprofundar-se a respeito, como este — no Kaggle, a principal plataforma de competições em Data Science e Machine Learning do mundo — e este exemplos e este pacote que simplifica a conexão entre Redis e Python.
+
+## Amazon DynamoDB
+Com suporte às estruturas de chave-valor e de documentos, é um serviço de banco de dados em nuvem da Amazon Web Service (AWS), considerado ideal para aplicações móveis e jogos da web e soluções digitais. 
+
+A documentação da AWS cobre muito bem as configurações e uso em Python. Também há tutoriais que podem ajudar a respeito.
+
+## Memcached
+Gratuito e de código aberto, o Memcached é frequentemente usado para acelerar sites dinâmicos baseados em banco de dados. Seu modelo não relacional realiza o armazenamento com chave-valor e usa um cache de memória distribuído. 
+
+Há tutoriais como este da Google Cloud e outros, que instruem sobre uso de Memcached com Python. Também há pacotes que facilitam o trabalho como python-memcached (também no Github) e pymemcache.
+
+## Hbase
+Utilizado por plataformas como Spotify e Facebook, o Hbase é um banco de dados distribuído NoSQL de código aberto, que armazena informações utilizando conjuntos de linhas e colunas. É uma referência em Big Data.
+
+A documentação cobre bem a integração com Python e não faltam tutoriais a respeito, como este, este e este exemplos.
+
+## MongoDB
+Considerado um banco de dados de código aberto de alta performance, o MongoDB é compatível com os mais diferentes sistemas operacionais. Seu modelo é orientado a documentos. 
+
+É muito popular em startups e aplicações web que precisam de agilidade e flexibilidade. MongoDB é relativamente fácil de aprender e usar e fornece uma ótima documentação sobre como integrá-lo a Python.
+
+## Cassandra
+Projetado para lidar com grandes quantidades de dados em servidores comuns, o Cassandra é um sistema gratuito de gerenciamento de banco de dados NoSQL em colunas, e possui código aberto. 
+
+Foi inicialmente desenvolvido para potencializar o recurso de busca do Facebook. É otimizado para cluster e fornece baixa latência em suas atualizações.
+
+Há muitos tutoriais, como este ou este, sobre como usar Cassandra com Python, inclusive em nuvens como AWS (Amazon) e Azure (Microsoft).
+
+## Neo4j
+O Neo4j é um banco de dados não-relacional que se baseia em grafos (arestas que se relacionam a nós). É descrito por seus desenvolvedores como um banco de dados transacional compatível com ACID, armazenamento e processamento gráfico nativo.
+
+A documentação oficial também cobre o caso de uso com Python.
+
+# Conclusão
+Como Cientista de Dados, você certamente não precisará saber todos os detalhes de como construir esquemas, armazenar dados, configurar permissões de acessos, entre outras operações de bancos de dados.
+
+Porém, é importante que você conheça os diferentes tipos de bancos de dados, como eles armazenam os dados e, principalmente, como deve ser feita a leitura de dados a partir deles.
+
+Uma etapa fundamental da Ciência de Dados, como veremos, é buscar dados de diversas fontes, entre elas bancos de dados, sejam relacionais ou não relacionais. 
+
+Por isso, aprender SQL (a linguagem padrão de consulta de dados relacionais) e APIs e formas de consultar dados em bancos de dados NoSQL, são conhecimentos essenciais para a profissão. 
+
+Aprofundaremos conhecimentos sobre estes aspectos ao longo do curso.
+
+# Referências
+
+https://www.omnisci.com/technical-glossary/relational-database
+https://xbsoftware.com/blog/main-types-of-database-management-systems/
+https://www.mongodb.com/nosql-explained
+https://www.cockroachlabs.com/blog/history-of-databases-distributed-sql/
+https://www.ibm.com/ibm/history/ibm100/us/en/icons/reldb/
+https://www.ibm.com/cloud/learn/relational-databases
+https://en.wikipedia.org/wiki/Relational_model
+https://www.toptal.com/database/the-definitive-guide-to-nosql-databases
+https://www.oracle.com/database/what-is-a-relational-database/
+https://pt.wikipedia.org/wiki/MySQL
+https://en.wikipedia.org/wiki/Microsoft_SQL_Server
