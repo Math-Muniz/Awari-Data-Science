@@ -1,0 +1,184 @@
+# Leitura: Transformando Dados
+
+Normalização e padronização, duas formas de transformação de dados. Fonte: becominghuman.ai
+
+Transformação de dados costuma ser uma tarefa feita em conjunto com a limpeza de dados, em uma etapa maior que podemos chamar de preparação de dados.
+
+A transformação envolve ajustes como:
+
+* substituir dados por outros, mais adequados à padronização do conjunto;
+* corrigir tipos de dados (transformar numerais contidos dentro de strings em números, por exemplo); 
+* deixar as variáveis de um conjunto de dados mais compreensíveis;
+* reduzir dados mais complexos a pares como Sim/Não ou 0/1;
+* suavizar a escala dos dados para que sejam melhor representados;
+* etc.
+
+É importante não confundir transformação, como trataremos aqui, com uma das etapas do processo de ETL (Extraction, Transformation, Load), visto em outro tópico do curso.
+
+Transformação, em ETL, é a conversão de dados massivos (big data) em escala, de forma mais “industrial”, por meio da área chamada Engenharia de Dados.
+
+Transformação, aqui neste tópico, é um processo mais ad-hoc (local) e manual, a fim de ajustar dados para análises ou para treinamento de modelos.
+
+Você também poderá encontrar referências a essa transformação de dados como pré-processamento — termo mais associado à mineração de dados (data mining). 
+
+Também poderá vê-lo como engenharia de recursos (feature engineering), terminologia usada em Machine Learning. Neste caso, “recurso” é a mesma coisa que “variável” em Estatística (algo como o rótulo de colunas em uma tabela, por exemplo).
+
+# Métodos de transformação
+A seguir, alguns dos principais métodos de transformação utilizados para ajustar dados.
+
+## Agregação
+Agregação de dados é o processo em que “dados brutos são reunidos e expressos de forma resumida para análise estatística”, segundo a IBM.
+
+É algo como sumarizar os dados para facilitar a análise dos mesmos. Como a própria IBM exemplifica, “dados brutos podem ser agregados em um determinado período de tempo para fornecer estatísticas como média, mínimo, máximo, soma e contagem.” 
+
+Após os dados serem agregados e gravados em uma exibição ou relatório, é possível obter informações (dados em um contexto) sobre o conjunto deles. 
+
+A agregação de dados pode ser temporal ou espacial.
+
+## Construção de atributos/recursos
+Trata-se da construção de novos recursos (features) ou variáveis com base nos dados que já temos.
+
+Podemos utilizar diversas variáveis de um conjunto de dados para criar um indicador ou índice (fórmula) que reduza aqueles dados em uma nova variável.
+
+Um exemplo simples seria termos uma tabela com dados de tempo e distância percorridos por veículos, a partir do qual podemos construir uma nova variável chamada velocidade média, por meio da divisão da variável distância pela variável tempo.
+
+## Discretização
+É a técnica de transformar dados brutos em intervalos discretos, mais intuitivos de serem compreendidos e mais fáceis de serem calculados.
+
+Pode ocorrer de você trabalhar com dados de distâncias percorridas por veículos, novamente. 
+
+Por se tratarem de medidas, estes dados serão contínuos, isto é, você pode ter muitos valores fracionários, com pequenas diferenças entre cada um deles. 
+
+Talvez seja útil você converter valores por faixas arredondadas de metros ou quilômetros percorridos, limitando o número de distâncias e facilitando a contagem delas.
+
+Há desde métodos de discretização simples até mais avançados, baseados em matemática mais profunda, como Minimum Description Length Principle (MDLP), por exemplo.
+
+## Normalização
+Normalização é a conversão de duas ou mais variáveis de um conjunto de dados em escalas correspondentes ou em intervalos determinados, como algo entre 0 e 1 ou entre -1 e 1, por exemplo.
+
+Conforme exemplo da Microsoft, podemos ter uma coluna de dados que varia de 0 a 1 e outra que varia de 10.000 a 100.000. A diferença de escala dos números atrapalha análises e treinamento de modelos de Machine Learning.
+
+A normalização permite ajustar esses dados para que tenham escalas iguais.
+
+Técnicas de normalizam envolvem, na maioria, aplicação de fórmulas matemáticas, como z-score, transformação logística, lognormal, tangente hiperbólica, Min-Max, entre outras. 
+
+Pacotes de ciência de dados e Machine Learning para Python já implementam essas funções, em sua grande maioria, para facilitar o trabalho.
+
+Este exemplo da Microsoft, já citado, fornece uma compreensão mais ampla a respeito. Este artigo também pode dar mais referências.
+
+## Suavização
+Suavização é a eliminação de ruídos dos dados para que fiquem mais fáceis de serem representados. 
+
+A técnica é muito comum no trabalho com Séries Temporais (sequências de dados ordenados no tempo).
+
+
+Exemplo de suavização de dados. No primeiro gráfico, temos uma tendência suavizada, fácil de ser intuída. Nos outros exemplos, temos ruído adicionado, o que dificulta a visualização de tendências. Fonte: rafalab.github.io
+
+A variação no preço de ações é um bom exemplo em que a suavização pode ser aplicada. 
+
+Se você observar a variação diária de preços para um determinado período de tempo, terá muito ruído (muitos pontos de dados), porque há altas e baixas discrepantes em um mesmo dia.
+
+No entanto, se você suavizar os dados para a média móvel, terá menos ruído e conseguirá notar tendências e outros movimentos com mais clareza.
+
+# Exemplos práticos
+Vamos fazer algumas demonstrações de transformações simples, que podem ser comuns no trabalho em Ciência de Dados.
+
+Continuaremos usando o Google Colab como ambiente para demonstrações e prática.
+
+Usaremos um conjunto de dados chamado dados2.csv, similar ao conjunto que usamos no tópico Limpeza de Dados.
+
+Podemos importar o Pandas e o conjunto de dados como já fizemos antes:
+
+import pandas as pd
+dados = pd.read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vTDyEU7lZJ-kPfXzHWs0Ku0gFSiUSt0nXyZzMVr1skTwDoegqHl5AyTuA29KYO0u231TiBRvqVajpCo/pub?output=csv")
+Chamando dados em outra célula, veremos:
+
+
+Alguns problemas que exigirão transformações de dados provavelmente já saltarão à vista, como nas linhas 3, coluna Duração, e nas linhas 13 e 17, coluna Data.
+
+Há ainda um outro probleminha muito comum, que exigirá conversão de tipos, na coluna Calorias. Você consegue visualizar qual é? Se sim, de que forma resolveria?
+
+Vamos transformar esses dados para deixá-los mais harmoniosos com os demais.
+
+## Dado errado
+Na linha 3, coluna Duração, temos um exemplo de dado errado. 
+
+Em vez de 45 minutos, há um campo informando 450 minutos, o que foge bastante ao padrão e, provavelmente, trata-se de um equívoco no registro.
+
+Intervenções como essas acabam sendo bastante específicas. Podemos fazer a alteração pontual com:
+
+dados.loc[3, 'Duração'] = 45
+Usamos o método loc, de Pandas, para localizar o registro 3, da coluna Duração, e modificá-lo para 45 (atribuir o valor 45 a ele, que substituirá o valor 450).
+
+Chame dados novamente e verá que estará tudo certo com essa coluna.
+
+## Corrigindo por limites
+Em grandes conjuntos de dados, valores discrepantes ou outliers (muito mais altos ou baixos do que os valores mais frequentes do conjunto) podem ser ajustados por limites estatísticos.
+
+Valores que estiverem fora do limite inferior do conjunto ou fora do limite superior, podem ser transformados para os valores desses limites.
+
+Digamos que nossos dados giram em torno, no máximo, de duas horas de atividade. Poderíamos ajustar valores acima de 120 minutos (duas horas) para exatos 120 minutos com um for loop em Python:
+
+for x in dados.index:
+  if dados.loc[x, "Duration"] > 120:
+    dados.loc[x, "Duration"] = 120
+
+## Formato incompatível
+Nas linhas 13 e 17 da coluna Data, como já dissemos, temos outros dois problemas. Um valor faltante (NaN) e outro formatado como um número (20220117) e não como data (17/01/2022). 
+
+Podemos converter todos os valores em datas válidas para Pandas — mesmo que vazias; NaN serve para números, não para datas — com:
+
+dados['Data'] = pd.to_datetime(dados['Data'])
+Chame dados novamente e você verá que as datas ficaram em um formato universal, que Pandas entende, como 2022-01-17 ou todas ordenadas por Ano-Mês-Dia.
+
+O valor faltante também se tornou NaT (Not a Time), que agora permite operações com datas sem resultar em erros.
+
+## Transformação de tipo
+Agora, vamos ver o que ocorre na coluna Calorias. Comentamos que havia um problema nela. Conseguiu perceber qual é?
+
+Tente calcular a média para Calorias, dessa maneira:
+
+dados['Calorias'].mean()
+Pandas retornará um erro e não executará a célula:
+
+
+Uma pista sobre o problema está na última linha da mensagem: TypeError: can only concatenate str (not “int”) to str.
+
+A coluna Calorias tem os números separados por vírgulas (notação brasileira). Como Pandas entende a notação americana (valores fracionários separados por pontos), ele converte valores separados por vírgula em strings (sequências de caracteres), que não permitem realizar cálculos como a média.
+
+Precisamos, então, fazer com que essas strings se transformem em números.
+
+Uma maneira de fazer isto é substituir todas as vírgulas por pontos na coluna, com o método replace de Python, que funciona em strings (str.replace):
+
+dados['Calorias'] = dados['Calorias'].str.replace(',', '.')
+Porém, ainda não conseguiremos fazer a média. Se você chamar dados.info(), verá que o tipo de dados da coluna Caloria ainda não é um tipo numérico e sim um objeto.
+
+Podemos fazer a conversão de tipo com o método astype de Python:
+
+dados['Calorias'] = dados['Calorias'].astype(float)
+Isto converterá os dados do tipo objeto para o tipo float (número fracionário ou de com ponto flutuante), preservando os valores decimais.
+
+Agora, sim, conseguimos calcular a média, que será nos retornará 291.2722222222222.
+
+# Considerações
+Dependendo do conjunto de dados, como vimos neste pequeno exemplo, podemos ter uma variedade de transformações a serem feitas.
+
+Por isso, é importante treinar métodos de Python puro e do próprio Pandas. Quanto mais praticar com eles, mais fluência você terá na hora de preparar conjuntos de dados — uma tarefa rotineira, principalmente a iniciantes na área.
+
+Não se preocupe em “decorar” todos os comandos, é claro. Pesquise em fóruns e na documentação. Sempre há casos em que alguém já teve aquela dúvida antes de você, normalmente com várias sugestões de soluções, umas mais eficientes do que outras.
+
+Com o tempo e a prática, você conseguirá fluência tanto na aplicação de técnicas de Python quanto na expertise em relação ao que é mais rápido e eficaz de fazer em um determinado conjunto de dados.
+
+Se os dados a serem trabalhos têm a mesma estrutura e natureza (por exemplo, você recebe planilhas de um serviço de saúde para normalizar e submeter a análises estatísticas), limpeza e transformação podem ser automatizadas em alguma medida por meio de scripts em Python.
+
+Assim, todo novo conjunto de dados recebidos já passa automaticamente por uma bateria de ajustes padrão.
+
+No entanto, se cada conjunto de dados em que você trabalhar for completamente diferente de outros, naturalmente será preciso mais tempo para o conhecimento dos dados e para prepará-los.
+
+# Referências
+https://analyticsindiamag.com/top-8-data-transformation
+https://developers.google.com/machine-learning/
+https://subscription.packtpub.com/book/data/
+https://www.analyticsvidhya.com/blog/2021/05/feature-transformations
+https://towardsdatascience.com/data-transformation
+https://towardsdatascience.com/semi-automated
