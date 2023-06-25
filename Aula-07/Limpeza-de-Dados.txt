@@ -1,0 +1,177 @@
+# Leitura: Limpeza de Dados
+
+Etapas comuns da limpeza de dados. Fonte: iteratorshq.com
+
+Limpeza de dados é uma etapa fundamental do ciclo de projetos em Data Science, Data Analytics e áreas relacionadas.
+
+É ela que garantirá a qualidade dos dados que serão analisados para extração de insights ou que serão processados em modelos estatísticos e de Machine Learning.
+
+Na comunidade de dados, há um lugar-comum que diz que 80% do tempo um profissional da área é dedicado a “trabalho chato” (limpeza e preparação de dados), enquanto só 20% é “diversão” (análise e obtenção de resultados).
+
+O ditado teria surgido de artigo da Revista Forbes, em 2016, que citava uma pesquisa, a qual mencionava que 60% do tempo de profissionais do setor era dedicado à limpeza e organização de dados. Houve quem até tentou uma “arqueologia” do termo.
+
+Percentuais à parte, é evidente que, dependendo da qualidade dos dados, pode ser necessário um grande esforço na rotina que compreende normalizá-los, isto é, remover dados inconsistentes, preencher dados vazios, transformar dados incompatíveis com o conjunto etc.
+
+Um dos fatores que “estigmatiza” a limpeza de dados como uma etapa trabalhosa e demorada é a qualidade das fontes de dados que surgiram com big data, nas duas primeiras décadas do século XXI.
+
+Na ânsia de as empresas capturarem todos os dados possíveis relacionados a vendas, comportamento do cliente e eventos de mercado, acreditando ou sendo influenciadas que bastaria minerá-los, depois, para encontrar “ouro” (diferenciais competitivos), houve um armazenamento sem precedentes de “lixões” de dados.
+
+## Exemplo
+Pense em um grande banco de dados em saúde, por exemplo, cujas informações são preenchidas manualmente por milhares de pacientes, familiares, enfermeiros e médicos, todos os dias. 
+
+Haverá nomes em maiúsculas ou minúsculas, datas de nascimento anotadas onde deveriam ir nomes, CIDs (códigos de doenças) esquecidos ou informados de forma equivocada e uma série de outras inconsistências.
+
+Apesar de startups e empresas mais maduras estarem corrigindo problemas na obtenção e armazenamento de dados, esses problemas ainda ocorrem e é fácil entender porque limpeza de dados é importante, pode tomar tempo e ser determinante para bons projetos em dados.
+
+E não há script padrão para realizá-la: ela será diferente, mais ou menos exigente e, normalmente, pouco linear, conforme os dados que obtemos e a finalidade em usá-los.
+
+# Principais requisitos de limpeza
+A limpeza de dados envolve uma série de requisitos a serem observados. Eles podem ser mais ou menos críticos, dependendo do projeto.
+
+## Qualidade dos dados
+Qualidade dos dados tem muito a ver com a semântica deles, isto é, com o significado ou, mais ainda, com o contexto em que estão sendo usados. 
+
+Nem sempre é possível entender se os dados estão de acordo com o significado ou contexto adequado olhando-se apenas para eles.
+
+É necessária alguma padronização no âmbito do negócio para saber o que um dado representa e como deve ser usado e interpretado, muitas vezes.
+
+Os principais aspectos que impactam nesse sentido são:
+
+* Validade: os dados estão conforme regras ou restrições de negócio padronizadas ou definidas? Em resumo, mesmo que representem algo, essa representação é válida, corresponde à realidade ou pode haver discrepâncias de medição, por exemplo?
+* Precisão: qual é o grau de precisão dos dados? Em conjunto, eles se aproximam da realidade ou também há problemas de medição que os tornam imprecisos?
+* Completude: o quão abrangente, para a situação que se quer analisar, os dados são? Eles cobrem boa parte dos eventos da realidade ou são uma amostra pequena demais, com riscos de estar enviesada, ser tendenciosa?
+* Consistência: os dados são consistentes dentro do conjunto de dados em que estão? Há um relacionamento que faz sentido entre eles? 
+* Uniformidade: os dados têm um certo padrão quanto aos tipos, a sintaxe e a semântica? Ou é como uma coleção aleatória de coisas diversas, discrepantes em tamanhos, formatos etc.?
+
+## Aspectos técnicos
+Além da qualidade dos dados, a qual depende de semântica e contexto, há aspectos técnicos (mais ao nível da sintaxe, digamos) a serem tratados na limpeza:
+
+* Dados ausentes: há dados faltantes em linhas, colunas ou campos? (Dependendo do caso, em se tratando de números, isso pode afetar seriamente cálculos estatísticos). 
+* Dados irrelevantes: há dados irrelevantes no conjunto, que podem ser suprimidos sem afetar seriamente a análise?
+* Duplicatas: há dados duplicados no conjunto? (Por exemplo, dados de um cliente que aparecem em várias linhas de uma tabela).
+* Desconformidade de tipos: números são números ou strings? Datas e horas estão em um formato tratável, possíveis de serem convertidos? Valores decimais estão separados por ponto (formato americano) ou vírgula (formato brasileiro)?
+* Erros de sintaxe: palavras, nomes, categorias estão escritas ora com letras maiúsculas e ora com minúsculas? Uma palavra separada com hífen aparece separada com espaço em outros locais do conjunto? Há números de telefone com e sem DDD na mesma base?
+
+# Praticando limpeza de dados
+Usaremos o Google Colab, novamente, para demonstrar um pouco de limpeza de dados na prática. 
+
+Nosso dataset (conjunto) de dados será um arquivo bem simples, com apenas 20 linhas e 5 colunas, chamado dados1.csv (clique se você quiser baixá-lo; não é necessário fazer isto para esta prática).
+
+Vamos importar o Pandas e o arquivo, em uma célula do Google Colab, desta forma:
+
+import pandas as pd
+dados = pd.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vSaQr4VZp2TYU222rtnZoLbZa4HY4vNVbkj9vEB1e681DGlKl4xj9FVSiUSPX-qcQddpdc6FFxA1gmA/pub?output=csv')
+Rode a célula e, na célula seguinte, chame dados para ver o resultado:
+
+
+Com isso, já conseguimos ter uma boa compreensão do conjunto de dados.
+
+Podemos ver que se trata, provavelmente, de algum tipo de teste cardíaco ou sessão de atividade física, em que temos tempo de duração do teste ou atividade, a data da medição, os batimentos cardíacos médios, pico de batimentos, calorias gastas e uma coluna (???) vazia.
+
+Vamos começar a limpar o conjunto de dados.
+
+## Células vazias
+A primeira coisa que talvez queiramos saber é se há células vazias. Como o dataset é muito pequeno, é fácil percebê-las. 
+
+Mas caso tivéssemos milhares ou milhões de linhas de dados, poderíamos fazer:
+
+dados.isnull().sum()
+O resultado será:
+
+
+Valores nulos são substituídos por padrão, pelo Pandas, com NaN, que significa Not a Number (Não é um Número). NaN ainda permite que realizemos cálculos no DataFrame, mas não é considerado nas operações.
+
+Temos um dado nulo na coluna Data, dois na coluna Calorias e uma coluna inteira de nulos em ???.
+
+## drop()
+Como a coluna ??? não serve para nada, aparentemente, podemos excluí-la com drop().
+
+Antes de fazermos isto, porém, uma providência é criarmos uma cópia do conjunto de dados, para mantermos o original e podermos recuperar as informações, se necessário.
+
+Usamos copy() para isso:
+
+dados1 = dados.copy()
+Com isso, podemos usar drop() em dados1, desta maneira:
+
+dados1.drop('???', axis=1, inplace=True)
+O que fizemos aqui foi chamar drop com os seguintes parâmetros:
+
+* o nome da coluna que queremos remover (‘???’);
+* axis=1, que informa que estamos removendo a coluna e não uma linha;
+* inplace=True, que força a alteração no objeto atual (dados1); sem usá-lo, teríamos de criar uma nova variável (dados2, por exemplo) para poder salvar a exclusão da coluna.
+Chame dados1 em uma nova célula do Colab e veja que a coluna ??? foi removida.
+
+## dropna()
+Outra forma de excluir dados nulos é com dropna(). Esse método, no entanto, exclui todas as linhas onde há valores nulos. 
+
+Se usássemos isto diretamente com nosso DataFrame dados, todas as linhas seriam excluídas, porque há NaNs em todas as linhas da coluna ???. 
+
+Se você quiser ver como isto acontece, pode fazer o seguinte:
+
+dadosX = dados.copy()
+dadosX.dropna()
+Sobrará apenas o cabeçalho com os rótulos de cada coluna.
+
+Se fizermos isso em dados1, porém, onde já excluímos a coluna ???, o método dropna() apenas excluirá as linhas 9, 13 e 18, onde há NaNs nas colunas Data ou Calorias.
+
+Faça isso e veja que as linhas 9, 13 e 18 são excluídas do DataFrame:
+
+dados2 = dados1.copy()
+dados2.dropna()
+O método dropna() é útil se temos segurança de que a exclusão de linhas não afetará nossa análise. Se houver muitos valores nulos, seu uso não é recomendado, porque poderá comprometer o conjunto de dados e distorcer análises.
+
+## Nulos
+Se queremos substituir valores nulos por números, para considerá-los em nossos cálculos, podemos usar fillna().
+
+Digamos que queremos fazer a média da coluna Calorias em dados1. Podemos fazer desta forma, mantendo os NaNs que há em tal coluna:
+
+dados1['Calorias'].mean()
+# Resultado: 291.2722222222222
+Porém, o que queremos, na verdade, é contabilizar os NaNs que aparecem nas linhas 12 e 18. Poderíamos substituir os NaNs por zeros como valor padrão.
+
+Para isso, usamos fillna(). Por segurança, faremos uma nova cópia dos dados.
+
+dados2 = dados1.copy()
+dados2['Calorias'].fillna(0, inplace=True)
+Chame dados2 em uma nova célula do Colab e veja o valores 0.0 na coluna Calorias, linhas 9 e 18.
+
+Rodando a média novamente, agora teremos um novo valor, porque os zeros foram considerados no cálculo, o que o altera (NaNs, lembre-se, permitem cálculos, mas não são considerados nos mesmos):
+
+dados2['Calorias'].mean()
+# Resultado: 262.145
+
+## Dados duplicados
+Podemos verificar dados duplicados em dados2 com o método duplicated():
+
+dados2.duplicated()
+Teremos como resultado:
+
+
+O True (Verdadeiro) na linha 6 indica que ela é duplicada. Chame dados2 e você verá que os dados são exatamente os mesmos em todas as colunas nas linhas 5 e 6.
+
+## drop_duplicated()
+Faremos a remoção dessa duplicata (linha 6) com drop_duplicates():
+
+dados2.drop_duplicates(inplace=True)
+Pronto, a linha 6 foi eliminada.
+
+# Conclusão
+Esta é uma introdução e uma pequena amostra prática sobre limpeza de dados. 
+
+Nos estudos ou no trabalho em Ciência de Dados, importação, limpeza e transformação de dados — o que podemos resumir como preparação dos dados ou pré-processamento — é um processo interativo.
+
+Começa-se, normalmente, com uma análise prévia dos dados. Percebem-se os problemas. Em seguida, parte-se para a limpeza e/ou a transformação de dados. Pode-se limpar determinados dados e analisá-los para ver se deu tudo certo. 
+
+Talvez tenha-se de voltar atrás no procedimento porque esquecemos de fazer uma cópia do conjunto. Precisamos importar o conjunto novamente e começar de novo. 
+
+Podemos perceber problemas que requerem mais trabalho de transformação. Vamos para ela. Limpamos outros dados na mesma etapa. Analisamos de novo para nos certificarmos que está tudo dentro do esperado. 
+
+Podemos voltar a limpar dados. Fazer mais transformações. Analisar novamente. Toda essa rotina, até estarmos com o conjunto de dados satisfatoriamente saneado para uso.
+
+Conhecimento acerca dos recursos do Pandas é um bom começo para praticar limpeza de dados de um ponto de vista técnico. A expertise virá da repetição desse trabalho em conjunto de dados variados.
+
+# Referências
+https://www.tableau.com/learn/articles/what-is-data
+https://towardsdatascience.com/data-cleaning
+https://towardsdatascience.com/the-ultimate-guide
+https://www.w3schools.com/python/
