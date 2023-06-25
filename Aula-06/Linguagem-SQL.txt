@@ -1,0 +1,270 @@
+# Leitura: Linguagem SQL
+Imagem ilustrativa de modelagem de um banco de dados com tipos de dados SQL. Fonte: pt.stackoverflow.com 
+
+SQL é a sigla para Structure Query Language (em tradução livre, Linguagem de Consulta Estruturada).
+
+Trata-se de uma linguagem declarativa para pesquisa em bancos de dados relacionais — que funcionam como grandes tabelas, com dados “relacionados” por linhas e colunas, de onde o nome “relacional”.
+
+A história de SQL começa nos anos 1970, na IBM, e segue forte até os dias atuais, com uma série de bancos de dados relacionais à disposição de desenvolvedores, desde os mais simples aos mais robustos e profissionais, como vimos anteriormente.
+
+Neste tópico, vamos entrar na sintaxe da linguagem SQL propriamente dita e usar o MySQL, um dos bancos de dados relacionais mais populares, para entendermos como trabalhar com ela.
+
+O aprendizado de SQL pode ser considerado fundamental tanto para profissionais de dados (que precisam usar a linguagem para consultar dados) como para desenvolvedores de software, que dependem de bancos de dados para registrar e atualizar informações de sites e aplicativos. 
+
+Dado que a principal tarefa de muitas aplicações é realizar operações em bancos de dados e dado que muitos bancos de dados ainda são relacionais, entender como SQL funciona torna-se um fundamento na área.
+
+Em resumo, SQL permite as seguintes operações em bancos de dados relacionais:
+
+* criar (create), ler (read), atualizar (update) e excluir (delete) registros em tabelas bancos de dados — a ações da famosa sigla CRUD, que vimos anteriormente;
+* criar, gerir e excluir tabelas onde esses registros ficam armazenados;
+* setar permissões, ou seja, definir quem pode fazer o que no banco de dados.
+Pense em bancos de dados profissionais praticamente como “cofres”, podendo conter “fortunas” em forma de dados.
+
+Neles, podem estar vários dados sensíveis de muitos usuários cadastrados em um negócio, podem constar números de cartões de crédito, endereços e rastreamentos de GPS, dados biométricos e de saúde, além, é claro, de muitas senhas.
+
+Por isso, profissionais que lidam com eles devem conhecer do assunto e entender sua importância e as responsabilidades envolvidas.
+
+# Principais declarações
+Vamos ver, de forma resumida, as declarações mais comuns usadas na linguagem SQL. Por convenção, todas procuram ser escritas em maiúsculas.
+
+No trabalho com dados, é muito provável que um Data Analyts ou outro profissional de dados não faça inserção, atualização ou exclusão de dados e, sim, apenas os consulte-os e os importe para outras ferramentas a fim de analisá-los. 
+
+Mesmo assim, vamos cobrir todos os aspectos de SQL, desde a consulta até a exclusão de dados.
+
+## Declarações comuns para registros
+“Registro” pode ser entendido como uma linha de dados em uma tabela do banco de dados. As declarações mais comuns para trabalhar com eles são:
+
+* SELECT: instrução que serve para consultar dados de uma tabela de um banco de dados; trata-se de uma das instruções mais simples e mais usadas.
+* INSERT: insere uma ou mais linhas em uma tabela.
+* UPDATE: atualiza dados de uma tabela.
+* DELETE: exclui dados de uma tabela de forma permanente.
+
+Além das declarações, há cláusulas que são usadas junto das declarações, para torná-las mais versáteis e úteis:
+
+* GROUP BY: permite agrupar linhas.
+* ORDER BY: cláusula usada junto com instruções, que permite ordenar os resultados (em ordem alfabética ou de um valor maior para um menor, por exemplo).
+* DISTINCT: filtra apenas resultados únicos (remove duplicadas) em consultas ao banco de dados.
+* FETCH: permite começar uma consulta a partir de um determinado número de linhas.
+* WHERE: permite filtrar dados com base em condições específicas.
+* AND: operador lógico “E”, que permite combinar expressões booleanas.
+* OR: operador lógico “OU”, que também permite combinar expressões booleanas.
+* NOT: negação (não) de uma expressão booleana.
+* LIKE: permite consultas dentro de um padrão especificado.
+* CASE: permite a lógica if-then-else (se-então-senão) em SQL.
+
+## Declarações comuns para tabelas
+* CREATE TABLE: cria uma nova tabela no banco de dados.
+* ALTER TABLE: modifica a estrutura de uma tabela.
+* DROP TABLE: remove tabelas de forma permanente do banco de dados.
+* INNER JOIN: permite combinar várias tabelas.
+Além dessas declarações comuns para tabelas, também há outras relacionadas:
+
+* PRIMARY KEY: define qual a “chave primária” dos dados, isto é, o dado que será o principal de cada linha da tabela.
+* FOREIGN KEY: “chave estrangeira”, usada no relacionamento entre duas ou mais tabelas.
+Um aprofundamento sobre essas declarações pode ser conferido em sqltutorial.org. 
+
+Cada banco de dados fornece documentação específica sobre o SQL dentro de suas especificações. Por isso, também é interessante consultar a documentação do banco de dados que você venha a utilizar.
+
+# Praticando com MySQL
+MySQL é um tipo de banco de dados relacional bastante utilizado.
+
+Tornou-se um padrão de mercado na década de 2000, por acompanhar a linguagem de programação PHP, na época uma das principais para desenvolvimento web.
+
+Posteriormente, foi adquirido pela Oracle, empresa que desenvolve e fornece bancos de dados profissionais.
+
+MySQL é uma opção comum de banco de dados relacional utilizado por diversas aplicações. Por isso, resolvemos demonstrar SQL por meio dele. 
+
+O mesmo pode ser feito por meio de SQLite, um banco de dados muito mais simples, que você pode instalar na sua própria máquina para testar e aprender SQL, ou com PostgreSQL, mais robusto e com mais funcionalidades.
+
+## Instalação
+A instalação de MySQL, para fins de aprendizado, é relativamente simples.
+
+Para Windows, basta baixar e executar o arquivo de instalação, disponível em https://dev.mysql.com/downloads/installer/. Isto deverá conduzi-lo passo a passo pela instalação e configurações do MySQL, como a definição da senha de acesso.
+
+(A instalação por meio do Windows Power Shell ou de algum prompt que emula o terminal Linux no Windows, como cmder, permitem seguir as instruções para Linux descritas abaixo.)
+
+No Linux e macOS, as instalações são parecidas.
+
+No Linux, em geral basta executar no terminal:
+
+sudo apt update
+sudo apt install mysql
+No macOs, a instalação pode ser feita por meio de arquivo executável (.pkg) ou da linha de comando, por meio do homebrew, com:
+
+brew install mysql
+Em seguida, é necessário definir a senha de acesso e, se desejável, algumas questões de segurança. Isso pode ser feito informando-se no terminal:
+
+sudo mysql_secure_installation
+Para inicializar o MySQL na linha de comando, em geral basta digitar as instruções a seguir.
+
+Para Linux e macOS:
+
+sudo mysql -u root -p
+Para Windows, basta ir no menu “Iniciar” e selecionar o cliente da linha de comando do MySQL.
+
+Instruções mais complexas constam na documentação do MySQL. Também há diversos tutoriais disponíveis na web que podem ajudar com casos específicos.
+
+Ao executar os comandos acima no prompt do seu sistema, você deve ser solicitado a informar a senha de acesso ao MySQL e acessará o prompt do mysql, que se parece com a tela a seguir:
+
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 20
+Server version: 8.0.28-0ubuntu0.20.04.3 (Ubuntu)
+
+Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql>
+Ótimo! Você está dentro do MySQL e, a partir de mysql>, é possível experimentar como a ferramenta funciona.
+
+## “Mão na massa” em Mysql
+Para você ter um contato com o MySQL, vamos fazer algumas operações básicas. Você pode repeti-las no seu próprio MySQL.
+
+### Criando um novo banco de dados
+Primeiro, vamos criar um novo banco de dados, na qual poderemos inserir tabelas. Chamaremos esse banco de dados de “estudos”. A criação é feita com a seguinte declaração:
+
+CREATE DATABASE estudos;
+Você receberá uma mensagem como esta, significando que o banco de dados foi criado.
+
+Query OK, 1 row affected (0,16 sec)
+Visualizando bancos de dados
+
+Você pode ver o banco de dados digitando:
+
+SHOW DATABASES;
+O resultado deve ser algo como (note que estudos é o primeiro banco de dados da lista):
+
++--------------------+
+| Database           |
++--------------------+
+| estudos            |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0,01 sec)
+Declarando em qual banco de dados iremos trabalhar
+
+Para declarar que iremos trabalhar no banco de dados, usamos:
+
+USE estudos;
+Criando uma nova tabela no banco de dados
+
+A partir daqui, podemos criar uma nova tabela, digitando:
+
+CREATE TABLE aulas (
+aula varchar(100),
+instrutor varchar(50),
+dificuldade int
+);
+Novamente, você verá uma mensagem de OK.
+
+Se você digitar SHOW tables;, verá que temos uma tabela no banco de dados, com o nome aulas.
+
+## Inserindo registros na tabela
+O próximo passo, então, é inserir registros nessa tabela. Vamos informar o nome da aula, o nome do instrutor e o nível de dificuldade da aula (um número de 1 a 3), apenas para fins didáticos.
+
+Fazemos isso assim:
+
+INSERT INTO aulas (aula, instrutor, dificuldade) VALUES
+('Ferramentas de BI', 'Fulano', 2),
+('Análise Exploratória', 'Beltrano', 3),
+('Dashboards', 'Ciclano', 1);
+Note que é parecido com falar inglês com a máquina. Você ordena para inserir dentro da tabela “aulas” os valores entre parênteses.
+
+## Consultando registros
+Podemos consultar nossos dados com SELECT. Na declaração abaixo, usamos asterisco para indicar que queremos exibir todos os resultados:
+
+SELECT * FROM aulas;
+E o resultado será:
+
++-------------------------+-----------+-------------+
+| aula                    | instrutor | dificuldade |
++-------------------------+-----------+-------------+
+| Ferramentas de BI       | Fulano    |           2 |
+| Análise Exploratória    | Beltrano  |           3 |
+| Dashboards              | Ciclano   |           1 |
++-------------------------+-----------+-------------+
+3 rows in set (0,00 sec)
+Se quisermos ordenar por dificuldade, por exemplo, declaramos:
+
+SELECT * FROM aulas ORDER BY dificuldade;
+O resultado será a tabela anterior ordenada do menor para o maior grau de dificuldade:
+
++-------------------------+-----------+-------------+
+| aula                    | instrutor | dificuldade |
++-------------------------+-----------+-------------+
+| Dashboards              | Ciclano   |           1 |
+| Ferramentas de BI       | Fulano    |           2 |
+| Análise Exploratória    | Beltrano  |           3 |
++-------------------------+-----------+-------------+
+3 rows in set (0,00 sec)
+Se quisermos filtrar as aulas apenas por grau de dificuldade maior que 1, declaramos:
+
+SELECT * FROM aulas WHERE dificuldade > 1 ORDER BY dificuldade;
+
+E teremos apenas as aulas com grau de dificuldade 2 e 3, ordenadas do menor para o maior grau de dificuldade:
+
++-------------------------+-----------+-------------+
+| aula                    | instrutor | dificuldade |
++-------------------------+-----------+-------------+
+| Ferramentas de BI       | Fulano    |           2 |
+| Análise Exploratória    | Beltrano  |           3 |
++-------------------------+-----------+-------------+
+2 rows in set (0,00 sec)
+É tudo uma questão de composição de declarações, como se você falasse com o MySQL para ele buscar os dados para você ou para realizar operações nas tabelas e no banco de dados em que você está trabalhando. 
+
+## Atualizando um registro
+Digamos que nos confundimos e a aula “Análise Exploratória” é, na verdade, de “Estatística Descritiva”. Precisamos renomear a aula.
+
+Fazemos isso com a declaração UPDATE, informando que queremos atualizar a tabela aulas, com o valor (SET) “Análise Exploratória” na coluna “aula”, na linha em que consta (WHERE) “Estatística Descritiva” da mesma coluna:
+
+UPDATE aulas
+SET aula='Análise Exploratória'
+WHERE aula='Estatística Descritiva';
+Você receberá um novo OK na tela. Com um novo SELECT * FROM aulas;, você verá a tabela atualizada:
+
++-------------------------+-----------+-------------+
+| aula                    | instrutor | dificuldade |
++-------------------------+-----------+-------------+
+| Ferramentas de BI       | Fulano    |           2 |
+| Estatística Descritiva  | Beltrano  |           3 |
+| Dashboards              | Ciclano   |           1 |
++-------------------------+-----------+-------------+
+3 rows in set (0,00 sec)
+Excluindo registros
+
+Atualizamos uma aula. Mas digamos que temos a necessidade de excluir uma das aulas, porque ela será dada em um curso à parte, por exemplo. 
+
+Fazemos tal ação com DELETE, de forma muito parecida com o UPDATE:
+
+DELETE FROM aulas WHERE aula='Ferramentas de BI';
+Recebemos um novo OK e se consultarmos novamente a tabela com SELECT * FROM aulas, teremos:
+
++------------------------+-----------+-------------+
+| aula                   | instrutor | dificuldade |
++------------------------+-----------+-------------+
+| Estatística Descritiva | Beltrano  |           3 |
+| Dashboards             | Ciclano   |           1 |
++------------------------+-----------+-------------+
+2 rows in set (0,00 sec)
+
+# Considerações
+Esta é uma introdução à prática com MySQL. Obviamente, operações profissionais requerem conhecimentos mais aprofundados.
+
+O bom é que SQL é fácil de aprender e praticar. É o mesmo padrão independentemente dos diversos bancos de dados relacionais usados. E tem a mesma sintaxe independente de onde você utilizar.
+
+Isto é, se você operar uma ferramenta de BI que possui campos para consultas (queries) e SQL, bastará digitar declarações na linguagem para poder obter os extratos de dados que deseja.
+
+Aprendendo SQL, poderá usar esses conhecimentos em diferentes contextos de negócios e análises, independentemente das ferramentas que você utilizará e/ou dos bancos de dados relacionais que a empresa usa.
+
+# Referências
+https://dev.mysql.com/doc/refman/8.0/en/installing.html
+https://www.digitalocean.com/community/tutorials/introduction-to-queries-mysql
+https://www.sqltutorial.org/
