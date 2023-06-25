@@ -1,0 +1,81 @@
+# Leitura: Ferramentas de Big Data
+Este tópico cobre um assunto que é de competência da Engenharia de Dados, mas que cientistas de dados devem ao menos conhecer por alto.
+
+# Visão Geral
+O termo Big Data se refere às enormes coleções de dados que as empresas usam para automatizar processos, detectar padrões de alto nível e inovar produtos ou serviços. 
+
+Tais conjuntos de dados são tão volumosos que softwares tradicionais de processamento simplesmente não conseguem gerenciá-los.
+
+Ao contrário dos conjuntos comuns de dados, que normalmente são mais homogêneos, as coleções de Big Data correspondem a grupos maiores e mais complexos de dados, que costumam abranger tanto dados estruturados quanto não estruturados.
+
+Em sua essência, o Big Data é composto por três características básicas, classificadas como os 5 V’s:
+
+* Volume: diz respeito ao tamanho e à quantidade de Big Data que as empresas gerenciam e analisam;
+* Valor: o “V” mais importante da perspectiva de negócios, o valor do Big Data, em geral, resulta da descoberta de insights e padrões que levam a operações mais eficazes, relacionamentos mais fortes com os clientes, entre outros benefícios comerciais quantificáveis;
+* Variedade: a diversidade e a variedade de diferentes tipos de dados, que inclui dados não estruturados, semi estruturados e dados brutos;
+* Velocidade: corresponde à rapidez com que as empresas recebem, armazenam e gerenciam dados — por exemplo, o número específico de postagens de mídia social ou consultas de pesquisa recebidas em um dia, hora ou outra unidade de tempo;
+* Veracidade: a “verdade” ou precisão dos ativos de dados e informações, que geralmente determinam a confiança do nível executivo;
+* Variabilidade: tem a ver com a natureza mutável dos dados que as empresas buscam capturar, gerenciar e analisar — em análise de sentimento ou texto, por exemplo, mudanças no significado de palavras-chave ou frases.
+
+# Principais Ferramentas 
+Como você já deve ter percebido até aqui, o Big Data tornou-se parte integrante de qualquer negócio para melhorar a tomada de decisões e obter uma vantagem competitiva no merca. 
+
+Nesse sentido, a busca por profissionais capazes de utilizar ferramentas de dados que lidam com grandes conjuntos de dados e identificam padrões e tendências dentro deles só tende a crescer.
+
+A seguir, veremos algumas das ferramentas de Big Data que têm ajudado a equipar as empresas no processo de análise de suas grandes coleções de dados. 
+
+Vale notar que algumas soluções são mais completas, enquanto outras estão mais focadas em uma área específica, como a visualização e/ou integração de dados:
+
+## Apache Hadoop
+O Apache Hadoop é um framework de análise de dados open source, sendo uma das ferramentas mais populares entre analistas e outros profissionais de dados. 
+
+Capaz de armazenar e processar com eficiência conjuntos massivos de dados — cujo tamanho varia de gigabytes a petabytes — ele funciona distribuindo esses dados em um cluster de computação, dividindo-os em cargas de trabalho menores que podem ser executadas em paralelo.
+
+## MongoDB
+MongoDB é um banco de dados NoSQL que usa coleções baseadas em documentos em vez de linhas e colunas baseadas em SQL. 
+
+Outra ferramenta muito utilizada na análise de Big Data, ele permite processar grandes quantidades de dados em tempo real rapidamente devido a cálculos na memória.
+
+Alguns dos seus recursos incluem operações CRUD, estrutura de agregação, pesquisa de texto e o recurso Map-Reduce.
+
+## Tableau 
+Software líder em visualização de dados para analistas de dados e equipes de business intelligence, o Tableau também funciona como uma plataforma end-to-end de análise de dados, que permite preparar, analisar, colaborar e compartilhar insights de Big Data. 
+
+Alguns dos seus recursos incluem a conectividade de dados para plataformas Hadoop e NoSQL, bem como data warehouses de grande escala (locais e em nuvem).
+
+## Apache Spark 
+O Apache Spark é outro utilitário de código aberto que opera de maneira semelhante ao Hadoop com uma diferença importante: em vez de um sistema de arquivos, o Spark armazena em cache e processa dados usando a RAM do hardware subjacente. 
+
+Isso significa que o Spark é capaz de preencher as lacunas de processamento em tempo real e de cálculo na memória que o Hadoop não consegue resolver, tornando seu ecossistema mais eficiente.
+
+## Zoho Analytics
+Voltado para empresas menores, o Zoho Analytics é considerado uma das soluções de análise de Big Data mais acessíveis do mercado. 
+
+Ele possui uma interface de usuário intuitiva que facilita a criação de dashboards avançados, além de possibilitar a rápida localização de informações importantes.
+
+## Lumify 
+OLumifyé uma ferramenta gratuita e de código aberto para fusão/integração de Big Data, análise e visualização.
+
+Seus principais recursos incluem pesquisa de texto completo, visualizações de gráficos 2D e 3D, layouts automáticos, análise de links, integração com sistemas de mapeamento, análise geoespacial e multimídia.
+
+Além disso, possibilita a colaboração em tempo real por meio de um conjunto de projetos ou espaços de trabalho.
+
+## Rapidminer
+ORapidminer é uma ferramenta multiplataforma que oferece um ambiente integrado para Data Science, Machine Learning e Análise Preditiva. 
+
+Utilizado por empresas como BMW, Samsung e Airbus, ele conta com uma versão gratuita que permite 1 processador lógico e até 10.000 linhas de dados.
+
+## Apache Cassandra
+Gratuito e open source, oApache Cassandra é um sistema de gerenciamento de banco de dados NoSQL distribuído, construído para gestão de Big Data em vários servidores comuns.
+
+Ele emprega CQL (Cassandra Structure Language) para interagir com o banco de dados. 
+
+American Express, Facebook e Yahoo estão entre as empresas que utilizam essa ferramenta.
+
+# Referências
+https://www.cortex-intelligence.com/blog/os-5-vs-do-big-data
+https://www.itbusinessedge.com/business-intelligence/
+https://www.teradata.com/Glossary/What-are-the-5
+https://www.itbusinessedge.com/business-intelligence/
+https://www.tableau.com/sites/
+https://www.softwaretestinghelp.com/big-data-tools/
