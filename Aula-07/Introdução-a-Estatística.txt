@@ -1,0 +1,170 @@
+# Leitura: Introdução à Estatística
+Representação dos conceitos de população (population) e amostra (sample), fundamentais em Estatística Inferencial, um dos ramos da Estatística. Fonte: omniconvert.com 
+
+Estatística é uma disciplina ou domínio de conhecimento que lida com a coleta, organização e análise de dados e a realização de testes e previsões a partir de tais dados.
+
+Há quem considere a Estatística um ramo da matemática aplicada e há quem a considere um ramo específico, independente da matemática (apesar de usar métodos desta).
+
+A Estatística é um dos pilares da Ciência e pode ser considerada uma das principais ferramentas (senão a principal) do conhecimento para progresso da humanidade nos séculos recentes.
+
+Muitos aspectos de nosso dia a dia envolvem Estatística, de avanços em nossa qualidade de vida a estudo de hábitos de consumo, como por exemplo:
+
+* meteorologia (probabilidade de cair um temporal amanhã);
+* experimentos na agricultura (descobrir o que faz plantas crescerem e serem produtivas em menos tempo);
+* avanços na medicina (entender fatores de risco para doenças ou quais os métodos mais eficazes de tratamento);
+* otimização na indústria (como envasar mais bebidas em garrafas com um mínimo de desperdício);
+* entendimento de preferências políticas (qual candidato ou qual política pública tem maior aceitação ou rejeição entre a população);
+* testes para saber se usuários compram mais a partir de um botão na cor azul ou na cor vermelha;
+* etc.
+
+Embora eminentemente prática, a Estatística também é uma fonte de discussão filosófica e epistemológica (estudo do conhecimento).
+
+É considerada por muitos como a única maneira realmente eficaz de conhecermos aspectos da realidade, seja do mundo natural ou de tudo o que decorre do comportamento humano, como a economia, por exemplo.
+
+Mesmo assim, curiosamente, quem lida com Estatística sabe que ela é incapaz de provar qualquer coisa com 100% de certeza e que qualquer conclusão tomada com base em estimativas e testes sempre envolve medidas de incerteza.
+
+Isto ocorre porque muitos aspectos do mundo não são determinísticos, mas, sim, probabilísticos.
+
+Em outras palavras, a realidade possui aleatoriedade ou, para ficar mais fácil, sempre envolve uma dose de sorte, fator que nos intriga há milênios e que está na origem dos estudos da probabilidade, principalmente em sua relação com jogos e apostas.
+
+# Relação com Data Analytics
+É desnecessário dizer que é fundamental para análise de dados (data analysis). É usada tanto para compreender características de conjuntos de dados como fazer conclusões e previsões a partir deles. 
+
+Neste tópico, forneceremos uma visão geral da Estatística. Nos próximos tópicos, porém, daremos mais atenção à Estatística Descritiva, um dos ramos da Estatística que é mais usado em Data Analytics.
+
+# Breve histórico
+Primórdios da Estatística remontam a matemáticos árabes que estudaram ótica e criptografia há mais de mil anos. 
+
+No entanto, foi só por volta do século 1600, com estudos de John Graunt sobre mortalidade que a área começou a florescer em termos modernos.
+
+O nome “Estatística”, inclusive, deriva de “estadista” ou de políticas de estado, já que nasceu relacionada a pesquisas para entender dados demográficos (censos populacionais, por exemplo) por parte de governos.
+
+Por volta de 1800, com Pascal e Fermat, surgiu a teoria da probabilidade, às voltas com jogos de azar e apostas, e a base matemática da Estatística.
+
+Na virada do século XIX para o XX, Francis Galton e Karl Pearson deram rigor e ajudaram a área avançar. 
+
+Os avanços aceleraram-se no século XX com Ronald Fischer, até a chegada dos computadores, que possibilitaram saltos sem precedentes, levando ao surgimento da Mineração de Dados, Ciência de Dados e Machine Learning (Aprendizado de Máquina).
+
+# Métodos Estatísticos 
+A Estatística é dividida em dois ramos ou duas maneiras de se lidar com os dados — Estatística Descritiva e Estatística Inferencial —, como veremos a seguir.
+
+Ambos podem ser realizados de maneira independente, mas é muito comum que caminhem juntos, como em pesquisas quantitativas.
+
+## Estatística Descritiva
+Estatística Descritiva é uma parte da estatística que se preocupa com o estudo de conjuntos de dados em si mesmos. É a área por excelência da análise de dados (data analysis).
+
+Pense em uma pesquisa quantitativa sobre preferências de consumo ou longevidade de pessoas. A Estatística Descritiva é a área que organizará e resumirá (irá sumarizar) os dados obtidos junto aos indivíduos entrevistados, para um melhor entendimento desses dados.
+
+### Em que se baseia
+A Estatística Descritiva foca em três tipos de tomada de conhecimento sobre os dados:
+
+sua distribuição, isto é, com que frequência os dados aparecem em um conjunto;
+a tendência central desse conjunto, que tem a ver com a média, mediana e outras medidas que ajudam a descrever o conjunto;
+a variabilidade, ou seja, como os valores estão dispersos ou “distantes” uns em relação aos outros nesse conjunto.
+
+### Exemplo de Estatística Descritiva
+Digamos que temos a necessidade de testar porque clientes/usuários de um aplicativo preferem um determinado serviço em detrimento de outro similar ou queremos implementar um mecanismo de recomendação de produtos a eles.
+
+É quase unânime que começaremos todo o nosso projeto pelo entendimento dos dados disponíveis sobre quem são esses clientes/usuários, com que frequência realizam compras no aplicativo, quais tipos de produto compras, quando compram etc.
+
+Provavelmente, extrairemos uma amostra representativa dos dados dos clientes, já que analisar o todo pode ser demorado, e tentaremos entender:
+
+* quais perfis de clientes (distribuição) compõem essa amostra;
+* qual o valor médio gasto por cada cliente ou qual o tempo médio que permanecem analisando produtos (tendência central) em um determinado serviço; e 
+* quais os clientes realizaram as compras mais caras ou em maior número em comparação com aqueles que adquiriram poucos produtos ou só os mais baratos (variabilidade).
+Com isso, obteremos uma noção se os dados servem para nosso propósito, se há padrões recorrentes observados neles, entre outras características.
+
+## Estatística Inferencial
+Seria ótimo se os dados que analisamos fossem os dados totais sobre um aspecto da realidade (todas as plantas de todas as plantações do mundo, toda a humanidade, todos os nossos clientes ativos e em potencial etc.). A Estatística Descritiva nos bastaria.
+
+Ocorre que, na maioria dos domínios do conhecimento, isso é impossível. Temos de nos contentar em obter dados de apenas partes desses “todos”. É aí que entra a Estatística Inferencial.
+
+Estatística Inferencial é um ramo da Estatística que usa uma amostra aleatória de dados coletados de uma população para descrever e tirar conclusões (fazer inferências) sobre essa população.
+
+### Exemplo de Estatística Inferencial
+Uma indústria produz canos com diâmetro esperado de 5 centímetros. Para saber se, em média, os canos que saem da fábrica atendem essa medida, o controle de qualidade reúne uma amostra de canos.
+
+Então, são formuladas duas hipóteses:
+
+* a hipótese nula, que supõe que, sim, a grande maioria dos canos tem um diâmetro muito próximo de 5 cm (entre 4,95 e 5,05 cm, por exemplo), o que é aceitável;
+* a hipótese alternativa, que supõe que, não, os canos tem um diâmetro abaixo ou acima de 5 cm, fora do aceitável (abaixo de 4,95 ou acima 5,05 cm, por exemplo).
+Escolhe-se um nível de significância de 0,05, o mais comum para a maioria das aplicações. Usa-se também um cálculo de poder e tamanho amostral para detectar essa mudança de 0,05 cm a menos ou a mais no diâmetro.
+
+Os canos da amostra são medidos e, por meio de cálculos estatísticos, gera-se um valor, chamado valor p.
+
+Decide-se, então, se a hipótese nula deve ser rejeitada ou não:
+
+* Se o valor p for maior que o nível de significância de 0,05 (p > 0,05), o diâmetros médio dos canos que saem da fábrica está dentro do padrão aceitável (entre 4,95 e 5,05 cm). A hipótese nula não foi rejeitada. Está tudo certo com a fábrica.
+* Se o valor p for menor que 0,05 (p < 0,05), então o diâmetro médio dos canos que saem da fábrica está fora do padrão aceitável (abaixo ou acima de 4,95 e 5,05 cm). A hipótese nula foi rejeitada.
+A hipótese nula sendo rejeitada, o controle de qualidade pode, então, tomar decisões, como inspecionar as máquinas da empresa, verificar os projetos ou moldes dos canos, a qualidade da matéria prima, entre outros fatores, para entender porque os canos estão fora do padrão e corrigir o problema.
+
+## Aspectos da Estatística Inferencial
+A Estatística Inferencial trabalha com aspectos e terminologias bastante específicas para lidar com o entendimento e as generalizações de características entre amostras e populações. Vamos ver alguns.
+
+### Estatísticas e parâmetros
+Estatística é uma medida que descreve a amostra. Parâmetro é uma medida que descreve toda a população.
+
+### Estimativa
+Estimativas podem ser:
+
+* pontuais: quando se trata de um único parâmetro (a média amostral é uma estimativa pontual da média populacional, por exemplo);
+* de intervalo: quando se trata de um intervalo de valores da amostra em que se estima que um parâmetro da população esteja — o tipo mais comum de estimativa.
+
+### Intervalo de confiança
+É algo como uma “margem de segurança” do conhecimento em torno de um parâmetro.
+
+Como estimativas de intervalo são as mais comuns, sempre haverá algum grau de incerteza nelas sobre uma estatística (média amostral, por exemplo) em relação a um parâmetro (média populacional).
+
+Você já deve ter ouvido que uma pesquisa ou estudo tem um intervalo de confiança de 95%, o que é um padrão razoável para a maioria dos experimentos.
+
+Isso quer dizer que se você repetir o estudo ou pesquisa, com uma nova amostra aleatória de eleitores, da mesma maneira, 100 vezes, em 95 delas sua estimativa ficará dentro do intervalo especificado.
+
+## Margem de erro
+Diretamente relacionado ao intervalo de confiança, a margem de erro diz respeito ao tamanho da amostra. Quanto maior a amostra em relação à população, menor tende a ser a margem de erro.
+
+Para uma população de 100.00 (pessoas, plantas, itens vendidos etc.) e uma margem de erro de 5 pontos percentuais para mais ou para menos, precisaríamos de uma amostra de apenas 383 casos.
+
+Porém, se quisermos uma precisão maior, como uma margem de erro de 1 ponto percentual, precisaríamos de uma amostra de 8.763 casos.
+
+## Teste de hipóteses e estatísticos
+Testes de hipóteses e testes estatísticos compõem um dos temas mais ricos da inferência estatística, mas também um dos mais desafiantes, com exigências e particularidades para não resultarem em inferências equivocadas e distorcidas.
+
+### Testes de hipóteses
+Testes de hipóteses permitem testar a relação entre duas ou mais amostras e fazer inferências sobre a população. Eles levam esse nome porque partem de hipóteses, que nada mais são do que suposições ou conjecturas que queremos testar.
+
+Assegurar a eficácia e segurança de uma vacina contra a covid-19 exige um teste de hipóteses, por exemplo. 
+
+Outro exemplo comum de teste de hipóteses são os Testes A/B, usados em larga escala pelo Google e populares, por isso, em startups e empresas de tecnologia. 
+
+Se você quer saber se um botão “Comprar” na cor azul-escuro (hipótese alternativa ou versão B) gera mais vendas do que o botão atual, na cor azul-claro (hipótese nula ou versão A), terá de fazer — e entender, embora haja softwares que já entregam tudo pronto — um teste de hipóteses.
+
+### Testes estatísticos
+Hipóteses são testadas por meio de testes estatísticos, baseados em modelos ou modelagem estatística. 
+
+Os testes podem ser paramétricos (quando a população segue uma distribuição normal ou “curva em forma de sino”, entre outras características, os quais permitem inferências mais fortes) ou não paramétricos (“sem distribuição”).
+
+Também podem ser de três formas:
+
+1. Testes de Comparação: para avaliar se há diferenças entre médias, medianas ou outras medidas entre dois ou mais grupos. Exemplo: teste ANOVA (permite saber a diferença nos níveis médios de dor em pacientes pós-cirúrgicos que receberam três analgésicos diferentes, por exemplo).
+2. Testes de Correlação: para saber até que ponto duas variáveis estão associadas. Exemplo: teste r de Pearson (permite saber como altitude e temperatura estão relacionadas, por exemplo).
+3. Testes de Regressão: para saber se mudanças em variáveis preditoras causam mudanças em uma variável de resultado. Exemplo: regressão linear simples (para saber o efeito da renda na longevidade de uma população, por exemplo).
+
+# Conclusão
+Estatística é uma área ampla, rica em conceitos e teorias e, como vimos, extremamente útil e importante para o modo como vivemos atualmente. 
+
+Dominar práticas da Estatística Descritiva ou de Inferência Estatística requer treinamento e também contato com dados e experimentos reais, com toda a sua complexidade e eventuais imperfeições.
+
+Há também toda a matemática necessária a Estatísticas, com suas fórmulas e cálculos. A Khan Academy, um projeto aberto, sustentado por diversas iniciativas, possui tópicos sobre Estatística e probabilidade e Estatística intermediária que servem como introdução ou revisão.
+
+Além disso, é interessante entender as particularidades do campo onde a Estatística será aplicada. Várias áreas, da militar à médica, da física à economia, têm suas próprias especializações da Estatística, como pesquisa operacional, bioestatística, física estatística, econometria etc.
+
+Em startups e empresas inovadoras, Data Analytics usa Estatística principalmente para compreender características de conjuntos de dados e extrair insights destes que possam subsidiar tomadas de decisão no âmbito do negócio, o que requer Estatística Descritiva, Análise Exploratória de Dados e outras técnicas.
+
+# Referências
+https://en.wikipedia.org/wiki/Statistics
+https://en.wikipedia.org/wiki/Descriptive_statistics
+https://en.wikipedia.org/wiki/Statistical_inference
+https://en.wikipedia.org/wiki/Statistical_hypothesis_testing
+https://www.scribbr.com/category/statistics/
+https://pt.khanacademy.org/math/statistics-probability
+https://pt.khanacademy.org/math/probability
