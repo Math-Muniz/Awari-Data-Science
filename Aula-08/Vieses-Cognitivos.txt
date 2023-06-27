@@ -1,0 +1,90 @@
+# Leitura: Vieses Cognitivos
+Tipos de vieses cognitivos, em mapeamento de 2016. Fonte: Wikipédia
+
+Os dados são conhecidos pela sua objetividade. O principal ponto de utilizá-los na tomada de decisões é exatamente o fato deles serem concretos e com pouca margem para subjetividade e, por isso, podem trazer resultados muito certeiros. 
+
+Entretanto, no trabalho de Data Science, o capital humano é muito necessário, seja para entender os processos, fazer uma análise e extrair insights do que foi analisado. 
+
+Ou seja, a etapa de entender os dados captados e extrair informação deles é trabalho de um profissional humano. A tecnologia fica com as etapas de mineração e processamento.
+
+Sendo assim, o profissional de Data Science precisa encontrar maneiras de evitar que a sua subjetividade e premissas de sua vida influenciem a tomada de decisão ou que tenham mais relevância que os dados em si. 
+
+Essa influência é chamada de viés cognitivo, um conceito que vem da psicologia e que explica que os seres humanos estão sempre em busca de respostas que se adequem com o que já tem em mente. 
+
+No trabalho do analista de dados, isso se torna um problema, já que o profissional pode acabar buscando por dados de acordo com seu viés ou, na hora de explorá-los, fazê-lo com influência do que está esperando encontrar. 
+
+Conhecer os principais vieses cognitivos e ver como evitá-los em seu trabalho é primordial para qualquer profissional de Data Science. 
+
+# Vieses do trabalho com dados
+O conceito de viés cognitivo vem da psicologia e foi introduzido por Amos Tversky e Daniel Kahneman em 1972. 
+
+Os dois psicólogos, ambos pesquisadores da área de Ciência Comportamental, estavam estudando sobre a falta de habilidades dos seres humanos em racionalizar informações, fazendo com que buscassem respostas que atendessem suas percepções pré-existentes. 
+
+Esse processo ganhou o nome de heurísticas ou “cognitive bias”, que em portugûes seria algo como “desvio” ou “distorção”. Ou seja, essa dificuldade em racionalizar as informações levaria a uma distorção na hora da análise. 
+
+Esses vieses ou distorções, poderiam, segundo os autores, levar tanto a decisões corretas e sensatas quanto a precipitadas e equivocadas, até prejudiciais. Esses conceitos podem ser vistos no livro Rápido e Devagar, de Kahneman. 
+
+Sendo assim, profissionais da área de análise de dados, precisam evitar ao máximo que esses vieses cognitivos atrapalhem a análise em si, considerando todas as etapas do processo. 
+
+# Tipos de vieses cognitivos
+De maneira geral, não existe na literatura científica uma definição precisa de todos os tipos de vieses cognitivos, sendo possível encontrar diferentes nomes e um número cada vez maior de tipos de vieses. Para se ter ideia, algumas listas apresentam mais de 200 possibilidades. 
+
+Tversky e Kahneman mapearam, originalmente, 3 processos enviesados que podem acontecer:
+
+* Disponibilidade: trata sobre a facilidade com que uma ideia é recuperada em nossa mente, que pode influenciar a percepção de probabilidade de eventos relacionados a essa ideia. 
+* Representatividade: depende do quão representativo determinados dados são para o indivíduo, ou seja, o quanto são comuns a ele e o quanto representam uma ideia pré-concebida, o que leva a avaliações incorretas.
+* Ancoragem: quando, ao analisar uma quantidade, a consideramos maior ou menor com base em análises anteriores, o que faz com que subestimemos ou superestimemos algo. É preciso analisar unicamente, sem “comparar” com outros. 
+
+# Vieses cognitivos, de acordo com profissionais
+Além desses indicados pelo pesquisadores, alguns vieses cognitivos específicos já são considerados quase “oficiais”, principalmente por conta da percepção de profissionais que trabalham buscando a objetividade - como é o caso da área de Data Science. 
+
+Alguns dos vieses mais descritos pelos profissionais da área são:
+
+* Viés de confirmação: quando considera-se mais os dados que dão embasamento em uma ideia pré-concebida, mesmo que de maneira inconsciente. Isso pode levar a erros graves e ainda diminuir os insights possíveis a partir dos dados. 
+* Viés de indução: quando a busca pelos dados já está induzida, ou seja, foi “feita” para encontrar dados específicos que dêem a resposta esperada. Isso também pode ocorrer de maneira inconsciente. Por isso, a construção do código de busca é uma etapa tão importante e com detalhes para evitar essa situação; 
+* Viés de seleção: quando os dados escolhidos para análise não refletem uma distribuição de dados no mundo real. Nesse caso, é preciso atentar-se ao momento de coleta dos dados e analisar se eles são de fato representativos do mundo real. 
+* Viés de automação: é a tendência que as pessoas têm de confiar totalmente no que foi encontrado pela automação (códigos, algoritmos, softwares), considerando que a máquina está totalmente certa e livre de vieses. Assim, acaba ignorando informações contraditórias e assume que elas estão corretas. 
+
+## Quatro situações: vantagem ou desvantagem?
+Para Buster Benson, um escritor e pesquisador da área, os vieses cognitivos podem ser divididos em quatro situações que carregam vantagens e desvantagens simultaneamente:
+
+Situação 1
+  * Vantagem: permite agir mesmo quando há muita informação.
+  * Desvantagem: não é possível considerar todos os dados.
+Situação 2
+  * Vantagem: o viés permite que seja tirado algum significado da grande quantidade de dados.
+  * Desvantagem: essa busca por significado pode levar a análise errôneas e prejudiciais.
+Situação 3
+  * Vantagem: permite ação rápida na análise de dados.
+  * Desvantagem: decisões rápidas podem apresentar falhas prejudiciais à análise.
+Situação 4
+  * Vantagem: indicam quais são os pontos principais e constroem uma análise.
+  * Desvantagem: a memória tende a reforçar erros e confundir informações.
+
+Dentro dessas situações, são várias as possibilidades de vieses cognitivos. O profissional reuniu em um infográfico (que ilustra esse tópico) todos os que foram mapeados. 
+
+# Como evitar a influência dos vieses cognitivos
+Como é possível perceber, os vieses cognitivos são praticamente uma certeza no processo de análise de dados, considerando qualquer dos autores citados ou profissionais da área. 
+
+Mas o que fazer para evitar que essas distorções cognitivas afetem a análise em si?
+
+Na verdade, não existe uma solução clara e direta para isso. Os vieses vão continuar existindo e é papel do analista perceber e entender quando eles interferem no dia a dia. 
+
+Na opinião de Benson, o mais produtivo é ter sempre em mente que esses vieses existem e, assim, sempre se questionar sobre aquelas ideias que pareceram muito simples e óbvias. 
+
+Ou seja, é preciso se questionar, entender o objetivo real daquela análise e tentar ao máximo deixar os vieses tomarem espaço em Data Science. 
+
+“Nada que façamos pode fazer com que os 4 problemas desapareçam [...] mas se aceitarmos que somos permanentemente tendenciosos, mas que há espaço para melhorias, o viés de confirmação continuará a nos ajudar a encontrar evidências que apoiem ​​isso, o que nos levará a um melhor entendimento de nós mesmos.” — Buster Benson, 2016.
+
+# Referências
+https://awaridados.substack.com/
+https://busterbenson.com/ 
+https://jonastadeu1.medium.com/ 
+https://www.integrate.io/
+http://www.datascienceassn.org/ 
+https://www.elderresearch.com/ 
+https://www.betterup.com/
+https://towardsdatascience.com/
+https://blogs.oracle.com/
+https://www.amazon.com.br/
+https://www.allerin.com/
