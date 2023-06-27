@@ -1,0 +1,224 @@
+# Leitura: EDA e Estatística Descritiva
+Matriz de correlação, artefato de EDA e Estatística Descritiva que permite visualizar a correlação entre variáveis. Fonte: https://data.world/makeovermonday/2019w5
+
+EDA é a sigla para Exploratory Data Analysis ou Análise Exploratória de Dados. Estatística Descritiva, por sua vez, é o ramo da Estatística que se preocupa em descrever características de conjuntos de dados.
+
+Ambas, EDA e Estatística Descritiva, caminham juntas e a primeira pode ser considerada uma evolução ou um incremento da segunda.Enquanto a Estatística Descritiva tradicional está preocupada em encontrar medidas de tendência central e medidas de dispersão dos dados, EDA continua fazendo isso, mas soma uma riqueza maior de métodos, como análises gráficas, no intuito de compreender conjuntos de dados em mais detalhes.
+
+# Histórico
+A Estatística Descritiva existe desde por volta do século XVI e, com a evolução da área, tornou-se inseparável da Estatística Inferencial — ramo que generaliza conclusões e previsões para populações a partir de amostras.
+
+Em qualquer estudo estatístico ou científico que utilize testes e estimativas da Estatística Inferencial, é comum que os dados utilizados sejam analisados previamente e apresentados por meio de tabelas e medidas da Estatística Descritiva.
+
+Análise Exploratória de Dados (EDA, em inglês), por sua vez, é uma expressão bem mais recente. Foi cunhada pelo estatístico, matemático e um dos pioneiros da computação — quem batizou o “bit” — John Tukey, em um artigo de 1962 e detalhado, posteriormente, em um livro de 1977.
+
+Diante das necessidades da ciência e da indústria e o desenvolvimento da estatística robusta (que lida com outliers, valores fora da normalidade) e estatística não paramétrica (que lida com dados que não obedecem a uma distribuição normal), Tukey defendeu procedimentos como o uso de gráficos e de cinco medidas descritivas (que formam o tipo de gráfico Boxplot). 
+
+O surgimento de pacotes de estatística computacional, como S e depois R (software popular e utilizado até hoje para análise de dados, ciência de dados e uma gama de áreas científicas) — bem como Mineração de Dados (Data Mining), Data Analytics e Data Science — devem muito a Tukey, como um de seus pioneiros.
+
+# Técnicas de EDA e Estatística Descritiva
+EDA e Estatística Descritiva lidam com diversos conceitos e técnicas. A partir daqui, vamos explicar:
+
+## Tipos de variáveis
+* Medidas de tendência central
+* Medidas de posição
+* Medidas de dispersão
+* Tipos de gráficos mais comuns
+
+## Tipos de variáveis
+Quando trabalhamos com conjuntos de dados, nossos dados são chamados, tecnicamente, de variáveis e podem ser de tipos diferentes. 
+
+Dependendo do tipo, podemos ou não realizar algumas operações estatísticas sobre os mesmos.
+
+Os tipos de variáveis são:
+
+* Variáveis Quantitativas (Numéricas): dados numéricos, divididos em:
+  * Variáveis Discretas: aquelas que podem ser contadas em valores inteiros (1, 2, 3…), como número de filhos de uma pessoa, quantidade de postes em uma rua etc.;
+  * Variáveis Contínuas: aquelas que podem ser medidas, onde pode haver valores fracionais, e que dependem de instrumentos de medição, como a temperatura, a altura de prédios, o tempo de uma viagem etc.
+
+* Variáveis Qualitativas (Categóricas): dados categóricos, como nomes ou classes, divididos em:
+  * Variáveis Nominais: categorias sem ordenação, como sexo, cor dos olhos, pares como “fumante/não fumante”, “doente/sadio”;
+  * Variáveis Ordinais: categorias que podem ser ordenadas, como meses do ano, grau de escolaridade, estágio de uma doença (inicial, intermediário, terminal).
+
+# Medidas de tendência central
+As principais medidas de tendência central analisadas em EDA e Estatística Descritiva são:
+
+## Média
+É a soma total dos valores dividido pelo total de observações. Aplicável apenas a variáveis quantitativas ou numéricas e altamente sensível a outliers. 
+
+Exemplo: a média do conjunto de dados [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] é 5,5. Se o conjunto fosse [1, 2, 3, 4, 5, 6, 7, 8, 9, 100], a média seria 14,5, sendo 100 um outlier (dado fora da normalidade do conjunto).
+
+## Mediana
+É a contagem total de um conjunto de dados ordenado de números, dividida por dois. Não é afetada por valores discrepantes. Aplica-se a variáveis numéricas.
+
+Exemplo: a mediana dos dois conjuntos de dados usados acima — [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] e [1, 2, 3, 4, 5, 6, 7, 8, 9, 100] — será 5,5. 
+
+Detalhe: em um conjunto de dados com número ímpar de itens, a mediana sempre será exatamente o número do meio. Em um conjunto com número par de itens, a mediana será a média entre os dois números do meio.
+
+Por isso, nos dois casos que usamos, que têm número par de itens (10 itens) a mediana é a média entre 5 e 6, que resulta em 11, o qual, dividido por 2, é 5,5.
+
+## Moda
+Trata-se dos valores observados com mais frequência em um conjunto de dados. Ajuda a entender a frequência de variáveis categóricas.
+
+Exemplo: para o conjunto [1, 2, 3, 3, 3, 4, 4, 5], a moda é 3, porque é o item que aparece mais vezes (3 vezes) no conjunto. O mesmo poderia ser aplicado ao conjunto [‘banana’, ‘maçã’, ‘laranja’, ‘pera’, ‘banana’]. A moda é banana, por aparecer duas vezes.
+
+# Medidas de posição
+Medidas de posição nos ajudam a entender como os dados estão dispostos (distribuição) em um conjunto de dados e quais os limites desse conjunto.
+
+## Máximo
+É o valor máximo do nosso conjunto de dados. Exemplo: no nosso conjunto [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], nosso máximo é 10.
+
+## Mínimo
+É o valor mínimo do nosso conjunto de dados. Exemplo: no nosso conjunto [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], nosso mínimo é 1.
+
+## Únicos
+Trata-se da quantidade de itens únicos (que não se repetem) em nosso conjunto de dados. 
+
+Exemplo: no conjunto [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], temos 10 itens únicos. Já no conjunto [1, 2, 3, 3, 3, 4, 4, 5], temos 8 itens, mas apenas 5 itens únicos, porque os números 3 e 4 se repetem.
+
+## Percentis
+Pense em percentis como “localizações” percentuais em nosso conjunto de dados. Para ficar bem fácil:
+
+* percentil 0: o mesmo que o valor mínimo, isto é, o início de nosso conjunto.
+* percentil 50%: o mesmo que a mediana, exatamente a metade de nosso conjunto.
+* percentil 100%: o mesmo que o máximo, isto é, o fim de nosso conjunto.
+
+## Quartis
+Quartil vem de “quarta parte”. Pense em dividir nosso conjunto de dados em quatro partes de proporções iguais. 
+
+Então, naturalmente, temos:
+
+* Q1 ou primeiro quartil (25%)
+* Q2 ou segundo quartil (50%)
+* Q3 ou terceiro quartil (75%)
+* Q4 ou quarto quartil (100%)
+
+É fácil deduzir algumas percepções disto. O primeiro quartil começa no valor mínimo. O segundo quartil acaba em nossa mediana. O terceiro quartil começa na mediana. O quarto quartil acaba no valor máximo.
+
+A disposição dos dados por quartil indica como é a distribuição do conjunto.
+
+Exemplo: para o conjunto [6, 7, 15, 36, 39, 40, 41, 42, 43, 47, 49], o primeiro quartil é 15, o segundo quartil (mediana) é 40 e o terceiro quartil é 43. Já para o conjunto [7, 15, 36, 39, 40, 41], Q1 é 15, Q2 é 37,5 e Q3, 40.
+
+## Assimetria ou distorção
+Indica como os valores estão distribuídos em relação à média. Se os valores estão distribuídos uniformemente em torno da média, temos uma distribuição simétrica ou a famosa distribuição normal (que origina gráficos com “curva em forma de sino”).
+
+Se a mediana é menor que a média do conjunto, temos uma assimetria positiva (inclinação da curva à esquerda, no caso do gráfico). Se a mediana é maior que a média, temos uma assimetria negativa (inclinação da curva à direita, no gráfico)
+
+Exemplo:
+
+Gráfico com curvas em forma de sino, indicando distribuição assimétrica positiva (esquerda), distribuição normal (centro) e assimétrica negativa (à direita). Fonte: towardsdatascience.com
+
+## Curtose
+Mede o comprimento ou pico das distribuições. Curtose mais alta: gráfico com curva mais íngreme. Curtose mais baixa: gráfico com curva mais suave.
+
+Curtose em torno de 3 (mesocúrtica) é similar a uma distribuição normal. Acima de 3 (leptocúrtica), gera um gráfico bastante íngreme. Abaixo de 3 (platicúrtica), forma uma espécie de platô.
+
+Exemplo:
+
+Fonte: towardsdatascience.com
+
+## Medidas de dispersão
+Medidas de variação indicam as distâncias entre os pontos de dados de um conjunto.
+
+## Amplitude
+É a diferença entre o valor máximo e o valor mínimo (máximo - mínimo) de um conjunto de dados. Exemplo: para o conjunto [1, 2, 3, 4, 5, 6, 7, 8, 9, 100], a amplitude é 99.
+
+## Intervalo interquartil
+É a diferença entre o quartil superior (Q3) e o quartil inferior (Q1) de um conjunto de dados. 
+
+Exemplo: para o conjunto [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], Q1 é 3,25 e Q3 é 7,75; diminuindo-se Q3 - Q1, tem-se o intervalo interquartil de 4,5.
+
+## Variância
+É a variabilidade dos dados em relação à média. Tecnicamente, é a média dos quadrados dos desvios em relação à média aritmética. É afetada por outliers.
+
+Exemplo: para o conjunto [1, 1, 1, 1, 1] a variância é 0, porque não há distância dos pontos de dados em relação à média. Para o conjunto [1, 2, 3, 4, 5], a variância é 2,5.
+
+## Desvio padrão
+Indica o quanto os valores estão concentrados ou distantes em torno da média. É a quantidade padrão de distância dos dados em relação à média. Também é afetado por outliers e é a raiz quadrada da variância.
+
+Exemplo: para o conjunto [1, 1, 1, 1, 1] o desvio padrão também é 0. Para o conjunto [1, 2, 3, 4, 5], é 1,58.
+
+# Tipos de gráficos mais comuns
+Como dito, a Análise Exploratória de Dados utiliza-se de gráficos para ajudar a descrever a observar as características de conjuntos de dados. Vamos ver os tipos mais comuns.
+
+## Ramo-e-folhas
+Mais como curiosidade, já que é inútil para representar grandes quantidades de dados, o diagrama de ramo-e-folhas não é um gráfico com formas geométricas ou cores, como estamos habituados, mas sim um arranjo dos dados. 
+
+É uma herança da Estatística Descritiva, dos idos de 1900, embora John Tukey também os tenha popularizado em EDA.
+
+São úteis para mostrar a densidade relativa e a forma dos dados, além de destacarem outliers e a moda. No entanto, só servem para conjuntos de dados pequenos ou moderados.
+
+Exemplo: para o conjunto de dados [44, 46, 47, 49, 63, 64, 66, 68, 68, 72, 72, 75, 76, 81, 84, 88, 106], um diagrama de ramo-e-folhas ficaria assim:
+
+Fonte: Wikipedia
+
+Ramos representam as dezenas; folhas, as unidades. O arranjo permite visualizar que há mais dados concentrados nas dezenas 60 e, em seguida, 40 e 70, por exemplo. 
+
+## Histograma
+Histogramas são um bom substituto para diagramas de ramo-e-folhas. São bastante utilizados atualmente.
+
+Eles já utilizam formas geométricas que permitem visualizar a frequência com que os dados aparecem em um conjunto.
+
+Exemplo: para o conjunto de dados [1, 1, 1, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5], um histograma simples feito com a biblioteca Matplotlib, de Python, ficaria assim:
+
+
+Fonte: Awari
+
+O gráfico permite notar que ￼há uma grande frequência de números 3 (o qual aparece cinco vezes), seguida de números 4, por exemplo.
+
+## Gráfico de dispersão
+Gráfico ou Diagrama de Dispersão é um tipo de gráfico popularizado por Francis Galton, um dos pioneiros da Estatística, no fim do século XIX e início do século XX.
+
+Um gráfico de dispersão se parece com este:
+
+Fonte: Minitab
+
+É possível notar que o gráfico descreve duas variáveis: 
+
+no eixo y, o percentual de gordura de uma pessoa;
+no eixo x, o IMC (Índice de Massa Corpórea) da mesma pessoa.
+Este tipo de gráfico é muito utilizado para se observar a correlação entre duas variáveis de um conjunto. 
+
+Observa-se, no exemplo acima, que há razoável correlação entre as duas variáveis, isto é, indivíduos com percentual de gordura baixos têm IMC também baixos e vice-versa.
+
+Quanto maior a correlação dos dados, mais os pontos formam uma reta em um gráfico de dispersão. Quanto menor a correlação, mais eles formam uma “mancha” no gráfico. 
+
+Fonte: Armando Duarte/ReserchGate
+
+## Boxplot
+Boxplot ou Diagrama de Caixa é um tipo de gráfico que representa a variação de dados por meio de quartis. Foi introduzido e popularizado por John Tukey por volta de 1969.
+
+Permite identificar onde estão localizados 50% dos valores mais prováveis, a mediana e os valores extremos de conjuntos de dados.
+
+Exemplo:
+
+Fonte: Wikipédia
+
+Note que a caixa (box cinza) começa no primeiro quartil, tem uma linha mais grossa (verde) representando a mediana, e vai até o terceiro quartil. A linha (“fio de bigode”, no jargão estatístico) segue até os limites inferior e superior, com outliers (valores discrepantes) fora desses limites.
+
+O gráfico abaixo resume dados do conjunto IRIS, muito utilizado em reconhecimento de imagens (Deep Learning). O conjunto possui imagens das plantas setosa, versicolor e virginica, com dados relacionados ao tamanho de suas pétalas, por exemplo.
+
+No boxplot a seguir, pode-se notar que plantas do tipo setosa têm pétalas menores do que as virginicas. E que as virginicas possuem um outiler (planta com pétalas muito pequenas, fora de seu padrão), além de terem uma variedade maior de tamanhos em comparação com a versicolor e a setosa:
+
+Fonte: practicaldatascience.co.uk
+
+# Conclusão
+Análise Exploratória de Dados e Estatística Descritiva são dois assuntos que andam juntos e que permitem até alguma “diversão” no trabalho com dados, à medida que nos permitem enxergar dados de uma perspectiva mais espacial e intuitiva.
+
+Por meio dessas técnicas, é possível descrever o “formato”, a distribuição, a dispersão, os limites e várias outras características de conjuntos de dados. 
+
+Elas também permitem uma ampla tomada de conhecimento sobre como os dados se comportam e como estão organizados, o que é fundamental para, posteriormente, fazermos Inferências Estatísticas ou até alimentar modelos de Machine Learning (Aprendizado de Máquina). Por isso, é impensável praticar Data Analytics ou Data Science sem EDA e Estatística Descritiva.
+
+Sugerimos que você explore mais a respeito desta área, procure exemplos e pratique tentando encontrar as medidas descritas e gerando visualizações com os gráficos apresentados acima para diferentes conjuntos de dados.
+
+# Referências
+https://www.ibm.com/br-pt/cloud/learn/exploratory-data-analysis
+http://www.each.usp.br/lauretto/SIN5008_2011/aula01/aula1
+https://en.wikipedia.org/wiki/Exploratory_data_analysis
+https://en.wikipedia.org/wiki/Descriptive_statistics
+https://towardsdatascience.com/descriptive-statistics
+https://towardsdatascience.com/exploratory-data-analysis
+https://en.wikipedia.org/wiki/Scatter_plot
+https://en.wikipedia.org/wiki/Histogram
+https://medium.com/@carvalho.natalia03/como-criar-um-histograma
+https://medium.com/20-21/boxplot-com-python
