@@ -1,0 +1,157 @@
+# Leitura: Probabilidade
+A probabilidade de um evento ocorrer está sempre entre 0 (ou a impossibilidade total de acontecer) e 1 (a certeza total de que ocorra). Fonte: mathsisfun.com
+
+Uma definição simples de Probabilidade é que ela é um ramo da matemática que descreve o quão provável é a ocorrência de um evento ou quão verdadeira é uma proposição.
+
+Embora matematicamente sejam conceitos diferentes, no senso comum podemos pensar em probabilidade com a chance de algo acontecer.
+
+Olhando-se com atenção, o mundo real é feito, em sua quase completude, de probabilidades. Quão provável é que chova hoje? Ou que nossa empresa venda mais que no mês anterior? Ou que uma ação da bolsa de valores suba ou caia? Quão provável é que um meteoro possa atingir o planeta?
+
+Mesmo que “muito certeiras”, como o fato de o sol nascer e se por todos os dias, ou “quase impossíveis”, como a chance de um meteoro atingir a Terra, dificilmente há eventos naturais ou sociais que têm impossibilidade total ou certeza total de ocorrerem. 
+
+Matematicamente, a Probabilidade trata tudo isso como uma escala que vai de 0 (a impossibilidade total de um evento acontecer) e 1 (a certeza total de que ocorra).
+
+A Ciência de Dados e outras disciplina quantitativas em geral têm uma relação inseparável com incerteza e, por causa disso, com os cálculos de probabilidades. 
+
+Se tudo fosse determinístico, com causa e efeitos simplesmente mecânicos, não precisaríamos de métodos estatísticos avançados nem de algoritmos de Machine Learning capazes de fazer previsões, não é mesmo? Bastaria aplicar regras simples.
+
+# Definições formais
+A explicação acima é uma definição de senso comum. Se você procura uma base mais teórica para conceituar probabilidade, saiba que matemáticos e filósofos debatem isso há um bom tempo.
+
+A Estatística Frequentista ou Clássica, por exemplo, entende que a probabilidade é relativa à frequência de um resultado. 
+
+Jogue uma moeda justa uma vez e você terá 50% de probabilidade de que dê Cara ou Coroa. 
+
+Jogue a moeda 10 mil vezes, 3 milhões de vezes ou infinitas vezes e você deverá se aproximar cada vez mais uma distribuição normal, um dos fenômenos mais interessantes da natureza, com sua clássica “Curva em forma de Sino”.
+
+A Estatística Bayesiana, por sua vez, derivada Teorema de Bayes, argumenta que a probabilidade é um grau de crença. 
+
+Por exemplo, a probabilidade de alguém tirar nota máxima em uma prova é um grau de crença, porque não há como fazer infinitas provas para observarmos a frequência.
+
+Cada um desses ramos da Estatística trata da falta de dados ou de evidências de forma particulares. 
+
+Andrey Kolmogorov, um grande matemático soviético do Século XX, que fez muitas contribuições à computação, no entanto, definiu probabilidade em três axiomas fundamentais, no que é conhecido como teoria da medida. 
+
+Em resumo, o que se pode resumir de sua axiomatização, grosso modo, é que: probabilidade é a medida do tamanho de um conjunto.
+
+A reflexão e intuição deste conceito, segundo Stanley H. Chan, autor do livro Introduction to Probability for Data Science, é uma das formas de adentrar na carga matemática que a probabilidade envolve.
+
+# Relação com jogos e apostas
+Voltando um pouco mais ao mundo cotidiano, é comum que você veja muitas discussões sobre probabilidades associadas a jogos e apostas.
+
+Pensou no Cara ou Coroa de antes? Sim, é uma das formas mais fáceis de exemplificar probabilidade. Quase todos os exercícios introdutórios fazem referência a brincadeiras com moedas. 
+
+Pensou em dados de seis faces? Sim, é outro exemplo muito comum.
+
+Mas você pode pensar em esportes (o beisebol é um dos maiores exemplos, no contexto dos Estados Unidos, tanto que há até cases históricos de uso de Ciência de Dados que revolucionaram a área), vários jogos de carta (o pôquer é um dos mais famosos) e, é claro, as apostas em cassinos ou até mesmo em investimentos.
+
+Como o dinheiro gera muito interesse, não é à toa que haja desde leigos a estudiosos em todo o mundo tentar aplicar matemática, estatística e probabilidade para tentar prever como ganhar mais dele.
+
+Domínios do mundo real, como o próprio mercado financeiro, geopolítica e guerras, comportamentos sociais ou de consumo, entre vários outros, entretanto, são bem mais complexos de modelar do que jogos fechados, porque envolvem muitas variáveis que podem ser desconhecidas ou que mudam repentinamente. 
+
+Por isso, sempre há uma dificuldade maior em modelar o mundo real em termos de probabilidades — embora esta seja uma das principais funções de cientistas de dados em negócios.
+
+# Um pouco de matemática
+A matemática básica por trás de probabilidades é relativamente simples. 
+
+A fórmula da probabilidade de que um evento ocorra é a seguinte — a intuição sobre ela e seus conceitos ajudam a entender, com o tempo, porque “probabilidade é a medida do tamanho de um conjunto”:
+
+P = n(E) / n(sigma)
+
+Onde:
+
+* P: probabilidade;
+* E: elementos do evento;
+* sigma: espaço amostral (conjunto).
+Por exemplo, se quisermos saber a probabilidade de jogarmos um dado de seis lados e obter o lado de número 1, teríamos:
+
+* E: 1, o evento que queremos obter; 
+* sigma: 6, já que o dado é um conjunto de seis elementos: {1, 2, 3, 4, 5, 6}.
+
+A fórmula ficará, então:
+P = 1 /6 = 1,666...~~16,67%
+
+A probabilidade de jogarmos o dado e obtermos o número 1 é de uma em seis vezes ou de cerca de 16,67%.
+
+Se quiser saber a probabilidade de obtermos um número par do mesmo dado, teríamos:
+
+E: 3, já que há três elementos (números pares) no conjunto: {2, 4, 6};
+: 6, o conjunto elementos: {1, 2, 3, 4, 5, 6}.
+Calculamos:
+P = 3 / 6 = 0,5 = 50%
+
+Como metade dos lados do dado contém números pares e metade, ímpares, temos 50% de chance de obter um número par ou 50% de obter um ímpar.
+
+Probabilidade condicional
+Probabilidade condicional é a probabilidade de um evento ocorrer com base em outro que já ocorreu.
+
+Um exemplo é retirar bolinhas de um saco. Digamos que temos 10 bolinhas, identificadas com as letras A até J.
+
+Qual a probabilidade de tirarmos duas bolinhas com vogais, uma seguida da outra, sem haver reposição da primeira bolinha ao recipiente?
+
+A fórmula para o caso é:
+P(A/B) = p(A B) / p(B)
+
+Para facilitar, podemos apenas passar p(B) para o outro lado da igualdade:
+P(A B) = P(A/B) x p(B)
+
+Onde:
+
+p(B): 3/10, por termos 10 bolinhas com as letras (A, B, C, D, E, F, G, H, I, J) e apenas três com vogais (A, E, I) entre elas;
+p(A|B): 2/9, porque, se B ocorreu (tiramos uma bolinha com vogal e não a repomos), restaram 9 bolinhas e, dessas, agora, apenas 2 com vogais.
+
+Logo:
+P(A B) = (2 / 9) x ( 3 / 10) = (6/90) = 1/15 ~ 6,67%
+
+A probabilidade de tirarmos duas vogais, uma seguida da outra, sem repor a primeira ao recipiente, é de aproximadamente 6,67%.
+
+# Teorema de Bayes
+O Teorema de Bayes é usado para calcular a probabilidade de uma hipótese com base em evidências anteriores. 
+
+É parecido com a probabilidade condicional e bastante famoso em Estatística.
+
+A fórmula do Teorema de Bayes é:
+
+
+Onde:
+
+A,B: nossos eventos;
+P(A|B): probabilidade do evento A dado o evento B;
+P(B|A): probabilidade do evento B dado o evento A;
+P(A), P(B): probabilidades independentes dos eventos A e B.
+Vamos a mais um exemplo com bolas; dessa vez, coloridas. Temos um recipiente com 2 bolas vermelhas e 3 azuis. 
+
+Queremos saber:
+
+Qual a probabilidade de tirarmos uma bola vermelha (B) depois de termos tirado uma azul (A)?; e 
+Qual a probabilidade da primeira bola (A) ser azul, sendo que a segunda (B) é vermelha?
+Raciocine um pouco, se a intuição for difícil. Se necessário, represente no papel como isso funcionaria. Ajuda a entender o que faremos com a matemática.
+
+Calculamos o primeiro caso com a probabilidade condicional:
+
+
+A probabilidade de tirarmos uma bola vermelha depois de termos tirado uma azul é de 3/10 (três décimos).
+
+Então, usamos o Teorema de Bayes para calcular o segundo caso, com base no conhecimento do resultado do primeiro ou a priori, cuja fórmula, facilitada, ficará:
+
+
+O que nos dá:
+
+
+A probabilidade de a primeira bola ser azul, sendo que a segunda é vermelha, dado que já sabemos a probabilidade de já termos tirado uma vermelha após uma azul, é de 75%.
+
+# Sugestão de exercício
+Um bom exercício é pesquisar mais problemas de probabilidade e tentar calculá-los diretamente na linguagem Python. 
+
+Como os cálculos básicos envolvem operações simples, como soma, multiplicação e divisão, que não requerem codificação complexa, pode servir como uma boa prática para já fixar conceitos matemáticos ao mesmo tempo em que você estuda Python e a lógica da construção de programas.
+
+Funções e classes podem ajudar nisso. Se quiser ir além, tente investigar como as bibliotecas numpy, math e scipy podem ajudá-lo.
+
+# Referências
+https://www.khanacademy.org/
+https://en.wikipedia.org/
+https://www.infoescola.com/
+https://brasilescola.uol.com.br/
+https://www.analyticsvidhya.com/
+https://bookdown.org/
+https://probability4datascience.com/
