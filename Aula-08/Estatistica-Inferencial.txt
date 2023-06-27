@@ -1,0 +1,178 @@
+# Leitura: Estatística Inferencial
+Representação da Estatística Inferencial como conclusões a partir de uma amostra (sample) sobre uma população (population). Fonte: datatab.net
+
+Estatística Inferencial é um ramo da Estatística que usa uma amostra aleatória de dados coletados de uma população para descrever e tirar conclusões (fazer inferências) sobre essa população.
+
+A Estatística Inferencial é útil e necessária quando não é conveniente ou possível examinar cada indivíduo de uma população inteira. Do contrário, poderíamos usar Estatística Descritiva, apenas.
+
+Pense, por exemplo, sobre como avaliar o tamanho médio dos grãos de soja produzidos em uma região. 
+
+É inviável medir todos os grãos (população) existentes nela. Então, colhe-se apenas uma parcela aleatória (amostra) para se inferir o tamanho médio de todos os grãos produzidos.
+
+A partir de uma ou mais amostras, então, pode-se fazer estimativas e testes de hipóteses, os dois principais procedimentos da Estatística Inferencial. 
+
+# Amostra e população
+Amostra e população são dois termos essenciais e com conotações específicas em Inferência Estatística:
+
+* população é um conjunto ou o “todo” de algo que queremos entender (podem ser pessoas, plantas, itens ou eventos de quaisquer tipos);
+* amostra é uma parcela representativa desse todo, uma parte do conjunto.
+
+Amostras, por sua vez, podem ser:
+
+* aleatórias: escolher aleatoriamente indivíduos de uma população (pense que você tem uma população de 100 pessoas e você sorteia 10 pessoas, entre elas, para comporem a amostra);
+* estratificadas: dividir a população em grupos, com base em suas características (pense que nessas 100 pessoas temos pessoas de diferentes idades, profissões etc.; formamos grupos a partir dessas características e extraímos indivíduos, novamente de forma aleatória, desses grupos).
+
+# Estimação
+É o ato de estimar características de uma população a partir de características de amostras dessa população.
+
+Às características da população, chamamos parâmetros. Às características da amostra, chamamos estatísticas.
+
+Quando você vê tais termos em Estatística Inferencial, saiba, portanto, que parâmetros sempre serão populacionais e estatísticas, amostrais.
+
+Como podemos extrair diversas amostras de uma população, e como elas podem diferir entre si, as estimativas podem ser bastante diferentes, dependendo da amostra. Por isso, um estimador é chamado de variável aleatória.
+
+Esse estimador pode ser:
+
+* um valor único;
+* um intervalo de valores, chamado de intervalo de confiança.
+
+Na maioria dos casos em que a Estatística é aplicada, é difícil termos um valor único. Então, o mais comum é usarmos intervalos de confiança para fazer estimativas.
+
+### Intervalo de confiança
+Intervalo de confiança é como uma “margem de segurança” do conhecimento que temos acerca de um parâmetro da população.
+
+Como estimativas de intervalo são as mais comuns, sempre haverá algum grau de incerteza nelas, em relação a um parâmetro (média populacional, por exemplo).
+
+Você já deve ter ouvido que uma pesquisa de intenção de votos tem um intervalo de confiança de 95%, o que é um padrão razoável para a maioria dos casos.
+
+Isso quer dizer que se você repetir a pesquisa, com a mesma metodologia, com uma nova amostra aleatória e representativa de eleitores, por 100 vezes, em 95 delas sua estimativa estará, seguramente, dentro do intervalo especificado.
+
+# Teste de hipóteses
+Teste de hipóteses é uma das técnicas mais importantes da Estatística Inferencial. 
+
+São os testes de hipóteses que nos garantem, por exemplo, que uma vacina contra a covid é eficaz (cria defesas contra a doença) e é segura a humanos (não causa efeitos colaterais sérios).
+
+Em termos conceituais, teste de hipóteses é um procedimento estatístico formal para investigar nossas ideias e suposições contra o mundo real, a fim de tomarmos decisões objetivas e informadas.
+
+Para cientistas, teste de hipótese é a única maneira realmente “objetiva” de atestarmos nosso conhecimento sobre o mundo. O restante são “chutes”, especulações, crenças ou, na linguagem científica, conjeturas.
+
+A realização de testes de hipóteses implica um bom domínio de técnicas matemáticas e da estatística subjacente. Também implica em conceitos bastante abstratos e em alguns perigos de conclusões erradas, se feitos com descuido ou desconhecimento das particularidades envolvidas.
+
+## Etapas de um teste de hipóteses
+Um teste de hipóteses, em geral, deve respeitar 5 etapas básicas, que se parecem bastante com as do Método Científico (no qual é uma das principais ferramentas utilizadas):
+
+1. Declaração de uma hipótese de pesquisa ou hipótese nula e de uma hipótese alternativa.
+2. Coleta de dados de maneira projetada e controlada, para testar a hipótese.
+3. Realização de um teste estatístico apropriado.
+4. Decisão sobre se a hipótese nula é rejeitada ou não.
+5. Apresentação de resultados, discussão e submissão do teste à possível reprodução por parte de outros pesquisadores.
+
+## Conceitos fundamentais
+Vamos explicar melhor cada um dos termos acima. Para isso, vamos usar um exemplo simplório, para fins de compreensão: queremos saber se o uso de redes sociais causa vício ou dependência.
+
+* Hipótese nula: é uma situação de base, o ponto de partida. No nosso exemplo, é a suposição de que, não, as redes sociais não causam vício, ou seja, não há relação de causa e efeito entre as duas coisas.
+* Hipótese alternativa: é a situação que queremos testar. No exemplo, é a suposição de que, sim, as redes sociais causam vício, ou seja, há relação entre frequência de uso e vício em redes sociais.
+* Coleta de dados: é a forma de medir ou quantificar nossa situação. No exemplo, seria, teoricamente, algo como escolher aleatoriamente pessoas que usam redes sociais por tantas horas no dia e verificar se apresentam sinais classificados como os de dependência de uma droga (ansiedade, abstinência, crises etc.) caso não consigam acessá-las.
+* Teste estatístico: fórmulas estatísticas que irão calcular, a partir dos dados coletados, o quanto uma estatística de teste se relaciona à hipótese nula ou não. Existem vários tipos de testes estatísticos para diferentes tipos de dados e quantidades de amostras, como teste T, teste T-pareado e ANOVA (para testes paramétricos ou quando os dados são normalmente distribuídos) e qui-quadrado, r de Spearman, Kruskal-Wallis H (para testes não paramétricos), entre outros. 
+
+Feito tudo isso, entramos em alguns outros conceitos fundamentais, diretos ou derivados da etapas acima:
+
+* Estatística de teste: um número que descreve a relação entre as variáveis ou dados e a hipótese nula.
+* Valor p: probabilidade de se obter uma estatística de teste igual ou mais extrema que a observada na amostra a partir da hipótese nula.
+* Significância estatística: probabilidade de que a diferença na estatística de teste e a estatística da hipótese nula não seja devida ao acaso. Depende de:
+* Tamanho da amostra: quanto maior a amostra, mais confiança no resultado do experimento. Amostras pequenas geram mais erros de amostragem.
+* Tamanho do efeito: tamanho da diferença entre resultados entre conjuntos de amostras. Tamanho de efeito pequeno quer dizer que precisamos de uma amostra muito grande para determinar se a diferença é significativa ou apenas devida ao acaso. 
+* Rejeição da hipótese nula: é a decisão que deve ser tomada com base no resultado do teste estatístico. Na maioria dos casos, usamos o valor p para isso. Considerando um nível de significância de 0,05 ou 5% (um padrão popular na ciência e na indústria), caso o valor p seja maior que isso, não se rejeita a hipótese nula. Voltando ao nosso exemplo, quer dizer que não há relação entre frequência de uso de redes sociais e vício. Não podemos fazer essa inferência. Caso o valor p seja menor que 0,05, podemos fazer a inferência de que, sim, redes sociais causam vício. Se não estivermos seguros, poderíamos diminuir o nível de significância, para, por exemplo, 0,01 ou 1%. Porém, isso exigiria uma amostra muito maior de pessoas, ou seja, experimentos mais custosos.
+
+### Tipos de erros
+Entre os conceitos fundamentais, também estão os tipos de erros estatísticos:
+
+* Erro do Tipo I: trata-se do falso positivo. Em nosso exemplo, é como o teste nos permitir inferir que, sim, as redes sociais causam vício, quando na realidade não causam. Em outros termos, é como o resultado de teste para covid dizer que você tem a doença, quando você não tem.
+* Erro do Tipo II: trata-se do falso negativo. Em nosso exemplo, é como o teste não nos permitir inferir que as redes sociais não causam vício, quando na verdade causam. Pegando o exemplo da covid, é como você testar negativo para a doença, mas estar contaminado.
+O erro de Tipo I acontece quando concluímos que os resultados do teste são estatisticamente significativos, quando, na realidade, ocorreram por mero acaso.
+
+Ele está atrelado ao nível de significância. Um nível de significância maior que 5% pode levar mais facilmente a erros desse tipo, por exemplo.
+
+Já o erro do Tipo II depende do que é chamado de potência em testes estatísticos. É a probabilidade de um teste detectar um efeito de um determinado tamanho na hipótese alternativa. O valor padrão costuma ser 80%. 
+
+Considerar mais fatores que caracterizam vício ou dependência poderia ser uma forma de aumentar a potência, no exemplo das redes sociais.
+
+Pouca potência pode levar a testes incapazes de detectar efeitos. Normalmente, é um desperdício e é muito arriscado realizar testes assim. 
+
+Muita potência, por outro lado, pode levar a testes altamente sensíveis, que produzem resultados estatisticamente significativos, mas pouco úteis no mundo real.
+
+Erros do Tipo II são mais críticos e tem bastante implicações para estudos que trazem implicações à saúde ou segurança de pessoas ou animais, por exemplo.
+
+Testes A/B: exemplo de teste de hipóteses
+Ilustração básica de um teste A/B, em que se compara duas versões de uma tela quanto à variação de uma métrica (cliques, cadastros, compras etc.). Fonte: optimizely.com
+
+No mundo da tecnologia, incentivados principalmente por big techs como Google a grandes startups disruptivas, como Airbnb, é comum nos depararmos com o termo Teste A/B.
+
+Estas empresas, de alguma maneira, foram construídas e escalas em cima de quantidades colossais desses testes, para se ter ideia.
+
+A Google, por exemplo, empregou o método para testar minúcias de cores de links para seus anúncios em texto, com retornos expressivos em receita (dinheiro).
+
+Mas o que seriam esses tais Testes A/B e por que entram em um tópico sobre Inferência Estatística?
+
+Porque são um bom exemplo de testes de hipóteses executados aos milhares, normalmente de forma automatizada — muitos deles acompanhados por Analistas ou Cientistas de Dados — no dia a dia de muitas startups e empresas.
+
+Na prática, um teste A/B permite, por exemplo, testar se um botão vermelho (versão B) converte mais (gera mais click e vendas) do que um botão azul (versão A). 
+
+Ou se um anúncio no alto do aplicativo recebe mais visualizações do que em outra parte da tela. Ou se uma frase é mais entendível do que outra aos clientes. Ou se um formato de campanha de marketing traz mais resultado que outro. Os exemplos são muitos.
+
+# Relação com teste de hipóteses
+Como é possível notar, o nome A/B deriva do fato de compararmos duas coisas. Perceba que A é como nossa hipótese nula de nosso teste de hipóteses e B, a hipótese alternativa. 
+
+Normalmente, rodamos os testes com bases consideráveis de usuários, que são nossa amostra.
+
+A partir da variação da nossa métrica entre a versão A e B, decidimos se rejeitamos ou não a hipótese nula.
+
+Com isto, podemos tomar a decisão de que, sim, B é mais eficiente (gera mais cliques, vendas etc.) e pode ser implementado para todos os nossos clientes, e não apenas para uma amostra. 
+
+Ou que, não: não há diferença significativa entre A e B e, por economia, é inútil — provavelmente, apenas uma questão de vaidade — estendermos a versão B de nosso aplicativo a todos os clientes.
+
+Com base nisso, Testes A/B nos permite retirar subjetividade de nossas implementações (colocar o botão na cor vermelha porque “achamos mais bonito” que a cor azul) e trazer objetividade às decisões (tornar o botão vermelho ou mantê-lo azul porque geram um resultado tangível, baseado em evidências, como mais clientes em potencial ou mais vendas).
+
+# Como funciona um Teste A/B
+Atualmente, há vários softwares que já permitem a realização de Testes A/B automatizados, com conclusões prontas na tela, bastando que qualquer pessoa de negócio tome decisões a respeito. 
+
+Entretanto, é provável que esses softwares não contemplem todas as possibilidades que um negócio queira investigar — é aí que Cientistas de Dados entram em ação, munidos de conhecimento em Estatística e bibliotecas Python apropriadas, como scipy ou statsmodels, por exemplo, para ajudar na tarefa.
+
+Tomando nosso exemplo muito simples de comparar se a cor vermelha de um botão gera mais conversões que a cor azul, que já é usada, podemos seguir um roteiro parecido com o de um teste de hipóteses clássico:
+
+1. Geramos nossas hipóteses, que no caso já estão dadas:
+1.1. Hipótese nula ou versão A: mudar a cor do nosso botão, que é azul, para vermelho, não impacta na taxa de conversão desejada.
+1.2. Hipótese alternativa ou versão B: a mudança da cor de azul para vermelho gerará uma taxa maior de conversão do que o botão azul.
+2. Criamos as variações de nossa versão, isto é, a versão A da tela, com o botão azul que já usamos, e a versão B, com o botão na cor vermelha.
+3. Executamos o experimento, pegando uma amostra aleatória (dados) que atenda ao nível de significância estabelecido e, por meio de algumas linhas de código ou de alguma ferramenta especializada, direcionamos 50% dessa amostra à nossa versão A e 50% à versão B.
+4. Analisamos os resultados e tomamos a decisão:
+4.1. se a diferença de desempenho das duas versões for estatisticamente significativa, hipótese nula rejeitada, isto é, o botão vermelho é mais eficiente e podemos implementá-lo com segurança;
+4.2. se a diferença de desempenho das duas versões não for significativa, hipótese nula não rejeitada, é inútil implementar o botão vermelho e podemos continuar com o azul, sem esforços desnecessários.
+Na etapa 5, é necessário deixar o teste rodando o tempo necessário até que a amostra seja atingida, para evitar imprecisões nos resultados e decisões precipitadas.
+
+Um comportamento comum de Testes A/B ao longo do tempo pode se assemelhar ao do gráfico abaixo: 
+
+Fonte: optimizely.com
+
+O grupo de controle (os 50% da amostra que recebem a versão A) tem mais conversão em um período inicial, enquanto o grupo teste (ou os 50% da amostra que recebem a variação ou versão B) tem menos conversão.
+
+À medida que o tamanho da amostra cresce e satisfaz o nível desejado, o resultado tende a ser cada vez mais realista, indicando quais das versões é mais eficaz (no gráfico, a variação ou versão B é a mais eficaz, representada pela linha verde).
+
+É claro que devem ser tomados alguns cuidados para a amostra ser realmente aleatória. Se apenas pessoas de uma determinada faixa etária verem uma versão e pessoas de outra faixa verem a outra, a comparação não é viável e haverá problemas com a significância estatística.
+
+Os links disponíveis nas referências, a seguir, ajudam você a se aprofundar e entender mais sobre inferência estatística e testes A/B. 
+
+O assunto é denso e requer leitura até os conceitos serem intuídos. Se você já realizou pesquisa científica quando estudante, por exemplo, ou se tem alguma familiaridade com o assunto, provavelmente já viu alguns dos conceitos e pode revisitá-los para Data Science. Muito do aprendizado consolidado, porém, vem do contato com testes desse tipo no dia a dia, por meio de projetos de estudo ou prática no trabalho.
+
+#Referências
+https://www.scribbr.com/category/statistics/
+https://www.scribbr.com/statistics/hypothesis-testing/
+https://www.scribbr.com/statistics/test-statistic/
+https://www.scribbr.com/statistics/p-value/
+https://www.scribbr.com/statistics/type-i-and-type-ii-errors/
+https://www.scribbr.com/statistics/statistical-significance/
+https://www.scribbr.com/statistics/statistical-power/
+https://www.optimizely.com/optimization-glossary/ab-testing/
+https://www.optimizely.com/optimization-glossary/statistical-significance/
+https://www.analyticsvidhya.com/blog/2017/01/comprehensive-practical-guide-inferential-statistics-data-science/
+https://www.analyticsvidhya.com/blog/2022/02/statistical-inference-using-python/
