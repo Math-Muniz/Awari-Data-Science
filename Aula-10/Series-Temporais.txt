@@ -1,0 +1,174 @@
+# Leitura: Séries Temporais
+Cotações do S&P 500, principal índice da bolsa de valores americana e um dos mais longos do mundo, representado por meio de um gráfico de linha de série temporal. Fonte: Google Finance
+
+Série temporal é uma sequência de pontos de dados ordenados no tempo. Em inglês, você pode encontrar tanto a expressão time series como o termo forecasting referindo-se ao assunto.
+
+O fator tempo é crucial para determinar uma série temporal, como o próprio nome deixa claro. Em regressões, por exemplo, a ordem das observações (dados) não é importante. Em séries temporais, a ordem é obrigatória.
+
+Você certamente viu muitas representações de séries temporais de 2020 para cá. Praticamente todas as visualizações de casos de contaminação e número de mortes da covid-19 foram representadas, na mídia, por meio de gráficos de linha de série temporal.
+
+Ou talvez você tenha algum conhecimento, curiosidade ou mesmo invista no mercado de ações e esteja familiarizados com gráficos de trade, que mostram cotações de preços em janelas de horas, dias, semanas, meses, por exemplo. 
+
+Séries temporais não se resumem a gráficos do mercado financeiro ou da covid, contudo. O assunto envolve métodos de análise de dados sequenciais no tempo e permite fazer previsões (projeções) a partir do histórico dos dados.
+
+Como necessidades de negócio geram diversas séries temporais — medir o desempenho da receita ou o churn (desistência) de clientes ao longo do tempo, por exemplo —, é comum que Data Analysts ou Data Scientists tenham de trabalhar com elas ao longo de suas carreiras.
+
+# Como são usadas?
+Séries temporais são utilizadas para a realização de análises e para previsões:
+
+* Análise: é o método para entender uma série temporal, como ela é formada, ou seja, qual sua estrutura. Em outras palavras, tem a ver com “olhar ao passado”, ao que os dados registrados já demonstram. Uma das “ferramentas” mais utilizadas para análise de séries temporais são os gráficos de linha.
+* Previsão: é o método de usar os dados passados para fazer previsões ou “projeções” de como a série temporal continuará se comportando. Em outras palavras, tem a ver com “olhar para o futuro” ou gerar novos dados a partir do padrão dos dados passados. Os métodos de fazer previsões a partir de séries temporais envolvem uso de modelos estatísticos específicos, mais conhecidos por suas siglas, como AR, ARMA, ARIMA e variações (que veremos adiante).
+
+# Características
+Séries temporais tem algumas características especiais em relação a outros conjuntos de dados. Vamos ver quais são.
+
+# Tendência
+Exemplo de gráfico de linha de série temporal com tendência de crescimento.
+Fonte: Data Hackers/Medium
+
+Tendência diz respeito ao fato de uma série temporal estar crescendo, decrescendo ou permanecendo estável ao longo do tempo, bem como a velocidade dessas mudanças.
+
+A tendência permite entender o comportamento dos dados a curto, médio ou longo prazo.
+
+São exemplos comuns dizermos, com base em séries temporais, que a “tendência” é de que o trânsito fique mais congestionado ano após ano ou que a população viva mais dentro de uma década.
+
+# Sazonalidade
+Exemplo de gráfico de linha de série temporal com sazonalidade (oscilações ou “ondas” ao longo do tempo).
+Fonte: Data Hackers/Medium
+
+Sazonalidade corresponde às oscilações (subidas e descidas) que se repetem com a mesma frequência (ou muito parecida) em determinados períodos de tempo, sejam dias, semanas, meses, anos, décadas etc.
+
+Venda de chocolates de Páscoa, vendas na Black Friday, diminuição de tickets de suporte entre janeiro e fevereiro (em função de Natal e Reveillon), diminuição de atividades nos fins de semana, venda de sorvete no verão ou de chocolate quente no inverno — todos esses são exemplos de comportamentos sazonais.
+
+A sazonalidade pode ser combinada com a tendência na análise de variações de séries temporais, conforme ilustram os gráficos abaixo:
+
+Fonte: comunidade.ceodofuturo.org.br 
+
+# Ciclo
+Exemplo de ciclicidade em série temporal. Note que há ciclos de “baixa” entre 1980 e 1985 e logo após 1990, assim como há ciclos de alta entre 1975 e 1980 e 1985 e 1990.
+Fonte: robjhyndman.com
+
+Ciclos também são oscilações, porém sem a regularidade e a frequência de movimentos sazonais. 
+
+Quando falamos em algo cíclico, referimo-nos a algo que pode acontecer de tempos em tempos, mas que não acontece em um intervalo preciso e que pode provocar fortes oscilações na série temporal, principalmente a curto prazo.
+
+Por exemplo, crises econômicas são cíclicas. Não sabemos se elas ocorrerão exatamente a cada 10 anos, mas sabemos que, de tempos em tempos, elas tendem a ocorrer. 
+
+Eventos meteorológicos também. Diz-se que há chuvas cíclicas, com tempo de recorrência de uma década, por exemplo. Não significa que a cada exatos dez anos haverá a mesma quantidade de chuva de dez anos atrás, mas que talvez em 8 ou 12 anos provavelmente chova acima da média para uma determinada região.
+
+# Flutuações aleatórias
+Gráfico compara bem tendência, sazonalidade, ciclo e o que são flutuações aleatórias ou irregulares.
+Fonte: abepro.org.br
+
+Erros ou flutuações aleatórias são movimentos fora da tendência, sazonalidade ou ciclo, normalmente de curto prazo, e que correspondem a eventos raros e anormais. 
+
+Por exemplo, pense que houve uma queda de energia generalizada em uma região do Brasil durante um dia útil. 
+
+Esse dia será um “ponto fora da curva”, porque não houve vendas, atividades, nem ao menos registros disso. Trata-se de uma flutuação aleatória.
+
+A curto prazo, provavelmente significará uma flutuação estranha. A longo prazo, tende a se diluir na média. 
+
+Contudo, se a flutuação for de grande magnitide, provavelmente se trata de um “cisne negro”, evento com poder de alterar profundamente a sequência posterior da série, por exemplo.
+
+Exemplo de uma flutuação aleatória drástica em uma série temporal, com queda abrupta que não é recuperada posteriormente.
+Fonte: minitab.com
+
+# Classificação
+Séries temporais são classificadas em estacionárias e não estacionárias. Vamos saber mais sobre cada classe.
+
+# Série estacionária
+Série estacionária é uma série cujas oscilações sempre ocorrem em torno da média da série: 
+
+Exemplo de uma série estacionária. Note que os dados oscilam dentro de uma mesma “faixa” (ou com média constante).
+Fonte: Data Hackers/Medium
+
+Em uma série estacionária, independentemente do período de tempo selecionado, a média dos dados deve ser a mesma ou muito próxima da média total da série.
+
+# Série não estacionária
+O contrário é chamado de série não estacionária:
+
+Exemplo de uma série não estacionária, em que a média dos dados não é constante.
+Fonte: Data Hackers/Medium
+
+Em uma série estacionária, um período específico pode ter uma média muito baixa ou muito alta, em comparação com a média total da série.
+
+# Lei de formação
+Componente determinístico
+Séries temporais podem ser descritas por meio de uma função matemática. Se essa função for perfeitamente determinada por uma ou mais variáveis, diz-se que ela contém apenas o componente determinístico.
+
+Um exemplo é o PIB (Produto Interno Bruto). Ele é perfeitamente determinado pela soma dos PIBs das cinco regiões brasileiras. Não há outros componentes que interferem no cálculo.
+
+# Componente estocástico
+Até mais comuns, também há séries temporais com componente aleatório ou estocástico. 
+
+Um exemplo é o desemprego. Apesar de determinado por fatores como PIB, produtividade, salário real e população economicamente ativa, ele pode sofrer interferências aleatórias, decorrentes, por exemplo, do fechamento de uma grande empresa ou de uma decisão política de elevar o salário mínimo.
+
+# Modelos
+Modelos, em séries temporais, são fórmulas estatísticas para estudar e tratar séries temporais. 
+
+Modelos podem ser:
+
+* paramétricos: quando há um número finito de parâmetros, o que leva a análise no domínio do tempo da série;
+* não paramétricos: quando há um número infinito de parâmetros, o que leva a análise ao domínio de frequência da série. 
+Modelos paramétricos são os mais conhecidos e são muito utilizados em áreas como Econometria, Epidemiologia etc., onde costumam ser identificados por siglas: ARMA, ARIMA, ARFIMA, SARIMA etc.
+
+Fonte: Data Hackers/Medium
+
+# Modelos AR
+Modelos AR vêm de autorregressivo. Utilizam a própria variável alvo para projetá-la a partir da variável no passado.
+
+Em termos mais simples, eles permitem predizer valores futuros com base apenas nos valores passados. 
+
+Uma característica desse modelo, no entanto, é que pressupõe que o futuro será parecido com o passado (ou seja, podem não ser úteis para prever crises e eventos raros e adversos).
+
+Como se trata de um modelo estatístico, ele possui a seguinte fórmula matemática (não se assuste!):
+
+A fórmula pode ser resolvida manualmente, é claro. Mas o mais comum, atualmente, é fazê-lo por meio de softwares estatísticos, softwares de BI ou linguagens de programação, como Python ou R, com pacotes estatísticos específicos para séries temporais.
+
+# Modelos ARMA
+Modelos ARMA tem o nome derivado de “Autorregressivo + Média Móvel” (do inglês, Moving Average). 
+
+Eles juntam um modelo AR com a média móvel. Ou seja, usam a própria variável alvo para projetá-la a partir da variável no passado, mas também consideram os erros anteriores por meio da média móvel.
+
+O modelo ARMA também tem uma fórmula, parecida, naturalmente, com a do modelo AR:
+
+# Modelos ARIMA
+Modelos ARIMA — agora ficou fácil de intuir — são um ARMA com um parâmetro integrado (I), que são os números de vezes de transformações feitas na série para que ela se torne estacionária. 
+
+Este tipo de modelo é aplicado em casos em que os dados mostram evidências de não estacionariedade, a qual é tratada pela parte “integrada” (I).
+
+Modelos ARIMA podem ser não sazonais — ARIMA(p, d, q) — ou sazonais — ARIMA(p, d, q)(P, D, Q)m.
+
+A fórmula matemática que compõe o modelo, também por curiosidade e mais complexa, é:
+
+Modelos ARIMA podem ter variações. Se forem usadas múltiplas séries temporais (várias delas), é chamado VARIMA (o “V” é de “vetorial”). Se for considerada a sazonalidade, é chamado SARIMA. 
+
+Há ainda modelos autoregressivos fracionariamente integrado de médias móveis (ufa!), chamados de FARIMA ou ARFIMA. 
+
+# No trabalho com dados
+Séries temporais compõem um capítulo importante da Estatística no trabalho com dados, seja a Data Analysts ou Data Scientists 
+
+Como muitos dados do mundo real dependem do tempo para fazerem sentido — voltemos às oscilações de receita de uma empresa, preço de ações, casos de uma doença etc. como exemplos —, saber aplicar métodos de serem temporais tem grande valia no mercado.
+
+Como outros tópicos da Estatística, este também envolve bastante matemática (e matemática avançada), como se pode ver pelas próprias fórmulas. Nem sempre é necessário (nem possível) dominar todos os conceitos para começar a usar tais métodos. 
+
+No entanto, é importante procurar estudar rotineira e gradativamente tais conceitos para entender como as coisas funcionam de verdade nos bastidores.
+
+Há vários livros introdutórios sobre séries temporais. Pessoas tanto da academia quanto do mercado costumam referenciar os livros de Pedro Morettin, Econometria Financeira e Análise de Séries Temporais, como boas bases.
+
+Há muito material na web que detalha na parte matemática, embora ela seja naturalmente exigente por causa das fórmulas e dos termos matemáticos. Vale dedicar tempo a ter contato, sem preconceitos.
+
+Vários tutoriais tratam da linguagem de programação estatística R, muito usada em Econometria e em Ciência em geral; portanto, em muitas análises e previsões de séries temporais.
+
+O IBPAD (Instituto Brasileiro de Pesquisa e Análise de Dados) disponibiliza um Curso de Séries Temporais do cientista de dados Sillas Gonzaga, que trata só de séries temporais, bastante completo (também utiliza a linguagem R).
+
+Um ponto de partida para entrar mais ainda nesse universo é pesquisar por “previsão de demanda” (de produtos, insumos ou matérias-primas para comércio e indústria, por exemplo). É um assunto com o qual muitas empresas lidam e que, por isso, envolve vários estudos a respeito.
+
+# Referências
+https://pt.wikipedia.org/wiki/S%C3%A9rie_temporal
+https://en.wikipedia.org/wiki/Time_series
+https://pt.wikipedia.org/wiki/ARMA
+https://pt.wikipedia.org/wiki/ARIMA
+https://proeducacional.com/ead/curso-cga-modulo-i/capitulos/capitulo-4/aulas/
+https://medium.com/data-hackers/series-temporais-parte-1-
+https://betterprogramming.pub/fundamentals-of-time
