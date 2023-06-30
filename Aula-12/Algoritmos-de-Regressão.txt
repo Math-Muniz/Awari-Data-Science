@@ -1,0 +1,235 @@
+# Leitura: Algoritmos de Regressão
+Exemplo de gráfico de uma regressão linear, em que a reta azul é a que melhor se ajusta ao conjunto de dados (pontos vermelhos). Fonte: Wikipedia
+
+Neste tópico, vamos aprender sobre algoritmos de regressão: o que são, como funcionam, a lógica por trás do seu desempenho, e em seguida, passaremos por alguns dos mais usados no mercado.
+
+# O que é regressão?
+Regressão é uma técnica que permite quantificar e inferir a relação de uma variável dependente (variável de resposta) com variáveis independentes (variáveis explicativas).
+
+Tom Redman, especialista em dados e autor de uma série de livros sobre o assunto, explica regressão por meio do seguinte exemplo: imagine que você é um gerente de vendas tentando prever os números do próximo mês.
+
+Você sabe que são muitos os fatores, até alheios aos esforços da equipe comercial, que influenciam nos números.
+
+Uma promoção imperdível do concorrente, chuvas intensas na cidade ou até o burburinho sobre o lançamento de um novo produto no mercado são acontecimentos bem comuns que exemplificam essa infinidade de razões influentes para os números.
+
+Os algoritmos de regressão são uma maneira de descobrir, de maneira matemática e científica, quais desses fatores realmente são capazes de influenciar nas vendas da empresa.
+
+Uma análise bem feita responde às perguntas: quais fatores são mais importantes? O que podemos ignorar? Como esses fatores interagem uns com os outros? E, talvez a mais importante, quão certos estamos nas nossas especulações sobre tudo isso?
+
+Na análise de regressão, esses inúmeros fatores são chamados de variáveis.
+
+Você tem uma variável dependente, que é o principal fator que está tentando entender ou prever — no caso do exemplo, as vendas do mês —, e as variáveis independentes, suspeitas de influenciarem a variável dependente.
+
+## Como funciona?
+Para fazer uma análise de regressão é importante coletar os dados sobre as variáveis em questão.
+
+Você reúne todos os números de vendas mensais dos últimos três anos, por exemplo, e quaisquer dados sobre as variáveis independentes predeterminadas.
+
+No nosso caso, vamos usar o exemplo da variação meteorológica. Digamos que você descubra a precipitação média mensal de chuva dos últimos três anos. 
+
+Em seguida, você traça todas essas informações em um gráfico parecido com este:
+
+Fonte: Harvard Business Review
+
+O eixo Y representa a quantidade de vendas, a nossa variável dependente, e o eixo X mostra a chuva. Cada pontinho azul mostra os dados de um mês — quanto choveu naquele mês e quantas vendas você fez.
+
+Fonte: Harvard Business Review
+
+Traçando uma reta de regressão que melhor se aproxima de todos os pontos de dados, como podemos ver, é possível afirmar que a chuva contribui para as vendas, ou seja, quanto mais chove, mais a loja vende.
+
+Desenhar uma linha ajuda a responder, com algum grau de certeza, quanto você normalmente vai conseguir vender quando chove na cidade.
+
+Esta é uma previsão, muito comum nas análises usando algoritmos de regressão.
+
+Agora que você entende como funciona a análise de regressão, vamos aprender um pouco mais sobre os algoritmos em si.
+
+# Regressão Linear
+O exemplo dado na definição de análise de regressão é um tipo de regressão linear, em que se faz a relação entre duas variáveis em um gráfico de eixos X e Y.
+
+O resultado da regressão linear sempre será um número. É a melhor escolha na hora de apresentar uma tendência de crescimento ou decrescimento.
+
+Fonte: Data Geeks
+
+A linha traçada no gráfico é representada pela seguinte equação:
+
+
+Onde:
+
+y é a variável dependente e mostra o que o modelo vai tentar prever;
+a é a constante, que representa a interceptação da reta com o eixo vertical; 
+B mostra a inclinação em relação à variável independente;
+X é a variável independente; e
+ɛ indica os valores residuais e possíveis erros.
+Dessa forma, o algoritmo busca encontrar os valores para ? e ? usando o conjunto de dados disponível.
+
+# Coeficiente de Correlação
+Dentro da regressão linear, há um termo que define a relação entre duas variáveis. Trata-se do coeficiente de correlação, também conhecido como coeficiente de Pearson ou coeficiente de determinação. Ele determina o grau e a direção dessa correlação — se positiva ou negativa.
+
+São atribuídos os valores de -1 e 1 para indicar o grau de correlação. Quanto mais perto do número 1, mais positiva ela é. Do contrário, quanto mais próximo do -1, mais negativa é a correlação.
+
+Além disso, quanto mais próximo dos extremos, maior é o grau da correlação, e quanto mais próximo de zero, menor ele será.
+
+Em seguida, fazemos uma conversão em porcentagem. Por exemplo, se o resultado da equação for 0,83 dizemos que a correlação entre as variáveis é de 83%. Ajuda a assimilar melhor os resultados obtidos e perceber se a correlação é realmente significativa.
+
+## Regressão Ridge
+Em tradução livre do termo Ridge Regression, a Regressão de Pico é um outro algoritmo, usado para estimar os coeficientes de modelos de regressão múltipla em cenários onde as variáveis ​​linearmente independentes são altamente correlacionadas.
+
+Esse método tem sido usado em muitos campos, incluindo economia, química e engenharia.
+
+A Regressão Ridge foi desenvolvida como uma possível solução para a imprecisão dos estimadores de mínimos quadrados quando os modelos de Regressão Linear têm algumas variáveis ​​independentes altamente correlacionadas.
+
+Especialistas em Machine Learning preferem a Regressão Ridge em alguns casos porque ela minimiza a perda e a margem de erro da regressão linear. Aqui o resultado é previsto por um estimador de pico.
+
+A equação desse tipo de regressão é representada pela seguinte fórmula:
+
+
+Onde:
+
+y é o que define as observações da variável de dados dependente;
+X é a matriz de regressores;
+B mostra os coeficientes de regressão; e
+ɛ é o componente de erros.
+
+## Regressão Lasso
+Lasso é uma sigla que vem do inglês Least Absolute Shrinkage and Selection Operator, que em tradução livre significa Operador de Retração e Seleção Mínima Absoluta.
+
+Mais um método de análise de regressão, muito usado no Machine Learning e também na Estatística, que realiza uma seleção e regularização de variáveis ​​para melhorar a precisão da previsão e a interpretabilidade do modelo estatístico resultante.
+
+Esta técnica ajuda a diminuir a limitação do modelo. Os valores dos dados encolhem para o centro ou média para evitar uma duplicidade de dados.
+
+A Regressão Lasso se relaciona diretamente com a Regressão Ridge e tem a seleção do melhor subconjunto de dados, além das conexões entre as estimativas do coeficiente de Lasso e o chamado limiar suave.
+
+Assim como a regressão linear padrão, as estimativas de coeficiente não precisam ser únicas se as variáveis ​​forem colineares.
+
+A habilidade do Lasso de realizar a seleção de subconjuntos depende muito da forma da restrição e tem uma grande variedade de interpretações, inclusive em termos de geometria, estatística Bayesiana e análise convexa.
+
+## Regressão Árvore de Decisão
+Regressão de Árvore de Decisão é não linear e sua principal função é dividir o conjunto de dados em conjuntos menores.
+
+Os subconjuntos são criados para definir o valor de qualquer informação que se conecta ao problema.
+
+A divisão do conjunto de dados por este algoritmo resulta em uma árvore com vários nós de decisão.
+
+Assim como em um fluxograma, esses nós se relacionam entre si através de uma hierarquia. Existe o nó-raiz, que é o mais importante, e os nós-folha, que são os resultados finais.
+
+No contexto de ciência de dados, a raiz é um dos atributos da base de dados e o nó-folha representa a classe ou o valor que será gerado como resposta.
+
+Fonte: Data Science Foundation
+
+Especialistas em Machine Learning preferem esse modelo nos casos em que não há alterações suficientes no conjunto de dados.
+
+Por menor que seja, qualquer mudança nos dados pode causar uma grande alteração na estrutura nos galhos de decisão subsequentes, uma vez que o formato dela depende da decisão anterior, que depende da anterior e assim sucessivamente.
+
+Também não se deve “podar” demais os regressores da árvore de decisão, pois dessa forma não haverá nós finais suficientes para fazer a previsão no final do processamento.
+
+## Random Forest
+Random significa aleatório, e denota o comportamento do algoritmo ao selecionar subconjuntos de recursos e montar pequenas árvores de decisão.
+
+Forest significa floresta em português, e essa variação do algoritmo tem esse nome porque gera várias árvores de decisão.
+
+Fonte: Medium
+
+Esse algoritmo possui 4 etapas básicas: 
+
+seleção aleatória de algumas features (variáveis);
+seleção da feature mais apropriada para a posição de nó-raiz;
+geração dos nós-folhas; e
+repetição dos passos até que se atinja a quantidade necessária ou desejada de árvores.
+Em seguida, as previsões são feitas a partir de “votações”. Cada mini árvore toma uma decisão a partir dos dados gerados. A decisão mais votada é a resposta do algoritmo.
+
+## KNN (K-Nearest Neighbor)
+KNN já é um pouco diferente: ele é um algoritmo não paramétrico, em que a estrutura do modelo será determinada pelo dataset utilizado.
+
+Também é conhecido como um algoritmo de aprendizado lento ou algoritmo do tipo lazy, preguiçoso.
+
+Esse tipo de metodologia não necessita de dados de treinamento para gerar o modelo, o que diminui o processo inicial, mas por outro lado vai pedir uma análise posterior mais minuciosa. 
+
+Os algoritmos que não precisam de treinamento funcionam assim: todos os dados obtidos no dataset serão utilizados na fase de teste, portanto o treinamento é muito rápido, mas a fase de testes e validação é lenta, e precisa ser mais detalhada.
+
+## Support Vector Machines (SVM)
+Máquina de Vetores de Suporte (SVM) é um conjunto de métodos de aprendizado supervisionado que analisa os dados e reconhece padrões.
+
+SVM identifica como entrada um conjunto de informações e prediz, para cada entrada, a qual de duas possíveis classes essa entrada pertence, o que faz do SVM um classificador linear binário não probabilístico.
+
+Um algoritmo de treinamento do SVM desenvolve um modelo que atribui novos exemplos a uma categoria ou outra.
+
+Esse modelo é uma representação como pontos no espaço, mapeados de maneira que os componentes de cada categoria sejam divididos por um espaço claro, tão amplo quanto possível.
+
+O que uma SVM faz é encontrar uma linha de separação, mais comumente chamada de hiperplano, entre dados de duas classes.
+
+Fonte: Wikipedia
+
+## Processos Gaussianos
+Os algoritmos de regressão gaussiana são comumente usados ​​em aplicações de Machine Learning devido à sua flexibilidade de representação e medidas de incerteza inerentes sobre as previsões.
+
+Um processo gaussiano é construído sobre conceitos fundamentais como distribuição normal multivariada, modelos não paramétricos, núcleos, probabilidade conjunta e condicional.
+
+Um modelo de regressão de processos gaussianos (GPR) pode prever usando conhecimento prévio (kernels) e fornecer medidas de incerteza para essas previsões.
+
+É um método de aprendizado supervisionado desenvolvido por comunidades de ciência da computação e estatística.
+
+Devido à natureza não paramétrica da regressão de processo gaussiana, ela não é restringida por nenhuma forma funcional.
+
+Como resultado, em vez de calcular a distribuição de probabilidade dos parâmetros de uma função específica, o processo gaussiano calcula a distribuição de probabilidade de todas as funções permitidas que se ajustam aos dados.
+
+## Regressão Polinomial
+A Regressão Polinomial é um algoritmo de regressão que modela a relação entre uma variável independente (x) e uma variável dependente (y) como um polinômio de grau n. A equação para a regressão polinomial é a seguinte:
+
+
+Também é conhecido como o cenário especial de Regressão Linear Múltipla no Machine Learning. Para torná-lo uma regressão polinomial, alguns termos polinomiais são adicionados à equação de Regressão Linear Múltipla.
+
+É um modelo linear que foi modificado para melhorar a precisão. O conjunto de dados usado para treinamento em regressão polinomial não é linear, de modo a ajustar as funções e conjuntos de dados não lineares e complexos.
+
+As features originais são transformadas em features polinomiais do grau requerido e então moldadas usando um modelo linear.
+
+## Regressão de Rede Neural
+A regressão de rede neural é um método de aprendizado supervisionado e, portanto, requer um conjunto de dados marcado que inclua uma coluna de rótulo.
+
+Como um modelo de regressão prevê um valor numérico, a coluna de rótulo deve ser um número.
+
+Cada nó em uma rede neural possui uma respectiva função de ativação que define a saída do nó com base em um conjunto de entradas.
+
+A última função de ativação pode ser manipulada para transformar uma rede neural em um modelo de regressão.
+
+Pode-se usar Keras, que é uma biblioteca Python apropriada para construir redes neurais no aprendizado de máquina.
+
+A saída de um neurônio é mapeada para uma variedade de valores na regressão da rede neural, garantindo assim a não linearidade.
+
+Você pode escolher um único parâmetro ou um intervalo de parâmetros para prever a saída usando esse tipo de algoritmo de regressão.
+
+Os neurônios são as saídas de uma rede, e são bem conectados entre si, juntamente com um peso associado a cada saída.
+
+Eles ajudam a prever valores futuros juntamente com o mapeamento de uma relação entre variáveis ​​dependentes e independentes.
+
+## Rede Neural Convolucional
+Uma Rede Neural Convolucional ou CNN, do inglês Convolutional Neural Network e também conhecida como ConvNet. 
+
+É uma modalidade de rede neural artificial do tipo feed-forward, que vem sendo aplicada com sucesso no processamento e análise de imagens digitais.
+
+CNN usa uma variação de perceptrons multi-camada que demandam o menor processamento possível.
+
+As redes convolucionais são inspiradas nos processos biológicos. Assim como a organização dos neurônios no córtex visual dos animais, a CNN responde a regiões restritas do campo receptivo.
+
+Elas aprendem os filtros que em um algoritmo tradicional precisaria ter implementados manualmente.
+
+Essa independência de um conhecimento a priori e do esforço humano no desenvolvimento de suas funcionalidades básicas pode ser considerada a maior vantagem de sua aplicação.
+
+A Rede Neural Convolucional é usada principalmente em reconhecimento de imagens e processamento de vídeo, embora já tenha sido aplicada com sucesso em experimentos envolvendo processamento de voz e linguagem.
+
+## Redes Adversárias Generativas
+As Redes Adversárias Generativas (GANs) são arquiteturas de redes neurais profundas compostas por duas redes colocadas uma contra a outra, e por isso o nome “adversárias”.
+
+São algumas das estruturas mais recentes e mais fascinantes em Deep Learning, utilizadas inclusive na indústria cinematográfica em filmes que precisam criar um rejuvenescimento ou envelhecimento nos membros do elenco.
+
+O potencial das GANs é gigantesco, porque elas podem aprender a imitar qualquer distribuição de dados. Elas podem ser ensinadas a criar mundos estranhamente semelhantes aos nossos em imagens, música, e linguagem.
+
+# Referências
+https://www.jigsawacademy.com/
+https://hbr.org/ 
+https://www.jigsawacademy.com/
+https://en.wikipedia.org/wiki/
+https://ilumeo.com.br/todos-posts/
+https://datascience.eu/
+https://medium.com/
+https://inferir.com.br/artigos/
+https://pt.wikipedia.org/wiki/
