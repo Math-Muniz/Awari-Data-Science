@@ -1,0 +1,111 @@
+# Leitura: Algoritmos de Classificação
+Exemplo de gráfico com a divisão de dados em duas classes diferentes, de acordo com suas características ou proximidades. Fonte: javatpoint.com
+
+Algoritmos de classificação pertencem ao grupo dos supervisionados, assim como os algoritmos de regressão. 
+
+O objetivo dos algoritmos de classificação é, como o nome já denota, classificar itens seguindo as características identificadas pelo supervisor. 
+
+A diferença entre os classificatórios e os regressivos é que os primeiros costumam ser usados para dados discretos ou categóricos (nomes, classes etc.), enquanto os segundos são usados para dados numéricos de valor contínuo (taxas, medições etc.).
+
+Mesmo assim, ambos os métodos são preditivos, ou seja, são capazes de prever comportamentos, situações e acontecimentos relevantes para o objeto de estudo do cientista de dados.
+
+Para poder trabalhar com algoritmos de classificação, é necessário seguir três passos: 
+
+extração de características;
+usar um algoritmo de aprendizagem; e
+aplicar o modelo aprendido.
+Um detalhe importante ao escolher um algoritmo de aprendizagem supervisionada: alguns deles são para classificação binária, ou seja, apenas duas características, enquanto outros são generalizáveis para múltiplas classes. Veja nos itens abaixo alguns exemplos.
+
+# Regressão Logística
+Regressão Logística é um classificador binário, muito utilizado nos campos da cibersegurança e também na biologia. Sua equação pode ser representada da seguinte maneira:
+
+
+Assim como nas outras modalidades de algoritmos que estamos estudando, a Regressão Logística é aplicada na Estatística e na Ciência de Dados como uma ferramenta que auxilia máquinas e softwares a medir a relação entre a variável dependente categórica e uma ou mais variáveis independentes, estimando as probabilidades usando uma função logística.
+
+A ideia é ajustar a equação com múltiplas variáveis, a partir de uma combinação linear dos vários atributos que os nossos dados possuem. O ? da equação torna-se a1?1+a2?2+⋯+a?x?+b.
+
+O treinamento do modelo serve para encontrar os valores desses parâmetros (a1, a2… a?, b) que melhor se adequem aos dados.
+
+Com a equação pronta, o modelo consegue prever um valor de y (saída) entre 0 e 1, a depender dos valores de (x1, x2, …, x?) fornecidos como entrada.
+
+Se a saída for menor que 0,5: o modelo classifica o elemento na classe 0.
+Se a saída for maior que 0,5: o modelo classifica o elemento na classe 1.
+
+# Naïve Bayes
+Naïve Bayes ou Bayes Ingênuo é um algoritmo baseado no Teorema de Bayes, que descreve a probabilidade de um evento, baseado em um conhecimento a priori que pode estar relacionado ao evento. 
+
+Por exemplo, sabemos que a probabilidade de ganhar na loteria é muito baixa. A Mega-Sena mesmo: comprar um bilhete de oito números representa uma chance em 1.787.995 de vencer, de acordo com estatísticas apresentadas pela Caixa e divulgadas pela Agência Brasil.
+
+As chances são baixas porque são muitas pessoas jogando, muitas vezes mais de uma vez.
+
+Agora, se fosse possível reduzir o número de jogadores para um seleto grupo de 500 pessoas, por exemplo, as chances de ganhar aumentariam satisfatoriamente.
+
+O Teorema de Bayes mostra exatamente isso: como alterar as probabilidades a priori tendo em vista novas evidências para obter probabilidades a posteriori. 
+
+O algoritmo Naïve Bayes é uma aplicação do Teorema de Bayes. O Naive vem do inglês e significa ingênuo. Isso porque o algoritmo assume que os atributos (variáveis ou features) são completamente independentes e nem sempre essa afirmação será verdadeira.
+
+# Stochastic Gradient Descent (SGD)
+Em português, Gradiente Descendente Estocástico ou simplesmente SGD é um método iterativo para otimizar uma função objetiva com propriedades de suavidade adequadas — diferenciável ou subdiferenciável, por exemplo.
+
+Pode ser considerada uma Aproximação Estocástica da otimização gradiente descendente, uma vez que substitui o gradiente real, calculado a partir de todo o dataset, por uma estimativa dele, calculada a partir de um subconjunto de dados selecionado aleatoriamente.
+
+Especialmente em problemas de otimização de alta dimensão, isso reduz a carga computacional muito alta, alcançando iterações mais rápidas na troca por uma taxa menor de convergência.
+
+# K-Nearest Neighbors
+K-Nearest Neighbors ou simplesmente KNN é mais um algoritmo de classificação de aprendizagem supervisionada usado no campo de Ciência de Dados e Machine Learning. 
+
+Aqui o aprendizado é baseado em quão similar um dado — ou um vetor é do outro. O treinamento é formado por vetores de n dimensões.
+
+Na prática, o KNN é relativamente simples. Imagine que você tem um grupo de bolinhas azuis e outro grupo de bolinhas verdes.
+
+No meio dessas bolinhas, há uma terceira bolinha que você não consegue ver, mas tem as informações sobre ela.
+
+Cada bolinha azul carrega consigo uma classificação, um código RGB por exemplo, que indica a sua cor. O mesmo ocorre com as bolinhas verdes.
+
+Portanto, a lógica do KNN é essa: ele não vê a bolinha, mas através de suas características, consegue determinar a cor dela.
+
+# K-Means Clustering Classification Algorithm
+K-Means é mais um algoritmo de clusterização, desta vez de aprendizado não supervisionado, que significa que não precisa de inputs de confirmação externos.
+
+K-Means avaliam e clusterizam os dados de acordo com suas características.
+
+Por exemplo, um hospital que enfrentou a pandemia de Covid-19 muito provavelmente criou um sistema de identificação de pacientes infectados com o vírus de acordo com seus sinais e sintomas.
+
+Se um paciente apresenta um conjunto de características semelhantes a alguém diagnosticado com Covid, então esse paciente será encaminhado para um teste.
+
+O mesmo ocorre com o K-Means, mas de maneira automatizada. Primeiro é necessário definir um K, ou seja, um número de clusters. Depois disso é importante indicar, de forma aleatória, um centróide para cada cluster.
+
+Em seguida, calcula-se, para cada ponto, o centróide de menor distância. Cada ponto pertencerá ao centróide mais próximo. Depois acontece o reposicionamento desse centróide.
+
+A nova posição será a média da posição de todos os pontos do cluster. As últimas etapas são repetidas, iterativamente, até que se alcance a posição ideal dos centróides.
+
+# Árvore de Decisão
+Assim como em um fluxograma, a Árvore de Decisão é uma cadeia de decisões e escolhas que o algoritmo faz de acordo com uma variável.
+
+Os nós-folha, que são as tomadas de decisão, se relacionam através de uma hierarquia. Existe o nó-raiz, que é o mais importante, e os nós-folha, que são os resultados finais.
+
+No contexto de ciência de dados, a raiz é um dos atributos da base de dados e o nó-folha representa a classe ou o valor que será gerado como resposta.
+
+# Support Vector Machine (SVM)
+Usado para classificação binária, ou seja, em problemas nos quais existem apenas duas classes. Propõe traçar uma linha que divide o conjunto de dados em dois:
+
+Os dados de um lado da linha são classificados de uma forma.
+Os valores do outro lado são classificados de outra.
+A partir de 4 dimensões, estas linhas passam a ser um hiperplano, normalmente representadas no plano visual por linhas tracejadas.
+
+Diversos hiperplanos podem ser traçados, todos eles separando nossos dados de treinamento por classe. A questão é: como equacionar o melhor hiperplano possível para cada caso?
+
+A resposta está nos vetores de suporte, que dão nome ao algoritmo. Vetores de suporte é o nome que damos aos pontos que estão mais próximos da fronteira entre as classes. 
+
+O algoritmo tenta maximizar a margem entre os vetores de suporte e o hiperplano que serve de fronteira entre as classes.
+
+Fonte: Código fluente
+
+# Referências
+https://awari.com.br/
+https://blog.geekhunter.com.br/
+https://gatefy.com/
+https://pt.wikipedia.org/wiki/ 
+https://nelson-ewert-oliveira.medium.com/ 
+https://medium.com/
+https://medium.com/brasil-ai/
