@@ -1,0 +1,75 @@
+# Leitura: Algoritmos de Agrupamento
+Exemplos de visualizações de dados gerados por algoritmos de clusterização ou agrupamento. Fonte: Kmine
+
+Quando se fala em Data Science ou Machine Learning, os algoritmos de agrupamento ou clustering são alguns dos mais importantes e utilizados. 
+
+De maneira geral, o intuito desse processo é juntar os dados de acordo com sua semelhança com os outros, ou seja, agrupar aqueles que sejam o mais parecidos possível entre eles. 
+
+Para isso, o clustering utiliza um conjunto de técnicas de data mining para reunir esses dados e compará-los. A partir disso, utiliza de diversas técnicas e cálculos de distância para de fato agrupar os dados e rotulá-los por si só. 
+
+# Aprendizado Não Supervisionado 
+Um dos pontos principais para entender algoritmos de clustering é o paradigma de aprendizado não supervisionado do Machine Learning.
+
+Diferentemente de outros algoritmos que são treinados para reconhecer padrões a partir de dados do mundo real (você insere o elemento de comparação), o de agrupamento não tem esse treinamento “prévio”. 
+
+Dessa maneira, é criado para que faça esse reconhecimento a partir dos próprios dados, comparando-os entre si. 
+
+Basicamente, o que ele faz é entender quais são os dados “padrão” que determinarão o centro de um grupo. 
+
+Depois, compara os dados com esse padrão e, quanto mais semelhante for, mais próximo fica desse ponto, participando, enfim, do seu agrupamento. 
+
+Esse “ponto padrão” muda um pouco durante o processamento do algoritmo, de acordo com a comparação com os outros dados, mas não de forma a alterar um grupo completo. 
+
+Esse processo é o oposto do que acontece com algoritmos de aprendizado supervisionado, em que inserimos dados já rotulados para serem utilizados como base para o aprendizado.
+
+# Principais tipos de algoritmos de clustering
+Existem diferentes tipos de algoritmos para realizar agrupamentos, cada um considerando diferentes critérios de criação dos grupos. 
+
+Os algoritmos representados abaixo, por exemplo, fazem parte de Scikit-Learn, biblioteca utilizada para Machine Learning em Python. As visualizações são representações de como dados de diferentes conjuntos são agrupados.
+
+Fonte: Scikit-Learn
+
+Os 10 algoritmos de agrupamento mais comuns e utilizados são:
+
+* Affinity Propagation: são calculados os pontos de maior afinidade entre os dados. Indicado quando sabe-se que haverão muitos grupos e com diferenças claras entre eles. 
+* Agglomerative Clustering: os grupos determinados vão sendo formados a partir  do processamento, aglomerando os semelhantes em torno do dado-base. 
+* BIRCH: utilizado quando há uma grande quantidade de dados, são feitos pequenos agrupamentos o mais semelhantes possíveis que depois unem-se com outros com afinidade, formando um maior. 
+* DBSCAN: encontra áreas de alta densidade dentro dos dados, conseguindo determinar quais são mais afins que o centróide e descartar aqueles que estão em transição irrelevante. Consegue criar diferentes formatos, por conta da sua forma de análise.
+* K-Means: um dos mais utilizados e conhecidos, faz o agrupamento calculando a distância entre o centróide e os outros dados, criando grupos a partir da proximidade com esse centro. Permite a definição do número de grupos desejado. 
+* Mini-Batch K-Means: funciona como o k-means, mas encontra os centróides a partir de mini-lotes de dados e insere novas amostras de maneira separada. Torna o processo mais rápido e pode trazer resultados mais precisos.
+* Mean Shift: busca calcular a média dos clusters de acordo com a densidade e aproximar os dados de acordo com o ponto mais “denso” de análise. O processo é repetido até que todos os pontos sejam definidos dentro do cálculo da média. 
+* OPTICS: é uma atualização do anterior, porém considera outros critérios para o agrupamento, como a distância do núcleo e a alcançabilidade. Assim, não faz a segmentação, mas apresenta as densidades de acordo com esses critérios, podendo ser mais preciso em alguns casos.
+* Spectral Clustering: utiliza a álgebra para reunir dados multidimensionais complexos, ou seja, consegue detalhar muito mais os agrupamentos e, por isso, vem se tornando mais popular. 
+* Mixture of Gaussians: a partir desse algoritmo, assume-se que há um certo número de distribuições gaussianas, e cada uma dessas distribuições representa um cluster. Assim, tende a agrupar os pontos de dados pertencentes a uma única distribuição.
+
+# Para que servem os algoritmos de agrupamento
+Os principais usos de algoritmos de agrupamento estão relacionados com o setor de Big Data e para diferentes mercados e necessidades. 
+
+Empresas que lidam com muitos dados buscam realizar a clusterização a fim de entender melhor as informações que têm, principalmente se a tomada de decisões e inovação é feita a partir disso. 
+
+Assim, com o agrupamento, é possível fazer uma segmentação dos dados, ou seja, entender quais são os pontos diferentes entre si e separá-los de fato. 
+
+Com isso é possível entender quais dados estão em “maioria”, quais estão sendo irrelevantes na prática e quais estão ganhando volume. 
+
+Em uma empresa de nível mundial, por exemplo, é possível avaliar vendas por região, por classe social, por país e muitos outros detalhes específicos, mostrados a partir da segmentação. 
+
+Também é possível entender e analisar os dados a partir do resultado do agrupamento. 
+
+Analisando o volume em cada grupo é possível perceber preferência dos clientes, por exemplo, o que determinaria uma tomada de decisões.
+
+Outro ponto é que a clusterização também pode ser utilizada, no futuro, para análises supervisionadas, como parâmetro de comparação, algo que contribui com o acompanhamento de algum dado da empresa. 
+
+Ou seja, de maneira geral, o principal ponto de uso dos algoritmos de agrupamento é conseguir lidar com uma grande quantidade de dados e, a partir deles, segmentar e analisar esses grupos. 
+
+# Referências
+https://machinelearningmastery.com/clustering-algorithms-with-python/
+https://scikit-learn.org/stable/modules/clustering.html 
+https://developers.google.com/machine-learning/clustering/clustering-algorithms 
+https://dataat.github.io/introducao-ao-machine-learning/agrupamento.html
+https://medium.com/data-hackers/aprendizado-n%C3%A3o-supervisionado-com-an%C3%A1lise-de-agrupamento-os-melhores-links-da-semana-6-a294e018f628
+https://www.analyticsvidhya.com/blog/2019/10/gaussian-mixture-models-clustering/
+https://en.wikipedia.org/wiki/Spectral_clustering
+https://www.knime.com/blog/what-is-clustering-how-does-it-work
+https://en.wikipedia.org/wiki/Hierarchical_clustering
+https://medium.com/programadores-ajudando-programadores/k-means-o-que-%C3%A9-como-funciona-aplica%C3%A7%C3%B5es-e-exemplo-em-python-6021df6e2572
+https://datascience.eu/pt/aprendizado-de-maquina/algoritmos-de-agrupamento-e-o-seu-significado-na-aprendizagem-de-maquinas/
