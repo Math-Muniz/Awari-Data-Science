@@ -1,0 +1,125 @@
+# Leitura: Python Web Frameworks
+Alguns frameworks web populares para Python. Fonte: activestate.com
+
+Programar robôs, desenvolver aplicativos, sites e jogos, criar soluções de Machine Learning. Tudo isso, e muito mais, é possível graças ao uso da linguagem Python.
+
+Extremamente versátil, Python conta com diferentes bibliotecas, entre as quais estão os chamados Python Web Frameworks — bibliotecas Python usadas no desenvolvimento de aplicações web.
+
+Esses frameworks são bastante úteis em Data Science, especialmente por permitirem a execução de soluções de forma integrada com outras aplicações no servidor.
+
+Além disso, também possibilitam gerar visualizações de dados mais completas e agradáveis.
+
+Este tópico reúne os Python Web Frameworks mais usados em Ciência de Dados.
+
+## Flask
+Fonte: flask.palletsprojects.com 
+
+Uma solução simples e leve, Flaské mais indicado para aqueles que desejam começar a desenvolver aplicativos da web de página única (single-page applications).
+
+Por não ser um framework full stack, ele não suporta validação, camada de abstração de dados e muitos outros componentes que vários outros frameworks incluem. 
+
+Ao mesmo tempo, por ser minimalista e leve, é muito usado por Data Scientists, que não precisam de grandes recursos como desenvolvedores de software para colocar soluções em funcionamento.
+
+Algumas de suas principais vantagens são: simplicidade, implantação rápida (em poucos segundos, tudo está funcionando) e extensibilidade, por contar com boas extensões.
+
+## Bottle
+Fonte: bottlepy.org 
+
+Parecido com Flask (até no nome!), Bottle é apenas um wrapper muito simples em torno de um servidor web, ou seja, é ainda mais simples do que Flask. 
+
+Embora não indicado para soluções profissionais, pode ser ótimo para colocar no ar soluções rápidas, produtos viáveis mínimos (MVPs) em Ciência de Dados ou aplicativos apenas para testes.
+
+Ótimo para pôr para rodar publicamente projetos pessoais. As desvantagens, obviamente, ficam por conta de sua simplicidade, de modo que não é extensível nem indicado para projetos mais robustos.
+
+## Pyramid
+Fonte: commons.wikimedia.org 
+
+Pyramid é um framework Python também bastante simples e leve, mas que pode ser melhor dimensionado para aplicações de médio porte, por exemplo.
+
+A ferramenta fornece recursos a mais do que Flask e Bottle, como  renderização de ativos estáticos, geração de URL e um sistema de autenticação.
+
+É indicado, por exemplo, para construção de aplicações internas em uma startup ou empresa, por exemplo, que precisa rodar Python e alguma biblioteca de ML nos bastidores.
+
+## Web2Py
+Fonte: web2py.com 
+
+Web2py é um cross-platform framework que acompanha um depurador, editor de código e uma ferramenta de implantação para permitir criar e depurar o código, bem como testá-lo. 
+
+Sua estrutura simplifica o procedimento de desenvolvimento de aplicativos Python por meio de um servidor Web, banco de dados SQL e uma interface gráfica online. 
+
+Ele foi desenvolvido inicialmente como um framework para ensino. Por isso, é fácil de usar. Além disso, vem com ferramentas que permitem que seja executado na Google App Engine e na Amazon EC2, isto é, ambientes de nuvem.
+
+É interessante para iniciantes e permite colocar soluções com relativa facilidade em produção (necessita, é claro, de conhecimentos em Python e algumas noções de desenvolvimento de software na linguagem). 
+
+Tem uma comunidade menor que outros frameworks, ou seja, recebe menos melhorias e recursos, como um ponto negativo.
+
+## Falcon
+Fonte: falcon.readthedocs.io 
+
+Falcon é um framework também minimalista para construir APIs REST e microsserviços em Python, com foco em desempenho em escala. 
+
+Ou seja, é eficiente para aplicações que recebem muitas consultas e conexões. Também é bastante personalizável, em função de ter uma comunidade bastante ativa.
+
+No entanto, é um framework voltado ao back-end (servidor) e não tem recursos para tratar o front-end (interface do usuário, a parte “visual e bonita”) de aplicações.
+
+## FastAPI
+Fonte: fastapi.tiangolo.com 
+
+Framework mais novo do que os demais, FastAPI ainda tem uma comunidade menor, mas também é rápido e eficiente, similar a aplicações em NodeJS (runtime para executar a linguagem Javascript do lado do servidor, que hoje sustenta muitos produtos de software de grandes empresas e startups no mundo).
+
+Fornece diversos recursos, como validação automática de dados, web sockets, bibliotecas de serialização e outras, necessárias para aplicações mais robustas. Também suporta requisições assíncronas.
+
+## Dash
+Fonte: dash.plotly.com 
+
+Dash é um dos frameworks mais “queridos” da comunidade de Ciência de  Dados. Ele não é um framework web, que permite colocar uma aplicação para rodar publicamente. 
+
+O que ele faz é facilitar a criação de gráficos e painéis front-end, os populares dashboards, de uma maneira intuitiva a Cientistas de Dados, sem que estes tenham de entender profundamente de design ou de aplicações front-end.
+
+Em outras palavras, Dash permite que Cientistas de Dados criem gráficos e dashboards atraentes sem ter de entender de Javascript e CSS (linguagens nativas do front-end).
+
+## Streamlit
+Fonte: streamlit.io 
+
+Outro “queridinho” da comunidade de Data Science, Streamlit é uma mão na roda para colocar aplicações para funcionar em minutos.
+
+Tanto que seu slogan é: “Uma maneira mais rápida de criar e compartilhar aplicativos de dados”. Tudo em Python puro e sem precisar de experiência em front-end para deixar a interface bonita.
+
+Ele é ótimo para demonstrações, não para colocar aplicações para rodar de verdade, é claro. 
+
+Funciona assim: basta inserir código da biblioteca diretamente dentro de um script Python e chamar a aplicação. 
+
+O resultado do script será exibido em uma página web, sem grandes complicações com configurações de servidores, roteamento de páginas e outras características de quaisquer frameworks ou microframeworks tradicionais.
+
+Eis dois exemplos da própria ferramenta, um que  renderiza texto simples e outro que renderiza um gráfico de linhas, da forma como aparecerão no navegador.
+
+## Django
+Fonte: djangoproject.com
+
+Django é, certamente, o web framework Python mais popular e mais utilizado. Permite o desenvolvimento de aplicações complexas e profissionais.
+
+Nele, podem ser desenvolvidos aplicativos, sites e APIs. É gratuito, de código aberto e adotado por uma grande comunidade.
+
+Tem como vantagens rapidez, segurança e escalabilidade — tudo o que aplicações profissionais necessitam.
+
+Grandes players do mercado usam Django no dia a dia, como o jornal The New York Times e as redes sociais Instagram e Pinterest.
+
+Usar Django para projetos mais simples de Ciência de Dados, no entanto, pode ser um pouco complexo. É mais voltado para quem já lida com desenvolvimento de software em Python.
+
+# Exemplo de uso de dados e web frameworks
+Fonte: serenata.ai
+
+Focada em monitorar e fiscalizar gastos públicos no Brasil, a iniciativa Operação Serenata de Amor, idealizada pelo cientista de dados brasileiro Irio Musskopf, é um exemplo de interface web que utiliza algoritmos de Machine Learning, comandados a partir de frameworks Python. 
+
+A inteligência artificial (IA) da plataforma audita todos os dados em tempo real, chegando a disparar tweets automáticos ao perceber algo fora do normal, como, por exemplo, despesas e gastos suspeitos de parlamentares.
+
+Todos os dados são capturados, analisados e compartilhados com o público por meio de uma pilha de tecnologias em Python, que abrangem Machine Learning sob o “capô” e web frameworks para lidar com a publicação das informações na web.
+
+O código dos “robôs” da aplicação pode ser conhecido no Github da iniciativa. Este e este artigos também ajudam a entender mais sobre o funcionamento desta “Inteligência Artificial”.
+
+# Referências
+https://medium.com/
+https://medium.com/
+https://www.netsolutions.com/
+https://x-team.com/
+https://www.activestate.com/
