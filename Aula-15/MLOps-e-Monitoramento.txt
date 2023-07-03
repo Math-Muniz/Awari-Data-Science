@@ -1,0 +1,65 @@
+# Leitura: MLOps e Monitoramento
+Ciclo de MLOps, segundo a Nvidia. Fonte: blog.nvidia.com.br 
+
+MLOps (Machine Learning Operations) é um conceito relativamente novo no contexto de IA ​​(Inteligência Artificial) e Data Science
+
+Trata-se do gerenciamento de operações de aprendizado de máquina, de maneira a permitir o desenvolvimento, implantação e monitoramento eficazes de modelos. 
+
+Em outras palavras, é a área que cuida da supervisão de modelos em produção, evitando que estes entrem em desconformidade com a realidade.
+
+Modelos de ML são adaptativos, isto é, mudam à medida que recebem mais dados e aprendem com eles.
+
+Em função disso, há risco de “degradação” do aprendizado com o passar do tempo, o que pode provocar “vícios” de sistema e limitá-lo a determinados padrões de reconhecimento (seja de imagens, de textos, de números, enfim, quaisquer massas de dados).
+
+Isso, muitas vezes, pode exigir desde mudanças forçadas nos algoritmos ou que eles sejam treinados novamente.
+
+Do contrário, pode demorar um período considerável até que o modelo consiga ser reajustado, o que pode gerar inúmeros problemas, desde prejuízos a um negócio até preconceitos e vieses de classificação de clientes, por exemplo. 
+
+# Princípios de MLOps
+À medida que o Machine Learning e a IA se propagaram em produtos e serviços de software, foi preciso estabelecer boas práticas e ferramentas para testar, implantar, gerenciar e monitorar modelos de ML na produção do mundo real. 
+
+Em suma, com o MLOps, esforçamo-nos para evitar a chamada “dívida técnica” em aplicativos de aprendizado de máquina.
+
+A seguir, listamos alguns dos seus princípios mais importantes em MLOps, fundamentais para otimizar a adoção de ML/AI em sistemas de software, assim como a entrega rápida de algoritmos inteligentes:
+
+* Automação: o nível de automação dos pipelines de Dados, Modelo de ML e Código determina a maturidade do processo de ML. O objetivo de uma equipe de MLOps é justamente automatizar a implantação de modelos de ML. Isso significa automatizar as etapas completas do fluxo de trabalho sem qualquer intervenção manual.
+* Controle de versão: trata-se de aplicar um princípio do desenvolvimento de software tradicional, o versionamento das correções e melhorias, em aplicações de ML.
+* Teste: os três escopos principais para testes em sistemas de ML incluem testes de recursos e dados, testes para desenvolvimento de modelos e testes para infraestrutura de ML.
+* Monitoramento: depois que o modelo de ML é implantado, precisa ser monitorado para garantir que funcione conforme o esperado e não degrade.
+* Reprodutibilidade: em um fluxo de trabalho de ML, a reprodutibilidade significa que todas as fases do processamento de dados, treinamento e implantação do modelo devem produzir resultados idênticos com a mesma entrada, o que é necessário para se poder eventualmente auditar e replicar uma solução, principalmente se ela for crítica em termo das previsões que realiza e decisões que toma.
+
+# Formas de Monitoramento 
+O monitoramento de um modelo de Machine Learning pode ser entendido como o rastreamento do desempenho de um modelo de ML na produção. 
+
+Trata-se de um ciclo de feedback essencial de qualquer sistema MLOps. E serve, especialmente, para manter os modelos implantados atualizados e prever com precisão. 
+
+Em última análise, monitorar modelos ajuda também a garantir que estes forneçam valor a longo prazo. 
+
+Conheça abaixo algumas das formas de monitoramento geralmente realizadas em modelos de ML:
+
+* Monitoramento de alterações: monitora as alterações de dependência ao longo de todo o pipeline resultando em notificação. Por exemplo: alteração da versão dos dados, alterações no sistema de origem e/ou dependências.
+* Monitoramento de invariantes: monitora dados invariantes em entradas de treinamento e veiculação e alerta se os dados não corresponderem ao esquema especificado na etapa de treinamento. Além disso, possibilita o ajuste do limite de alerta para garantir que os alertas permaneçam úteis e não enganosos.
+* Monitoramento de recursos: monitora os recursos de treinamento e veiculação, levando em conta que a geração de recursos de treinamento e serviço pode ocorrer em locais fisicamente separados. Nesse sentido, é necessário testar cuidadosamente se esses diferentes caminhos de código são logicamente idênticos.
+* Monitoramento de estabilidade: se propõe a monitorar a estabilidade numérica do modelo ML e a acionar alertas para a ocorrência de quaisquer NaNs ou infinitos.
+* Monitoramento do desempenho: consiste em monitorar o desempenho computacional de um sistema de ML. Serve para medir o desempenho de versões e componentes de código, dados e modelo.
+
+# Recursos de MLOps
+Apesar de ser um campo emergente, MLOps tem ganhado cada vez mais força entre cientistas de dados, engenheiros de ML e entusiastas de IA. 
+
+Isso se deve, em grande parte, aos recursos que diferenciam o gerenciamento de modelos de ML da engenharia de software tradicional. 
+
+São eles:
+
+* Ciclo de lançamento unificado: MLOps visa unificar o ciclo de lançamento para aprendizado de máquina e lançamento de aplicativos de software.
+* Automatização de testes: permite o teste automatizado de artefatos de aprendizado de máquina (por exemplo, validação de dados, teste de modelo de ML e teste de integração de modelos).
+* Suporte a sistemas CI/CD: MLOps suporta modelos e conjuntos de dados de aprendizado de máquina de maneira a criar tais modelos como “first-class citizens” em sistemas de desenvolvimento e entrega contínuos (CI/CD).
+* Redução da dívida técnica: reduz a dívida técnica (bugs, necessidade de correções) em modelos de aprendizado de máquina.
+* Independência: o gerenciamento da operacionalização do Modelo de Aprendizado de Máquina deve ser uma prática independente de linguagem, estrutura, plataforma e infraestrutura.
+* Agilidade: aplicação de princípios e metodologias ágeis a projetos de aprendizado de máquina.
+
+# Referências
+https://docs.microsoft.com/
+https://en.wikipedia.org/
+https://www.forbes.com/
+https://ml-ops.org/
+https://ml-ops.org/content/
