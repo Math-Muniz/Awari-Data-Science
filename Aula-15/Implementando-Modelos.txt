@@ -1,0 +1,113 @@
+# Leitura: Implementando Modelos
+
+Etapas comuns de projetos de Data Science com a modelagem (modeling), avaliação (evaluation) e a colocação do modelo em produção (deployment) como fases da implantação de modelos de ML. Fonte: medium.com
+
+De modo geral, a Modelagem Estatística por ser descrita como um método interpretado e prescrito matematicamente para aproximar a verdade que está sendo gerada pelos dados e para fazer previsões a partir dessa aproximação.
+
+Um modelo estatístico pode ser expresso como uma combinação de resultados dependendo dos dados consolidados e do entendimento da população que são implantados para prever informações de forma generalizada. 
+
+Portanto, pode ser uma equação ou um retrato visual das informações com base em pesquisas minuciosas realizadas ao longo dos anos.
+
+Em outras palavras, os modelos estatísticos existem para reconhecer relações entre duas ou mais variáveis. E, da mesma maneira que existem diferentes tipos de variáveis, existem diferentes modelos estatísticos. 
+
+Alguns tipos comuns são o Teste de Correlação, o Modelo de Regressão e as Análise de Variância e de Covariância.
+
+Já em relação aos modelos de Machine Learning, medidas de erro como RMSE e MSE podem ser implantadas para regressão. Enquanto isso, os chamados “verdadeiros positivos” e “falsos positivos” podem ser usados para problemas de classificação.
+
+Nesse sentido, a implantação eficaz de modelos de aprendizado de máquina tende a ser mais uma arte do que uma ciência. 
+
+## Aplicações de modelos estatísticos
+Aqui estão algumas das aplicações mais comuns de modelos estatísticos:
+
+* Modelos espaciais: a modelagem espacial é um importante instrumento para realizar análises geoespaciais para entender o mundo e orientar a tomada de decisões. Em GIS (Sistema de Informação Geográfica), esses modelos são linguagens formais para expressar mecanismos de processos geográficos e projetar fluxos de trabalho analíticos para entender esses processos.
+* Série temporal: a análise de séries temporais é uma técnica estatística que lida com dados de séries temporais ou análise de tendências. Dados de série temporal significam que os dados estão em uma série de períodos ou intervalos de tempo específicos.
+* Análise de sobrevivência: é uma coleção de procedimentos estatísticos para análise de dados em que a variável de resultado de interesse é o tempo até que um evento ocorra. Esse modelo tenta responder a questões como: qual é a proporção de uma população que sobreviverá após um certo tempo? É muito usado ​​por estatísticos, mas também por profissionais de marketing que projetam modelos de rotatividade e retenção de usuários.
+* Segmentação de mercado: é geralmente usado para identificar e definir melhor os clientes-alvo e fornecer dados de suporte para as empresas desenvolverem estratégias de diferenciação de produtos, ou uma abordagem indiferenciada.
+* Sistemas de recomendação: são uma subclasse de sistemas de filtragem de informações que buscam “prever” a “classificação” ou “preferência” que um usuário daria a um item.
+* Regras de associação: serve para descobrir relações interessantes entre variáveis ​​em grandes bancos de dados. Por exemplo, a regra {cebolas, batatas} ==> {hambúrguer} encontrada nos dados de vendas de um supermercado indicaria que, se um cliente comprar cebolas e batatas juntos, provavelmente também comprará carne de hambúrguer.
+* Modelagem de atribuição: é uma regra, ou um conjunto de regras, que determina como o crédito para vendas e conversões é atribuído a pontos de contato nos caminhos de conversão. Os modelos macroeconômicos usam dados históricos agregados de longo prazo para atribuir, para cada venda ou conversão, um peso de atribuição a vários canais. 
+* Scoring (pontuação): trata-se de um tipo especial de modelo preditivo que usa uma escala logarítmica e é baseado em regressão logística e árvores de decisão ou uma combinação de vários algoritmos. A tecnologia de pontuação é normalmente aplicada a dados transacionais, às vezes em tempo real (detecção de fraude de cartão de crédito, fraude de clique etc.).
+* Modelagem Preditiva: aproveita as estatísticas para prever resultados. Por exemplo, os modelos preditivos são frequentemente usados ​​​​para previsão do tempo, para prever preços do mercado de ações ou para prever vendas, incorporando séries temporais ou modelos espaciais. Estão associados à criação de um conjunto de treinamento, validação cruzada e ajuste e seleção de modelo.
+* Clustering (agrupamento): é a tarefa de agrupar um conjunto de objetos de tal forma que os objetos do mesmo grupo (chamado de cluster) sejam mais semelhantes (em algum sentido ou outro) uns aos outros do que aos de outros grupos (clusters). Incluindo Machine Learning, reconhecimento de padrões, análise de imagens, recuperação de informações, entre outros. 
+
+# Executando Modelos Estatísticos
+Independentemente do modelo estatístico que você esteja implementando, será preciso, via de regra, seguir as mesmas etapas. 
+
+No entanto, a ordem e as especificidades de como cada etapa é executada podem diferir conforme os dados, assim como em relação ao tipo de modelo usado.
+
+## Fase 1: definir e projetar
+Essa fase inclui ao todo cinco passos, e seu principal objetivo é obter clareza:
+
+* Termos teóricos e operacionais: definir questões de pesquisa em termos teóricos e operacionais é fundamental para evitar que o método estatístico a ser usado se torne vago ou impreciso.
+* Estudo ou definição do projeto: dependendo do tipo dado (dados próprios ou secundários), é preciso ter uma ideia clara do design, que inclui randomização e amostragem. Por exemplos: fatores aninhados e cruzados, variáveis ​​de controle, amostragem aleatória simples, estratificação ou agrupamento.
+* Escolha das variáveis: ​​para responder a perguntas de pesquisa, todo modelo deve levar em conta tanto o design quanto o nível de medição das variáveis; ou seja, se uma variável é nominal, ordinal ou numérica.
+* Plano de análise: consiste no palpite para o método estatístico que responderá à pergunta de pesquisa, levando em consideração o design e o tipo de dados.
+* Cálculo de estimativas: é o ponto em que você deve calcular seus tamanhos de amostra, antes de coletar dados e depois de ter um plano de análise. Você precisa saber quais testes estatísticos usará como base para as estimativas.
+
+## Fase 2: preparar e explorar
+* Coletar, codificar, inserir e limpar os dados: as partes mais diretamente aplicáveis ​​à modelagem são a inserção de dados e a criação de novas variáveis. Para a entrada de dados, o plano de análise criado determinará como configurar o conjunto de dados.
+* Criação de novas variáveis: esta etapa, que costuma ser um pouco demorada, consiste em criar índices, categorizar, inverter o código, e tudo o que for preciso para obter variáveis ​​em sua forma final.
+* Descritivos Univariados e Bivariados: significa verificar as distribuições das variáveis ​​que pretende usar, bem como as relações bivariadas entre todas as variáveis ​​que podem entrar no modelo.
+* Execução do modelo inicial: depois de saber com o que está trabalhando, execute o modelo listado em seu plano de análise. Com toda a probabilidade, este não será o modelo final.
+
+## Fase 3: refinar o modelo
+* Preditores e ajuste do modelo: no caso da análise exploratória, ou de previsão, você pode usar algum tipo de abordagem gradual para determinar os melhores preditores. Já se a análise for para testar hipóteses, esta parte será mais sobre refinamento. Você pode, por exemplo, eliminar variáveis de controle não significativas ou fazer uma modelagem hierárquica para ver os efeitos dos preditores adicionados sozinhos ou em blocos.
+* Suposições de teste: esta etapa é mais sobre confirmação, verificação e refinamento. Mas o que você aprender aqui pode levá-lo de volta a alguma das etapas anteriores para refinamento adicional.
+* Verificação de problemas de dados: é aqui que você verifica problemas de dados que podem afetar o modelo, mas que não são exatamente suposições.
+
+## Fase 4: responder à pergunta de pesquisa
+* Interpretação de resultados: você pode não notar problemas de dados ou preditores especificados incorretamente até interpretar os coeficientes. 
+* Descrição de resultados: este pode ser o passo mais difícil e mais importante de todos. Inclui a criação de gráficos e tabelas que estão prontos para o seu leitor. Também inclui a redação dos resultados, seja para um artigo de jornal, tese ou relatório para gerenciamento. Ou um documento de conferência ou pôster.
+
+# Implementação de modelos de Machine Learning
+Machine Learning (ML) é basicamente o campo da ciência da computação com a ajuda de que os sistemas de computador podem fornecer sentido aos dados da mesma maneira que os seres humanos. 
+
+Em termos simples, ML é um tipo de inteligência artificial (IA)que extrai padrões de dados brutos usando um algoritmo ou método. Seu foco principal é permitir que os sistemas de computador aprendam com a experiência sem intervenção humana.
+
+Para desenvolver aplicativos de ML, você terá que decidir sobre a plataforma, o IDE (Ambiente de Desenvolvimento Integrado) e a linguagem de programação — o Python costuma ser a mais usada. 
+
+## O exemplo da Netflix
+Veremos a seguir como empresas como a Netflix utilizam ML e IA.
+
+Da experiência do usuário à criação de conteúdo, o aprendizado de máquina tem um papel a desempenhar em quase todos os aspectos da Netflix.
+
+### Página inicial
+
+Fonte: ibc
+
+Ao abrir a Netflix, você é recebido pela primeira vez com sua página inicial, repleta de programas que assistiu e programas que a Netflix recomenda que você assista. 
+
+Aqui, é usada uma tecnologia de ML chamada “mecanismo de recomendação”, que permite determinar quais filmes ou séries deverão ser recomendados ao usuário.
+
+Como o próprio nome sugere, um sistema de recomendação recomenda produtos e serviços aos usuários com base nos dados disponíveis sobre eles.
+
+### Thumbnails
+
+Fonte: theverge
+
+Os thumbnails (ou miniaturas) você vê para uma série ou filme não são necessariamente aquelas que seu melhor amigo vê quando rola pela página inicial.
+
+A Netflix usa aprendizado de máquina para determinar em quais miniaturas você tem mais chance de clicar. Para isso, seus algoritmos de ML os testam constantemente com os usuários.
+
+Aqueles que recebem mais cliques e geram mais interesse têm preferência sobre aqueles que não recebem cliques.
+
+### Qualidade do streaming
+
+Fonte: moyens
+
+A imagem travar ou surgir na tela a mensagem “carregando” são as piores coisas que podem acontecer quando estamos assistindo a um filme.
+
+Mesmo assim, não importa qual serviço de streaming você use, o famoso “buffer” costuma ser um grande problema.
+
+Ciente disso, a Netflix utiliza soluções de ML que prevêem os padrões de visualização de seus usuários para determinar quando a maioria das pessoas usa seu serviço e quando esse número é menor.
+
+Em seguida, garantem que nenhum buffer (ou buffering mínimo) ocorra enquanto esses usuários estiverem assistindo.
+
+# Referências
+https://www.analyticssteps.com/blogs/5-statistical
+https://www.theanalysisfactor.com/13-steps
+https://www.datasciencecentral.com/top-20
+https://www.analyticsinsight.net/the-10-general
+https://www.tutorialspoint.com/machine_learning/
+https://prutor.ai/machine-learning-with-python-basics/
+https://www.upgrad.com/blog/how-netflix-uses-machine
