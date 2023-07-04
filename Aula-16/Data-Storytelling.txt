@@ -1,0 +1,75 @@
+# Leitura: Data Storytelling
+Esquema mostrando os elementos que compõem uma boa narrativa com dados ou data storytelling: narrativa, elementos visuais e dados. Fonte: Forbes
+
+Ao ouvir o termo “análise de dados”, é esperado que venha à nossa mente processos como vasculhar planilhas, implementar algoritmos e fazer cálculos matemáticos – em resumo, hard skills do trabalho com dados. 
+
+No entanto, as habilidades técnicas são inúteis sem soft skills como a capacidade de se comunicar com clareza e de maneira persuasiva. 
+
+Nesse sentido, não basta apenas analisar dados. Você precisa saber comunicar a história que eles contam de maneira clara e convincente — uma habilidade chamada Data Storytelling, ou Narrativa com Dados.
+
+No contexto atual, muitas empresas passaram, por exemplo, a incluir o domínio desse tipo de narrativa como um requisito necessário nas descrições de vagas de profissionais de dados. Enquanto isso, funções como data storyteller têm se tornado cada vez mais presentes no mercado.
+
+Este tópico traz uma visão geral dos conceitos de Data Storytelling e explica como criar uma narrativa convincente utilizando este método. 
+
+# O que é Data Storytelling
+Em poucas palavras, podemos definir o Data Storytelling como a capacidade de comunicar efetivamente insights de um conjunto de dados usando narrativas e visualizações. 
+
+Esse método é geralmente usado para contextualizar insights de dados e inspirar ações de determinado público.
+
+Existem ao todo três componentes principais na narrativa com dados:
+
+* Dados: a análise minuciosa de dados precisos e completos serve como a base de sua história de dados. É possível fazer isso usando análises descritivas, diagnósticas, preditivas e prescritivas, o que permite que você entenda seu quadro completo.
+* Narrativa: uma narrativa verbal ou escrita, também chamada de enredo, é usada para comunicar insights obtidos de dados, assim como o contexto que os cerca e as ações que você pretende inspirar em seu público.
+* Visualizações: as representações visuais dos seus dados em conjunto com a narrativa podem ser úteis para comunicar sua história de forma clara e memorável. Isso pode ser feito a partir do uso de gráficos, diagramas, imagens ou vídeos.
+
+Por fim, a narrativa com dados pode ser usada tanto internamente (para comunicar a necessidade de melhorias em um produto com base nos dados do usuário) quanto externamente (para criar um argumento convincente para a compra de um produto por clientes em potencial).
+
+# O poder de contar histórias
+Os seres humanos contam histórias para se comunicar com os outros desde a pré-história — inicialmente para sobreviver e registrar relatos da vida cotidiana. 
+
+Embora os métodos de storytelling tenham percorrido um longo caminho desde os tempos das pinturas rupestres, seu poder psicológico se mantém verdadeiro dezenas de milhares de anos depois.
+
+A preferência do cérebro por histórias em vez de dados brutos tem a ver com o fato de que ele recebe tantas informações todos os dias que precisa determinar o que é importante — ou seja, processar e lembrar o que pode ser descartado.
+
+Quando alguém ouve uma história, várias partes do cérebro estão envolvidas, incluindo:
+
+* Área de Wernicke: controla a compreensão da linguagem.
+* Amígdala: processa a resposta emocional.
+* Neurônios-espelho: responsáveis por imitar o comportamento de outro ser humano como se aquele que estivesse observando praticasse também a ação, o que nos faz ter empatia.
+
+Em conjunto, essas áreas possibilitam que o hipocampo — que armazena memórias de curto prazo — tenha maior probabilidade de converter a experiência de ouvir uma história em uma memória de longo prazo.
+
+Em vez de apresentar uma planilha de dados e despejar números, portanto, considere usar o storytelling com dados para evocar uma resposta emocional que fará com que as pessoas lembrem do que foi apresentado.
+
+# Como criar uma narrativa com dados
+O storytelling com dados utiliza os mesmos elementos narrativos que qualquer história que você já leu ou ouviu antes: personagens, cenário, conflito e resolução.
+
+Para ajudar a ilustrar isso, imagine que você é um profissional de dados e acabou de descobrir que o recente declínio nas vendas de uma empresa foi impulsionado por clientes de todos os gêneros, entre 14 e 23 anos. 
+
+Você descobre que a queda foi causada por um post viral nas redes sociais, destacando o impacto negativo da empresa no meio ambiente. 
+
+Para apresentar os dados decorrentes deste cenário, você pode criar uma narrativa usando os quatro elementos principais do storytelling:
+
+## Personagens 
+Stakeholders, clientes entre 14 e 23 anos, consumidores ambientalmente conscientes e sua equipe interna. 
+
+## Cenário
+Defina o cenário explicando que houve uma queda recente nas vendas impulsionadas por clientes de todos os gêneros, com idades entre 14 e 23 anos; use uma visualização de dados para mostrar o declínio entre os tipos de público e destacar a maior queda em usuários jovens.
+
+## Conflito
+Descreva a raiz do problema: um post viral nas redes sociais destacou o impacto negativo da sua empresa no meio ambiente e fez com que dezenas de milhares de jovens clientes parassem de usar seu produto.
+
+Incorpore pesquisas sobre como os consumidores estão mais ambientalmente conscientes do que nunca e como os produtos comercializados de forma sustentável podem gerar mais receita do que suas contrapartes insustentáveis. Use visualizações aqui também.
+
+## Resolução 
+Proponha sua solução. Com base nesses dados, você apresenta uma meta de longo prazo para adotar práticas de fabricação sustentáveis. 
+
+Você também pode concentrar esforços em áreas como marketing e relações públicas para reverter a imagem negativa entre todos os segmentos de público. 
+
+Use visualizações que mostrem que o investimento necessário para práticas de fabricação sustentáveis ​​pode valer a pena na forma de ganhar clientes do crescente segmento de mercado ambientalmente consciente.
+
+Seja qual for a história que os dados contam, você pode comunicá-la de forma eficaz formatando sua narrativa com esses elementos e orientando seu público com a ajuda de visualizações.
+
+# Referências
+https://www.amazon.com.br/
+https://online.hbs.edu/
