@@ -1,0 +1,95 @@
+# Leitura: Benefícios de Dataviz
+Fonte: hoick.io 
+
+“A visualização fornece respostas para perguntas que você não sabia que tinha.” — Ben Schneiderman.
+
+Quando apresentamos dados na forma de gráficos, dashboards, histogramas e assim por diante, estamos essencialmente usando visualização de dados ou dataviz, como também é conhecida. 
+
+Em termos de Data Science, essa abordagem é especialmente útil desde a limpeza e identificação de tendências até a apresentação de resultados. 
+
+É por meio da visualização que conseguimos fazer os dados “falarem” e, dessa forma, descobrir todos os detalhes ocultos que eles escondem. 
+
+No âmbito dos negócios, gerentes e partes interessadas precisam ter uma compreensão completa dos dados disponíveis antes de qualquer tomada de decisão. 
+
+Entretanto, como o enorme volume de dados existente, a maneira mais fácil e rápida de obter uma visão geral completa deles é por meio de técnicas de visualização.
+
+Abordaremos neste tópico os principais benefícios da visualização de dados, sua importância no contexto dos negócios, e de que maneira essa abordagem pode auxiliar na tomada de decisões.
+
+# Uma imagem vale mais que mil palavras
+Uma pesquisa feita pela 3M concluiu que nós, seres humanos, processamos imagens 60.000 vezes mais rápido do que texto.
+
+Enquanto isso, outros estudos apontam que o cérebro humano decifra elementos da imagem simultaneamente, enquanto a linguagem é decodificada de maneira linear e sequencial, levando mais tempo para ser processada.
+
+O fato é que nossos cérebros são muito mais engajados em contar histórias do que em uma lista de fatos. Nesse sentido, os recursos visuais adicionam um componente à narrativa que o texto não consegue: velocidade.
+
+Se você deseja transmitir uma mensagem específica a alguém, usar uma visualização em vez de textos ou números sempre será uma abordagem mais eficaz. 
+
+Nesse quesito, a visualização de dados exige menos do leitor, sendo, sem dúvida, a melhor alternativa quando o intuito for capturar a atenção de alguém ou ajudá-lo a captar os dados e informações que precisa.
+
+# Facilita a captura de padrões 
+Analisar dados, detectar outliers e grupos incomuns, identificar tendências e agrupamentos, identificar padrões locais, reconhecer padrões. Tudo isso faz parte das tarefas diárias de um analista de dados. 
+
+No entanto, como os dados estão disponíveis em grandes quantidades, atualmente, esse profissional não pode simplesmente usar qualquer fórmula ou ferramenta para analisá-los. Dependendo do tipo de processo, isso pode levar meses. 
+
+Nesse sentido, as ferramentas de Business Intelligence (BI) são recursos comumente adotados para visualizar os dados de várias maneiras e, dessa forma, conseguir estudá-los com mais eficiência.
+
+Isso não apenas economiza tempo, mas também ajuda os analistas de dados a realizar diversas tarefas sem muito esforço. Tudo isso porque a visualização de dados ajuda a identificar novos padrões e tendências o tempo todo, muitas vezes em tempo real. 
+
+Aliás, são inúmeras as ferramentas de big data existentes que podem ajudá-lo a analisar grandes volumes de dados. Tudo isso a partir de diferentes técnicas de visualização, e de forma eficiente.
+
+# Auxilia na tomada decisões de negócios
+Foi-se o tempo em que as empresas tomavam decisões meramente intuitivas ou baseadas em experiências de gestores e funcionários. Cada vez mais a tomada de decisão orientada por dados (DDDM) tem se tornado o caminho mais comum.
+
+Nesse contexto, a melhor maneira de analisar enormes volumes de dados de negócios é por meio de ferramentas de visualização (gráficos, dashboards, etc.). O principal motivo por trás disso é que os dados dispostos de maneira visual fornecem às empresas uma visão acionável sobre como agir.
+
+Segundo um levantamento realizado pela Tableau, o uso de ferramentas de BI (Business Intelligence) aumenta em 28% as chances de encontrar informações de negócios oportunas em comparação a relatórios e painéis gerenciados.
+
+Além disso, devemos levar em consideração que, de maneira geral, os gerentes de negócios não conseguem interpretar dados brutos — o que seria tarefa para um analista de dados profissional. 
+
+Portanto, as alternativas de visualização ajudam a tornar a interpretação desses dados mais acessível e menos complexa. 
+
+# Transmissão de informações
+Os stakeholders (partes interessadas) não se importam com como os analistas de dados estão lidando com um modelo. Afinal, eles só precisam da solução que procuram. 
+
+No entanto, levando em conta que as partes interessadas não possuem habilidades técnicas suficientes, caberá a você encontrar uma maneira de transmitir informações e apresentar resultados, de maneira que eles possam entender e, assim, fornecer um feedback. A melhor maneira de fazer isso também é por meio da visualização de dados.
+
+Considerando a importância de manter as partes interessadas informadas a cada etapa dos projetos de análise de dados, o uso de técnicas de visualização possibilita transmitir todas as informações necessárias sem se perder nos detalhes técnicos.
+
+Além do mais, os recursos visuais também fornecem informações sobre a direção em que um projeto está avançando e as áreas que ele visa. 
+
+# Apresentação de resultados
+Por último, mas não menos importante, a visualização de dados desempenha um papel vital para manter as partes interessadas cientes dos resultados dos projetos, assim como as equipes envolvidas.
+
+Devemos considerar que é comum haver várias equipes envolvidas em projetos e nem todas serem qualificadas em análise de dados. 
+
+Logo, para as equipes que pertencem a pilares externos do negócio, como, por exemplo, gestão de projetos e recursos humanos, cabe aos analistas de dados apresentar os resultados de maneira simplificada — e visual. 
+
+# Exemplos de visualização de dados 
+## FedEx Soundtrack
+O projeto FedEx Soundtrack, lançado em 2017 pela FedEx, permitia que usuários visualizassem as etapas e estatísticas de suas entregas e, por fim, gerava uma música personalizada com base nessas variáveis — contabilizando acusticamente qualquer coisa, desde roteamento até condições climáticas.
+
+## The Pudding
+Gráfico equilíbrio de gênero da lista de best-sellers do New York Times. Fonte: pudding
+
+O The Puddingé uma publicação digital que explica ideias e conta histórias a partir de infográficos e mapas visuais interativos, baseados em preceitos do jornalismo de dados.
+
+## Gráficos do New York Times
+Fonte: nytimes
+
+O jornal americano The New York Times surpreende a cada dia com seus gráficos interativos e recursos de data visualization.
+
+## The New Mobile Workforce
+Fonte: thenewmobileworkforce
+
+The New Mobile Workforce é uma plataforma de visualização de dados imersiva e interativa desenvolvida pela Citrix, empresa especializada em virtualização de servidores, aplicativos e desktops, em parceria com a Red Bull Racing.
+
+## Pew Research Center
+Fonte: pewresearch.org
+
+Conjunto de dados visuais sobre visões políticas americanas e mudança demográfica ao longo dos anos, criada pelo Pew Research Center.
+
+# Referências
+https://www.fastcompany.com/3035856/why-were-more
+https://hdsr.mitpress.mit.edu/pub/zok97i7p/release/3
+https://www.analyticsfordecisions.com/data-visualization-is-important/
+https://designmodo.com/data-visualization/
