@@ -1,0 +1,219 @@
+# Leitura: Design de Gráficos e Dashboards
+Ao levarmos em conta que a visualização de dados consiste, basicamente, na representação de dados a partir de recursos visuais, podemos dizer que os gráficos são o principal método utilizado para tornar isso possível.
+
+Desde o mapeamento de métricas e de desempenho até a análise de resultados, essas formas servem, dentre outras coisas, para categorizar e organizar dados, traduzindo-os em insights analisáveis ​​e acionáveis. 
+
+Existem inúmeros tipos diferentes de gráficos e técnicas de visualização capazes de ajudar os analistas a representar e transmitir dados importantes. 
+
+Neste tópico, iremos conhecer os tipos de gráficos mais usados e suas respectivas indicações de uso e como a composição deles gera dashboards, painéis úteis tanto a profissionais de dados como a pessoas de negócio.
+
+# Tipos de gráficos
+## Gráfico de colunas
+Fonte: dhtmlx
+
+Considerado um dos tipos mais comuns no campo da visualização de dados, o gráfico de colunas é a alternativa mais simples e tradicional de demonstrar uma comparação entre diferentes conjuntos de dados.
+
+Este tipo de gráfico inclui rótulos de dados ao longo do eixo horizontal (x) com métricas ou valores medidos apresentados no eixo vertical (y), também conhecido como lado esquerdo do gráfico. O eixo y normalmente começa em 0 e vai até a maior medida que você estiver rastreando.
+
+Você pode usar gráficos de colunas para rastrear, por exemplo, números de vendas mensais, receita por página de destino ou medições semelhantes. 
+
+Cores consistentes ajudam a manter o foco nos dados em si, embora você possa introduzir cores de destaque para enfatizar pontos de dados importantes ou rastrear alterações ao longo do tempo.
+
+## Gráfico de colunas empilhadas
+Fonte: online.visual-paradigm
+
+Um gráfico de colunas empilhadas é um tipo básico de gráfico para permitir comparações de parte para todo ao longo do tempo ou entre categorias. 
+
+Nele, as séries de dados são empilhadas uma sobre a outra em colunas verticais e podem mostrar alterações ao longo do tempo. 
+
+O uso desse tipo de gráfico é mais indicado para a comparação de totais e uma parte dos totais, já que costuma ser mais difícil para os leitores comparar colunas que não começam na mesma linha de base. 
+
+Caso o total das peças não seja importante, um gráfico de linhas pode ser uma escolha melhor. 
+
+## Gráfico de barras
+Fonte: dhtmlx
+
+Similar ao gráfico de colunas, a única diferença do gráfico de barras é que este é apresentado horizontalmente (com valores no eixo x e categorias no eixo y). 
+
+Este tipo é comumente usado para mostrar uma distribuição de pontos de dados ou realizar uma comparação de valores de métrica em diferentes subgrupos de dados. 
+
+Na maioria das vezes, é possível utilizar um gráfico de barras e um de colunas com a mesma finalidade, embora este último limite o tamanho do rótulo e espaço de comparação. 
+
+## Gráfico de barras empilhado
+Fonte: boostlabs
+
+Pretende comparar muitos itens diferentes? Precisa acompanhar o crescimento individual de cada conjunto de dados junto com o crescimento do grupo como um todo? 
+
+Para revelar essa relação entre uma parte e o  todo, a melhor alternativa é o uso de um gráfico de barras empilhado.
+
+Semelhante a um gráfico de barras padrão, o layout “empilhado” geralmente apresenta um esquema de cores contrastantes que mapeiam de volta para uma legenda.
+
+Com ele, é possível acompanhar, por exemplo, o desempenho de quatro tipos diferentes de produtos em cinco estratégias de vendas diferentes. As Estratégias de 1 até a 5 estarão no eixo x, enquanto os números de vendas estarão no eixo y.
+
+Dentro de cada categoria, no entanto, você terá quatro blocos de cores diferentes, que representam os tipos de produto. 
+
+Dessa forma, você pode determinar qual estratégia funcionou melhor para cada tipo de produto como um todo, bem como quais produtos se saíram bem em cada estratégia.
+
+## Gráfico de linha
+Fonte: fusioncharts
+
+Outro tipo de gráfico bastante popular, o gráfico de linhas é projetado para revelar tendências, progressões ou mudanças que ocorrem ao longo do tempo. 
+
+Como tal, funciona melhor quando seu conjunto de dados é contínuo em vez de cheio de inícios e paradas.
+
+Assim como um gráfico de colunas, os rótulos de dados em um gráfico de linhas estão no eixo x, enquanto as medições estão no eixo y.
+
+Para facilitar a interpretação, é importante usar linhas sólidas e planejar espaço suficiente para que suas linhas tenham cerca de 2/3 da altura do eixo y.
+
+## Gráfico de área
+Fonte: chartio
+
+Um gráfico de área começa com a mesma base de um gráfico de linhas — pontos de valor conectados por segmentos de linha — mas adiciona um conceito do gráfico de barras com sombreamento. 
+
+Este tipo de gráfico é visto com mais frequência quando combinado com o conceito de empilhamento. Geralmente é usado para mostrar como um total mudou ao longo do tempo e como as contribuições de seus componentes mudaram.
+
+Seu layout normalmente inclui várias linhas para fazer uma comparação entre grupos (também conhecido como séries) ou para mostrar como um todo é dividido em partes componentes. Isso leva a dois tipos diferentes de gráfico de área, um para cada caso de uso.
+
+## Gráfico de eixo duplo
+Fonte: chartio
+
+Enquanto a maioria dos gráficos de visualização usa um único eixo y e eixo x, um gráfico de eixo duplo incorpora um eixo x compartilhado e dois eixos y separados. 
+
+A maioria combina os recursos de um gráfico de colunas e um gráfico de linhas, embora você possa variar os estilos de gráficos de acordo com os dados que estiver usando.
+
+Esse layout permite que você mostre um relacionamento (ou a falta dele) entre diferentes variáveis, e funciona melhor quando você está trabalhando com três conjuntos de dados da seguinte forma:
+
+um conjunto de dados contínuos;
+dois conjuntos de dados agrupados por categoria.
+Como nosso cérebro está mais inclinado a ler da esquerda para a direita, ajuda a tornar o eixo y do lado esquerdo a variável primária. Também é importante usar cores contrastantes para os dois gráficos para fornecer distinção visual.
+
+## Gráfico Mekko (Marimekko Chart)
+Fonte: towardsdatascience
+
+Bastante comum no contexto de Data Analytics, um gráfico Mekko tem um layout semelhante a um gráfico de barras empilhadas, mas com uma grande exceção: em vez de rastrear a progressão do tempo, o eixo x mede a dimensão de conjuntos de dados.
+
+Com este layout, você pode comparar valores, medir a composição de cada valor e analisar a distribuição de dados ao mesmo tempo.
+
+Ele é frequentemente usado para mostrar medidas como crescimento, margem ou participação de mercado por produto, segmento ou região. 
+
+Um gráfico do tipo Mekko pode ser usado, por exemplo, para mostrar o crescimento do mercado por segmento, no qual a taxa de crescimento é a altura da barra e a receita do segmento é a largura da barra.
+
+## Gráfico de pizza
+Um gráfico de pizza representa um número estático, dividido em categorias que constituem suas partes individuais. 
+
+Ao usar um, você representará valores numéricos em porcentagens. Quando você soma todas as porções separadas, elas devem somar 100%.
+
+Eles são especialmente úteis para mostrar detalhamentos como:
+
+participação de mercado;
+despesas;
+dados demográficos do cliente;
+uso do dispositivo do cliente (para teste de UX, por exemplo);
+fontes de tráfego.
+No entanto, gráficos de pizza são mais eficientes quando têm poucas fatias e quando há diferença clara entre a proporção (porcentagem) das fatias. Muitas fatias ou pouca diferença entre elas torna o gráfico confuso, já que é difícil perceber visualmente quais seriam as fatias predominantes.
+
+## Gráfico de dispersão (scatter plot)
+Fonte: data-to-viz
+
+Esse tipo de gráfico, também chamado de diagrama de dispersão, representa diferentes variáveis ao longo de dois eixos. É muito comum para representar regressões lineares, por exemplo.
+
+Observe que o eixo x e o eixo y são eixos de valor, já que um gráfico de dispersão não usa eixo de categoria.
+
+Esse tipo de visualização de dados funciona melhor para analisar vários pontos de dados ou ao procurar semelhanças em um conjunto. Ao fazer isso, você pode notar quaisquer discrepâncias e também obter uma compreensão mais clara de sua distribuição geral de dados.
+
+Nesse caso, traçar um diagrama de dispersão com seus pontos de dados pode ajudá-lo a determinar se há uma correlação entre eles.
+
+## Gráfico de bolhas
+Fonte: chartio
+
+Assim como um gráfico de dispersão, um gráfico de bolhas também pode mostrar relacionamentos ou distribuição.
+
+Nesta variação, no entanto, você substituirá os pontos de dados por bolhas. Além disso, é possível variar os tamanhos da bolha para representar um terceiro conjunto ou dimensão de dados.
+
+Este tipo de gráfico também não usa um eixo de categoria. Em vez disso, os conjuntos de dados são demonstrados como valores x, y e z (tamanho da bolha).
+
+## Diagrama de caixa (box plot)
+Fonte: cds.climate.copernicus
+
+Um gráfico de caixa resume a distribuição de valores dentro dos grupos medidos. As posições das extremidades da caixa e do “bigode” mostram as regiões onde se encontra a maioria dos dados. 
+
+Geralmente vemos diagramas de caixa quando temos vários grupos para comparar uns com os outros. Outros gráficos com mais detalhes são preferidos quando temos apenas um grupo.
+
+O box plot pode ser utilizado para se estudar várias características do conjunto de dados ou, por exemplo, para determinar a simetria entre eles. Basta observar se a média é igual (ou próxima) à mediana, pois, nesse caso, os dados são simétricos.
+
+## Gráfico de marcadores (bullet graph)
+Inspirado no gráfico de barras tradicional, o gráfico de marcadores inclui um contexto adicional e pode servir como substituto para medidores em painéis devido à sua capacidade de transmitir muitas informações em um espaço compacto.
+
+São geralmente usados para comparar um valor, representado por uma barra horizontal, com outro valor, representado por uma linha vertical, e relacioná-los com intervalos qualitativos. 
+
+O fato de poder ser orientado tanto horizontal quanto verticalmente, dependendo do espaço disponível, permite que ele exiba várias medidas e apresente informações em um formato mais fácil de digerir.
+
+## Gráfico de funil
+Fonte: discourse.metabase
+
+Um gráfico de funil é frequentemente visto em contextos de negócios onde  os visitantes ou usuários precisam ser rastreados em um fluxo de pipeline. 
+
+Esse tipo de gráfico mostra quantos usuários chegam a cada estágio do processo rastreado a partir da largura do funil em cada divisão de estágio. 
+
+Esse afunilamento, no entanto, pode confundir na hora de interpretar as reais taxas de conversão. 
+
+Nesse sentido, um gráfico de barras geralmente  oferece uma representação mais clara dos dados, sendo capaz de cumprir a mesma finalidade do gráfico de funil.
+
+# Dashboards
+Dashboards, ou painéis dinâmicos, são ferramentas de gerenciamento de dados e informações usadas para rastrear, analisar e exibir indicadores de desempenho, métricas e pontos de dados. O termo faz referência aos painéis de controle de carros, usados pelos motoristas para monitorar as principais funções do veículo.
+
+Um dashboard geralmente fica em uma página própria e recebe informações de bancos de dados vinculados (planilhas, anexos, APIs etc.). Em muitos casos, esse tipo de painel é configurável, permitindo que você escolha quais dados deseja ver ou se deseja incluir tabelas e gráficos para visualizar números.
+
+Essa ferramenta de visualização permite, por exemplo, que analistas monitorem dados e desempenho, criem relatórios e definam estimativas e KPIs (Key Performance Indicator) para projetos futuros. 
+
+Algumas das vantagens relacionadas ao uso de dashboards incluem: 
+
+* Representação visual de desempenho (tabelas, gráficos etc.);
+* Capacidade de identificar tendências;
+* Uma maneira fácil de medir a eficiência;
+* Oferece meios para gerar relatórios detalhados com um único clique;
+* Serve de apoio para a tomada de decisões mais informadas;
+* Visibilidade total de todos os sistemas, campanhas e ações;
+* Identificação rápida de dados atípicos e correlações.
+
+## Tipos de dashboards
+No contexto de Business Intelligence (BI), existem ao todo três tipos de dashboard. São eles:
+
+* Dashboards operacionais: fornecem aos usuários finais a capacidade de monitorar atividades, eventos ou processos de negócios específicos do dia-a-dia em que os dados estão em constante mudança. Os dados coletados aparecem em tempo real e refletem o que está ocorrendo no negócio no momento do consumo.
+* Dashboards analíticos: possibilitam o detalhamento de dados e dão suporte à análise de causa raiz. Normalmente usados por analistas de negócios e gerentes, incluem mais dados contextuais e análises comparativas. Além disso, são úteis para analisar manualmente alterações, embora a descoberta de insights dependa do nível de habilidade do usuário. 
+* Dashboards estratégicos: também chamados de dashboards executivos, fornecem uma visão geral das métricas necessárias para monitorar o desempenho dos negócios. Seu objetivo é apoiar os tomadores de decisão com insights sobre os desafios ou oportunidades que o negócio que estes podem enfrentar. São geralmente construídos a partir de dados agregados — como visualizações semanais, mensais ou trimestrais — para destacar tendências e padrões de longo prazo.
+
+# Exemplos de dashboards 
+Listamos abaixo alguns exemplos de dashboard com o quais você talvez já esteja familiarizado:
+
+## Google Analytics
+Fonte: databox
+
+O Google Analytics é o exemplo mais conhecido de um dashboard analítico. Ele fornece uma visualização instantânea e rápida do desempenho de um site (visitas, páginas de entrada, taxa de rejeição, origens de tráfego etc.), além de permitir uma busca mais profunda para obter mais informações. 
+
+## COVID-19 Map
+Fonte: inquirer
+
+Criado em 2020 pela Universidade Johns Hopkins, o dashboard COVID-19 Map apresenta em tempo real os dados relacionados à pandemia de coronavírus. 
+
+## Telehealth
+Fonte: toptal
+
+Áreas como a de Telemedicina são conhecidas por fornecerem uma enorme quantidade de dados brutos. Esses dados, por sua vez, costumam ser organizados em dashboards operacionais. 
+
+No exemplo acima, as informações são apresentadas para os usuários dos serviços a partir de perguntas e respostas, com dados que refletem o que está ocorrendo no negócio durante o momento do consumo.
+
+# Referências
+https://boostlabs.com/blog/10-types-of-data-visualization-tools/
+https://chartio.com/learn/charts/area-chart-complete-guide
+http://assessoriaestatistica.com.br/blog/boxplot
+https://chartio.com/learn/charts/essential-chart-types-for-data-visualization
+https://blog.datawrapper.de/stacked-column-charts/
+https://chartio.com/learn/charts/bar-chart-complete-guide
+https://www.fusioncharts.com/resources/chart-primers/bullet-graph
+https://en.wikipedia.org/wiki/Dashboard_(business)
+https://www.adjust.com/glossary/dashboard/
+https://www.klipfolio.com/blog/what-is-a-data-dashboard
+https://www.yellowfinbi.com/glossary/dashboards
+https://wandr.studio/blog/dashboard-examples/
+https://www.toptal.com/designers/dashboard-design/top-data-visualization-dashboard-examples
