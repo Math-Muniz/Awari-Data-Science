@@ -1,0 +1,75 @@
+# Leitura: Comunicação Assertiva de Dados
+Embora uma boa apresentação tenha dados, os dados por si só não garantem uma boa apresentação. 
+
+Seja ao demonstrar resultados ou propor insights de negócios, um bom analista de dados deve saber desenvolver e entregar uma apresentação baseada em dados que traduza as informações de forma simples e clara.
+
+Pensando nisso, reunimos neste tópico um apanhado de dicas e instruções que irão ajudá-lo a comunicar dados de forma mais assertiva a diferentes públicos. 
+
+# Certifique-se de que os dados podem ser vistos
+Pode parecer óbvio, mas às vezes você está muito perto de sua apresentação – literalmente. O que é legível em seu laptop pode ser muito menos legível quando projetado em uma tela. 
+
+Para evitar o desastre de traduzir timidamente números e rótulos difíceis de ver, ensaie sua apresentação com colegas sentados tão longe quanto o público real. 
+
+Pergunte a eles: “Você consegue ver este gráfico claramente?” Se a resposta for tudo menos um firme “sim”, redesenhe para ser mais fácil para os olhos.
+
+# Concentre-se nos pontos ilustrativos
+Os slides de dados não são realmente sobre os dados. Eles são sobre o significado deles.
+
+Sendo assim, não deixe o fardo de decodificar seus dados para o seu público. É seu trabalho explicar como os dados suportam seus pontos principais.
+
+Cabe a você deixar esse significado claro antes de clicar. Caso contrário, o público não processará – muito menos comprará – seu argumento.
+
+Quando você conecta dados aos pontos essenciais que eles suportam, a transição deve ser explícita e soar assim:
+
+* “Esses dados mostram…”;
+* “Este gráfico ilustra…”;
+* “Esses números provam…”.
+
+Essas transições podem ser tão importantes quanto as próprias conclusões, já você está chamando a atenção do público para elas.
+
+# Comunique um ponto de cada vez
+A maneira mais rápida de confundir seu público é compartilhar muitos detalhes de uma só vez. Por isso, se tiver vários apontamentos importantes a fazer, considere demonstrar cada um com uma nova visualização.
+
+Um erro muito comum é pensar que você deve compartilhar cada marcador, ideia e ponto de dados em um único slide. 
+
+Lembre-se: os únicos pontos de dados que você deve compartilhar são aqueles que apoiam significativamente seu objetivo– e, idealmente, um ponto por gráfico. 
+
+Para manter seus gráficos sob controle, você pode perguntar a si mesmo: qual é o aprendizado mais importante que quero que meu público extraia desses dados? 
+
+# Rotule os componentes dos gráficos de forma clara
+Enquanto você trabalha com o mesmo gráfico há semanas ou meses, seu público será exposto a ele por meros segundos. 
+
+Dê a eles a melhor chance de compreender seus dados usando uma linguagem simples, clara e completa para identificar os eixos X e Y, pedaços de pizza, barras e outros elementos diagramáticos. 
+
+Tente evitar abreviações que não sejam óbvias e não assuma que os componentes rotulados em um slide serão lembrados nos slides subsequentes.
+
+Algumas pessoas são aprendizes visuais e processam o que veem muito melhor do que o que ouvem. Logo, a intuição visual e a clareza do seu gráfico são cruciais.
+
+# Realce visual
+Todo gráfico ou dashboard tem uma zona “Aha!” — um número ou intervalo de dados que revela algo crucial para a sua apresentação.
+
+Há analistas que explicam a relevância dessa zona oralmente, compartilhando o aprendizado, tendência ou história que os dados estão contando. Outros já preferem fazer isso em voz alta ou escrever no slide.
+
+Para uma comunicação assertiva, no entanto, você deve ir além.
+
+Busque destacar visualmente essa zona mais importante, seja com um círculo ou sombreado, para, assim, gerar impacto e facilitar ainda mais o entendimento dos dados por parte do seu público.
+
+# Escreva títulos que reforcem o ponto dos dados
+Mesmo quando os dados são apresentados de forma eficaz em um slide, a propriedade mais valiosa é o título da página. Afinal, esse é o primeiro item que o público notará e processará. 
+
+Contudo, com muita frequência, os apresentadores usam palavras e frases genéricas como “Estatísticas” e “Pelos números” que não servem para nenhum propósito funcional.
+
+Mesmo quando os títulos são específicos, como “Preferências da geração do milênio” ou “Consciência da campanha”, eles ainda podem ser elevados com títulos mais específicos, como “A geração do milênio prefere o celular” ou “A conscientização da campanha está aumentando”.
+
+# Apresente para o público, não para os dados
+Muitos apresentadores observam seus slides enquanto compartilham dados como se o PowerPoint fosse seu público.
+
+Como seres humanos, as pessoas captam melhor o que dizemos quando as olhamos nos olhos. Mas isso não significa que você nunca deva analisar seus dados – apenas não converse com eles.
+
+Dê uma olhada em seus slides para referência, mas faça pontos críticos diretamente para seu público.
+
+Quando apresentados de forma clara e objetiva, os dados podem elevar a credibilidade e a confiabilidade dos seus argumentos. 
+
+# Referências
+https://hbr.org/
+https://slidesgo.com/
