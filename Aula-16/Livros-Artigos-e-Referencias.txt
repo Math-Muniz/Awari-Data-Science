@@ -1,0 +1,66 @@
+# Leitura: Livros, Artigos e Referências
+O mundo de Data Science, assim como da tecnologia em geral, está sempre em rápido desenvolvimento. 
+
+Para acompanhar tudo o que acontece, as novidades, melhorias e insights, é preciso, primeiro, entender a base dos conceitos e, depois, ter sempre contato com o que há de novo. 
+
+Na lista a seguir você encontra os principais livros sobre o assunto para construir uma base sólida de conhecimento. 
+
+Depois, confere quem são os principais nomes da Ciência de Dados para acompanhar de perto o desenvolvimento do setor. 
+
+Também indicamos blogs e sites para estar sempre atualizado sobre o que há de novo no mercado e saber as novidades dessa área de atuação. 
+
+# 5 livros sobre Data Science
+## Data Science do Zero
+Como o nome sugere, o livro busca explicar o Data Science e Análise de Dados desde o início, considerando a linguagem de programação Python, a mais utilizada nos projetos da área. Por ser de 2016, o autor utiliza uma versão mais antiga do Python, mas o grande foco está nos ensinamentos sobre a combinação entre programação, matemática e estatística e como utilizá-la para encontrar respostas. O livro também conta com exemplos de códigos.
+
+## Python para Análise de Dados
+O livro é considerado um guia para uso de Python (3.6) na análise de dados e foi escrito pelo criador da biblioteca “pandas”, utilizada para extrair, organizar e modelar dados. Por isso, é um exemplar mais completo e prático do que precisa e pode ser feito, mostrando estudos de caso práticos e atuais. 
+
+## R Para Data Science
+Um profissional de data analytics ou de data science pode trabalhar bem com Python, mas é sempre interessante conhecer também outra linguagem para aprofundar seus conhecimentos. Neste livro, é possível aprender a usar a linguagem R para analisar e modelar dados de maneira rápida e facilitada, já que o foco do livro são os iniciantes na área.
+
+## Storytelling com Dados
+O principal foco do livro não é a técnica em si, mas, sim, falar sobre a dificuldade de mostrar os dados e seus potenciais insights para pessoas do mundo dos negócios, que tem apenas uma visão geral de Data Science. São ensinamentos sobre como mostrar para leigos o que os dados estão indicando, para contribuir com a tomada de decisões nos negócios. 
+
+## O homem que decifrou o mercado
+Não é um livro técnico, mas conta a história de como Jim Simons, um matemático, conseguiu decifrar o funcionamento da bolsa de valores de Wall Street a partir da análise de dados e estatística. É um estudo de caso interessante pois movimenta todo o mercado dos dados e até o financeiro, que ficou conhecido como revolução quant. 
+
+# Especialistas para acompanhar
+## Dean Abbott
+Co-fundador e Chief de Data Science na SmarterHQ (Twitter: @deanabb. Linkedin). É um dos profissionais mais conhecidos e tido como referência no mercado de Data Science pois desenvolveu diversas técnicas de mineração e preparação de dados, além de métodos para visualização dos dados e insights. Seus ensinamentos são muito utilizados até hoje, principalmente no campo de pesquisa e negócios. 
+
+## Nando de Freitas
+Líder da equipe de machine learning no Google DeepMind (Twitter: @NandoDF. Linkedin). Professor de Ciência da Computação na Universidade de Oxford, o profissional é especialista em machine learning e deep learning com foco em conexões neurais. É o profissional líder do Google DeepMind e ajuda a empresa a construir projetos que beneficiem a sociedade e as descobertas científicas a partir dos dados. 
+
+## Fei-Fei Li
+Professora de Ciência da Computação na Universidade de Standford (Twitter: @drfeifei). É uma pioneira na Inteligência Artificial e machine learning, tendo participado de projetos, desde 2007, que construíram o conceito de deep learning como conhecemos atualmente. Também é autora de diversos livros da área e fala sobre como os dados estão mudando o mundo. Criou uma organização sem fins lucrativos para aumentar a diversidade e a inclusão no mercado de IA.
+
+## Richard Socher
+Chief Scientist na Salesforce (Twitter: @RichardSocher. Linkedin). Especialista em deep learning com foco em processamento de linguagem e resolução de tarefas de processamento em modelos multitarefas. Trabalhou junto com Fei-Fei Li e também é considerado uma referência na área de machine learning e deep learning a partir dos dados. 
+
+## Peter Norvig
+Diretor de Pesquisa no Google Inc (Linkedin). É um dos principais referências de uso de dados e inteligência artificial. Hoje é diretor de pesquisa no Google e antes trabalhou como Chief no setor de Ciência da Computação da NASA. Seu trabalho tem foco principalmente em IA e deep learning. 
+
+# Blogs e sites para acompanhar
+## Data Science Central
+É um dos portais mais conhecidos de Data Science e Data Analytics e fala sobre as principais notícias e novidades dessas áreas, além de conteúdos instrutivos e conceituais para ajudar quem está entrando na área. Especialistas também produzem textos e conteúdos por lá. Também conta com um fórum para que os profissionais do setor tirem suas dúvidas e participem de discussões.
+
+## SmartData Collective
+Em formato comunitário e colaborativo, o site reúne as principais tendências de Data Analytics e Data Science em um só lugar. É possível conferir novidades, notícias e insights, principalmente voltados para aplicação da tecnologia no mundo dos negócios. 
+
+## No Free Hunch
+É o blog oficial do Kaggle, site de desafios de Data Science em que os profissionais podem testar e aplicar seus conhecimentos em um grande fórum. Conta com tutoriais, notícias, perfis de especialistas e muitos outros conteúdos que ajudam pessoas que trabalham com dados a se aprofundarem na área e saber o que está acontecendo no setor. 
+
+## Data Science 101
+Tem um conteúdo mais denso, portanto é indicado para quem já tem uma certa familiaridade com o mercado de Dados. É escrito por Ryan Swanstrom, que trabalhou na Microsoft, na Wells Fargo e no setor de defesa do governo dos Estados Unidos. Ou seja, apresenta diferentes visões sobre o uso de dados na sociedade. No blog, compartilha suas experiências, dicas e conselhos. 
+
+## Data Science Report
+Funciona como um acervo de materiais para quem está entrando no mercado de Data Science ou quer saber cada vez mais sobre o tema. É possível encontrar artigos, livros e vídeos para se aprofundar cada vez mais na área, independente do nível de conhecimento. 
+
+# Continue aprendendo
+https://blog.dsacademy.com.br/os-15-melhores-livros-gratuitos-sobre-data-science/ 
+https://techbeacon.com/enterprise-it/14-data-scientists-you-should-follow-twitter
+https://www.analyticsinsight.net/top-15-data-science-experts-of-the-world-in-2020/
+https://medium.com/@adrianorqsoares/5-excelentes-livros-sobre-data-science-para-iniciantes-come%C3%A7arem-a-praticar-ci%C3%AAncias-de-dados-e-a811a81b0ecf 
+https://www.tableau.com/pt-br/learn/articles/data-science-blogs 
+https://amazon.com.br
