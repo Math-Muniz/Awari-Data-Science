@@ -22,20 +22,35 @@ Cada aula tem 2 horas de duração. A jornada de uma aula consiste, normalmente,
 O roteiro de aulas é exatamente o mesmo que está anunciado no site da Awari e que você confere aqui na Plataforma Awari: 
 
 Aula-01 - Introdução a Data Science
+
 Aula-02 - Matemática para Data Science
+
 Aula-03 - Linguagem Python
+
 Aula-04 - Bibliotecas Python
+
 Aula-05 - Coleta de Dados
+
 Aula-06 - Bancos de Dados e SQL
+
 Aula-07 - Estatística Descritiva
+
 Aula-08 - Medidas de Variabilidade
+
 Aula-09 - Estatística Inferencial e Probabilidade
+
 Aula-10 - Medidas Distribuições Estatísticas
+
 Aula-11 - Machine Learning
+
 Aula-12 - Supervised Learning
+
 Aula-13 - Unsupervised Learning
+
 Aula-14 - Deep Learning
+
 Aula-15 - Feature Engineering, Métricas e Deploy
+
 Aula-16 - Dataviz e Data Storytelling
 
 ## 2.3 Materiais
