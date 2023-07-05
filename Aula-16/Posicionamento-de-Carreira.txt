@@ -1,0 +1,115 @@
+# Leitura: Posicionamento de Carreira
+A área da tecnologia, com certeza, é uma das mais amplas atualmente, com muitas possibilidades de atuação, projetos diferenciados e inovação.
+
+Para conseguir trabalhar no setor, é preciso se destacar e, o mais importante, saber se posicionar estrategicamente como profissional. 
+
+Isso porque, mesmo ainda sendo uma área com grande abertura para novos profissionais, ter algo de destaque para mostrar é sempre positivo. 
+
+E isso passa por diferentes etapas, desde a aprendizagem em si até a maneira como você mostra para o mundo o que sabe. 
+
+Para quem está mudando de carreira para trabalhar como Data Scientist, é preciso também saber mostrar como suas habilidades se somam, para conseguir um diferencial ainda maior
+
+Um currículo de qualidade é sempre um passo importante. Por lá, é preciso colocar tanto sua trajetória educacional quanto de carreira, focando nos pontos principais e mostrando seus diferenciais. 
+
+Mas hoje em dia existem muitas outras maneiras de se destacar. 
+
+# Mostrando seu trabalho 
+Um dos pontos principais da vida profissional é mostrar o que você sabe fazer - e isso vai muito além de um bom currículo (que também é imprescindível).
+
+No caso do profissional de Ciência de Dados, o foco aqui é mostrar projetos que participou, o código de análise, como foi o processo e os insights gerados a partir dos dados. 
+
+Basicamente, é preciso criar um portfólio de qualidade, que mostre aos empregadores e outros membros da comunidade o que você é capaz de fazer. 
+
+Nessa área de atuação existem várias maneiras de fazer isso. Acompanhe. 
+
+## Github
+O GitHub é o espaço ideal e mais conhecido para você divulgar seus códigos e projetos. A plataforma, além de muito completa, é o espaço “oficial” de quem trabalha com tecnologia. 
+
+Como é pensada especificamente para essa área, conta com diversas funcionalidades para você mostrar todo o processo da sua análise de dados, inclusive a documentação, em que você pode explicar melhor como foi todo o processo. 
+
+## Kaggle
+O Kaggle é uma plataforma de desafios de Data Science. Por lá você encontra projetos para resolver e gerar insights a partir deles.
+
+Todos os projetos que você resolve por lá ficam armazenados em sua conta, como um portfólio do que foi feito para melhorar suas habilidades técnicas. 
+
+Além de mostrar o interesse por estar sempre treinando, também funciona como um grande fórum de profissionais da área, o que contribui com o networking. 
+
+## Medium
+É uma plataforma de textos muito utilizada por quem trabalha com tecnologia, sendo possível encontrar toda uma comunidade de Data Science. 
+
+Por lá, os profissionais da área falam sobre suas experiências, dão dicas, comentam novidades, contam percepção do mercado, do trabalho e muito mais. Como é um “banco de textos” (como uma rede social de escrita) você não precisa se preocupar com layout nem outras questões do tipo. 
+
+Muitos profissionais também usam o Medium como um espaço para documentar seus projetos, com o intuito de mostrar a capacidade de gerar insights a partir deles. Também vale a pena publicar os textos da rede para o Linkedin. 
+
+# Projetos pessoais com dados públicos
+Se você ainda não tem projetos para mostrar às pessoas, um bom começo é utilizar dados públicos para gerar insights. Isso vale também para quem já trabalha na área e não pode mostrar os projetos da empresa de maneira pública. 
+
+Existe uma grande quantidade de dados públicos disponíveis nos mais diversos formatos e que podem ser um grande objeto de análise para quem precisa gerar portfólio. 
+
+Acesse os sites de governo para encontrar esses dados e verifique se eles realmente podem ser analisados (geralmente essa informação está presente na mesma página). 
+
+Depois, publique o projeto, seus insights e sua experiência com ele. Os projetos do Kaggle também podem ajudar nisso. 
+
+# Branding profissional no Linkedin
+O Linkedin é a maior rede social profissional do mundo e, por isso, um dos melhores locais para conseguir encontrar vagas em qualquer área de atuação. 
+
+Apesar de muita gente utilizar o Linkedin apenas como currículo, a rede social é muito mais que isso. 
+
+Por lá, as pessoas contam sobre suas conquistas e desafios da vida profissional, falam sobre os projetos que estão envolvidos e muito mais. 
+
+É um espaço de troca de experiências entre os profissionais, o que é positivo para toda a comunidade. 
+
+Isso ajuda a pessoa a criar seu “branding”, sua imagem, ou seja, a maneira como as pessoas o enxergarão como profissional. 
+
+E, por ser uma rede social, o Linkedin valoriza esse tipo de interação. Afinal, o objetivo é que as pessoas interajam socialmente por meio da plataforma.
+
+Quanto mais você utiliza a rede para criar conexões com outros profissionais, mais você fortalece seu networking e encontra as pessoas certas para construir sua carreira. 
+
+Além disso, o próprio Linkedin valoriza os perfis daqueles que participam ativamente do site. Por meio de uma pontuação que vai de 0 a 100, a rede social entende o quanto seu perfil está sendo relevante ou não e passa a indicá-lo de acordo com isso. 
+
+Para saber sua pontuação, acesse esse site enquanto estiver logado na rede social. 
+
+Para conquistar cada vez mais espaço por lá, algumas dicas podem ajudar:
+
+* publique sobre suas conquistas, desafios e projetos no feed com alguma frequência;
+* fale sobre novidades que viu e achou interessante;
+* fale sobre uma dificuldade ou ensinamento;
+* comente e interaja na publicações de seus colegas; 
+* deixe seu perfil sempre atualizado e completo, com informações relevantes sobre sua carreira;
+
+Apesar de muitas pessoas não gostarem de ter mais uma rede social, o Linkedin ainda é um dos melhores espaços de networking, pois coloca você em contato com profissionais das mais diversas áreas e projetos e de qualquer lugar do mundo. 
+
+# Networking 
+Claro, o networking não precisa e nem deve ser feito apenas por meio das redes sociais. Conhecer outros profissionais da comunidade de Data Science também pode ser feito de outros modos, como participando de eventos, cursos, palestras e muito mais. 
+
+O networking é importante para qualquer área, mas não significa se aproximar das pessoas apenas por “interesse”. Veja a relação como uma colaboração e cooperação, em que todos se ajudam e a comunidade se fortalece. 
+
+# Hard skills e soft skills
+As hard skills, ou seja, as competências técnicas são imprescindíveis em qualquer área de atuação e todos sabemos disso. 
+
+Mas algo cada vez mais cobrado pelo mercado de trabalho são as soft skills, ou habilidades comportamentais. Elas são vistas hoje como diferenciais, já que determinam como será a relação do profissional com outras pessoas. 
+
+Hoje muitas empresas valorizam encontrar a pessoa com o “perfil” que se encaixe não apenas nos conhecimentos técnicos, mas também nas habilidades comportamentais esperadas. 
+
+Entre as soft skills mais desejadas hoje em dia, segundo o Fórum Econômico Mundial e profissionais de recrutamento, estão:
+
+* criatividade;
+* liderança;
+* resolução de problemas;
+* pensamento inovador;
+* resiliência e flexibilidade
+* inteligência emocional; 
+* persuasão e negociação.
+* organização;
+* proatividade;
+* bom relacionamento em equipe;
+* boa comunicação. 
+
+# Continue aprendendo
+https://www.youtube.com/watch?v=a0nY4BQzxjA
+https://www.youtube.com/watch?v=AX8TZr5_VZE 
+https://www.youtube.com/watch?v=MfUzKeEKtr8
+https://www.youtube.com/watch?v=XYKuslcJp7A
+http://linkedin.com  
+http://kaggle.com
+http://www.github.com
