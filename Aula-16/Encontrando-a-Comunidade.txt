@@ -1,0 +1,71 @@
+# Leitura: Encontrando a Comunidade
+Ter uma carreira promissora em Data Science não depende apenas dos conhecimentos técnicos. A área de tecnologia é bastante colaborativa e é muito comum existirem comunidades em volta de assuntos específicos. 
+
+Isso porque o setor está em constante desenvolvimento e a partir dessas comunidades é possível ficar por dentro das novidades, dos novos formatos e também criar conexões importantes. 
+
+Por isso, adquirir conhecimentos técnicos é primordial, mas acompanhar de perto o que outros profissionais da área estão fazendo também é importante para ficar atualizado e criar um bom networking. 
+
+Veja, a seguir, como encontrar outros profissionais da área e comunidades que valem a pena conhecer.
+
+# Data Hackers
+O portal Data Hackers é a maior comunidade de Data Science do Brasil, totalmente gratuita e aberta aos profissionais. O objetivo é contribuir com o crescimento dos profissionais da área, tanto para conseguirem vagas de trabalho quanto para criarem seu networking. 
+
+A comunidade conta com uma newsletter semanal com insights, projetos e notícias sobre Data Science, um Slack com mais de 1300 membros que contribuem uns com os outros por lá e um podcast voltado a essa área de atuação. 
+
+Ou seja, é um espaço de aprendizado, mas também de colaboração e networking entre as pessoas que fazem parte. 
+
+# PT-BR Data Science & Python
+PT-BR Data Science & Python é um dos maiores grupos de Data Science do Brasil no Telegram, sempre com muitas interações entre os profissionais, que sempre tiram dúvidas e colaboram com projetos de outros. 
+
+Por lá, os profissionais também contam suas experiências e projetos, sendo um ótimo lugar para aprender mais sobre Data Science e ter novos insights sobre a área. 
+
+Também é um espaço de networking, já que há uma grande quantidade de pessoas para conhecer e acompanhar seus projetos. Vale a pena entrar para ficar por dentro do que a comunidade brasileira está desenvolvendo no país. 
+
+# Analytics Vidhya
+Analytics Vidhya é uma das maiores comunidades de Data Science no mundo e conta com a interação e colaboração de muitos profissionais do mundo todo por lá.  
+
+São mais de 10 mil participantes de todos os locais do mundo, o que é interessante para que o profissional tenha contato com o que está sendo desenvolvido fora das fronteiras brasileiras. 
+
+A comunidade conta com o blog informativo, que traz inúmeros temas e discussões acerca do Data Science e Data Analytics, além de contar com um fórum para que os participantes tirem suas dúvidas e discutam algum assunto pertinente.
+
+# Medium
+O Medium é uma plataforma de textos que funciona como uma rede social de blogs. Por lá, diversos profissionais de diferentes áreas escrevem sobre seus insights, projetos, trabalhos e experiências. 
+
+Assim, é possível encontrar sobre os mais diversos projetos de maneira bem completa, o que ajuda no conhecimento geral mas também nos insights que você pode ter em seu projeto. 
+
+Quanto mais contato tem com outros profissionais e sabe sobre seus trabalhos, maiores as chances de você desenvolver uma ideia a partir daquilo. 
+
+Para encontrar profissionais e seguir seus textos é só procurar pelos termos “Data Analytics”, “Data Science” ou qualquer outro que tenha interesse para encontrar as pessoas que estão falando sobre esses assuntos. 
+
+# LinkedIn
+LinkedIn é a maior rede social profissional do mundo. Serve principalmente para networking, mas a partir dela você também consegue encontrar toda uma comunidade em torno da Ciência de Dados.
+
+Ao procurar por profissionais dessa área você consegue se conectar com novas ideias e também acompanhar os projetos e trabalhos de outras pessoas, o que é ótimo tanto para o networking quanto para o desenvolvimento do seu trabalho. 
+
+Além disso, acompanhando as pessoas mais influentes da área, é possível notar que há toda uma comunidade de profissionais de Data Science que se relacionam pelo Linkedin. 
+
+Use a plataforma para estar sempre por dentro das novidades e insights sobre a área e acompanhar os principais nomes desse setor. 
+
+# Eventos de Data Analytics e Data Science
+Os eventos também são ótimos para conhecer a comunidade da área e fazer networking com outros profissionais. 
+
+Nos últimos anos, muitos tornaram-se online, o que permite que pessoas de todo o mundo participem. Há também os presenciais, inclusive no Brasil, que são uma oportunidade para fortalecer relações e conhecer as ações realizadas aqui no Brasil. 
+
+## Big Data Brazil Experience
+É um dos eventos mais conhecidos sobre Big Data no Brasil e aborda o Data Science em sua programação. É um evento presencial, na cidade de São Paulo, onde é possível encontrar profissionais que trabalham em diversos projetos e empresas a fim de criar um bom networking e “abrir o horizonte” para novas ideias na área. 
+
+## PyData Brasil
+O PyData é um evento que acontece em todo o mundo e faz parte de uma das ações do programa educacional da NumFocus, uma organização sem fins lucrativos do setor de Big Data. Aqui no Brasil conta com edições em diversas capitais, como São Paulo e Brasília, mas no último ano foi feito de maneira online, o que possibilitou um número maior de eventos. 
+
+## Sympla
+Pelo Sympla, plataforma de eventos online e venda de ingressos, também é possível pesquisar por eventos de um tema específico e ver o que acontecerá nos próximos meses. O interessante de buscar diretamente pelo o que deseja é que você pode descobrir eventos independentes sobre temas variados dentro do Data Science e, assim, participar de discussões diferentes sobre a área.
+
+# Continue aprendendo
+https://datahackers.com.br/ 
+https://paulovasconcellos.com.br/as-melhores-comunidades-de-data-science-que-voc%C3%AA-precisa-participar-hoje-dbb73f72d334
+https://medium.com/search?source=home----------------------------------------&q=data+analytics+brazil 
+https://www.eventbrite.com.br/d/online/data-science/
+https://www.sympla.com.br/eventos/tecnologia?c=data-science-big-data-dados&page=2 
+https://www.bigdatabrazilexperience.com.br/ 
+https://pydata.org/ 
+https://numfocus.org/
